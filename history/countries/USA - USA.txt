@@ -1,0 +1,1040 @@
+﻿capital = 64
+
+oob = "1860-USA"
+set_research_slots = 3
+#characters
+recruit_character = USA_james_buchanan
+recruit_character = USA_abraham_lincoln
+recruit_character = USA_U_S_Grant
+recruit_character = USA_GEORGE_McClellan
+recruit_character = USA_william_sherman
+recruit_character = USA_Henry_Halleck
+recruit_character = USA_winfield_scott
+recruit_character = USA_george_thomas
+recruit_character = USA_George_Meade
+recruit_character = USA_philip_sheridan
+recruit_character = USA_Winfield_S_Hancock
+recruit_character = USA_Joseph_Hooker
+recruit_character = USA_Montegomery_meigs
+recruit_character = USA_William_Starke_Rosecrans
+recruit_character = USA_JOHN_A_LOGAN
+recruit_character = USA_W_H_SEWARD
+recruit_character = USA_Salmon_P_Chase
+recruit_character = USA_Edward_Bates
+recruit_character = USA_caleb_blood_smith
+recruit_character = USA_Montgomery_Blair
+recruit_character = USA_gideon_welles
+recruit_character = USA_andrew_johnson
+
+#US 36th Congress
+set_variable = { var = senators_support value = 42 }
+set_variable = { var = senators_total value = 66 }
+set_variable = { var = representatives_support value = 130 }
+set_variable = { var = representatives_total value = 238 }
+set_variable = { var = quorum_low value = 25 }
+set_variable = { var = quorum_medium value = 35 }
+set_variable = { var = quorum_high value = 45 }
+USA_recalc_congress_icon_frames = yes
+
+set_convoys = 250
+
+set_stability = 0.28
+set_war_support = 0.25
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	gw_artillery = 1
+	transport = 1
+	superior_firepower = 1
+	fleet_in_being = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	transport = 1
+	marines = 1
+	tech_engineers = 1
+	tech_mountaineers = 1
+	electronic_mechanical_engineering = 1
+	radio = 1
+	basic_machine_tools = 0
+	concentrated_industry = 1
+	construction1 = 1
+	excavation1 = 1
+	basic_train = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		basic_depth_charges = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+	}
+}
+add_ideas = {
+mobilization_against_our_brothers
+secseed_crisis
+secession_in_the_dock_yards
+american_slavery_usa
+runaway_slave_law
+JB_FLOYD
+corn_is_king_trade
+USA_core_defense
+USA_winfield_scott
+}
+set_politics = {
+	ruling_party = democratic
+	last_election = "1856.11.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 90
+	communism = 10
+}
+
+create_country_leader = {
+	name = "Frederick Douglass"
+	desc = "FDP_desc"
+	picture = "800px-Frederick_Douglass_portrait.dds"
+	expire = "1865.5.1"
+	ideology = stalinism
+	traits = {
+	
+	}
+}
+create_country_leader = {
+	name = "Clement Vallandigham"
+	picture = "220px-Clement_Vallandigham_-_Brady-Handy.dds"
+	expire = "1865.5.1"
+	ideology = fascism_ideology
+	traits = {
+	}
+}
+			#Custom
+			create_corps_commander = {
+				name = "Włodzimierz Krzyżanowski"
+				picture = "Włodzimierz_Krzyżanowski.dds"
+				traits = { polish bearer_of_artillery }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 3
+			}
+			#Base Mod
+			create_corps_commander = {
+				name = "Robert Anderson"
+				picture = "200px-Portrait_of_Maj._Robert_Anderson_(Brig._Gen._from_May_15,_1861),_officer_of_the_Federal_Army_LOC_cwpb.05635_(cropped).dds"
+				traits = {     war_hero   }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Edward Canby"
+				picture = "220px-General_Edward_Canby_525.dds"
+				traits = {       war_hero }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Lewis Wallace"
+				picture = "250px-Lewis_Wallace.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Robert Patterson"
+				picture = "220px-Robert_Patterson.dds"
+				traits = {       war_hero }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Ambrose Burnside"
+				desc = "burnside_desc"
+				picture = "800px-Ambrose_Burnside2.dds"
+				traits = {     war_hero   }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John A.McClernand"
+				picture = "John_A._McClernand.dds"
+				traits = {     war_hero   }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John Ellis Wool"
+				picture = "220px-John_Ellis_Wool_by_Southworth_Hawes.dds"
+				traits = {     war_hero   }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John F. Reynolds"
+				picture = "220px-GenJFRenyolds.dds"
+				traits = {     war_hero   }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Oliver Otis Howard"
+				picture = "220px-Oliver_Otis_Howard.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John Sedgewick"
+				picture = "John Sedgewick.dds"
+				traits = {       }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "George Meade"
+				id = 233
+				picture = "George Meade.dds"
+				desc = "GM_desc"
+				traits = {     war_hero   trait_engineer}
+				skill = 3
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Joseph Gilbert Totten"
+				picture = "Joseph_Gilbert_Totten.dds"
+				traits = { trait_engineer war_hero bearer_of_artillery  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Joseph K.F.Mansfield"
+				id = 1800
+				picture = "800px-Gen._Joseph_K._F._Mansfield_-_NARA_-_528442_cropped.dds"
+				traits = { trait_engineer war_hero   }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Henry W Benham"
+				picture = "Henry_W_Benham.dds"
+				traits = { war_hero  trait_engineer }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Louis Blenker"
+				picture = "General_Blenker.dds"
+				traits = {        war_hero }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Henry Warner Slocum"
+				picture = "Henry Warner Slocum.dds"
+				traits = {       bearer_of_artillery }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Jeremiah Tilford Boyle"
+				picture = "Gen_jboyle.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John Joseph Abercrombie"
+				picture = "220px-John_Joseph_Abercrombie_-_Brady-Handy.dds"
+				traits = { war_hero }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "N.P.Banks"
+				picture = "800px-GenNPBanks.dds"
+				traits = {        }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Edward Dickinson Baker"
+				id = 1801
+				picture = "800px-Edward_Dickinson_Baker_.dds"
+				traits = {        }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Silas Casey"
+				picture = "220px-Silas_Casey.dds"
+				traits = {        }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Don Carlos Buell"
+				picture = "290px-Don_Carlos_Buell.dds"
+				traits = {       war_hero  }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			create_corps_commander = {
+				name = "Thornton F.Brodhead"
+				id = 1802
+				picture = "800px-Col._Thornton_F._Brodhead.dds"
+				traits = {   cavalry_officer    }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "James Cooper"
+				id = 1803
+				picture = "JamesCooper.dds"
+				traits = {        }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Michael Corcoran"
+				picture = "800px-Michael_Corcoran_-_Brady-Handy.dds"
+				traits = {        }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "George W Cullum"
+				picture = "George_W_Cullum.dds"
+				traits = { trait_engineer  }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John W Denver"
+				picture = "200px-GenJohnWDenver.dds"
+				traits = { war_hero      }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John Adams Dix"
+				picture = "220px-General_Dix_(bust_crop).dds"
+				traits = { }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "William B.Franklin"
+				picture = "220px-William_B._Franklin_enh.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Willis Gorman"
+				picture = "Willis_Gorman_and_wife.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "William S.Harney"
+				picture = "220px-Gen._William_S._Harney_-_NARA_-_528814_(cropped).dds"
+				traits = {       war_hero }
+				id = 502
+				skill = 3
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "William Farrar Smith"
+				picture = "220px-GenWFSmith.dds"
+				traits = {       trait_engineer }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John C Frémont"
+				picture = "John_C_Frémont.dds"
+				traits = { war_hero politically_connected }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Daniel Butterfield"
+				picture = "220px-Daniel_Butterfield.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Abram Duryée"
+				picture = "AbramDuryée.dds"
+				traits = {      }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Charles D Jameson"
+				id = 1804
+				picture = "CharlesDJameson.dds"
+				traits = {      }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Philip Kearny"
+				id = 1805
+				picture = "220px-Philip_Kearny,jr.dds"
+				traits = {       war_hero}
+				skill = 2
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Rufus King"
+				picture = "220px-Rufus_King_Civil_War_General_-_Brady-Handy.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "W.H.Keim"
+				picture = "WHKeim.dds"
+				traits = { }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "James Henry Lane"
+				picture = "220px-James_Henry_Lane.dds"
+				traits = { }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "G.A.McCall"
+				picture = "GAMcCall.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Eleazer A.Paine"
+				picture = "Eleazer A.Paine.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Andrew Porter"
+				picture = "220px-Andrew_Porter.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "James B.Ricketts"
+				picture = "220px-James_B._Ricketts_-_Brady-Handy.dds"
+				traits = {        bearer_of_artillery}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "T.W.Sherman"
+				picture = "220px-TWSherman.dds"
+				traits = {       war_hero}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Charles Pomeroy Stone"
+				picture = "Charles_Pomeroy_Stone.dds"
+				traits = {       war_hero}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Francis Preston Blair"
+				picture = "220px-General_Francis_Preston_Blair.dds"
+				traits = {       war_hero}
+				skill = 1
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "L.Thomas"
+				picture = "220px-GenLThomas.dds"
+				traits = {       war_hero}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 3
+				logistics_skill = 4
+			}
+			create_corps_commander = {
+				name = "Egbert Ludovicus Viele"
+				picture = "Egbert Ludovicus Viele.dds"
+				traits = {       war_hero}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "James S. Wadsworth"
+				picture = "James S. Wadsworth.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "William.T.Ward"
+				picture = "220px-William_T._Ward_cropped.dds"
+				traits = {      }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Orlando B.Willcox"
+				picture = "220px-Orlando_B._Willcox_-_Brady-Handy.dds"
+				traits = {      }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Seth Williams"
+				picture = "220px-General_Seth_Williams-01.dds"
+				traits = {      }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Sam.K.Zook"
+				picture = "200px-GenSamKZook.dds"
+				traits = {      }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Samuel D.Sturgis"
+				picture = "220px-Samuel_D._Sturgis_-_Brady-Handy.dds"
+				traits = {     cavalry_officer war_hero}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Albin.F.Schoepf"
+				picture = "AlbinFSchoepf.dds"
+				traits = {       bearer_of_artillery }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John Cleveland Robinson"
+				picture = "220px-John_Cleveland_Robinson.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Joseph B.Plummer"
+				id = 1806
+				picture = "220px-Gen._Joseph_B._Plummer_-_NARA_-_528834.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "G.W.Morell"
+				picture = "220px-GWMorell.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Irvin McDowell"
+				id = 19000
+				picture = "220px-Portrait_of_Maj._Gen._Irvin_McDowell,_officer_of_the_Federal_Army.dds"
+				traits = {       war_hero}
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Henry Hayes Lockwood"
+				picture = "Henry_Hayes_Lockwood.dds"
+				traits = {       }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John M.Brannan"
+				picture = "Portrait_of_Brig._Gen._John_M._Brannan_(Maj._Gen._from_Jan._23,_1865),_officer_of_the_Federal_Army_LOC_cwpb.05050_(cropped).dds"
+				traits = {        }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Edwin Vose Sumner"
+				picture = "220px-Edwin_Vose_Sumner_1.dds"
+				traits = { war_hero cavalry_officer    }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John Buford"
+				desc = "JohnBuford_desc"
+				picture = "800px-John_Buford.dds"
+				traits = { war_hero cavalry_officer    }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 4
+				planning_skill = 3
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John P Hatch"
+				picture = "220px-John_P_Hatch.dds"
+				traits = { war_hero cavalry_officer    }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John Pope"
+				picture = "220px-GenJohnPope.dds"
+				traits = { war_hero       trait_engineer  }
+				skill = 2
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Darius N.Couch"
+				picture = "800px-Darius_N._Couch_-_Brady-Handy.dds"
+				traits = { war_hero        }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Samuel P. Heintzelman"
+				picture = "220px-Samuel_P._Heintzelman_-_Brady-Handy.dds"
+				traits = { war_hero        }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "George Sykes"
+				picture = "George Sykes.dds"
+				traits = { war_hero        }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Charles Griffin"
+				picture = "800px-CharlesGriffin.dds"
+				traits = { war_hero        }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John Gibbon"
+				picture = "John_Gibbon.dds"
+				traits = { war_hero        }
+				skill = 1
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Benjamin Butler"
+				picture = "General_Benjamin_Butler_Brady-Handy.dds"
+				traits = { old_guard politically_connected }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "Nathaniel Lyon"
+				id = 15000
+				picture = "General_Nathaniel_Lyon.dds"
+				traits = { war_hero        }
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 2
+			}			
+			create_corps_commander = {
+				name = "Philip St.George Cooke"
+				id = 5201
+				picture = "220px-Philip_St._George_Cooke.dds"
+				traits = { war_hero cavalry_officer      }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_corps_commander = {
+				name = "John Schofield"
+				picture = "John_Schofield.dds"
+				traits = {   }
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			create_navy_leader = {
+			name = "David Farragut"
+			picture = "220px-Admiral_Farragut2.dds"
+			traits = { naval_invader invader_ii naval_liason war_hero }
+			skill = 1
+			}
+			create_navy_leader = {
+			name = "John Lorimer Worden"
+			picture = "800px-John_Lorimer_Worden_-_Mathew_Brady_-_left_photograph.dds"
+			traits = { ironside }
+			skill = 1
+			}
+			create_navy_leader = {
+			name = "John Ancrum Winslow"
+			picture = "John_Ancrum_Winslow.dds"
+			traits = {  }
+			skill = 1
+			}
+			create_navy_leader = {
+			name = "David Dixon Porter"
+			picture = "220px-David_Dixon_Porter_-_Mathew_Brady's_National_Photographic_Art_Gallery.dds"
+			traits = {  }
+			skill = 1
+			}
+			create_navy_leader = {
+			name = "Stephen C Rowan"
+			picture = "Stephen_C_Rowan.dds"
+			traits = {  }
+			skill = 1
+
+			}
+			create_navy_leader = {
+			name = "Andrew H.Foote"
+			picture = "220px-Andrew_H._Foote.dds"
+			traits = {  }
+			skill = 1
+
+			}
+			create_navy_leader = {
+			name = "Percival Drayton"
+			picture = "Percival_Drayton.dds"
+			traits = {  }
+			skill = 1
+			}
+			create_navy_leader = {
+			name = "John A. Dahlgren"
+			picture = "220px-Dahlgren_LOC_05803u.dds"
+			traits = {  }
+			skill = 1
+
+			}
+			create_navy_leader = {
+			name = "Samuel Phillips Lee"
+			picture = "Samuel_Phillips_Lee.dds"
+			traits = {  }
+			skill = 1
+
+			}
+			create_navy_leader = {
+			name = "Samuel francis du Pont"
+			picture = "220px-Samuel_francis_du_pont.dds"
+			traits = {  }
+			skill = 1
+
+			}
+			create_navy_leader = {
+			name = "Charles H.Davis"
+			picture = "220px-Charles_H._Davis.dds"
+			traits = {  }
+			skill = 1
+
+			}
+			
+			create_equipment_variant = {
+			name = "USS Des"	
+			type = ship_hull_light_2
+			name_group = USA_DD_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_1
+			}
+		}
+			create_equipment_variant = {
+			name = "USS LIGHT Class"
+			type = ship_hull_cruiser_1
+			name_group = USA_CA_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_light_battery_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			}
+		}
+		
+		create_equipment_variant = {
+		name = "NO Class"	
+		type = ship_hull_heavy_1
+		name_group = USA_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		}
+	}
+	create_equipment_variant = {
+		name = "WAR Class"	
+		type = ship_hull_heavy_1
+		name_group = USA_BB_HISTORICAL
+		parent_version = 0
+		modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		}
+	}
+	create_equipment_variant = {
+		name = "HEAVY Class"	
+		type = ship_hull_heavy_1
+		name_group = USA_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+		fixed_ship_battery_slot = ship_heavy_battery_1
+		}
+	}

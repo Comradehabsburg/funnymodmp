@@ -1,0 +1,50 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "GATHERING_STORM_DESC"
+		date = 1860.10.31.12
+		picture = "GFX_select_date_1936"
+		default_country = "USA"
+		default = yes
+		
+		"USA"={
+			history = "USA_ACW_1861_DESC"
+			ideology = democratic
+			ideas = {
+			secseed_crisis
+			american_slavery_usa
+			runaway_slave_law
+			USA_core_defense
+			}
+			focuses = {
+			USA_first_address
+			USA_emancipation_proclamation
+			USA_end_of_us_slavery_13th_amd
+			}
+		}
+		
+		"CSA"={
+			history = "CSA_ACW_1861_DESC"
+			ideology = democratic
+			ideas = {
+			plotting
+			mobilization_against_our_brothers
+			american_slavery
+			}
+			focuses = {
+			CSA_civil_war
+			CSA_twenty_negro_law
+			CSA_1865_slavery_keep_forever
+			}
+		}
+		
+		# minors from DLC ####
+
+		
+
+		effect = {
+			randomize_weather = 12345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

@@ -1,0 +1,2 @@
+This is a MP version of https://steamcommunity.com/sharedfiles/filedetails/?id=2689678339 and is not an official version of that mod
+It is a different mod just for MP and for balance inside of MP for any info on the MP mod join https://discord.gg/ZrB2wUkHha

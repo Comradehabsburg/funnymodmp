@@ -1,0 +1,42 @@
+﻿focus_tree = {
+	id = OKL_native_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = OKL
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = OKL_end_of_native_war
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 0
+
+		cost = 0
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+		date > 1862.1.1
+		tag = OKL
+		}
+		
+		available_if_capitulated = no
+
+		completion_reward = {
+			OKL = {
+				annex_country = {
+				target = INT
+				}
+			}
+		}
+	}
+}

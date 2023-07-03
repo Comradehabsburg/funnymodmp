@@ -1,0 +1,354 @@
+technologies = {
+
+	gw_artillery = {
+
+		enable_equipments = {
+			artillery_equipment_1
+		}
+		
+		path = {
+			leads_to_tech = interwar_artillery 
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = interwar_antitank
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = interwar_antiair 
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_anti_air_1
+		}
+		
+		research_cost = 1.5
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1837.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1838.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1839.1.1"
+			}
+		}
+	}
+	
+	interwar_artillery = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mobile_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		
+		path = {
+			leads_to_tech = artillery1
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+
+		start_year = 1840
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 2 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				date > "1837.1.1"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1838.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1839.1.1"
+			}
+		}
+	}
+	
+	artillery1 = {
+	
+		enable_equipments = {
+			artillery_equipment_2
+		}
+
+		#artillery = {
+		#	soft_attack = 0.1
+		#}
+		#artillery_brigade = {
+		#	soft_attack = 0.1
+		#}
+		
+		path = {
+			leads_to_tech = artillery2
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+
+		start_year = 1862
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1838.1.9"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1839.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1839.1.6"
+			}
+		}
+	}
+	
+	artillery2 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mobile_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		
+		path = {
+			leads_to_tech = artillery3
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = rocket_artillery
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+
+		start_year = 1863
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1860.1.6"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1861.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1862.1.1"
+			}
+		}
+	}
+	
+	artillery3 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mobile_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		
+		path = {
+			leads_to_tech = artillery4
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+
+		start_year = 1864
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1861.1.6"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1862.1.1"
+			}
+		}
+	}
+	
+	artillery4 = {
+	
+		enable_equipments = {
+			artillery_equipment_3
+		}
+
+		#artillery = { 
+		#	soft_attack = 0.1
+		#}
+		#artillery_brigade = {
+		#	soft_attack = 0.1
+		#}
+		
+		path = {
+			leads_to_tech = artillery5
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2
+
+		start_year = 1865
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 10 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1861.1.9"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1862.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1862.1.6"
+			}
+		}
+	}
+	
+	artillery5 = {
+
+		artillery = {
+			soft_attack = 0.1
+		}
+		artillery_brigade = {
+			soft_attack = 0.1
+		}
+		mobile_artillery_brigade = {
+			soft_attack = 0.1
+		}
+		
+		research_cost = 1
+
+		start_year = 1866
+		
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		categories = {
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 2
+			
+			modifier = {
+				factor = 2
+				date > "1863.1.6"
+			}
+			
+			modifier = {
+				factor = 2
+				date > "1864.1.1"
+			}
+			
+			modifier = {
+				factor = 5
+				date > "1865.1.1"
+			}
+		}
+	}
+}

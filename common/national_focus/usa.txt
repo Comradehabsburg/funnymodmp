@@ -1,0 +1,2205 @@
+focus_tree = {
+id = usa_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = USA
+		}
+		reset_on_civilwar = no
+	}
+	
+	shared_focus = USA_rebulid_union_navy
+  shared_focus = USA_industry_civ
+		focus = {
+		id = USA_buchanan_administration
+		icon = GFX_focus_buchanan_1860
+		x = 2
+		y = 0
+		cost = 5
+
+		available = {
+			has_character = USA_james_buchanan
+		}
+
+		completion_reward = {
+			country_lock_all_division_template = yes
+			add_political_power = 100
+			add_stability = -0.1
+		}
+	}
+	focus = {
+		id = USA_cabinet_meeting
+		icon = GFX_goal_generic_attack_allies
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = {
+		focus = USA_buchanan_administration
+		}
+		available = {
+			has_character = USA_james_buchanan
+		}
+
+		completion_reward = {
+			add_political_power = 20
+		}
+	}
+	
+	focus = {
+		id = USA_southerner
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = {
+		focus = USA_buchanan_administration
+		}
+		available = {
+			has_character = USA_james_buchanan
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = buchannan_southern
+		}
+	}
+	focus = {
+		id = USA_protect_union
+		icon = GFX_goal_generic_improve_relations
+		x = 4
+		y = 1
+		cost = 5
+		prerequisite = {
+		focus = USA_buchanan_administration
+		}
+		available = {
+			has_character = USA_james_buchanan
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = buchannan_union
+		}
+	}
+		focus = {
+		id = USA_sumter_things
+		icon = GFX_focus_fort_sumter
+		x = 2
+		y = 2
+		cost = 8
+		continue_if_invalid = yes
+		prerequisite = {
+		focus = USA_protect_union
+		}
+		prerequisite = {
+		focus = USA_southerner
+		}
+		available = {
+			has_character = USA_james_buchanan
+		}
+
+		completion_reward = {
+			set_country_flag = Buchanan_fouces_complete
+			add_political_power = 50
+			custom_effect_tooltip = sumter_anderson
+		}
+	}
+
+	focus = {
+		id = USA_McClellan's_Campaign
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		x = 2
+		y = 3
+		cost = 100
+		continue_if_invalid = yes
+		prerequisite = {
+		}
+		available = {
+			OR = {
+				controls_state = 88
+			OR = {
+				controls_state = 64
+				AND = {
+					controls_state = 24
+					controls_state = 34 
+				}
+				
+				AND = {
+					controls_state = 65
+					controls_state = 56
+					controls_province = 1637
+				}
+				
+				
+						}
+		} 
+	}
+
+		completion_reward = {
+			custom_effect_tooltip = USA_McClellan
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	focus = {
+		id = USA_McClellan's_Campaign1
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		x = 2
+		y = 4
+		cost = 100
+		continue_if_invalid = yes
+		prerequisite = {
+		focus =  USA_McClellan's_Campaign
+		}
+		available = {
+
+			OR = {
+				controls_state = 88
+
+
+
+			OR = {
+
+				AND = {
+		controls_state = 64
+		AND = {
+			controls_state = 24
+			controls_state = 34 
+		}
+		
+		
+		
+				}
+	
+				AND = {
+					AND = {
+						controls_state = 24
+						controls_state = 34 
+					}
+					
+					AND = {
+						controls_state = 65
+						controls_state = 56
+						controls_province = 1637
+					}
+	
+					OR = {
+						controls_state = 64
+						
+						AND = {
+							controls_state = 65
+							controls_state = 56
+							controls_province = 1637
+						}
+					}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+				OR = {
+					controls_state = 64
+					AND = {
+						controls_state = 24
+						controls_state = 34 
+					} 
+					
+					AND = {
+						controls_state = 65
+						controls_state = 56
+						controls_province = 1637
+					} }
+					
+					
+							} 
+	
+	
+	
+	} }
+
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = USA_McClellan2
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	#Abe Lincoln fouces
+	focus = {
+		id = USA_first_address
+		icon = GFX_focus_lincoln_1861
+		x = 10
+		y = 0
+		cost = 4
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			NOT = {
+			has_character = USA_james_buchanan
+			}
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			news_event = {
+			id = news.1861
+			days = 3
+			}
+		}
+	}
+	focus = {
+		id = USA_37th_congress
+		icon = GFX_focus_us_congress
+		x = 10
+		y = 1
+		cost = 4
+		prerequisite = {
+		focus = USA_first_address
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = congress_change
+		custom_effect_tooltip = 37th_congress_usa
+		add_political_power = 200
+		add_stability = 0.05
+			set_variable = { var = senators_support value = 31 }
+			set_variable = { var = senators_total value = 48 }
+			set_variable = { var = representatives_support value = 132 }
+			set_variable = { var = representatives_total value = 177 }
+			USA_recalc_congress_icon_frames = yes
+		}
+	}
+		focus = {
+		id = USA_sumter_and_anderson
+		icon = GFX_focus_anderson
+		x = 8
+		y = 1
+		cost = 4
+		prerequisite = {
+		focus = USA_first_address
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_upper_south
+		icon = GFX_virginia
+		x = 12
+		y = 1
+		cost = 4
+		prerequisite = {
+		focus = USA_first_address
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+		}
+
+		completion_reward = {
+		}
+	}
+		focus = {
+		id = USA_habeas_corpus_in_maryland
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 13
+		y = 2
+		cost = 2
+		prerequisite = {
+		focus = USA_upper_south
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			date > 1861.7.20
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = act_of_congress_ignore
+		if = {
+		limit ={
+		NOT = {
+		has_country_flag = habeas_corpus_banned_in_congress
+		}
+		}
+		58 = {
+		add_manpower = -300
+		}
+		add_stability = 0.07
+		add_war_support = -0.14
+		USA_congress_medium_opposition = yes
+		add_to_variable = {
+		var = 58.usa_support
+		value = 10
+		}
+		subtract_from_variable = {
+		var = 58.csa_support
+		value = 10
+		}
+		country_event = {
+    id = usa.2001
+    days = 1
+    random = 24 
+    random_days = 5 
+		}
+		}
+		if = {
+		limit ={
+		has_country_flag = habeas_corpus_banned_in_congress
+		}
+		58 = {
+		add_manpower = -300
+		}
+		add_stability = 0.07
+		add_war_support = -0.1
+		add_to_variable = {
+		var = 58.usa_support
+		value = 15
+		}
+		subtract_from_variable = {
+		var = 58.csa_support
+		value = 15
+		}
+		}
+	}
+}
+	focus = {
+		id = USA_habeas_corpus_in_rebels
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 15
+		y = 2
+		cost = 5
+		prerequisite = {
+		focus = USA_upper_south
+		}
+		available = {
+		has_completed_focus = USA_habeas_corpus_in_maryland
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			date > 1861.9.17
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = act_of_congress_ignore
+		if = {
+		limit ={
+		NOT = {
+		has_country_flag = habeas_corpus_banned_in_congress
+		}
+		}
+		add_stability = 0.05
+		add_ideas = USA_habeas_corpus
+		USA_congress_medium_opposition = yes
+		}
+		if = {
+		limit ={
+		has_country_flag = habeas_corpus_banned_in_congress
+		}
+		add_stability = 0.1
+		add_ideas = USA_habeas_corpus
+		}
+		}
+	}
+		focus = {
+		id = USA_caling_75000
+		icon = GFX_focus_75000
+		x = 10
+		y = 2
+		cost = 3
+		will_lead_to_war_with = CSA
+		prerequisite = {
+		focus = USA_upper_south
+		}
+		prerequisite = {
+		focus = USA_sumter_and_anderson
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			date > 1861.4.15
+		}
+		
+	ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+		add_ideas = USA_core_defense
+		remove_ideas = secseed_crisis
+		add_timed_idea = { idea = love_usa_sumter days = 240 }
+		custom_effect_tooltip = Lincoln_75000
+		country_event = {
+    id = usa.75001
+    days = 1
+    random = 24 
+    random_days = 5 
+		}
+		country_event = {
+    id = usa.75002
+    days = 3
+    random = 24 
+    random_days = 5 
+		}
+		country_event = {
+    id = usa.75003
+    days = 5
+    random = 24 
+    random_days = 5 
+		}
+		country_event = {
+    id = usa.75004
+    days = 9
+    random = 24 
+    random_days = 5 
+		}
+		add_tech_bonus = {
+    bonus = 0.25
+    uses = 2
+    category = land_doctrine
+		}
+			hidden_effect={
+			add_equipment_to_stockpile ={
+			type = infantry_equipment
+			amount = 50000
+			producer = USA
+			}
+			add_ideas = Simon_Cameron
+			country_lock_all_division_template = no
+			53 = {
+		create_unit = {
+			division = "name = \"Illinois Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Illinois Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Illinois Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Illinois Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Illinois Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA}
+			create_unit = {
+			division = "name = \"Illinois Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			}
+			55 = {
+		create_unit = {
+			division = "name = \"Indiana Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Indiana Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Indiana Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Indiana Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Indiana Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Indiana Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			}
+			51 = {
+		create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA}
+			create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Ohio Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			}
+			48 = {
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Pennsylvania Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			}
+			37 = {
+		create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"New York Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+			43 ={
+			create_unit = {
+			division = "name = \"3rd Massachusetts Militia Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"4th Massachusetts Militia Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"5th Massachusetts Militia Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"6th Massachusetts Militia Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"8th Massachusetts Militia Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+		71 = {
+			create_unit = {
+			division = "name = \"1st Rhode Island Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+		35 = {
+		create_unit = {
+			division = "name = \"1st Vermont Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+		35 = {
+		create_unit = {
+			division = "name = \"1st Vermont Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+		32 = {
+		create_unit = {
+			division = "name = \"1st Minnesota Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+		58 = {
+		create_unit = {
+			division = "name = \"1st Maryland Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		create_unit = {
+			division = "name = \"1st Maryland Cavalry Regiment\" division_template = \"Union Cavalry volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+		81 = {
+		create_unit = {
+			division = "name = \"1st Delaware Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+		45 = {
+		create_unit = {
+			division = "name = \"1st Connecticut Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"2nd Connecticut Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"3rd Connecticut Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+		30 = {
+		create_unit = {
+			division = "name = \"1st New Hampshire  Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"2nd New Hampshire  Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+		27 = {
+		create_unit = {
+			division = "name = \"1st Maine Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"2nd Maine Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+		50 = {
+		create_unit = {
+			division = "name = \"1st New Jersey Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"1nd New Jersey Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+		42 = {
+		create_unit = {
+			division = "name = \"1st Michigan Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+		40 = {
+		create_unit = {
+			division = "name = \"1st Wisconsin Infantry Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor = 0.8"
+			owner = USA
+			}
+		}
+			}
+		}
+	}
+	focus = {
+		id = USA_regular_army
+		icon = GFX_focus_regular_army
+		x = 6
+		y = 3
+		cost = 4
+		mutually_exclusive = {
+		focus = USA_volunteers_army
+		}
+		prerequisite = {
+		focus = USA_caling_75000
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+		}
+
+		completion_reward = {
+		add_ideas = us_army_regular
+		add_tech_bonus = {
+    bonus = 0.25
+    uses = 2
+    category = land_doctrine
+		}
+		}
+	}
+	focus = {
+		id = USA_regular_army_2
+		icon = GFX_focus_chi_army_reform
+		x = 5
+		y = 4
+		cost = 4
+		prerequisite = {
+		focus = USA_regular_army
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+		}
+
+		completion_reward = {
+		load_oob = 1861_7_regular_usa
+		}
+	}
+	focus = {
+		id = USA_marines
+		icon = GFX_goal_generic_navy_cruiser
+		x = 1
+		y = 5
+		cost = 5
+		prerequisite = {
+		focus = USA_regular_army_2
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={
+			controls_state = 58 
+			controls_state = 37
+			}
+		}
+
+		completion_reward = {
+		load_oob = us_marines_1861
+		}
+	}
+	focus = {
+		id = USA_marines_2
+		icon = GFX_goal_generic_navy_cruiser
+		x = 1
+		y = 6
+		cost = 5
+		prerequisite = {
+		focus = USA_marines
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+		}
+
+		completion_reward = {
+		load_oob = us_marines_1861
+		add_ideas =
+		free_marines
+		USA = {
+		play_song = "From the Halls of Montezuma"
+		}
+		}
+	}
+	focus = {
+		id = USA_mountaineers
+		icon = GFX_focus_GRE_a_land_of_mountains
+		x = 3
+		y = 5
+		cost = 5
+		prerequisite = {
+		focus = USA_regular_army_2
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			controls_state = 60
+		}
+
+		completion_reward = {
+		load_oob = us_mountaineers_1861
+		}
+	}
+	focus = {
+		id = USA_mountaineers_2
+		icon = GFX_focus_GRE_a_land_of_mountains
+		x = 3
+		y = 6
+		cost = 5
+		prerequisite = {
+		focus = USA_mountaineers
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			controls_state = 60
+		}
+
+		completion_reward = {
+		load_oob = us_mountaineers_1861
+		}
+	}
+	focus = {
+		id = USA_ACE
+		icon = GFX_focus_USACE
+		x = 5
+		y = 5
+		cost = 5
+		prerequisite = {
+		focus = USA_regular_army_2
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+		}
+
+		completion_reward = {
+		add_ideas = {
+		USACE
+		}
+		}
+	}
+	focus = {
+		id = USA_ACTE
+		icon = GFX_focus_USACE
+		x = 5
+		y = 6
+		cost = 5
+		prerequisite = {
+		focus = USA_ACE
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+		}
+
+		completion_reward = {
+		add_ideas = {
+		USACTE
+		}
+		}
+	}
+	focus = {
+		id = USA_OCD
+		icon = GFX_focus_usa_ocd
+		x = 5
+		y = 7
+		cost = 5
+		prerequisite = {
+		focus = USA_ACTE
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+		}
+
+		completion_reward = {
+		add_ideas = {
+		USAOCD
+		}
+		}
+	}
+	focus = {
+		id = USA_AGD
+		icon = GFX_focus_USA_ADG
+		x = 5
+		y = 8
+		cost = 5
+		prerequisite = {
+		focus = USA_OCD
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+		}
+
+		completion_reward = {
+		add_ideas = {
+		USAAGD
+		}
+		}
+	}
+	focus = {
+		id = USA_regular_army_3
+		icon = GFX_focus_chi_army_reform
+		x = 7
+		y = 4
+		cost = 4
+		prerequisite = {
+		focus = USA_regular_army
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+		}
+
+		completion_reward = {
+		load_oob = USA_volunteers_1861_after_sumter
+		add_manpower = -10000
+		swap_ideas = {
+		remove_idea = us_army_regular
+    add_idea = us_army_regular_2
+		}
+		}
+	}
+	focus = {
+		id = USA_regular_army_31
+		icon = GFX_focus_chi_army_reform
+		x = 7
+		y = 5
+		cost = 5
+		prerequisite = {
+		focus = USA_regular_army_3
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			date > 1862.4.1
+		}
+
+		completion_reward = {
+		add_ideas = Edwin_M_Stanton
+		swap_ideas = {
+		remove_idea = us_army_regular_2
+    add_idea = us_army_regular_3
+		}
+		}
+	}
+	focus = {
+		id = USA_regular_army_32
+		icon = GFX_focus_chi_army_reform
+		x = 7
+		y = 6
+		cost = 5
+		prerequisite = {
+		focus = USA_regular_army_31
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			date > 1863.4.1
+		}
+
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = us_army_regular_3
+    add_idea = us_army_regular_4
+		}
+		}
+	}
+	focus = {
+		id = USA_regular_army_33
+		icon = GFX_focus_chi_army_reform
+		x = 7
+		y = 7
+		cost = 5
+		prerequisite = {
+		focus = USA_regular_army_32
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			date > 1863.7.1
+		}
+
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = us_army_regular_4
+    add_idea = us_army_regular_5
+		}
+		}
+	}
+	focus = {
+		id = USA_regular_army_34
+		icon = GFX_focus_chi_army_reform
+		x = 7
+		y = 8
+		cost = 5
+		prerequisite = {
+		focus = USA_regular_army_33
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			date > 1864.5.1
+		}
+
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = us_army_regular_5
+    add_idea = us_army_regular_6
+		}
+		}
+	}
+		focus = {
+		id = USA_regular_1865
+		icon = GFX_focus_regular_1865
+		x = 3
+		y = 9
+		cost = 10
+		prerequisite = {
+		focus = USA_AGD
+		}
+		prerequisite = {
+		focus = USA_regular_army_34
+		}
+		prerequisite = {
+		focus = USA_marines_2
+		}
+		prerequisite = {
+		focus = USA_mountaineers_2
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			CSA ={
+			surrender_progress > 0.3
+			}
+			has_idea = us_army_regular_6
+		}
+
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = us_army_regular_6
+		add_idea = UNITED_STATE_ARMY_1865
+		}
+		add_tech_bonus = {
+    bonus = 0.33
+    uses = 2
+    category = land_doctrine
+		}
+		}
+		}
+	focus = {
+		id = USA_volunteers_army
+		icon = GFX_focus_volunteers_1861
+		x = 14
+		y = 3
+		cost = 5
+		prerequisite = {
+		focus = USA_caling_75000
+		}
+		mutually_exclusive = {
+		focus = USA_regular_army
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+		}
+
+		completion_reward = {
+		add_ideas = us_army_volunteers
+		add_tech_bonus = {
+    bonus = 0.33
+    uses = 2
+    category = land_doctrine
+		}
+		}
+	}
+	focus = {
+		id = USA_volunteers_army_2
+		icon = GFX_focus_fort_sumter
+		x = 14
+		y = 4
+		cost = 5
+		prerequisite = {
+		focus = USA_volunteers_army
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+		}
+
+		completion_reward = {
+		add_manpower = -100000
+		load_oob = USA_volunteers_1861_after_sumter
+		}
+	}
+	focus = {
+		id = USA_volunteers_army_3
+		icon = GFX_goal_generic_army_doctrines
+		x = 16
+		y = 4
+		cost = 5
+		prerequisite = {
+		focus = USA_volunteers_army
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1861.7.1
+		}
+
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = us_army_volunteers
+		add_idea = us_army_volunteers_2
+		}
+		}
+	}
+	focus = {
+		id = USA_volunteers_army_500000
+		icon = GFX_goal_support_democracy
+		x = 16
+		y = 5
+		cost = 5
+		prerequisite = {
+		focus = USA_volunteers_army_3
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1861.7.1
+			has_manpower > 250000
+		}
+
+		completion_reward = {
+		add_manpower = -250000
+		load_oob = USA_lincoln_500000
+		}
+	}
+	focus = {
+		id = USA_volunteers_army_cavalry
+		icon = GFX_goal_generic_cavalry
+		x = 17
+		y = 6
+		cost = 5
+		prerequisite = {
+		focus = USA_volunteers_army_500000
+		}
+		available = {
+		OR={controls_state = 58 controls_state = 37}
+		controls_state = 67
+		controls_state = 69
+		controls_state = 60
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1861.7.1
+			has_manpower > 45000
+		}
+
+		completion_reward = {
+		add_manpower = -20000
+		load_oob = USA_lincoln_volunteers_cavalry
+		}
+	}
+	focus = {
+		id = USA_volunteers_army_art
+		icon = GFX_goal_generic_army_artillery
+		x = 19
+		y = 6
+		cost = 5
+		prerequisite = {
+		focus = USA_volunteers_army_500000
+		}
+		available = {
+		OR={controls_state = 58 controls_state = 37}
+		controls_state = 67
+		controls_state = 69
+		controls_state = 60
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1861.7.1
+			has_manpower > 50000
+		}
+
+		completion_reward = {
+		add_manpower = -6000
+		load_oob = USA_lincoln_volunteers_art
+		}
+	}
+	focus = {
+		id = USA_volunteers_army_4
+		icon = GFX_focus_eng_special_air_service
+		x = 14
+		y = 5
+		cost = 5
+		prerequisite = {
+		focus = USA_volunteers_army_2
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1862.4.1
+		}
+
+		completion_reward = {
+		add_ideas = Edwin_M_Stanton
+		swap_ideas = {
+		remove_idea = us_army_volunteers_2
+		add_idea = us_army_volunteers_3
+		}
+		load_oob = USA_volunteers_1861_7
+		}
+	}
+	focus = {
+		id = USA_import_england_weapon
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		x = 12
+		y = 6
+		cost = 5
+		prerequisite = {
+		focus = USA_volunteers_army_4
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1861.12.1
+		}
+
+		completion_reward = {
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 42000
+		producer = CAN
+		}
+		add_equipment_to_stockpile = {
+		type = artillery_equipment
+		amount = 580
+		producer = CAN
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 3000
+		producer = CAN
+		}
+		add_timed_idea = {
+		 idea = pay_for_guns
+		 days = 90
+		}
+		}
+	}
+	focus = {
+		id = USA_import_french_weapon
+		icon = GFX_focus_chi_reach_out_to_france
+		x = 12
+		y = 7
+		cost = 5
+		prerequisite = {
+		focus = USA_import_england_weapon
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1862.6.1
+			NOT = {
+				has_idea = pay_for_guns
+			}
+		}
+
+		completion_reward = {
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 42000
+		producer = USA
+		}
+		add_equipment_to_stockpile = {
+		type = artillery_equipment
+		amount = 480
+		producer = USA
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 2000
+		producer = USA
+		}
+		add_timed_idea = {
+		 idea = pay_for_guns
+		 days = 90
+		}
+		}
+	}
+	focus = {
+		id = USA_union_volunteers
+		icon = GFX_focus_eng_special_air_service
+		x = 15
+		y = 6
+		cost = 5
+		prerequisite = {
+		focus = USA_volunteers_army_4
+		}
+		prerequisite = {
+		focus = USA_volunteers_army_500000
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1862.7.1
+		}
+
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = us_army_volunteers_3
+		add_idea = us_army_volunteers_1862
+		}
+		}
+	}
+	focus = {
+	id = USA_enrollment_act
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		x = 14
+		y = 7
+		cost = 5
+		prerequisite = {
+		focus = USA_union_volunteers
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1863.3.1
+		}
+		completion_reward = {
+		custom_effect_tooltip = act_of_congress
+		unlock_decision_tooltip = USA_enrollment_act_congress
+		}
+	}
+	focus = {
+	id = USA_enrollment_act_2
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		x = 16
+		y = 7
+		cost = 5
+		prerequisite = {
+		focus = USA_union_volunteers
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1864.1.1
+		}
+		completion_reward = {
+		custom_effect_tooltip = act_of_congress
+		unlock_decision_tooltip = USA_enrollment_act_2_congress
+		}
+	}
+	focus = {
+	id = USA_enrollment_act_1865
+		icon = GFX_goal_tfv_can_forced_quebec_conscription
+		x = 15
+		y = 8
+		cost = 5
+		prerequisite = {
+		focus = USA_enrollment_act
+		}
+		prerequisite = {
+		focus = USA_enrollment_act_2
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1865.3.3
+		}
+		completion_reward = {
+		custom_effect_tooltip = act_of_congress
+		unlock_decision_tooltip = USA_enrollment_act_1865_congress
+		}
+	}
+	focus = {
+	id = USA_people_army
+		icon = GFX_focus_USA_people_army
+		x = 15
+		y = 9
+		cost = 8
+		prerequisite = {
+		focus = USA_enrollment_act_1865
+		}
+		prerequisite = {
+		focus = USA_volunteers_army_art
+		}
+		prerequisite = {
+		focus = USA_volunteers_army_cavalry
+		}
+		prerequisite = {
+		focus = USA_import_french_weapon
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1865.1.1
+		}
+		completion_reward = {
+		add_tech_bonus = {
+    bonus = 0.33
+    uses = 2
+    category = land_doctrine
+		}
+		swap_ideas = {
+		remove_idea = us_army_volunteers_1862
+		add_idea = us_army_volunteers_1865
+		}
+		}
+	}
+	focus = {
+	id = USA_the_army_of_the_free
+		icon = GFX_focus_army_of_the_free_shine
+		x = 10
+		y = 10
+		cost = 5
+		prerequisite = {
+		focus = USA_people_army
+		focus = USA_regular_1865
+		}
+		available = {
+		or = {
+		has_idea = emancipation_proclamation
+		has_idea = 13th_a
+		}
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1865.1.1
+		}
+		completion_reward = {
+		add_ideas = the_army_of_the_free
+		}
+	}
+	#Next to Slave issues
+	focus = {
+	id = USA_slavery_in_usa
+		icon = GFX_focus_slave_issue
+		x = 25
+		y = 0
+		cost = 1
+		available = {
+		has_completed_focus = USA_caling_75000
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1861.3.4
+		}
+		completion_reward = {
+		add_political_power = 150
+		}
+	}
+	focus = {
+	id = USA_slavery_in_border
+		icon = GFX_focus_border_state_slavery
+		x = 23
+		y = 1
+		cost = 1
+			prerequisite = {
+		focus = USA_slavery_in_usa
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1861.3.4
+		}
+		completion_reward = {
+		add_political_power = 50
+		}
+	}
+	focus = {
+	id = USA_slavery_in_washington
+		icon = GFX_focus_slavery_in_washington
+		x = 21
+		y = 2
+		cost = 1
+		prerequisite = {
+		focus = USA_slavery_in_border
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1862.3.20
+		}
+		completion_reward = {
+		custom_effect_tooltip = act_of_congress
+		unlock_decision_tooltip = USA_slavery_in_washington_congress
+		}
+	}
+	focus = {
+	id = USA_request_border_remove_slavery
+		icon = GFX_focus_border_remove_slavery
+		x = 21
+		y = 3
+		cost = 1
+		prerequisite = {
+		focus = USA_slavery_in_washington
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			controls_state = 60
+			controls_state = 69
+			controls_state = 67
+			controls_state = 81
+			date > 1863.1.1
+			has_idea = emancipation_proclamation
+			USA_missouri_check_medium = yes
+			USA_maryland_check_medium = yes
+			USA_kentucky_check_medium = yes
+			USA_delaware_check_medium = yes
+			USA_wva_check_medium = yes
+		}
+		completion_reward = {
+		add_ideas = border_slavery
+		add_political_power = -100
+		}
+	}
+	focus = {
+	id = USA_confiscation_act_1861
+		icon = GFX_goal_generic_neutrality_focus
+		x = 23
+		y = 2
+		cost = 1
+		prerequisite = {
+		focus = USA_slavery_in_border
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1861.8.6
+		}
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = partial_economic_mobilisation 
+			add_idea = war_economy
+		}
+		custom_effect_tooltip = act_of_congress
+		unlock_decision_tooltip = USA_confiscation_act_1861_congress
+		}
+	}
+	focus = {
+	id = USA_confiscation_act_1862
+		icon = GFX_goal_generic_political_pressure
+		x = 23
+		y = 3
+		cost = 1
+		prerequisite = {
+		focus = USA_confiscation_act_1861
+		}
+		available = {
+
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1862.8.6
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = war_economy
+				add_idea = tot_economic_mobilisation
+			}
+		custom_effect_tooltip = act_of_congress
+		unlock_decision_tooltip = USA_confiscation_act_1862_congress
+		}
+	}
+	focus = {
+	id = USA_slavery_in_south
+		icon = GFX_focus_CSA
+		x = 25
+		y = 1
+		cost = 5
+		prerequisite = {
+		focus = USA_slavery_in_usa
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1861.3.4
+		}
+		completion_reward = {
+		add_political_power = 50
+		}
+	}
+	focus = {
+	id = USA_contraband
+		icon = GFX_focus_contraband
+		x = 25
+		y = 2
+		cost = 5
+		prerequisite = {
+		focus = USA_slavery_in_south
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1861.8.10
+		}
+		completion_reward = {
+		add_political_power = 50
+		add_ideas = war_contraband
+		}
+	}
+	focus = {
+	id = USA_port_royal_experiment
+		icon = GFX_goal_generic_construction2
+		x = 25
+		y = 3
+		cost = 5
+		prerequisite = {
+		focus = USA_contraband
+		}
+		available = {
+		controls_province = 2979
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1861.11.3
+		}
+		bypass = {
+		USA = {
+		is_ai = yes
+		}
+		}
+		completion_reward = {
+		add_political_power = 50
+			CSA = {
+			add_stability = -0.05
+			add_ideas = run_away_slaves
+			}
+		}
+	}
+	focus = {
+	id = USA_reserve_freedom
+		icon = GFX_focus_EMP
+		x = 25
+		y = 4
+		cost = 1
+		prerequisite = {
+		focus = USA_port_royal_experiment
+		}
+		prerequisite = {
+		focus = USA_slavery_in_native_3
+		}
+		prerequisite = {
+		focus = USA_confiscation_act_1862
+		}
+		available = {
+		CSA = {
+			surrender_progress > 0.2
+			}
+		controls_province = 7243
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1862.9.17
+		}
+		completion_reward = {
+		add_timed_idea = {
+		idea = reserved_emancipation_proclamation
+		days = 106
+		}
+		}
+	}
+	focus = {
+	id = USA_emancipation_proclamation
+		icon = GFX_focus_EMP
+		x = 25
+		y = 5
+		cost = 1
+		prerequisite = {
+		focus = USA_reserve_freedom
+		}
+		available = {
+		NOT = {
+		has_idea = reserved_emancipation_proclamation
+		}
+		CSA = {
+			surrender_progress > 0.25
+			}
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1863.1.1
+		}
+		completion_reward = {
+		add_ideas = emancipation_proclamation
+		every_country = {
+			set_global_flag = CM_SE_opened
+			clear_array = CM_SE_event_id_array
+			add_to_array = { CM_SE_event_id_array = 4 }	
+			play_song = "We Are Coming Father Abraham"
+			}
+		}
+	}
+	focus = {
+	id = USA_USCT
+		icon = GFX_focus_USCT
+		x = 29
+		y = 6
+		cost = 1
+		prerequisite = {
+		focus = USA_emancipation_proclamation
+		}
+		available = {
+		has_idea = emancipation_proclamation
+		CSA = {
+			surrender_progress > 0.25
+			}
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1863.1.1
+		}
+		completion_reward = {
+		load_oob = USCT_1863
+		}
+	}
+	focus = {
+	id = USA_NATIVE_HOME_GUARD
+		icon = GFX_focus_native_guard
+		x = 29
+		y = 7
+		cost = 1
+		prerequisite = {
+		focus = USA_USCT
+		}
+		available = {
+		controls_state = 61
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1863.1.1
+		}
+		completion_reward = {
+		61 = {
+		create_unit = {
+		   division = "name = \"1st Regiment, Indian Home Guard\" division_template = \"Union volunteers\" start_experience_factor = 0.5 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"2nd Regiment, Indian Home Guard\" division_template = \"Union volunteers\" start_experience_factor = 0.5 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"3rd Regiment, Indian Home Guard\" division_template = \"Union volunteers\" start_experience_factor = 0.5 start_equipment_factor = 1"
+    owner = USA
+		}
+		}
+		}
+	}
+		focus = {
+		id = USA_galvanized_yankees
+		icon = GFX_goal_tfv_can_compromise_with_quebec
+		x = 29
+		y = 8
+		cost = 2
+		prerequisite = {
+		focus = USA_NATIVE_HOME_GUARD
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1863.1.1
+		}
+		completion_reward = {
+		31 = {
+		create_unit = {
+		   division = "name = \"1st U.S. Volunteer Infantry\" division_template = \"Union volunteers\" start_experience_factor = 0.3 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"2nd U.S. Volunteer Infantry\" division_template = \"Union volunteers\" start_experience_factor = 0.3 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"3rd U.S. Volunteer Infantry\" division_template = \"Union volunteers\" start_experience_factor = 0.3 start_equipment_factor = 1"
+    owner = USA
+		}
+				create_unit = {
+		   division = "name = \"4th U.S. Volunteer Infantry\" division_template = \"Union volunteers\" start_experience_factor = 0.3 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"5th U.S. Volunteer Infantry\" division_template = \"Union volunteers\" start_experience_factor = 0.3 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"6th U.S. Volunteer Infantry\" division_template = \"Union volunteers\" start_experience_factor = 0.3 start_equipment_factor = 1"
+    owner = USA
+		}
+		}
+		}
+	}
+	focus = {
+	id = USA_end_of_runslave_law
+		icon = GFX_focus_end_of_fugitive
+		x = 23
+		y = 6
+		cost = 1
+		prerequisite = {
+		focus = USA_emancipation_proclamation
+		}
+		available = {
+		CSA = {
+			surrender_progress > 0.33
+			}
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1864.6.20
+		}
+		completion_reward = {
+		custom_effect_tooltip = act_of_congress
+		unlock_decision_tooltip = USA_end_of_runslave_law_congress
+		}
+	}
+	focus = {
+	id = USA_end_of_us_slavery_senate_vote
+		icon = GFX_focus_senate
+		x = 25
+		y = 6
+		cost = 1
+		prerequisite = {
+		focus = USA_emancipation_proclamation
+		}
+		available = {
+		CSA = {
+			surrender_progress > 0.35
+			}
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1864.11.6
+		}
+		completion_reward = {
+		custom_effect_tooltip = act_of_congress
+		unlock_decision_tooltip = USA_end_of_us_slavery_senate_vote_congress
+		}
+	}
+	focus = {
+	id = USA_end_of_us_slavery_13th_amd
+		icon = GFX_focus_usa_recruit_the_free_corps
+		x = 25
+		y = 7
+		cost = 1
+		prerequisite = {
+		focus = USA_end_of_us_slavery_house_vote
+		}
+		prerequisite = {
+		focus = USA_end_of_runslave_law
+		}
+		prerequisite = {
+		focus = USA_end_of_us_slavery_senate_vote
+		}
+		available = {
+		CSA = {
+			surrender_progress > 0.35
+			}
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1865.1.21
+			has_idea = border_slavery
+			has_country_flag = 13th_senate_voted
+			has_country_flag = 13th_house_voted
+			has_country_flag = events_trigger
+		}
+		completion_reward = {
+			custom_effect_tooltip = 13th_a_desc_congress
+			swap_ideas = {
+			remove_idea = emancipation_proclamation
+			add_idea = 13th_a
+			}
+			remove_ideas = border_slavery
+			remove_ideas = american_slavery_usa
+			add_popularity = {
+				ideology = democratic
+					popularity = 0.15
+			}
+			hidden_effect = {
+				every_country = {
+				set_global_flag = CM_SE_opened
+				clear_array = CM_SE_event_id_array
+				add_to_array = { CM_SE_event_id_array = 14 }	
+				play_song = "The Battle Cry of Freedom"
+				}
+			}
+		}
+	}
+		focus = {
+		id = USA_freedmen_bureau
+		icon = GFX_goal_continuous_boost_freedom
+		x = 25
+		y = 8
+		cost = 5
+		prerequisite = {
+		focus = USA_end_of_us_slavery_13th_amd
+		}
+		available = {
+		CSA = {
+			surrender_progress > 0.5
+			}
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={
+			controls_state = 58 
+			controls_state = 37
+			}
+			date > 1865.3.3
+		}
+		completion_reward = {
+		add_stability = 0.05
+		add_ideas = freedmen_bureau
+		}
+	}
+	focus = {
+	id = USA_end_of_us_slavery_house_vote
+		icon = GFX_focus_house
+		x = 27
+		y = 6
+		cost = 1
+		prerequisite = {
+		focus = USA_emancipation_proclamation
+		}
+		available = {
+		CSA = {
+			surrender_progress > 0.35
+			}
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1865.1.1
+		}
+		completion_reward = {	
+		custom_effect_tooltip = act_of_congress
+		unlock_decision_tooltip = USA_end_of_us_slavery_house_vote_congress
+		add_political_power = 150
+		}
+	}
+	focus = {
+	id = USA_slavery_in_native
+		icon = GFX_focus_slavery_in_native
+		x = 27
+		y = 1
+		cost = 1
+		prerequisite = {
+		focus = USA_slavery_in_usa
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1861.3.4
+		}
+		completion_reward = {
+		add_political_power = 50
+		}
+	}
+	focus = {
+	id = USA_slavery_in_native_2
+		icon = GFX_focus_TUR_ratify_the_six_arrows
+		x = 27
+		y = 2
+		cost = 1
+		prerequisite = {
+		focus = USA_slavery_in_native
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1862.1.1
+		}
+		completion_reward = {
+		add_political_power = 100
+		add_stability = 0.05
+		}
+		}
+	focus = {
+	id = USA_slavery_in_native_3
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		x = 27
+		y = 3
+		cost = 5
+		prerequisite = {
+		focus = USA_slavery_in_native_2
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+			OR={controls_state = 58 controls_state = 37}
+			date > 1862.4.1
+		}
+		completion_reward = {
+		add_popularity = {
+		ideology = fascism
+    popularity = -0.1
+		}
+		add_popularity = {
+		ideology = democratic
+    popularity = 0.05
+		}
+		add_popularity = {
+		ideology = communism
+    popularity = 0.05
+		}
+		}
+	}
+}

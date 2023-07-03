@@ -1,0 +1,151 @@
+division_template = {
+	name = "CS Militia"
+	is_locked = yes
+
+	regiments = {
+		Militia = { x = 0 y = 0 }
+		Militia = { x = 0 y = 1 }
+		Militia = { x = 0 y = 2 }
+		Militia = { x = 0 y = 3 }
+	}
+	priority = 1
+}
+division_template = {
+	name = "Fort Guard"
+	is_locked = yes
+
+	regiments = {
+		fortguard = { x = 0 y = 0 }
+		fortguard = { x = 0 y = 1 }
+	}
+
+	priority = 1
+}
+Units = {
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Citizen Army"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Fort Guard"
+		location = 5300
+		division_template = "Fort Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Virginia Fort Guard"
+		location = 5300
+		division_template = "Fort Guard"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	}

@@ -1,0 +1,28 @@
+capital = 1
+set_research_slots = 0
+
+oob = "standard_templates"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+recruit_character = GRN_Avril_Lavigne
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = neutrality
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}
+
+add_ideas = {
+nobodys_home
+girlfriend
+bois_lie
+}

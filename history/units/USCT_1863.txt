@@ -1,0 +1,243 @@
+division_template = {
+	name = "United States Colored Troops Regiment 1863"
+	is_locked = yes
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
+		militia = { x = 0 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = {x=0 y=1}
+		artillery = {x=0 y=2}
+	}
+
+	priority = 1
+}
+division_template = {
+	name = "United States Colored Troops cavalry Regiment 1863"
+	is_locked = yes
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = {x=0 y=1}
+		artillery = {x=0 y=2}
+	}
+
+	priority = 1
+}
+Units ={
+	division = {
+		name = "1st USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "2nd USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "3rd USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "4th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "5th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+		division = {
+		name = "6th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "7th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "8th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "9th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "10th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "11st USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "12nd USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "13rd USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "14th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "15th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "16th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "17th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "18th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "19th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "20th USCT Regiment"
+		location = 7281
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "1st Kansas Colored Infantry Regiment"
+		location = 7562
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "2nd Kansas Colored Infantry Regiment"
+		location = 7562
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "31th USCT Infantry Regiment"
+		location = 7562
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "54th MA Infantry Regiment"
+		location = 6832
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "55th MA Infantry Regiment"
+		location = 6832
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+		division = {
+		name = "29th CT Infantry Regiment"
+		location = 1935
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "30th CT Infantry Regiment"
+		location = 1935
+		division_template = "United States Colored Troops Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "5th MA cavalry Regiment"
+		location = 6832
+		division_template = "United States Colored Troops cavalry Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "1st USCT cavalry Regiment"
+		location = 7281
+		division_template = "United States Colored Troops cavalry Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "2nd USCT cavalry Regiment"
+		location = 7281
+		division_template = "United States Colored Troops cavalry Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "3rd USCT cavalry Regiment"
+		location = 7281
+		division_template = "United States Colored Troops cavalry Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "4th USCT cavalry Regiment"
+		location = 7281
+		division_template = "United States Colored Troops cavalry Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "5th USCT cavalry Regiment"
+		location = 7281
+		division_template = "United States Colored Troops cavalry Regiment 1863"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "6th USCT cavalry Regiment"
+		location = 7281
+		division_template = "United States Colored Troops cavalry Regiment 1863"
+		start_experience_factor = 0.1
+	}
+}

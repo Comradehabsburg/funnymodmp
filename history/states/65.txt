@@ -1,0 +1,52 @@
+
+state={
+	id=65
+	name="STATE_65"
+	resources={
+		steel=8.000
+		chromium=2
+		aluminium=2
+		tungsten = 1
+		oil=0
+	}
+	history={
+		owner = USA
+		add_core_of = USA
+		add_core_of = TEN
+		victory_points = { 7774 60 }
+		buildings = {
+			4737 = {
+				naval_base = 10
+			}
+			infrastructure = 4
+			arms_factory = 3
+			industrial_complex = 5
+			3313 = {
+			bunker = 2
+			}
+			7759 = {
+			bunker = 2
+			}
+		}
+		victory_points = { 4737 25}
+		victory_points = { 2294 25}
+		victory_points = { 7812 1 }
+		victory_points = { 7718 25}
+		victory_points = { 7847 3 }
+		victory_points = { 3968 5 }
+		victory_points = { 5879 1 }
+		victory_points = { 7805 5 }
+		victory_points = { 7828 5 }
+		victory_points = { 7689 20 }
+		victory_points = { 7759 15 }
+		victory_points = { 3313 15 }
+	}
+
+	provinces={
+		611 678 947 1281 1304 1396 1451 1718 1994 2231 2272 2294 2528 2692 3053 3229 3240 3300 3312 3313 3359 3714 3968 4007 4181 4398 4407 4410 4577 4652 4699 4737 5168 5222 5337 5376 5618 5620 5665 5797 5855 5879 5914 7671 7689 7695 7696 7698 7718 7724 7733 7740 7746 7759 7767 7772 7774 7777 7785 7794 7795 7802 7804 7805 7812 7818 7821 7828 7830 7841 7847 7849 7854 7855 7883 14914 14917 
+	}
+	manpower=1109801
+	state_category=city
+	buildings_max_level_factor=1.000
+	local_supplies=25.0 
+}

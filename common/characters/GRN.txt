@@ -1,0 +1,18 @@
+characters={
+
+	GRN_Avril_Lavigne = {
+		name = GRN_Avril_Lavigne
+		portraits = {
+			civilian ={ 
+			large="gfx/leaders/GRN/Avril_Lavigne.dds"
+			}
+		}
+		country_leader={
+			ideology = despotism
+			desc = "GRN_Avril_Lavigne_desc"
+			traits = {
+			}
+			expire = "1865.4.14.1"
+		}
+	}
+}

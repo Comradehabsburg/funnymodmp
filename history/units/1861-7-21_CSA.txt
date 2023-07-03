@@ -1,0 +1,254 @@
+division_template = {
+	name = "PACS Volunteers"
+	is_locked = yes
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = {x=0 y=1}
+		artillery = { x = 0 y = 2 }
+	}
+
+	priority = 1
+}
+Units = {
+	division = {
+		name = "1st Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "2nd Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "3rd Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "4th Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "5th Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "6th Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "7th Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "8th Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "9th Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "10th Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "11st Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+		division = {
+		name = "1st Tennessee Infantry Regiment"
+		location = 7774
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "2nd Tennessee Infantry Regiment"
+		location = 7774
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "3rd Tennessee Infantry Regiment"
+		location = 7774
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "4th Tennessee Infantry Regiment"
+		location = 7774
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "5th Tennessee Infantry Regiment"
+		location = 7774
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+		division = {
+		name = "1st Arkansas Infantry Regiment"
+		location = 3562
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "2nd Arkansas Infantry Regiment"
+		location = 3562
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "3rd Arkansas Infantry Regiment"
+		location = 3562
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "1st North Carolina Infantry Regiment"
+		location = 7745
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "2nd North Carolina Infantry Regiment"
+		location = 7745
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "3rd North Carolina Infantry Regiment"
+		location = 7745
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "4th North Carolina Infantry Regiment"
+		location = 7745
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "5th North Carolina Infantry Regiment"
+		location = 7745
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "6th North Carolina Infantry Regiment"
+		location = 7745
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "7th North Carolina Infantry Regiment"
+		location = 7745
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+	division = {
+		name = "8th North Carolina Infantry Regiment"
+		location = 7745
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.65
+	}
+		division = {
+		name = "Richmond Guard"
+		location = 7467
+		division_template = "Fort Guard"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Richmond Guard"
+		location = 7467
+		division_template = "Fort Guard"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Richmond Guard"
+		location = 7467
+		division_template = "Fort Guard"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Richmond Guard"
+		location = 7467
+		division_template = "Fort Guard"
+		start_experience_factor = 0.2
+	}
+		division = {
+		name = "Newport News Guard"
+		location = 5300
+		division_template = "Fort Guard"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Newport News Guard"
+		location = 5300
+		division_template = "Fort Guard"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Newport News Guard"
+		location = 5300
+		division_template = "Fort Guard"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Newport News Guard"
+		location = 5300
+		division_template = "Fort Guard"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Pensacola News Guard"
+		location = 4142
+		division_template = "Fort Guard"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Pensacola News Guard"
+		location = 4142
+		division_template = "Fort Guard"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Fort Fisher Guard"
+		location = 14957
+		division_template = "Fort Guard"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Fort Wagner Guard"
+		location = 14958
+		division_template = "Fort Guard"
+		start_experience_factor = 0.2
+	}
+}

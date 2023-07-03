@@ -1,0 +1,198 @@
+###########################
+# Dakota War Events
+###########################
+
+add_namespace = dakota
+
+#sioux uprising
+country_event = {
+	id = dakota.1
+	title = dakota.1.t
+	desc = dakota.1.d
+		picture = GFX_report_event_generic_read_write
+
+	trigger = {
+	has_character = USA_abraham_lincoln
+	32 = {
+	is_controlled_by  = USA
+	}
+	NOT = {
+	country_exists = SIO
+	}
+	date > 1862.8.3
+	}
+	fire_only_once = yes
+	option = {
+	name = dakota.1.a
+	ai_chance = { factor = 1000 }
+	hidden_effect = {
+	create_corps_commander = {
+	name = "Henry Hastings Sibley"
+	picture = "Henry_Hastings_Sibley.dds"
+	traits = { trickster }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+	32 = {
+		add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 7009
+		}
+		add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 4325
+		}
+		}
+	add_victory_points = {
+	province = 7009
+	value = 2
+	}
+	add_victory_points = {
+	province = 4325
+	value = 1
+	}
+	add_victory_points = {
+	province = 100
+	value = 10
+	}
+	add_victory_points = {
+	province = 5466
+	value = 10
+	}
+	add_victory_points = {
+	province = 2081
+	value = 3
+	}
+		SIO = {
+		add_ideas = for_my_tribes
+		set_state_owner = 32
+		set_province_controller = 100
+		set_province_controller = 7037
+		set_province_controller = 5466
+		set_province_controller = 2081
+		set_province_controller = 7029
+		set_province_controller = 7047
+		set_province_controller = 5247
+		set_province_controller = 376
+		set_province_controller = 1528
+		set_province_controller = 498
+		set_province_controller = 1570
+		set_province_controller = 6953
+		set_province_controller = 2537
+		set_province_controller = 5745
+		set_province_controller = 2914
+		set_province_controller = 2409
+		set_province_controller = 3926
+		load_oob = sioux_tribes
+		}
+		USA = {
+		declare_war_on = {
+    target = SIO
+    type = annex_everything
+		}
+		add_political_power = 250
+		load_oob = minnesota_guard
+		}
+			every_country = {
+	set_global_flag = CM_SE_opened
+	clear_array = CM_SE_event_id_array
+	add_to_array = { CM_SE_event_id_array = 12 }	
+	play_song = dakota
+	}
+		}
+	}
+	option = {
+	name = dakota.1.b
+	hidden_effect = {
+	create_corps_commander = {
+	name = "Henry Hastings Sibley"
+	picture = "Henry_Hastings_Sibley.dds"
+	traits = { trickster }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+	add_victory_points = {
+	province = 7009
+	value = 2
+	}
+	add_victory_points = {
+	province = 4325
+	value = 1
+	}
+	add_victory_points = {
+	province = 100
+	value = 10
+	}
+	add_victory_points = {
+	province = 5466
+	value = 10
+	}
+	add_victory_points = {
+	province = 2081
+	value = 3
+	}
+	32 = {
+		add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 7009
+		}
+		add_building_construction = {
+    type = bunker
+    level = 1
+    instant_build = yes
+    province = 4325
+		}
+		}
+		SIO = { change_tag_from = ROOT }
+		SIO = {
+		add_ideas = for_my_tribes
+		set_state_owner = 32
+		set_province_controller = 100
+		set_province_controller = 7037
+		set_province_controller = 5466
+		set_province_controller = 2081
+		set_province_controller = 7029
+		set_province_controller = 7047
+		set_province_controller = 5247
+		set_province_controller = 376
+		set_province_controller = 1528
+		set_province_controller = 498
+		set_province_controller = 1570
+		set_province_controller = 6953
+		set_province_controller = 2537
+		set_province_controller = 5745
+		set_province_controller = 2914
+		set_province_controller = 2409
+		set_province_controller = 3926
+		load_oob = sioux_tribes
+		}
+		USA = {
+		declare_war_on = {
+    target = SIO
+    type = annex_everything
+		}
+		load_oob = minnesota_guard
+		add_political_power = 250
+		}
+		}
+			every_country = {
+	set_global_flag = CM_SE_opened
+	clear_array = CM_SE_event_id_array
+	add_to_array = { CM_SE_event_id_array = 12 }	
+	play_song = dakota
+	}
+	}
+}

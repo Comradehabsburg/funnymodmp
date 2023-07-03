@@ -1,0 +1,240 @@
+Units = {
+	division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "CSA Home Guard"
+		location = 7952
+		division_template = "CS Militia"
+		start_experience_factor = 0
+		start_equipment_factor = 1
+	}
+}

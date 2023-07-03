@@ -1,0 +1,215 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		example_trigger = yes
+#	}
+#
+
+#1864_election
+
+USA_compare_R_votes = {
+	custom_trigger_tooltip = {
+		tooltip = CT_who_win
+		check_variable = { var = usa.republican_votes_pool  value = usa.won_electoral_members compare = greater_than_or_equals }
+	}
+}
+
+USA_compare_D_votes = {
+	custom_trigger_tooltip = {
+		tooltip = CT_who_win
+		check_variable = { var = usa.democrats_votes_pool  value = usa.won_electoral_members compare = greater_than_or_equals }
+	}
+}
+
+USA_compare_MA_support = {
+	custom_trigger_tooltip = {
+		tooltip = MA_who_win
+		check_variable = { var = 43.lincoln_support value = 43.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_CT_support = {
+	custom_trigger_tooltip = {
+		tooltip = CT_who_win
+		check_variable = { var = 45.lincoln_support value = 45.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_maine_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 27.lincoln_support value = 27.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_RI_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 71.lincoln_support value = 71.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_VT_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 35.lincoln_support value = 35.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_NH_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 30.lincoln_support value = 30.mcclellan_support compare = greater_than }
+	}
+}
+
+USA_compare_NY_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 37.lincoln_support value = 37.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_PE_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 48.lincoln_support value = 48.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_NJ_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 50.lincoln_support value = 50.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_KY_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 69.lincoln_support value = 69.mcclellan_support compare = greater_than }
+	}
+}
+
+USA_compare_DE_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 81.lincoln_support value = 81.mcclellan_support compare = greater_than }
+	}
+}
+
+USA_compare_MO_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 67.lincoln_support value = 67.mcclellan_support compare = greater_than }
+	}
+}
+
+USA_compare_MD_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 58.lincoln_support value = 58.mcclellan_support compare = greater_than }
+	}
+}
+
+USA_compare_WVA_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 60.lincoln_support value = 60.mcclellan_support compare = greater_than }
+	}
+}
+
+USA_compare_IL_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 53.lincoln_support value = 53.mcclellan_support compare = greater_than }
+	}
+}
+
+USA_compare_OH_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 51.lincoln_support value = 51.mcclellan_support compare = greater_than }
+	}
+}
+
+USA_compare_IN_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 55.lincoln_support value = 55.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_MI_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 42.lincoln_support value = 42.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_WS_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 40.lincoln_support value = 40.mcclellan_support compare = greater_than }
+	}
+}
+
+USA_compare_MN_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 32.lincoln_support value = 32.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_KA_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 70.lincoln_support value = 70.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_IO_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 52.lincoln_support value = 52.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_CA_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 54.lincoln_support value = 54.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_OR_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 41.lincoln_support value = 41.mcclellan_support compare = greater_than }
+	}
+}
+USA_compare_NE_support = {
+	custom_trigger_tooltip = {
+		tooltip = maine_who_win
+		check_variable = { var = 59.lincoln_support value = 59.mcclellan_support compare = greater_than }
+	}
+}
+
+#Congress
+congress_low_support_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = congress_low_support_trigger_tt
+		check_variable = { var = senators_support value = quorum_low compare = greater_than_or_equals }
+		check_variable = { var = representatives_support value = 80 compare = greater_than_or_equals }
+	}
+}
+
+congress_medium_support_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = congress_medium_support_trigger_tt
+		check_variable = { var = senators_support value = quorum_medium compare = greater_than_or_equals }
+		check_variable = { var = representatives_support value = 150 compare = greater_than_or_equals }
+	}
+}
+
+congress_high_support_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = congress_high_support_trigger_tt
+		check_variable = { var = senators_support value = quorum_high compare = greater_than_or_equals }
+		check_variable = { var = representatives_support value = 200 compare = greater_than_or_equals }
+	}
+}

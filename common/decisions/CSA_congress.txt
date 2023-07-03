@@ -1,0 +1,389 @@
+CSA_congress = {
+		seize_some_trains_woo = { 
+
+		visible = { 
+			date > 1861.4.12
+		}
+		
+		available = {
+			has_equipment = { train_equipment < 200 }
+			has_tech = basic_train
+		}
+		
+		days_remove = 150
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_stability < 0.3
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 10
+			}
+			add_stability = -0.03
+			CSA_congress_small_opposition = yes
+		}
+	}
+	CSA_small_lobby_effort = {
+		icon = generic_political_discourse
+		available = {
+			OR = {
+				check_variable = { CSA_senators_support < CSA_senators_total }
+				check_variable = { CSA_representatives_support < CSA_representatives_total }
+			}
+			not = {
+				has_decision = CSA_medium_lobby_effort
+			}
+			OR = {
+				political_power_daily > 0.3
+				has_political_power > 10
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				CSA_congress_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				CSA_congress_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				CSA_congress_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		modifier = {
+			political_power_gain = -0.3
+		}
+		days_remove = 30
+		remove_effect = {
+			CSA_congress_small_support = yes
+		}
+	}
+	CSA_medium_lobby_effort = {
+		icon = generic_political_discourse
+		available = {
+			OR = {
+				check_variable = { CSA_senators_support < CSA_senators_total }
+				check_variable = { CSA_representatives_support < CSA_representatives_total }
+			}
+			not = {
+				has_decision = CSA_small_lobby_effort
+			}
+			OR = {
+				political_power_daily > 0.75
+				has_political_power > 35
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				CSA_CSA_congress_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				CSA_congress_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				CSA_congress_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_remove = 45
+		modifier = {
+			political_power_gain = -0.75
+		}
+		remove_effect = {
+			CSA_congress_medium_support = yes
+		}
+	}
+	CSA_special_measures = {
+		icon = ger_mefo_bills
+		available = {
+			OR = {
+				check_variable = { CSA_senators_support < CSA_senators_total }
+				check_variable = { CSA_representatives_support < CSA_representatives_total }
+			}
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				CSA_congress_low_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_re_enable = 90
+		complete_effect = {
+			CSA_congress_small_support = yes
+		}
+	}
+	CSA_amend_the_budget = {
+		icon = ger_mefo_bills
+		available = {
+			CSA_congress_medium_support_trigger = yes
+		}
+		visible = {has_government = democratic }
+		cost = 25
+		days_remove = 90
+		days_re_enable = 275
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA_congress_low_support_trigger = yes
+				factor = 0
+			}
+		}
+		modifier = { consumer_goods_factor = -0.05 }
+		remove_effect = {
+			CSA_congress_medium_opposition = yes
+		}
+	}
+	CSA_research_grants = {
+		icon = ger_mefo_bills
+		available = {
+			CSA_congress_medium_support_trigger = yes
+		}
+		visible = {has_government = democratic }
+		cost = 25
+		days_remove = 90
+		days_re_enable = 275
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA_congress_low_support_trigger = yes
+				factor = 0
+			}
+		}
+		modifier = { research_speed_factor = 0.08 }
+		remove_effect = {
+			CSA_congress_medium_opposition = yes
+		}
+	}
+	CSA_statehood_for_maryland = {
+		icon = infiltrate_state
+		available = {
+			political_power_daily > 0.1
+			controls_state = 58
+			date > 1861.7.30
+			CSA_maryland_check_large = yes
+			58 = {
+			is_claimed_by = CSA
+			}
+		}
+		visible = {
+			date > 1861.7.30
+			has_completed_focus = CSA_Provisional_Congress
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 58
+			}			
+		}
+		fire_only_once = yes
+		days_remove = 180
+		cost = 50
+		modifier = {
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			CSA_congress_add_state = yes
+			add_state_core = 58
+			remove_state_claim = 58
+		}
+	}
+		CSA_statehood_for_delaware = {
+		icon = infiltrate_state
+		available = {
+			political_power_daily > 0.1
+			controls_state = 81
+			date > 1861.7.30
+			CSA_delaware_check_large = yes
+			81 = {
+			is_claimed_by = CSA
+			}
+		}
+		visible = {
+			date > 1861.7.30
+			has_completed_focus = CSA_Provisional_Congress
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 81
+			}			
+		}
+		fire_only_once = yes
+		days_remove = 180
+		cost = 50
+		modifier = {
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			CSA_congress_add_state = yes
+			add_state_core = 81
+			remove_state_claim = 81
+		}
+	}
+		CSA_statehood_for_missouri = {
+		icon = infiltrate_state
+		available = {
+			political_power_daily > 0.1
+			controls_state = 67
+			date > 1861.7.30
+			CSA_missouri_check_large = yes
+			67 = {
+			is_claimed_by = CSA
+			}
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 67
+			}			
+		}
+		visible = {
+			date > 1861.7.30
+			has_completed_focus = CSA_Provisional_Congress
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		days_remove = 180
+		cost = 50
+		modifier = {
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			CSA_congress_add_state = yes
+			add_state_core = 67
+			remove_state_claim = 67
+		}
+	}
+		CSA_statehood_for_kentucky = {
+		icon = infiltrate_state
+		visible = {
+		available = {
+			controls_state = 69
+			date > 1861.7.30
+			CSA_kentucky_check_large = yes
+			69 = {
+			is_claimed_by = CSA
+			}
+		}
+		}
+		available = {
+			controls_state = 69
+			date > 1861.7.30
+			CSA_kentucky_check_large = yes
+			69 = {
+			is_claimed_by = CSA
+			}
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 69
+			}			
+		}
+		fire_only_once = yes
+		days_remove = 180
+		cost = 50
+		modifier = {
+			political_power_gain = -0.1
+		}
+		remove_effect = {
+			CSA_congress_add_state = yes
+			add_state_core = 69
+			remove_state_claim = 69
+		}
+	}
+	CSA_partisan = {
+		icon = infiltrate_state
+		available = {
+			political_power_daily > 0.1
+			date > 1862.4.21
+			CSA_congress_medium_support_trigger = yes
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		fire_only_once = yes
+		days_remove = 90
+		cost = 50
+		remove_effect = {
+			add_ideas = partisan_ranger_act
+		}
+	}
+	Confederate_State_militia={
+	icon = oppression
+	available = {
+		date > 1861.3.4
+		has_completed_focus = CSA_civil_war
+		has_completed_focus = CSA_Provisional_Congress
+		CSA_congress_medium_support_trigger = yes
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = CSA_civil_war
+		has_completed_focus = CSA_Provisional_Congress
+		}
+		days_re_enable = 120
+		cost = 50
+		ai_will_do = {
+			factor = 200
+		}
+		days_re_enable = 90
+		complete_effect = {
+		war_support_factor = -0.02
+		random_owned_state = {
+		limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+					state_population > 20000
+					NOT = {
+					state = 82
+					state = 83
+					state = 84
+					state = 85
+					state = 86
+					}
+				}
+			create_unit = {
+			division = "name = \"Confederate Infantry Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Infantry Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Infantry Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Infantry Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+		}
+		}
+	}
+}

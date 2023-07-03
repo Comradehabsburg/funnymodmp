@@ -1,0 +1,346 @@
+division_template = {
+	name = "Infantry Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = {x=0 y=1}
+		artillery = {x=0 y=2}
+	}
+
+	priority = 1
+}
+division_template = {
+	name = "US Army Regular Regiment"
+	is_locked = yes
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = {x=0 y=1}
+		artillery = {x=0 y=2}
+	}
+
+	priority = 1
+}
+division_template = {
+	name = "US Army Artillery Regiment"
+	is_locked = yes
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		artillery_brigade = { x = 0 y = 3 }
+		artillery_brigade = { x = 0 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = { x = 0 y = 1}
+		artillery = {x=0 y=2}
+}
+	priority = 1
+}
+division_template = {
+	name = "US Army Cavalry Regiment"
+	is_locked = yes
+
+	regiments = {
+		Cavalry = { x = 0 y = 0 }
+		Cavalry = { x = 0 y = 1 }
+		Cavalry = { x = 0 y = 2 }
+		Cavalry = { x = 0 y = 3 }
+		Cavalry = { x = 0 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = { x = 0 y = 1}
+		artillery = {x=0 y=2}
+}
+	priority = 1
+}
+division_template = {
+	name = "Union volunteers"
+	is_locked = yes
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Union Cavalry volunteers"
+	is_locked = yes
+
+	regiments = {
+		Cavalry = { x = 0 y = 0 }
+		Cavalry = { x = 0 y = 1 }
+		Cavalry = { x = 0 y = 2 }
+		Cavalry = { x = 0 y = 3 }
+	}
+	support = {
+	artillery = {x=0 y=0}
+	}
+	priority = 1
+}
+
+Units ={
+	division = {
+		name = "1st Infantry Regiment (United States)"
+		location = 2100
+		division_template = "US Army Regular Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "2nd Infantry Regiment (United States)"
+		location = 7299
+		division_template = "US Army Regular Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "3rd U.S. Infantry Regiment (The Old Guard)"
+		location = 7924
+		division_template = "US Army Regular Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "4th U.S. Infantry Regiment"
+		location = 3891
+		division_template = "US Army Regular Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "5th U.S. Infantry Regiment"
+		location = 2349
+		division_template = "US Army Regular Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "6th U.S. Infantry Regiment"
+		location = 7201
+		division_template = "US Army Regular Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "7th U.S. Infantry Regiment"
+		location = 7270
+		division_template = "US Army Regular Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "8th U.S. Infantry Regiment"
+		location = 2816
+		division_template = "US Army Regular Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "9th U.S. Infantry Regiment"
+		location = 7649
+		division_template = "US Army Regular Regiment"
+		start_experience_factor = 1
+	}
+  division = {
+		name = "10th U.S. Infantry Regiment"
+		location = 3442
+		division_template = "US Army Regular Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "1st Regiment of Artillery"
+		location = 7270
+		division_template = "US Army Artillery Regiment"
+		start_experience_factor = 1
+	}
+			division = {
+		name = "2nd Regiment of Artillery"
+		location = 7233
+		division_template = "US Army Artillery Regiment"
+		start_experience_factor = 1
+	}
+			division = {
+		name = "3rd Regiment of Artillery"
+		location = 7270
+		division_template = "US Army Artillery Regiment"
+		start_experience_factor = 1
+	}
+			division = {
+		name = "4th Regiment of Artillery"
+		location = 7270
+		division_template = "US Army Artillery Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "1st Cavalry Regiment (United States)"
+		location = 7943
+		division_template = "US Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "2nd Cavalry Regiment (United States)"
+		location = 3037
+		division_template = "US Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "3rd Cavalry Regiment (United States)"
+		location = 7870
+		division_template = "US Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "4th Cavalry Regiment (United States)"
+		location = 2580
+		division_template = "US Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "5th Cavalry Regiment (United States)"
+		location = 8069
+		division_template = "US Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "6st Cavalry Regiment (United States)"
+		location = 7943
+		division_template = "US Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "7nd Cavalry Regiment (United States)"
+		location = 3037
+		division_template = "US Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "8rd Cavalry Regiment (United States)"
+		location = 7870
+		division_template = "US Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "9th Cavalry Regiment (United States)"
+		location = 2580
+		division_template = "US Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "10th Cavalry Regiment (United States)"
+		location = 8069
+		division_template = "US Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+	fleet = {
+	name = "USS Norfolk Fleet"			
+		naval_base = 4694 # Manhattan
+		task_force = {		
+		name = "Norfolk Fleets"	
+		location = 4694
+		ship = { name = "USS Pennsylvania" definition = battleship start_experience_factor = 0.0 equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "NO Class" } } }
+		ship = { name = "USS Delaware" definition = battleship start_experience_factor = 0.0 equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "NO Class" } } }
+		ship = { name = "USS New York" definition = battleship start_experience_factor = 0.0 equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "NO Class" } } }
+		ship = { name = "USS Columbus" definition = battleship start_experience_factor = 0.0 equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "NO Class" } } }
+		ship = { name = "USS United States" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "USS LIGHT Class" } } }
+		ship = { name = "USS Columbia" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "USS LIGHT Class" } } }
+		ship = { name = "USS Raritan" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "USS LIGHT Class" } } }
+		ship = { name = "USS Plymouth" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "USS Des" } } }
+		ship = { name = "USS Germantown" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "USS Des" } } }
+		ship = { name = "USS Dolphin" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "USS Des" } } }
+		ship = { name = "USS Merrimack" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "USS Des" } } }
+		ship = { name = "USS Pensacola" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "USS Des" } } }
+		}
+}
+}
+
+
+
+instant_effect = {
+    add_equipment_production = {
+        equipment = {
+	    type = horse_mules_1860
+	    creator = "USA"
+	}
+	requested_factories = 15
+	progress = 0.25
+	efficiency = 60
+    }
+	add_equipment_production = {
+     equipment = {
+	    type = train_equipment_1
+	    creator = "USA"
+	}
+	requested_factories = 5
+	progress = 0.15
+	efficiency = 50
+    }
+		    add_equipment_production = {
+        equipment = {
+	    type = infantry_equipment_1
+	    creator = "USA"
+	}
+	requested_factories = 20
+	progress = 0.25
+	efficiency = 58
+    }
+		    add_equipment_production = {
+        equipment = {
+	    type = support_equipment_1
+	    creator = "USA"
+	}
+	requested_factories = 15
+	progress = 0.25
+	efficiency = 38
+    }
+		    add_equipment_production = {
+        equipment = {
+	    type = artillery_equipment_1
+	    creator = "USA"
+	}
+	requested_factories = 15
+	progress = 0.25
+	efficiency = 40
+    }
+		   add_equipment_production = {
+      equipment = {
+	    type = ship_hull_light_1
+	    creator = "USA"
+			version_name = "USS Des"
+			
+	}
+	name = "USS"
+	requested_factories = 15
+	progress = 0.6
+	amount = 30
+	}
+	    add_equipment_production = {
+      equipment = {
+	    type = ship_hull_cruiser_2
+	    creator = "USA"
+			version_name = "USS LIGHT Class"	
+	}
+	name = "USS"
+	requested_factories = 5
+	progress = 0.5
+	amount = 4
+    }
+}

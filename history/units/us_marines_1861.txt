@@ -1,0 +1,20 @@
+Units ={
+	division = {
+		name = "US Marines"
+		location = 7281
+		division_template = "US Marine Corps Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "US Marines"
+		location = 7281
+		division_template = "US Marine Corps Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "US Marines"
+		location = 7281
+		division_template = "US Marine Corps Regiment"
+		start_experience_factor = 1
+	}
+}

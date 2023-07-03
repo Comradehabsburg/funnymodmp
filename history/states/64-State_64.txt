@@ -1,0 +1,70 @@
+
+state={
+	id=64
+	name="STATE_64"
+		resources={
+		steel= 12 # was: 24
+		oil=4
+		rubber = 20
+	}
+	history={
+		owner = USA
+		add_core_of = USA
+		add_core_of = VIR
+		victory_points = { 3077 1 }
+		victory_points = { 7327 1 }
+		victory_points = { 14966 1 }
+		victory_points = { 7523 5 }
+		victory_points = { 14959 1 }
+		victory_points = { 7302 2 }
+		victory_points = { 7467 130 }
+		victory_points = { 4272 10 }
+		victory_points = { 4701 20 }
+		victory_points = { 7322 10 }
+		victory_points = { 7280 20 }
+		victory_points = { 7397 3}
+		victory_points = { 2012 30}
+		victory_points = { 5300 5}
+		victory_points = { 4694 20}
+		victory_points = { 179 5}
+		victory_points = { 898 10}
+		victory_points = { 7572 15}
+		victory_points = { 3847 5}
+		victory_points = { 7441 1}
+		victory_points = { 287 10}
+		victory_points = { 5863 1}
+		victory_points = { 2587 10}
+		victory_points = { 7421 5}
+		victory_points = { 7338 5}
+		victory_points = { 1182 5}
+		buildings = {
+			infrastructure = 5
+			arms_factory = 4
+			industrial_complex = 7
+			dockyard = 3
+			7467 = {
+				bunker = 3
+			}
+			5300 = {
+				naval_base = 5
+				coastal_bunker = 1
+			}
+			4694 = {
+				naval_base = 8
+				coastal_bunker = 1
+			}
+			179 = {
+				naval_base = 3
+				coastal_bunker = 1
+			}
+		}
+	}
+
+	provinces={
+  14970 14969 14968 14967 14966 14962 14961 14959 14960 179 184 287 358 855 898 1108 1182 1250 1444 1979 2012 2072 2237 2552 2587 2685 2763 3077 3181 3449 3509 3625 3847 3907 4272 4273 4616 4626 4666 4694 4701 4705 4748 4841 4883  5063 5187 5284 5289 5300 5407 5784 5799 5860 5863 5961 7280 7302 7304 7322 7327 7338 7353 7366 7373 7374 7387 7388 7397 7404 7420 7421 7423 7425 7441 7443 7461 7467 7469 7485 7502 7517 7523 7535 7539 7551 7559 7572 7574 7577 7582 7597 7599 7600 7604 7616 7633 14906 14912 
+	}
+	manpower=1219630
+	state_category=large_city
+	buildings_max_level_factor=1.000
+	local_supplies=35.0 
+}

@@ -1,0 +1,692 @@
+USA_congress = {
+
+		seize_some_trains_woo_usa = { 
+
+		visible = { 
+			date > 1861.4.12
+		}
+		
+		available = {
+			has_equipment = { train_equipment < 200 }
+			has_tech = basic_train
+		}
+		
+		days_remove = 120
+		days_re_enable = 60
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_stability < 0.3
+				factor = 0
+			}
+		}
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 10
+			}
+			add_stability = -0.03
+			USA_congress_small_opposition = yes
+		}
+	}
+	USA_small_lobby_effort = {
+		icon = generic_political_discourse
+		available = {
+			OR = {
+				check_variable = { senators_support < senators_total }
+				check_variable = { representatives_support < representatives_total }
+			}
+			not = {
+				has_decision = USA_medium_lobby_effort
+			}
+			OR = {
+				political_power_daily > 0.3
+				has_political_power > 10
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				congress_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		modifier = {
+			political_power_gain = -0.3
+		}
+		days_remove = 30
+		remove_effect = {
+			USA_congress_small_support = yes
+		}
+	}
+	USA_medium_lobby_effort = {
+		icon = generic_political_discourse
+		available = {
+			OR = {
+				check_variable = { senators_support < senators_total }
+				check_variable = { representatives_support < representatives_total }
+			}
+			not = {
+				has_decision = USA_small_lobby_effort
+			}
+			OR = {
+				political_power_daily > 0.75
+				has_political_power > 35
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				congress_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_remove = 45
+		modifier = {
+			political_power_gain = -0.75
+		}
+		remove_effect = {
+			USA_congress_medium_support = yes
+		}
+	}
+	USA_special_measures = {
+		icon = ger_mefo_bills
+		available = {
+			OR = {
+				check_variable = { senators_support < senators_total }
+				check_variable = { representatives_support < representatives_total }
+			}
+		}
+		cost = 50
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_re_enable = 90
+		complete_effect = {
+			USA_congress_small_support = yes
+		}
+	}
+	USA_amend_the_budget = {
+		icon = ger_mefo_bills
+		available = {
+			congress_medium_support_trigger = yes
+		}
+		visible = {has_government = democratic }
+		cost = 25
+		days_remove = 90
+		days_re_enable = 275
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0
+			}
+		}
+		modifier = { consumer_goods_factor = -0.05 }
+		remove_effect = {
+			USA_congress_medium_opposition = yes
+		}
+	}
+	USA_research_grants = {
+		icon = ger_mefo_bills
+		available = {
+			congress_medium_support_trigger = yes
+		}
+		visible = {has_government = democratic }
+		cost = 25
+		days_remove = 90
+		days_re_enable = 275
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0
+			}
+		}
+		modifier = { research_speed_factor = 0.08 }
+		remove_effect = {
+			USA_congress_medium_opposition = yes
+		}
+	}
+
+
+	Union_State_militia={
+	icon = oppression
+	available = {
+		date > 1861.3.4
+		has_completed_focus = USA_caling_75000
+		congress_medium_support_trigger = yes
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = USA_caling_75000
+		}
+		days_re_enable = 120
+		cost = 50
+		ai_will_do = {
+			factor = 200
+		}
+		complete_effect = {
+		war_support_factor = -0.01
+		random_owned_state = {
+		limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+					state_population > 20000
+					NOT = {
+					state = 82
+					state = 83
+					state = 84
+					state = 85
+					state = 86
+					}
+				}
+			create_unit = {
+			division = "name = \"Union Infantry Volunteers Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Union Infantry Volunteers Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Union Infantry Volunteers Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"Union Infantry Volunteers Regiment\" division_template = \"Union volunteers\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = USA
+					}
+				}
+			}
+		}
+		#focus laws need to be pass through congress
+		USA_confiscation_act_1861_congress = {
+		icon = generic_political_discourse
+		
+		available = {
+		date > 1861.3.4
+		has_completed_focus = USA_confiscation_act_1861
+		congress_medium_support_trigger = yes
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = USA_confiscation_act_1861
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		fire_only_once = yes
+		
+		cost = 30
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 200
+		}
+		remove_effect = {
+		add_ideas = confiscation_act_1861
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.03
+		}
+		add_popularity = {
+		ideology = communism
+		popularity = 0.05
+		}
+		58 = {
+		add_manpower = -500
+		}
+		69 = {
+		add_manpower = -500
+		}
+		67 = {
+		add_manpower = -500
+		}
+		add_political_power = -100
+		}	
+	}
+	USA_confiscation_act_1862_congress = {
+		icon = generic_political_discourse
+		
+		available = {
+		date > 1861.3.4
+		has_completed_focus = USA_confiscation_act_1861
+		has_completed_focus = USA_confiscation_act_1862
+		congress_medium_support_trigger = yes
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = USA_confiscation_act_1861
+		has_completed_focus = USA_confiscation_act_1862
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		fire_only_once = yes
+		
+		cost = 30
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 200
+		}
+		remove_effect = {
+		swap_ideas = {
+		remove_idea = confiscation_act_1861
+		add_idea = confiscation_act_1862
+		}
+		add_popularity = {
+		ideology = democratic
+		popularity = 0.02
+		}
+		add_popularity = {
+		ideology = communism
+		popularity = 0.03
+		}
+		}	
+	}
+	USA_enrollment_act_congress = {
+		icon = generic_political_discourse
+		
+		available = {
+		date > 1861.3.4
+		has_completed_focus = USA_enrollment_act
+		congress_medium_support_trigger = yes
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = USA_enrollment_act
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		fire_only_once = yes
+		
+		cost = 30
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 1000
+		}
+		remove_effect = {
+		add_political_power = -50
+		add_ideas = enrollment_act
+		}	
+	}
+	USA_enrollment_act_2_congress = {
+		icon = generic_political_discourse
+		
+		available = {
+		date > 1861.3.4
+		has_completed_focus = USA_enrollment_act_2
+		congress_medium_support_trigger = yes
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = USA_enrollment_act_2
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		fire_only_once = yes
+		
+		cost = 30
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 1000
+		}
+		remove_effect = {
+		add_political_power = -50
+		swap_ideas = {
+		remove_idea = enrollment_act
+		add_idea = enrollment_act_1864
+		}
+		}	
+	}
+	USA_enrollment_act_1865_congress = {
+		icon = generic_political_discourse
+		
+		available = {
+		date > 1861.3.4
+		has_completed_focus = USA_enrollment_act_1865
+		congress_medium_support_trigger = yes
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = USA_enrollment_act_1865
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		fire_only_once = yes
+		
+		cost = 30
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 1000
+		}
+		remove_effect = {
+		add_political_power = -50
+		swap_ideas = {
+		remove_idea = enrollment_act_1864
+		add_idea = enrollment_act_1865
+		}
+		}	
+	}
+	USA_slavery_in_washington_congress = {
+		icon = generic_political_discourse
+		
+		available = {
+		date > 1861.3.4
+		has_completed_focus = USA_slavery_in_washington
+		congress_medium_support_trigger = yes
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = USA_slavery_in_washington
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		fire_only_once = yes
+		
+		cost = 20
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 1000
+		}
+		remove_effect = {
+		58 = {
+		add_manpower = 3185
+		}
+		add_political_power = -50
+		}	
+	}
+	USA_end_of_runslave_law_congress = {
+		icon = generic_political_discourse
+		
+		available = {
+		date > 1861.3.4
+		has_completed_focus = USA_slavery_in_washington
+		congress_medium_support_trigger = yes
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = USA_slavery_in_washington
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		fire_only_once = yes
+		
+		cost = 20
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 1000
+		}
+		remove_effect = {
+		remove_ideas = runaway_slave_law
+		}	
+	}
+	USA_end_of_us_slavery_senate_vote_congress = {
+		icon = generic_political_discourse
+		
+		available = {
+		date > 1861.3.4
+		has_completed_focus = USA_end_of_us_slavery_senate_vote
+		congress_medium_support_trigger = yes
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = USA_end_of_us_slavery_senate_vote
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		fire_only_once = yes
+		
+		cost = 40
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10000
+		}
+		remove_effect = {
+		add_political_power = 150
+		set_country_flag = 13th_senate_voted
+		}	
+	}
+	USA_end_of_us_slavery_house_vote_congress = {
+		icon = generic_political_discourse
+		
+		available = {
+		date > 1861.3.4
+		has_completed_focus = USA_end_of_us_slavery_house_vote
+		congress_medium_support_trigger = yes
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = USA_end_of_us_slavery_house_vote
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		fire_only_once = yes
+		
+		cost = 40
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10000
+		}
+		remove_effect = {
+		add_political_power = 150
+		set_country_flag = 13th_house_voted
+		}	
+	}
+	USA_homestead_act_1862_congress = {
+		icon = generic_political_discourse
+		
+		available = {
+		date > 1861.3.4
+		has_completed_focus = USA_homestead_act_1862
+		congress_medium_support_trigger = yes
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = USA_homestead_act_1862
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		fire_only_once = yes
+		
+		cost = 20
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10000
+		}
+		remove_effect = {
+		add_political_power = 120
+		add_ideas = homestead_1862
+		add_tech_bonus = {
+		bonus = 0.2
+		uses = 2
+		category = industry
+		}
+		}	
+	}
+	USA_pacific_railroad_acts_congress = {
+		icon = generic_political_discourse
+		
+		available = {
+		date > 1861.3.4
+		has_completed_focus = USA_pacific_railroad_acts
+		congress_medium_support_trigger = yes
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		visible = {
+		date > 1861.3.4
+		has_completed_focus = USA_pacific_railroad_acts
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		}
+		fire_only_once = yes
+		
+		cost = 20
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 10000
+		}
+		remove_effect = {
+		custom_effect_tooltip = RAILROAD_PA
+		add_research_slot = 1
+		37 = {
+		add_building_construction = {
+    type = infrastructure
+    level = 3
+    instant_build = yes
+		}
+		}
+		51 = {
+		add_building_construction = {
+    type = infrastructure
+    level = 3
+    instant_build = yes
+		}
+		}
+		53 = {
+		add_building_construction = {
+    type = infrastructure
+    level = 3
+    instant_build = yes
+		}
+		}
+		52 = {
+		add_building_construction = {
+    type = infrastructure
+    level = 3
+    instant_build = yes
+		}
+		}
+		49 = {
+		add_building_construction = {
+    type = infrastructure
+    level = 3
+    instant_build = yes
+		}
+		}
+		63 = {
+		add_building_construction = {
+    type = infrastructure
+    level = 3
+    instant_build = yes
+		}
+		}
+		59 = {
+		add_building_construction = {
+    type = infrastructure
+    level = 3
+    instant_build = yes
+		}
+		}
+		54 = {
+		add_building_construction = {
+    type = infrastructure
+    level = 3
+    instant_build = yes
+		}
+		}
+		build_railway = {
+		level = 1
+		build_only_on_allied = yes
+		controller_priority = {
+    base = 1
+		}
+		fallback = no
+		path = { 4541 1867 7330 7349 5329 2021 7377 7367 3042 7346 4673 3686 4319 7344 7359 3934 2494 7361 1998 5463 318 7357 5537 3826 5890 3212 7333 7371 1479 4663 7414 4854 499 5769 1830 5484 3637 7370 2998 7396 3262 2149 5230 273 1714 3704 175 4106 }
+		start_province = 4541
+		target_province = 4106
+			}
+		}	
+	}
+	habeas_corpus_banned_in_congress = {
+		icon = generic_political_discourse
+		
+		available = {
+		date > 1861.3.4
+		has_war_with = CSA
+		congress_medium_support_trigger = yes
+		has_completed_focus = USA_37th_congress
+		has_completed_focus = USA_caling_75000
+		NOT = {
+		has_completed_focus = USA_habeas_corpus_in_maryland
+		has_completed_focus = USA_habeas_corpus_in_rebels
+		}
+		}
+		visible = {
+		date > 1861.3.4
+		has_war_with = CSA
+		has_completed_focus = USA_caling_75000
+		has_completed_focus = USA_37th_congress
+		NOT = {
+		has_completed_focus = USA_habeas_corpus_in_maryland
+		has_completed_focus = USA_habeas_corpus_in_rebels
+		}
+		}
+		fire_only_once = yes
+		
+		cost = 50
+		days_remove = 15
+		
+		ai_will_do = {
+			factor = 200
+		}
+		remove_effect = {
+		set_country_flag = habeas_corpus_banned_in_congress
+		}	
+	}
+}

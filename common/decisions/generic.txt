@@ -1,0 +1,458 @@
+##RENAME##
+rename_decisions = {
+
+fort_sumter_rename = {
+		visible = { 
+		OR = {
+			TAG = CSA
+			TAG = USA
+		}
+		OR = {
+		NOT = {
+		has_country_flag = sumter_csa_renamed
+		has_country_flag = sumter_usa_renamed
+		}
+		}
+		controls_state = 82
+		date > 1861.4.15
+		has_war_with = CSA has_war_with = USA 
+	}
+		
+		available = {
+		OR = {
+			TAG = CSA
+			TAG = USA
+		}
+			controls_state = 82
+		OR = {
+		NOT = {
+		has_country_flag = sumter_csa_renamed
+		has_country_flag = sumter_usa_renamed
+		}
+	}
+	date > 1861.4.15
+}
+		
+		days_remove = 5
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			add_political_power = 65
+			if = {
+			limit = {
+			TAG = CSA
+			}
+			set_country_flag = sumter_csa_renamed
+			clr_country_flag = sumter_usa_renamed
+			set_province_name = {
+			id = 14954
+			name = csa_sumter
+			}
+			}
+			if = {
+			limit = {
+			TAG = USA
+			}
+			set_country_flag = sumter_usa_renamed
+			clr_country_flag = sumter_csa_renamed
+			set_province_name = {
+			id = 14954
+			name = usa_sumter
+			}
+			}			
+		}
+	}
+	fort_wagner_rename = {
+		visible = { 
+		OR = {
+			TAG = CSA
+			TAG = USA
+		}
+		OR = {
+		NOT = {
+		has_country_flag = wagner_csa_renamed
+		has_country_flag = wagner_usa_renamed
+		}
+		}
+		controls_state = 86
+		date > 1861.4.15
+		has_war_with = CSA has_war_with = USA 
+	}
+		
+	available = {
+		OR = {
+			TAG = CSA
+			TAG = USA
+		}
+		controls_state = 86
+		OR = {
+		NOT = {
+		has_country_flag = wagner_csa_renamed
+		has_country_flag = wagner_usa_renamed
+		}
+	}
+	date > 1861.4.15
+}
+		
+		days_remove = 5
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			add_political_power = 65
+			if = {
+			limit = {
+			TAG = CSA
+			}
+			set_country_flag = wagner_csa_renamed
+			clr_country_flag = wagner_usa_renamed
+			set_province_name = {
+			id = 14958
+			name = csa_wagner
+			}
+			}
+			if = {
+			limit = {
+			TAG = USA
+			}
+			set_country_flag = wagner_usa_renamed
+			clr_country_flag = wagner_csa_renamed
+			set_province_name = {
+			id = 14958
+			name = usa_wagner
+			}
+			}			
+		}
+	}
+		fort_fisher_rename = {
+		visible = { 
+		OR = {
+			TAG = CSA
+			TAG = USA
+		}
+		OR = {
+		NOT = {
+		has_country_flag = fisher_csa_renamed
+		has_country_flag = fisher_usa_renamed
+		}
+		}
+		controls_state = 85
+		date > 1861.4.15
+		has_war_with = CSA 
+		has_war_with = USA 
+	}
+		
+	available = {
+		OR = {
+			TAG = CSA
+			TAG = USA
+		}
+		controls_state = 85
+		OR = {
+		NOT = {
+		has_country_flag = fisher_csa_renamed
+		has_country_flag = fisher_usa_renamed
+		}
+	}
+	date > 1861.4.15
+}
+		
+		days_remove = 5
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			add_political_power = 65
+			if = {
+			limit = {
+			TAG = CSA
+			}
+			set_country_flag = fisher_csa_renamed
+			clr_country_flag = fisher_usa_renamed
+			set_province_name = {
+			id = 14957
+			name = csa_fisher
+			}
+			}
+			if = {
+			limit = {
+			TAG = USA
+			}
+			set_country_flag = fisher_usa_renamed
+			clr_country_flag = fisher_csa_renamed
+			set_province_name = {
+			id = 14957
+			name = usa_fisher
+			}
+			}			
+		}
+	}
+		fort_pickens_rename = {
+		visible = { 
+		OR = {
+			TAG = CSA
+			TAG = USA
+		}
+		OR = {
+		NOT = {
+		has_country_flag = pickens_csa_renamed
+		has_country_flag = pickens_usa_renamed
+		}
+		}
+		controls_state = 84
+		date > 1861.4.15
+		has_war_with = CSA has_war_with = USA 
+	}
+		
+	available = {
+		OR = {
+			TAG = CSA
+			TAG = USA
+		}
+		controls_state = 84
+		OR = {
+		NOT = {
+		has_country_flag = pickens_csa_renamed
+		has_country_flag = pickens_usa_renamed
+		}
+	}
+	date > 1861.4.15
+}
+		
+		days_remove = 5
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			add_political_power = 65
+			if = {
+			limit = {
+			TAG = CSA
+			}
+			set_country_flag = pickens_csa_renamed
+			clr_country_flag = pickens_usa_renamed
+			set_province_name = {
+			id = 14956
+			name = csa_pickens
+			}
+			}
+			if = {
+			limit = {
+			TAG = USA
+			}
+			set_country_flag = pickens_usa_renamed
+			clr_country_flag = pickens_csa_renamed
+			set_province_name = {
+			id = 14956
+			name = usa_pickens
+			}
+			}			
+		}
+	}
+	fort_monroe_rename = {
+		visible = { 
+		OR = {
+			TAG = CSA
+			TAG = USA
+		}
+		OR = {
+		NOT = {
+		has_country_flag = monroe_csa_renamed
+		has_country_flag = monroe_usa_renamed
+		}
+		}
+		controls_state = 83
+		date > 1861.4.15
+		OR = {
+		has_war_with = CSA 
+		has_war_with = USA 
+		}
+	}
+		
+	available = {
+		OR = {
+			TAG = CSA
+			TAG = USA
+		}
+		controls_state = 83
+		OR = {
+		NOT = {
+		has_country_flag = monroe_csa_renamed
+		has_country_flag = monroe_usa_renamed
+		}
+	}
+	date > 1861.4.15
+}
+		
+		days_remove = 5
+		cost = 0
+		
+		ai_will_do = {
+			factor = 10
+		}
+		complete_effect = {
+			add_political_power = 65
+			if = {
+			limit = {
+			TAG = CSA
+			}
+			set_country_flag = monroe_csa_renamed
+			clr_country_flag = monroe_usa_renamed
+			set_province_name = {
+			id = 14955
+			name = csa_monroe
+			}
+			}
+			if = {
+			limit = {
+			TAG = USA
+			}
+			set_country_flag = monroe_usa_renamed
+			clr_country_flag = monroe_csa_renamed
+			set_province_name = {
+			id = 14955
+			name = usa_monroe
+			}
+			}			
+		}
+	}
+}
+
+civil_war_in_indians_decisions = {
+	direct_involvement_in_indian_territory = {
+	
+		visible = { 
+		OR = {
+			TAG = USA
+		}
+		OR = {
+			country_exists = OKL
+		}
+		OR = { 
+			has_war_with = CSA
+		} 
+		}
+		
+		available = {
+		OR = {
+			TAG = USA
+		}
+		OR = {
+			country_exists = OKL
+		}
+		OR = {
+			has_war_with = CSA
+		} 
+		date > 1862.6.1
+		OR = {
+			INT = {
+				surrender_progress > 0.70
+			}
+			OR = {
+				NOT = {
+				country_exists = INT
+				}
+			}
+		}
+	}
+		
+		cost = 50
+		
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_stability < 0.3
+				factor = 1
+			}
+				modifier = {
+				has_stability < 0.5
+				factor = 5
+			}
+		}
+		complete_effect = {
+		if = {
+			limit = {
+				TAG = USA
+				}
+				USA = {
+				declare_war_on = {
+				target = OKL
+				type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	annex_of_indian_territory = {
+		visible = { 
+		OR = {
+			TAG = CSA
+		}
+		OR = {
+			country_exists = OKL
+		}
+		OR = {
+			has_war_with = USA
+		} 
+		}
+		
+		available = {
+		OR = {
+			TAG = CSA
+		}
+		OR = {
+			country_exists = OKL
+		}
+		OR = {
+			has_war_with = USA
+			NOT = {
+			has_war = yes
+			}
+		}
+			date > 1862.1.1
+			OR = {
+			OKL = {
+			has_full_control_of_state = 87
+			has_full_control_of_state = 61
+			}
+			}
+		}
+			ai_will_do = {
+			factor = 1
+			modifier = {
+				has_stability < 0.3
+				factor = 1
+			}
+				modifier = {
+				has_stability < 0.5
+				factor = 5
+			}
+			modifier = {
+				has_war = no 
+				factor = 100
+			}
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					TAG = CSA
+					}	
+					annex_country = {
+					target = OKL
+					transfer_troops = yes
+					}
+				}	
+			}
+		}
+	}

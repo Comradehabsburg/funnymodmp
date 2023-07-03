@@ -1,0 +1,64 @@
+division_template = {
+	name = "Tribe Militia"
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+	}
+	priority = 1
+}
+Units ={
+	division = {
+		name = "Creek Unionist Guard"
+		location = 4601
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Creek Unionist Guard"
+		location = 7811
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.25
+	}
+	division = {
+		name = "Creek Unionist Guard"
+		location = 2826
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Cherokee Unionist Guard"
+		location = 7869
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Cherokee Unionist Guard"
+		location = 7869
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Cherokee Unionist Guard"
+		location = 1493
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Shawnee Unionist Guard"
+		location = 7845
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Seminole Unionist Guard"
+		location = 7811
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.1
+	}
+	division = {
+		name = "Seminole Unionist Guard"
+		location = 1917
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.1
+	}
+}

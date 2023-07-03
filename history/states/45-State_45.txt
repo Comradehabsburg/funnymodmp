@@ -1,0 +1,25 @@
+state={
+	id=45
+	name="STATE_45"
+	history={
+		owner = USA
+		add_core_of = USA
+		victory_points = { 1935 5 }
+		victory_points = { 6948 3 }
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			6948 = {
+				naval_base = 3
+			}
+		}
+	}
+
+	provinces={
+		1768 1935 3868 4831 5087 6900 6948 7008 
+	}
+	manpower=460147
+	state_category=city
+	buildings_max_level_factor=1.000
+	local_supplies=25.0 
+}

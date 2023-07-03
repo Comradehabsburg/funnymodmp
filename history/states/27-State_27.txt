@@ -1,0 +1,39 @@
+
+state={
+	id=27
+	name="STATE_27"
+	resources={
+		steel=4.000
+		chromium=0
+		aluminium=0
+		tungsten = 0 
+		oil=0
+	}
+	history={
+		owner = USA
+		add_core_of = USA
+
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 2
+			6736 = {
+				naval_base = 3
+			}
+			5426 = {
+				naval_base = 3
+			}
+		}
+		victory_points = { 6736 3 }
+		victory_points = { 4441 1 }
+		victory_points = { 5426 1 }
+	}
+
+	provinces={
+		437 966 1043 2159 2403 2605 2950 2987 3062 3243 3474 3553 3621 3775 3778 3822 3879 3993 4441 4580 4590 5037 5126 5426 5450 5472 5789 6489 6498 6511 6530 6552 6559 6576 6589 6590 6595 6602 6610 6617 6619 6630 6642 6643 6663 6664 6671 6672 6684 6690 6736 14870 
+	}
+	manpower=628279
+	state_category=large_town
+	buildings_max_level_factor=1.000
+	local_supplies=15.0 
+}

@@ -1,0 +1,85 @@
+division_template = {
+	name = "Tribe Militia"
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 1 y = 0 }
+		militia = { x = 2 y = 0 }
+		militia = { x = 3 y = 0 }
+	}
+	priority = 1
+}
+Units ={
+	division = {
+		name = "Creek Confederate Guard"
+		location = 1809
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Creek Confederate Guard"
+		location = 1809
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Osage Confederate Guard"
+		location = 7882
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Shawnee Confederate Guard"
+		location = 7882
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Cherokee Confederate Guard"
+		location = 7845
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Cherokee Confederate Guard"
+		location = 7845
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Cherokee Confederate Guard"
+		location = 7845
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Cherokee Confederate Guard"
+		location = 7845
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Chickasaw Confederate Guard"
+		location = 658
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Choctaw Confederate Guard"
+		location = 3696
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Choctaw Confederate Guard"
+		location = 3696
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.0
+	}
+	division = {
+		name = "Choctaw Confederate Guard"
+		location = 3096
+		division_template = "Tribe Militia"
+		start_experience_factor = 0.0
+	}
+}

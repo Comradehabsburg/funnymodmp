@@ -1,0 +1,23 @@
+
+state={
+	id=87
+	name="STATE_87"
+
+	history={
+		owner = USA
+		add_core_of = USA
+		add_core_of = CSA
+		add_core_of = OKL
+		add_core_of = INT
+		set_demilitarized_zone = yes
+		victory_points = { 2702 1 }
+	}
+
+	provinces={
+		2702
+	}
+	manpower=50
+	buildings_max_level_factor=1.000
+	state_category=enclave
+	local_supplies=0.000
+}

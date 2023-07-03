@@ -1,0 +1,24 @@
+state={
+	id=82
+	name="STATE_82"
+	history={
+		owner = USA
+		add_core_of = USA
+		add_core_of = CSA
+		buildings = {
+			14954= {
+				bunker = 1
+				coastal_bunker = 1
+			}
+		}
+		victory_points = { 14954 20 }
+	}
+
+	provinces={
+		14954
+	}
+	manpower=1
+	state_category=enclave
+	buildings_max_level_factor=1.000
+	local_supplies=1.0 
+}

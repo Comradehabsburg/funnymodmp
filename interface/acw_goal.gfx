@@ -1,0 +1,250 @@
+spriteTypes = {	
+
+	#Decisions
+	spriteType = {
+		name = "GFX_decision_usa_1864_election"
+		texturefile = "gfx/interface/decisions/usa_1864_election.dds"
+	}
+	#Goals
+	SpriteType = {
+	name = "GFX_focus_75000"
+	texturefile = "gfx/interface/goals/focus_75000.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_lincoln_1861"
+	texturefile = "gfx/interface/goals/focus_lincoln_1861.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_focus_buchanan_1860"
+	texturefile = "gfx/interface/goals/focus_buchanan_1860.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_for_the_union"
+	texturefile = "gfx/interface/goals/focus_for_the_union.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_fort_sumter"
+	texturefile = "gfx/interface/goals/focus_fort_sumter.dds"			
+	}
+
+	SpriteType = {
+	name = "GFX_focus_anderson"
+	texturefile = "gfx/interface/goals/focus_anderson.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_us_congress"
+	texturefile = "gfx/interface/goals/focus_us_congress.dds"			
+	}
+	SpriteType = {
+	name = "GFX_virginia"
+	texturefile = "gfx/interface/goals/focus_virginia_upper_south.dds"			
+	}
+
+	
+		SpriteType = {
+	name = "GFX_focus_regular_army"
+	texturefile = "gfx/interface/goals/focus_regular_army.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_USACE"
+	texturefile = "gfx/interface/goals/focus_USACE.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_usa_ocd"
+	texturefile = "gfx/interface/goals/focus_usa_ocd.dds"			
+	}
+
+	
+		SpriteType = {
+	name = "GFX_focus_USA_ADG"
+	texturefile = "gfx/interface/goals/focus_USA_ADG.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_regular_1865"
+	texturefile = "gfx/interface/goals/focus_regular_1865.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_volunteers_1861"
+	texturefile = "gfx/interface/goals/focus_volunteers_1861.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_USA_people_army"
+	texturefile = "gfx/interface/goals/focus_USA_people_army.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_slave_issue"
+	texturefile = "gfx/interface/goals/focus_slave_issue.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_border_state_slavery"
+	texturefile = "gfx/interface/goals/focus_border_state_slavery.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_slavery_in_washington"
+	texturefile = "gfx/interface/goals/focus_slavery_in_washington.dds"			
+	}	
+	SpriteType = {
+	name = "GFX_focus_border_remove_slavery"
+	texturefile = "gfx/interface/goals/focus_border_remove_slavery.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_CSA"
+	texturefile = "gfx/interface/goals/focus_CSA.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_contraband"
+	texturefile = "gfx/interface/goals/focus_contraband.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_EMP"
+	texturefile = "gfx/interface/goals/focus_EMP.dds"			
+	}
+	
+		SpriteType = {
+	name = "GFX_focus_USCT"
+	texturefile = "gfx/interface/goals/focus_USCT.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_native_guard"
+	texturefile = "gfx/interface/goals/focus_native_guard.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_end_of_fugitive"
+	texturefile = "gfx/interface/goals/focus_end_of_fugitive.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_senate"
+	texturefile = "gfx/interface/goals/focus_senate.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_house"
+	texturefile = "gfx/interface/goals/focus_house.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_slavery_in_native"
+	texturefile = "gfx/interface/goals/focus_slavery_in_native.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_homestead"
+	texturefile = "gfx/interface/goals/focus_homestead.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_democrats_won"
+	texturefile = "gfx/interface/goals/focus_democrats_won.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_CSA_southern_sprite"
+	texturefile = "gfx/interface/goals/focus_CSA_southern_sprite.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_csa_seal"
+	texturefile = "gfx/interface/goals/focus_csa_seal.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_csa_11_starsl"
+	texturefile = "gfx/interface/goals/focus_csa_11_starsl.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_csa_13_stars"
+	texturefile = "gfx/interface/goals/focus_csa_13_stars.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_csa_blood"
+	texturefile = "gfx/interface/goals/focus_csa_blood.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_csa_white_flag"
+	texturefile = "gfx/interface/goals/focus_csa_white_flag.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_attack_usa"
+	texturefile = "gfx/interface/goals/focus_attack_usa.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_army_of_the_free"
+	texturefile = "gfx/interface/goals/focus_army_of_the_free.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_choctaw_and_chickasaws"
+	texturefile = "gfx/interface/goals/focus_choctaw_and_chickasaws.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_mexico"
+	texturefile = "gfx/interface/goals/focus_mexico.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_CSA_1862_Conscription_act"
+	texturefile = "gfx/interface/goals/focus_CSA_1862_Conscription_act.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_CSA_1862_Conscription_act_9_27"
+	texturefile = "gfx/interface/goals/focus_CSA_1862_Conscription_act_9_27.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_CSA_1864_conscription"
+	texturefile = "gfx/interface/goals/focus_CSA_1864_conscription.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_CSMC"
+	texturefile = "gfx/interface/goals/focus_CSMC.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_twenty_negro_law"
+	texturefile = "gfx/interface/goals/focus_twenty_negro_law.dds"			
+	}
+		SpriteType = {
+	name = "GFX_focus_local_weapon"
+	texturefile = "gfx/interface/goals/focus_local_weapon.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_jeff"
+	texturefile = "gfx/interface/goals/focus_jeff.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_dixie"
+	texturefile = "gfx/interface/goals/focus_dixie.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_bonnie_blue_flag"
+	texturefile = "gfx/interface/goals/focus_bonnie_blue_flag.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_god_save_the_south"
+	texturefile = "gfx/interface/goals/focus_god_save_the_south.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_csa_congress"
+	texturefile = "gfx/interface/goals/focus_csa_congress.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_kentucky_and_missouri"
+	texturefile = "gfx/interface/goals/focus_kentucky_and_missouri.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_arizonia_and_new_mexico"
+	texturefile = "gfx/interface/goals/focus_arizonia_and_new_mexico.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_csct"
+	texturefile = "gfx/interface/goals/focus_csct.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_csa_slavery_reform"
+	texturefile = "gfx/interface/goals/focus_csa_slavery_reform.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_slavery_abolished"
+	texturefile = "gfx/interface/goals/focus_slavery_abolished.dds"			
+	}
+	SpriteType = {
+	name = "GFX_focus_slavery_forever"
+	texturefile = "gfx/interface/goals/focus_slavery_forever.dds"			
+	}
+	
+	
+	
+	
+	
+}

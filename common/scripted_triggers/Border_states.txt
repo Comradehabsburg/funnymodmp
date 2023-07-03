@@ -1,0 +1,342 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		exampel_trigger = yes
+#	}
+#
+#############
+CSA_maryland_check_low = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_low_tt
+			check_variable = { 
+			var = 58.csa_support 
+			value = 33
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_maryland_check_medium = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_medium_tt
+			check_variable = { 
+			var = 58.csa_support 
+			value = 50
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_maryland_check_large = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_large_tt
+			check_variable = { 
+			var = 58.csa_support 
+			value = 75
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_kentucky_check_low = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_low_tt
+			check_variable = { 
+			var = 69.csa_support 
+			value = 33
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_kentucky_check_medium = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_medium_tt
+			check_variable = { 
+			var = 69.csa_support 
+			value = 50
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_kentucky_check_large = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_large_tt
+			check_variable = { 
+			var = 69.csa_support 
+			value = 75
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_delaware_check_low = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_low_tt
+			check_variable = { 
+			var = 81.csa_support 
+			value = 33
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_delaware_check_medium = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_medium_tt
+			check_variable = { 
+			var = 81.csa_support 
+			value = 50
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_delaware_check_large = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_large_tt
+			check_variable = { 
+			var = 81.csa_support 
+			value = 75
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_wva_check_low = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_low_tt
+			check_variable = { 
+			var = 60.csa_support 
+			value = 33
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_wva_check_medium = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_medium_tt
+			check_variable = { 
+			var = 60.csa_support 
+			value = 50
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_wva_check_large = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_large_tt
+			check_variable = { 
+			var = 60.csa_support 
+			value = 75
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_missouri_check_low = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_low_tt
+			check_variable = { 
+			var = 67.csa_support 
+			value = 33
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_missouri_check_medium = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_medium_tt
+			check_variable = { 
+			var = 67.csa_support 
+			value = 50
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+CSA_missouri_check_large = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_check_large_tt
+			check_variable = { 
+			var = 67.csa_support 
+			value = 75
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+###################
+##USA
+###################
+USA_missouri_check_medium = {
+	custom_trigger_tooltip = {
+		tooltip = MO_check_medium_tt
+			check_variable = { 
+			var = 67.usa_support 
+			value = 70
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+USA_maryland_check_medium = {
+	custom_trigger_tooltip = {
+		tooltip = ML_check_medium_tt
+			check_variable = { 
+			var = 58.usa_support 
+			value = 70
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+USA_kentucky_check_medium = {
+	custom_trigger_tooltip = {
+		tooltip = KY_check_medium_tt
+			check_variable = { 
+			var = 67.usa_support 
+			value = 70
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+USA_delaware_check_medium = {
+	custom_trigger_tooltip = {
+		tooltip = DL_check_medium_tt
+			check_variable = { 
+			var = 81.usa_support 
+			value = 70
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+USA_wva_check_medium = {
+	custom_trigger_tooltip = {
+		tooltip = WVA_check_medium_tt
+			check_variable = { 
+			var = 60.usa_support 
+			value = 70
+			compare = greater_than_or_equals 
+	}
+	}
+
+}
+#Limit
+USA_missouri_check_limit = {
+	custom_trigger_tooltip = {
+		tooltip = check_limit_tt
+			check_variable = { 
+			var = 67.usa_support 
+			value = 100
+			compare = less_than 
+	}
+	}
+
+}
+USA_maryland_check_limit = {
+	custom_trigger_tooltip = {
+		tooltip = check_limit_tt
+			check_variable = { 
+			var = 58.usa_support 
+			value = 100
+			compare = less_than 
+	}
+	}
+}
+USA_kentucky_check_limit = {
+	custom_trigger_tooltip = {
+		tooltip = check_limit_tt
+			check_variable = { 
+			var = 67.usa_support 
+			value = 100
+			compare = less_than 
+	}
+	}
+}
+USA_delaware_check_limit = {
+	custom_trigger_tooltip = {
+		tooltip = check_limit_tt
+			check_variable = { 
+			var = 81.usa_support 
+			value = 100
+			compare = less_than 
+	}
+	}
+}
+USA_wva_check_limit = {
+	custom_trigger_tooltip = {
+		tooltip = check_limit_tt
+			check_variable = { 
+			var = 60.usa_support 
+			value = 100
+			compare = less_than 
+	}
+	}
+}
+#Limit
+CSA_missouri_check_limit = {
+	custom_trigger_tooltip = {
+		tooltip = check_limit_tt
+			check_variable = { 
+			var = 67.csa_support 
+			value = 100
+			compare = less_than 
+	}
+	}
+
+}
+CSA_maryland_check_limit = {
+	custom_trigger_tooltip = {
+		tooltip = check_limit_tt
+			check_variable = { 
+			var = 58.csa_support 
+			value = 100
+			compare = less_than 
+	}
+	}
+}
+CSA_kentucky_check_limit = {
+	custom_trigger_tooltip = {
+		tooltip = check_limit_tt
+			check_variable = { 
+			var = 67.csa_support 
+			value = 100
+			compare = less_than 
+	}
+	}
+}
+CSA_delaware_check_limit = {
+	custom_trigger_tooltip = {
+		tooltip = check_limit_tt
+			check_variable = { 
+			var = 81.csa_support 
+			value = 100
+			compare = less_than 
+	}
+	}
+}
+CSA_wva_check_limit = {
+	custom_trigger_tooltip = {
+		tooltip = check_limit_tt
+			check_variable = { 
+			var = 60.csa_support 
+			value = 100
+			compare = less_than 
+	}
+	}
+}

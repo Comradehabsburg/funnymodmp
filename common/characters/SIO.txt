@@ -1,0 +1,49 @@
+characters={
+
+SIO_little_crow={
+		name=SIO_little_crow
+		portraits={
+			civilian={
+				large="gfx/leaders/SIO/sioux_little_crow.dds"
+			}
+		}
+		country_leader={
+			ideology=despotism
+			desc = "Little_crow_desc"
+			traits={ }
+			expire="1861.3.4.1"
+		}
+	}
+	SIO_Wambditanka={
+		name=SIO_Wambditanka
+		portraits={
+			army={
+				large="gfx/leaders/SIO/Wambditanka.dds"
+			}
+		}
+		corps_commander={
+			traits = {   war_hero commando }
+			skill = 2
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	SIO_shakopee={
+		name=SIO_shakopee
+		portraits={
+			army={
+				large="gfx/leaders/SIO/shakopee.dds"
+			}
+		}
+		corps_commander={
+			traits = {  old_guard commando harsh_leader }
+			skill = 3
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+}

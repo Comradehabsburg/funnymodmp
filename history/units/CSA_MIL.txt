@@ -1,0 +1,352 @@
+Units = {
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7467
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 7774
+		division_template = "CS Militia"
+		start_experience_factor = 0.1
+		start_equipment_factor = 1
+	}
+}

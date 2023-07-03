@@ -1,0 +1,407 @@
+division_template = {
+	name = "South Carolina NG"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 0 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = {x=0 y=1}
+	}
+	priority = 1
+}
+division_template = {
+	name = "PACS Volunteers"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		artillery_brigade = { x = 0 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = {x=0 y=1}
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "PACS Cavalry"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 0 y = 3 }
+		artillery_brigade = { x = 0 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = {x=0 y=1}
+	}
+
+	priority = 1
+}
+
+division_template = {
+	name = "CS Militia"
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "PACS Artillery"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		artillery_brigade = { x = 0 y = 1 }
+		artillery_brigade = { x = 0 y = 2 }
+		artillery_brigade = { x = 0 y = 3 }
+		artillery_brigade = { x = 0 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = {x=0 y=1}
+	}
+
+	priority = 1
+}
+
+Units = {
+division = {
+		name = "1st Alabama Infantry Regiment"
+		location = 8103
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "3rd Alabama Infantry Regiment"
+		location = 8103
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+	}
+		division = {
+		name = "1st Florida Infantry Regiment"
+		location = 984
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "2nd Florida Infantry Regiment"
+		location = 984
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+	}
+		division = {
+		name = "1st Florida Cavalry Regiment"
+		location = 4142
+		division_template = "PACS Cavalry"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "1st Georgia Infantry Regiment"
+		location = 5853
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "5th Georgia Infantry Regiment"
+		location = 5853
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+	}
+		division = {
+		name = "9th Georgia Infantry Regiment"
+		location = 5853
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "6th Georgia Infantry Regiment"
+		location = 5853
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+	}
+  division = {
+		name = "1st Louisiana Regulars Infantry Regiment"
+		location = 2132
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "Pointe Coupee Artillery"
+		location = 2132
+		division_template = "PACS Artillery"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+			division = {
+		name = "1st Mississippi Infantry Regiment"
+		location = 5084
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+	}
+	division = {
+		name = "Jeff Davis Cavalry Legion"
+		location = 5084
+		division_template = "PACS Cavalry"
+		start_experience_factor = 0.5
+	}
+		division = {
+		name = "1st South Carolina Rifle Regiment"
+		location = 30
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "2nd South Carolina Infantry Regiment"
+		location = 30
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "Pee Dee Light Artillery"
+		location = 30
+		division_template = "PACS Artillery"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "1st Texas Infantry Regiment"
+		location = 8385
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+	}
+		division = {
+		name = "2nd Texas Infantry Regiment"
+		location = 8385
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+	}
+		division = {
+		name = "4th Texas Infantry Regiment"
+		location = 8385
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+	}
+		division = {
+		name = "1st (McCulloch's) Mounted Riflemen"
+		location = 8385
+		division_template = "PACS Cavalry"
+		start_experience_factor = 0.2
+	}
+		division = {
+		name = "3rd Texas Cavalry Regiment"
+		location = 8385
+		division_template = "PACS Cavalry"
+		start_experience_factor = 0.2
+	}
+		division = {
+		name = "10th Texas Field Battery"
+		location = 8385
+		division_template = "PACS Artillery"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "Douglas's Texas Battery"
+		location = 8385
+		division_template = "PACS Artillery"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "State Militia"
+		location = 8103
+		division_template = "CS Militia"
+		start_experience_factor = 0.0 start_equipment_factor = 1
+	}
+	division = {
+		name = "South Carolina NG"
+		location = 7952
+		division_template = "South Carolina NG"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "South Carolina NG"
+		location = 7952
+		division_template = "South Carolina NG"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "South Carolina NG"
+		location = 7952
+		division_template = "South Carolina NG"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "South Carolina NG"
+		location = 7952
+		division_template = "South Carolina NG"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "South Carolina NG"
+		location = 7952
+		division_template = "South Carolina NG"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "South Carolina NG"
+		location = 7952
+		division_template = "South Carolina NG"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+}

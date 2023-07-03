@@ -1,0 +1,497 @@
+####################
+# ACW:Endings
+####################
+
+add_namespace = end
+
+#History Ending-Lincoln(Killed),EMP,13TH
+country_event = {
+ id = end.1
+ title = end.1.t
+ desc = end.1.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1865.7.1
+	NOT = {
+	country_exists = CSA
+	}
+	NOT = {
+	has_character = USA_abraham_lincoln
+	}
+	has_completed_focus = USA_emancipation_proclamation
+	has_completed_focus = USA_end_of_us_slavery_13th_amd
+	has_idea = 13th_a
+	has_country_flag = REP_Wins_1864
+	has_country_flag = assassination_of_lincoln
+	has_country_leader = { ruling_only = yes character = USA_andrew_johnson }
+	}
+	option = {
+	name = end.1.a
+	ai_chance = { factor = 100}
+ }
+}
+#Alternative Ending-2nd term of lincoln,emp,13th
+country_event = {
+ id = end.2
+ title = end.2.t
+ desc = end.2.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	NOT = {
+	country_exists = CSA
+	}
+	date > 1865.7.1
+	has_completed_focus = USA_emancipation_proclamation
+	has_completed_focus = USA_end_of_us_slavery_13th_amd
+	has_idea = 13th_a
+	has_country_flag = REP_Wins_1864
+	has_country_leader = { ruling_only = yes character = USA_abraham_lincoln }
+	}
+	option = {
+	name = end.2.a
+	ai_chance = { factor = 100}
+ }
+}
+#Alternative Ending-lincoln,emp,13th,but lose union
+country_event = {
+ id = end.3
+ title = end.3.t
+ desc = end.3.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	country_exists = CSA
+	NOT = {
+	has_war_with = CSA
+	}
+	date > 1865.7.1
+	has_completed_focus = USA_emancipation_proclamation
+	has_completed_focus = USA_end_of_us_slavery_13th_amd
+	has_idea = 13th_a
+	has_country_flag = REP_Wins_1864
+	has_country_leader = { ruling_only = yes character = USA_abraham_lincoln }
+	}
+	option = {
+	name = end.3.a
+	ai_chance = { factor = 100}
+ }
+}
+#Alternative Ending-lincoln,alive,only emp keep union
+country_event = {
+ id = end.4
+ title = end.4.t
+ desc = end.4.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	NOT = {
+	country_exists = CSA
+	}
+	date > 1865.7.1
+	has_completed_focus = USA_emancipation_proclamation
+	has_idea = emancipation_proclamation
+	NOT = {
+	has_completed_focus = USA_end_of_us_slavery_13th_amd
+	has_idea = 13th_a
+	}
+	has_country_flag = REP_Wins_1864
+	has_country_leader = { ruling_only = yes character = USA_abraham_lincoln }
+	}
+	option = {
+	name = end.4.a
+	ai_chance = { factor = 100}
+ }
+}
+#Alternative Ending-lincoln,alive nothing to do with slavery
+country_event = {
+ id = end.5
+ title = end.5.t
+ desc = end.5.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	NOT = {
+	country_exists = CSA
+	}
+	date > 1865.7.1
+	NOT = {
+	has_completed_focus = USA_emancipation_proclamation
+	}
+	has_country_flag = REP_Wins_1864
+	has_country_leader = { ruling_only = yes character = USA_abraham_lincoln }
+	}
+	option = {
+	name = end.5.a
+	ai_chance = { factor = 100}
+ }
+}
+#Alternative Ending-Johnson,only emp
+country_event = {
+ id = end.6
+ title = end.6.t
+ desc = end.6.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1865.7.1
+	NOT = {
+	country_exists = CSA
+	}
+	NOT = {
+	has_character = USA_abraham_lincoln
+	}
+	has_completed_focus = USA_emancipation_proclamation
+	has_country_flag = REP_Wins_1864
+	has_country_flag = assassination_of_lincoln
+	has_country_leader = { ruling_only = yes character = USA_andrew_johnson }
+	}
+	option = {
+	name = end.6.a
+	ai_chance = { factor = 100}
+ }
+}
+#Alternative Ending-Johnson,nothing to do with slavery
+country_event = {
+ id = end.7
+ title = end.7.t
+ desc = end.7.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1865.7.1
+	NOT = {
+	country_exists = CSA
+	}
+	NOT = {
+	has_character = USA_abraham_lincoln
+	}
+	NOT = {
+	has_completed_focus = USA_emancipation_proclamation
+	has_idea = emancipation_proclamation
+	has_idea = 13th_a
+	}
+	has_country_flag = REP_Wins_1864
+	has_country_flag = assassination_of_lincoln
+	has_country_leader = { ruling_only = yes character = USA_andrew_johnson }
+	}
+	option = {
+	name = end.7.a
+	ai_chance = { factor = 100}
+ }
+}
+#Alternative Ending-Lincoln,emp,lose union
+country_event = {
+ id = end.8
+ title = end.8.t
+ desc = end.8.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1865.7.1
+	country_exists = CSA
+	NOT = {
+	has_war_with = CSA
+	}
+	has_character = USA_abraham_lincoln
+	NOT = {
+	has_completed_focus = USA_end_of_us_slavery_13th_amd
+	has_idea = 13th_a
+	}
+	has_completed_focus = USA_emancipation_proclamation
+	has_idea = emancipation_proclamation
+	has_country_flag = REP_Wins_1864
+	has_country_leader = { ruling_only = yes character = USA_abraham_lincoln }
+	}
+	option = {
+	name = end.8.a
+	ai_chance = { factor = 100}
+ }
+}
+#Alternative Ending-Lincoln,lose union nothing to do with slavery
+country_event = {
+ id = end.9
+ title = end.9.t
+ desc = end.9.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1865.7.1
+	country_exists = CSA
+	NOT = {
+	has_war_with = CSA
+	}
+	has_character = USA_abraham_lincoln
+	NOT = {
+	has_completed_focus = USA_end_of_us_slavery_13th_amd
+	has_idea = 13th_a
+	has_completed_focus = USA_emancipation_proclamation
+	has_idea = emancipation_proclamation
+	}
+	has_country_flag = REP_Wins_1864
+	has_country_leader = { ruling_only = yes character = USA_abraham_lincoln }
+	}
+	option = {
+	name = end.9.a
+	ai_chance = { factor = 100}
+ }
+}
+#Weird Ending-Johnson,lose union,but 13th and emp
+country_event = {
+ id = end.10
+ title = end.10.t
+ desc = end.10.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1865.7.1
+	country_exists = CSA
+	NOT = {
+	has_war_with = CSA
+	}
+	has_character = USA_andrew_johnson
+	has_completed_focus = USA_end_of_us_slavery_13th_amd
+	has_idea = 13th_a
+	has_completed_focus = USA_emancipation_proclamation
+	has_idea = emancipation_proclamation
+	has_country_flag = REP_Wins_1864
+	has_country_leader = { ruling_only = yes character = USA_andrew_johnson }
+	}
+	option = {
+	name = end.10.a
+	ai_chance = { factor = 100}
+ }
+}
+#Weird Ending-Johnson,lose union,but only emp
+country_event = {
+ id = end.11
+ title = end.11.t
+ desc = end.11.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1865.7.1
+	country_exists = CSA
+	NOT = {
+	has_war_with = CSA
+	}
+	has_character = USA_andrew_johnson
+	NOT = {
+	has_completed_focus = USA_end_of_us_slavery_13th_amd
+	has_idea = 13th_a
+	}
+	has_completed_focus = USA_emancipation_proclamation
+	has_idea = emancipation_proclamation
+	has_country_flag = REP_Wins_1864
+	has_country_leader = { ruling_only = yes character = USA_andrew_johnson }
+	}
+	option = {
+	name = end.11.a
+	ai_chance = { factor = 100}
+ }
+}
+#Weird Ending-Johnson,lose union nothing slavery
+country_event = {
+ id = end.12
+ title = end.12.t
+ desc = end.12.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1865.7.1
+	country_exists = CSA
+	NOT = {
+	has_war_with = CSA
+	}
+	has_character = USA_andrew_johnson
+	NOT = {
+	has_completed_focus = USA_end_of_us_slavery_13th_amd
+	has_idea = 13th_a
+	has_completed_focus = USA_emancipation_proclamation
+	has_idea = emancipation_proclamation
+	}
+	has_country_flag = REP_Wins_1864
+	has_country_leader = { ruling_only = yes character = USA_andrew_johnson }
+	}
+	option = {
+	name = end.12.a
+	ai_chance = { factor = 100}
+ }
+}
+#Democrats Ending - Mcclellan,the hope of nation(nothing slavery)
+country_event = {
+ id = end.13
+ title = end.13.t
+ desc = end.13.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1865.7.1
+	NOT = {
+	country_exists = CSA
+	}
+	has_character = USA_GEORGE_McClellan
+	NOT = {
+	has_completed_focus = USA_end_of_us_slavery_13th_amd
+	has_idea = 13th_a
+	has_completed_focus = USA_emancipation_proclamation
+	has_idea = emancipation_proclamation
+	}
+	has_country_flag = Democrat_Wins_1864_2
+	has_country_leader = { ruling_only = yes character = USA_GEORGE_McClellan }
+	}
+	option = {
+	name = end.13.a
+	ai_chance = { factor = 100}
+ }
+}
+#Democrats Ending - Mcclellan,but lincoln save usa from slavery
+country_event = {
+ id = end.14
+ title = end.14.t
+ desc = end.14.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1865.7.1
+	NOT = {
+	country_exists = CSA
+	}
+	has_character = USA_GEORGE_McClellan
+	has_completed_focus = USA_end_of_us_slavery_13th_amd
+	has_idea = 13th_a
+	has_completed_focus = USA_emancipation_proclamation
+	has_idea = emancipation_proclamation
+	has_country_flag = Democrat_Wins_1864_2
+	has_country_leader = { ruling_only = yes character = USA_GEORGE_McClellan }
+	}
+	option = {
+	name = end.14.a
+	ai_chance = { factor = 100}
+ }
+}
+#Democrats Ending - Mcclellan,but lincoln emp
+country_event = {
+ id = end.15
+ title = end.15.t
+ desc = end.15.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1865.7.1
+	NOT = {
+	country_exists = CSA
+	}
+	has_character = USA_GEORGE_McClellan
+	NOT = {
+	has_completed_focus = USA_end_of_us_slavery_13th_amd
+	has_idea = 13th_a
+	}
+	has_completed_focus = USA_emancipation_proclamation
+	has_idea = emancipation_proclamation
+	has_country_flag = Democrat_Wins_1864_2
+	has_country_leader = { ruling_only = yes character = USA_GEORGE_McClellan }
+	}
+	option = {
+	name = end.15.a
+	ai_chance = { factor = 100}
+ }
+}
+#Democrats Ending - Mcclellan,let CSA alive
+country_event = {
+ id = end.16
+ title = end.16.t
+ desc = end.16.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1865.7.1
+	country_exists = CSA
+	NOT = {
+	has_war_with = CSA
+	}
+	has_character = USA_GEORGE_McClellan
+	has_country_flag = Democrat_Wins_1864_2
+	has_country_leader = { ruling_only = yes character = USA_GEORGE_McClellan }
+	}
+	option = {
+	name = end.16.a
+	ai_chance = { factor = 100}
+ }
+}
+#90 days remove CSA-Lincoln won
+country_event = {
+ id = end.17
+ title = end.17.t
+ desc = end.17.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date < 1862.1.1
+	NOT = {
+	country_exists = CSA
+	}
+	NOT = {
+	has_war_with = CSA
+	}
+	controls_state = 64
+	controls_state = 39
+	has_country_leader = { ruling_only = yes character = USA_abraham_lincoln }
+	}
+	option = {
+	name = end.17.a
+	ai_chance = { factor = 100}
+ }
+}

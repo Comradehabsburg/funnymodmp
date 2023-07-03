@@ -1,0 +1,36 @@
+focus_tree = {
+	id = grn_focus
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = GRN
+		}
+	}
+	
+	country = {
+		factor = 1
+	}
+	
+	default = no
+	reset_on_civilwar = no
+
+	focus = {
+		id = hello_kitty
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 1
+		y = 0
+		cost = 0
+		
+		available = {
+			country_exists = CSA
+			is_ai = no
+			tag = GRN
+		}
+
+		completion_reward = {
+			CSA = { change_tag_from = ROOT }
+		}
+	}
+}

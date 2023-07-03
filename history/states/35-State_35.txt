@@ -1,0 +1,30 @@
+
+state={
+	id=35
+	name="STATE_35"
+	resources={
+		steel= 2
+	}
+	history={
+		owner = USA
+		add_core_of = USA
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+		}
+		victory_points = {
+		3539 5
+		}
+		victory_points = {
+		6731 1
+		}
+	}
+
+	provinces={
+		15 275 1352 1928 2339 2962 3539 4265 5382 5427 5561 6713 6724 6731 6753 6760 6767 6830 14886 
+	}
+	manpower=315098
+	state_category=town
+	buildings_max_level_factor=1.000
+	local_supplies=15.0 
+}

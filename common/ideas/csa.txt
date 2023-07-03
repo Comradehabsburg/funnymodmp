@@ -1,0 +1,908 @@
+ideas = {
+country = {
+
+#Offensives
+
+CSA_Robert_Lee_offensive = {
+	picture = civil_war
+		
+	allowed = {
+		always = no
+	}
+
+	removal_cost = -1
+	
+	modifier = { 
+		army_speed_factor = 0.25
+		army_attack_factor = 0.20
+		army_defence_factor = 0.20
+	}
+}
+
+CSA_Robert_Lee_offensive_1 = {
+	picture = civil_war
+		
+	allowed = {
+		always = no
+	}
+
+	removal_cost = -1
+	
+	modifier = { 
+	
+		army_core_attack_factor = -0.40
+		army_core_defence_factor = -0.40
+
+	}
+}
+
+USA_Robert_Lee_offensive = {
+	picture = GFX_focus_attack_usa
+		
+	allowed = {
+		always = no
+	}
+
+	removal_cost = -1
+	
+	modifier = { 
+		army_core_attack_factor = -0.60
+		army_core_defence_factor = -0.60
+		army_attack_factor = 0.10
+		army_defence_factor = 0.10
+	}
+}
+
+CSA_Robert_Lee_defensive = {
+	picture = civil_war
+		
+	allowed = {
+		always = no
+	}
+
+	removal_cost = -1
+	
+	modifier = { 
+		army_core_attack_factor = 0.05
+		army_core_defence_factor = 0.10
+	}
+}
+
+USA_Robert_Lee_defensive = {
+	picture = GFX_focus_attack_usa
+		
+	allowed = {
+		always = no
+	}
+
+	removal_cost = -1
+	
+	modifier = { 
+		army_core_attack_factor = 0.60
+		army_core_defence_factor = 0.60
+	}
+}
+
+#Counterfeiting
+	
+	CSA_counterfeiting_none = {
+
+			picture = chi_hyper_inflation
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = { }
+		}
+
+		CSA_counterfeiting_1 = {
+
+			picture = chi_hyper_inflation
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.10
+				min_export = 0.02
+				research_speed_factor = -0.02
+			}
+		}
+		
+		CSA_counterfeiting_2 = {
+
+			picture = chi_hyper_inflation2
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
+				min_export = 0.04
+				research_speed_factor = -0.04
+			}
+		}
+		
+		CSA_counterfeiting_3 = {
+
+			picture = chi_hyper_inflation3
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.20
+				industrial_capacity_factory = -0.20
+				min_export = 0.06
+				research_speed_factor = -0.06
+			}
+		}
+		
+		CSA_counterfeiting_4 = {
+
+			picture = chi_hyper_inflation4
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.25
+				industrial_capacity_factory = -0.25
+				min_export = 0.08
+				research_speed_factor = -0.08
+			}
+		}
+
+		CSA_counterfeiting_5 = {
+
+		picture = chi_hyper_inflation5
+		
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+			
+		modifier = {
+			consumer_goods_factor = 0.3
+			industrial_capacity_factory = -0.3
+			min_export = 0.1
+			research_speed_factor = -0.10
+		}
+	}
+
+#PRE CHIMBUS
+	plotting = {
+		picture = plotting
+		
+		allowed = {
+			tag = CSA
+		}
+
+		allowed_civil_war = {
+			always = yes
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+			political_power_factor = -2.0
+			command_power_gain_mult = -2.0
+		}
+	}
+
+#AFTER BLOBING
+CSN_raiders= {
+		allowed = {
+				tag = CSA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = escort_effort_focus
+			
+			removal_cost = -1
+
+			modifier = {
+			convoy_raiding_efficiency_factor = 0.1
+			}
+		}
+		
+		CSN_privateers= {
+		allowed = {
+				tag = CSA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_navy_bonus
+			
+			removal_cost = -1
+
+			modifier = {
+			convoy_raiding_efficiency_factor = 0.25
+			mines_planting_by_fleets_factor = 0.2
+			naval_enemy_fleet_size_ratio_penalty_factor = 0.1
+			}
+		}
+		
+	growing_industry = {
+		allowed = {
+				tag = CSA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = ast_all_in
+			
+			removal_cost = -1
+
+			modifier = {
+			production_speed_buildings_factor = 0.1
+			consumer_goods_factor = -0.02
+			}
+		}
+	CSCT = {
+		allowed = {
+				tag = CSA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_forced_conscription
+			
+			removal_cost = -1
+
+			modifier = {
+			conscription_factor = 0.15
+			political_power_cost = 0.3
+			}
+		}
+		partisan_ranger_act = {
+		allowed = {
+				tag = CSA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_war_of_resistance3
+			
+			removal_cost = -1
+
+			modifier = {
+			Resistance_damage_to_garrison_on_our_occupied_states = 0.2
+			resistance_target_on_our_occupied_states = 0.2
+			political_power_cost = 0.2
+			}
+		}
+		CSA_infantry_focus = {
+		
+			allowed = {
+				tag = CSA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_army_corruption3
+			
+			removal_cost = -1
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.15 instant = yes
+				}
+			}
+		}
+				CSA_secret_agents ={
+				picture = generic_secret_police
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			agency_upgrade_time = -0.1
+			enemy_operative_capture_chance_factor = 0.1
+			enemy_operative_detection_chance_factor = 0.1
+			intel_network_gain_factor = 0.25
+			operative_slot = 2
+			new_operative_slot_bonus = 2
+			decryption_factor = 1
+			encryption_factor = 1
+			}
+			}
+			CSA_dollar = {
+			picture = generic_goods_red_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = -0.03
+			}
+			}
+			CSA_stop_habeas_corpus = {
+			picture = SPR_masters_of_our_own_fate
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			democratic_drift = -0.04
+			political_power_cost = 0.1
+			war_support_factor = -0.05
+			stability_factor = 0.2
+			}
+			}
+			CSA_national_constitution = {
+			picture = HUN_treaty_of_triannon
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			democratic_drift = 0.01
+			political_power_gain = 0.5
+			war_support_factor = 0.1
+			}
+			}
+			CSA_popular_anthem = {
+			picture = SPA_disjointed_carlist_juntas
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			political_power_gain = 0.1
+			democratic_drift = 0.03
+			stability_factor = 0.1
+			}
+			}
+			1864_conscription = {
+			picture = eng_imperial_conscription
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			conscription_factor = 0.1
+			stability_factor = -0.15
+			war_support_factor = -0.15
+			conscription = 0.1
+			weekly_manpower = -120
+			democratic_drift = -0.05
+				}
+			}
+			CSA_BOFS = {
+			picture = new_deal
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = -0.06
+			stability_factor = -0.03
+			}
+		}
+		CSA_NMB = {
+			picture = SOV_scientist_defect
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			production_lack_of_resource_penalty_factor = -0.1
+			}
+		}
+		CSA_fort_dig = {
+			picture = SPA_duty_to_work
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			production_speed_bunker_factor = 0.2
+			}
+		}
+		twenty_negro_law = {
+			picture = SPA_la_division_azul
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			consumer_goods_factor = -0.05
+			production_factory_efficiency_gain_factor = 0.1
+			production_factory_max_efficiency_factor = 0.1
+			production_factory_start_efficiency_factor = 0.1
+			stability_factor = -0.05
+			war_support_factor = -0.05
+			weekly_manpower = -50
+			democratic_drift = -0.03
+			}
+		}
+
+    1862_conscription_927= {
+			picture = eng_imperial_conscription
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			conscription_factor = 0.08
+			stability_factor = -0.13
+			war_support_factor = -0.13
+			conscription = 0.06
+			weekly_manpower = -80
+			democratic_drift = -0.03
+			}
+		}
+		1862_conscription  = {
+			picture = eng_imperial_conscription
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			stability_factor = -0.1
+			war_support_factor = -0.1
+			conscription = 0.04
+			weekly_manpower = -50
+			democratic_drift = -0.01
+			}
+		}
+			war_department = {
+			picture = generic_victors_of_ww1
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			equipment_capture_factor = 0.25
+			experience_loss_factor = -0.1
+			land_reinforce_rate = 0.04
+			weekly_manpower = 150
+			stability_factor = -0.10
+			army_core_defence_factor = 0.2
+			army_core_attack_factor = 0.15
+			land_night_attack = -1
+			}
+		}
+		Confederate_Quartermaster_General_Department= {
+			picture = generic_production_bonus
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			special_forces_no_supply_grace = 120
+			no_supply_grace = 240
+			supply_consumption_factor = -0.1
+			army_morale_factor = -0.03
+			}
+		}
+		
+		CSA_Engineers = {
+		picture = generic_artillery_regiments
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			dig_in_speed = 1
+			max_dig_in_factor = 0.12
+			attrition = -0.02
+			}
+		}
+		
+		CSA_home_guard = {
+		picture = jap_interservice_rivalry_balanced
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			conscription_factor = 0.02
+			land_night_attack = 0.3
+			}
+		}
+		
+		CSA_CSLB = {
+		picture = MEX_revolutionary_army
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			political_power_gain = 0.2
+			experience_gain_navy = 0.02
+			naval_accidents_chance = -0.1
+			navy_max_range_factor = 0.25
+			}
+		}
+		
+		american_slavery = {
+			picture = ast_classify_aliens
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			weekly_manpower = -40
+			conscription_factor = -0.4
+			stability_factor = -0.1
+			communism_drift = 0.02
+			democratic_drift = 0.1
+			consumer_goods_factor = -0.01
+			production_factory_max_efficiency_factor = 0.25
+			industrial_capacity_factory = 0.50
+			production_factory_efficiency_gain_factor = 0.50
+			}
+		}
+		american_slavery_reformed = {
+			picture = ast_classify_aliens
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			conscription_factor = -0.35
+			stability_factor = -0.05
+			political_power_cost = 0.2
+			democratic_drift = 0.1
+			consumer_goods_factor = -0.1
+			production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		run_away_slaves = {
+			picture = FRA_matignon_agreements
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			weekly_manpower = -90
+			communism_drift = 0.03
+			}
+		}
+	}
+	industrial_concern = {
+
+			Atlanta_Machine_Works = {
+			allowed = {
+				original_tag = CSA
+			}
+			
+			available = { controls_province = 346 }
+			
+			equipment_bonus = {
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+			
+			traits = { industrial_concern }
+			ai_will_do = {
+					factor = 1.000
+				}
+				modifier = {
+				industrial_capacity_factory = 0.05
+			}
+			}
+		}
+	naval_manufacturer = { 
+	
+		designer = no
+		
+		norfolk_naval_yard = {
+			
+			
+			allowed = {
+				original_tag = CSA
+			}
+			
+			available = {
+			controls_province = 4694
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { coastal_defence_naval_manufacturer }
+			ai_will_do = {
+					factor = 1.000
+				}
+			modifier = {
+			}
+		}
+		
+		newport_news_shipbuilding = {
+			
+			
+			allowed = {
+				original_tag = CSA
+			}
+			available = {
+			controls_province = 5300
+			}
+
+			
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { pacific_fleet_naval_manufacturer }
+			
+			modifier = {
+			}
+		}
+	}
+tank_manufacturer = { 
+	
+		designer = no
+		csa_railroad = {
+			
+			
+			allowed = {
+				original_tag = CSA
+			}
+				
+			equipment_bonus = {
+				train_equipment = {
+					build_cost_ic = -0.15 instant = yes
+						reliability = 0.15
+				}
+			}
+			modifier = {
+			production_speed_infrastructure_factor = 0.01
+			production_speed_rail_way_factor = 0.05
+			stability_factor = -0.04
+			}
+			removal_cost = 10
+			ai_will_do = {
+					factor = 1.000
+				}
+			traits = { trains_manufacturer }
+		}
+}
+materiel_manufacturer = {
+  Richmond_Armory = {
+		allowed = {
+				original_tag = CSA
+			}
+			available = { controls_province = 7467 }
+				
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05 instant = yes
+						reliability = 0.05
+						hard_attack = 0.03
+				}
+			}
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			removal_cost = 10
+			ai_will_do = {
+					factor = 1.000
+				}
+			traits = { infantry_equipment_manufacturer }
+	}
+	bellona_arsenal = {
+	allowed = {
+				original_tag = CSA
+			}
+			available = { controls_province = 7467 }
+				
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.33 instant = yes
+						reliability = -0.15
+				}
+			}
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			removal_cost = 10
+			ai_will_do = {
+					factor = 1.000
+				}
+			traits = { infantry_equipment_manufacturer }
+	}
+}
+}

@@ -1,0 +1,114 @@
+Units = {
+division = {
+		name = "12nd Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "13rd Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "14th Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "15th Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "16th Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "17th Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+		division = {
+		name = "18th Virginia Infantry Regiment"
+		location = 7467
+		division_template = "PACS Volunteers"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "1st Virginia Cavalry Regiment"
+		location = 7467
+		division_template = "PACS Cavalry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "2nd Virginia Cavalry Regiment"
+		location = 7467
+		division_template = "PACS Cavalry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "3rd Virginia Cavalry Regiment"
+		location = 7467
+		division_template = "PACS Cavalry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "4th Virginia Cavalry Regiment"
+		location = 7467
+		division_template = "PACS Cavalry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "6th Virginia Cavalry Regiment"
+		location = 7467
+		division_template = "PACS Cavalry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "7th Virginia Cavalry Regiment"
+		location = 7467
+		division_template = "PACS Cavalry"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "1st Rockbridge Artillery"
+		location = 7467
+		division_template = "PACS Artillery"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Danville Artillery"
+		location = 7467
+		division_template = "PACS Artillery"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Lowry's Artillery"
+		location = 7467
+		division_template = "PACS Artillery"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+}

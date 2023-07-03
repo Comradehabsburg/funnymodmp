@@ -1,0 +1,33 @@
+capital = 24
+set_research_slots = 0
+
+oob = "standard_templates"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 50
+	fascism = 36
+	communism = 10
+	neutrality = 4
+}
+create_country_leader = {
+	name = "Thomas Overton Moore"
+	desc = ""
+	picture = "800px-Thomas_Overton_Moore,_CDV,_c1860s.dds"
+	expire = "1862.3.4"
+	ideology = conservatism
+	traits = {
+	}
+}

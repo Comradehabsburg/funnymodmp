@@ -1,0 +1,320 @@
+#Add to scripted triggers if more levels of hyper inflation is added
+
+CSA_congress_get_quorum = {
+	set_variable = { var = CSA_quorum_low value = CSA_senators_total }
+	multiply_variable = { var = CSA_quorum_low value = 0.2 }
+	set_variable = { var = CSA_quorum_medium value = CSA_senators_total }
+	multiply_variable = { var = CSA_quorum_medium value = 0.5 }
+	set_variable = { var = CSA_quorum_high value = CSA_senators_total }
+	multiply_variable = { var = CSA_quorum_high value = 0.6 }
+	round_variable = CSA_quorum_low 
+	round_variable = CSA_quorum_medium 
+	round_variable = CSA_quorum_high
+	CSA_recalc_congress_icon_frames = yes
+}
+CSA_congress_remove_state = {
+	custom_effect_tooltip = acw_mtg_usa_congress_remove_state_tt
+	subtract_from_variable = { CSA_senators_total = 2 }
+	clamp_variable = { var = CSA_senators_support max = CSA_senators_total min = 0 }
+	CSA_congress_get_quorum = yes
+	CSA_recalc_congress_icon_frames = yes
+}
+CSA_congress_add_state = {
+	custom_effect_tooltip = acw_mtg_usa_congress_add_state_tt
+	add_to_variable = { CSA_senators_total = 2 }
+	add_to_variable = { CSA_senators_support = 2 }
+	CSA_congress_get_quorum = yes
+	CSA_recalc_congress_icon_frames = yes
+}
+CSA_congress_andrew_johnson = {
+	custom_effect_tooltip = mtg_usa_congress_andrew_johnson_tt
+	add_to_variable = { CSA_senators_total = 1 }
+	add_to_variable = { CSA_senators_support = 1 }
+	CSA_congress_get_quorum = yes
+	CSA_recalc_congress_icon_frames = yes
+}
+CSA_congress_reduce = {
+	custom_effect_tooltip = mtg_usa_congress_reduce_state_tt
+	subtract_from_variable = { CSA_senators_total = 1 }
+	clamp_variable = { var = CSA_senators_support max = CSA_senators_total min = 0 }
+	CSA_congress_get_quorum = yes
+	CSA_recalc_congress_icon_frames = yes
+}
+
+CSA_congress_small_opposition = {
+	custom_effect_tooltip = mtg_usa_congress_small_opposition_tt
+	hidden_effect = {
+		CSA_senate_small_opposition = yes
+		CSA_house_small_opposition = yes
+		
+	}
+}
+
+CSA_senate_small_opposition = {
+	custom_effect_tooltip = mtg_usa_senate_small_opposition_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = -2 }
+	add_to_variable = { CSA_senators_support = temp_factor }
+	round_variable = CSA_senators_support
+	clamp_variable = { var = CSA_senators_support max = CSA_senators_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+
+CSA_house_small_opposition = {
+	custom_effect_tooltip = mtg_usa_house_small_opposition_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = -10 }
+	add_to_variable = { CSA_representatives_support = temp_factor }
+	round_variable = CSA_representatives_support
+	clamp_variable = { var = CSA_representatives_support max = CSA_representatives_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+CSA_senate_small_support = {
+	custom_effect_tooltip = mtg_usa_senate_small_support_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = 2 }
+	add_to_variable = { CSA_senators_support = temp_factor }
+	round_variable = CSA_senators_support
+	clamp_variable = { var = CSA_senators_support max = CSA_senators_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+
+CSA_house_small_support = {
+	custom_effect_tooltip = mtg_usa_house_small_support_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = 10 }
+	clamp_temp_variable = { var = temp_factor max = 25 min = 10 }
+	add_to_variable = { CSA_representatives_support = temp_factor }
+	round_variable = CSA_representatives_support
+	clamp_variable = { var = CSA_representatives_support max = CSA_representatives_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+
+CSA_senate_medium_opposition = {
+	custom_effect_tooltip = mtg_usa_senate_medium_opposition_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = -4 }
+	clamp_temp_variable = { var = temp_factor max = -3 min = -8 }
+	add_to_variable = { CSA_senators_support = temp_factor }
+	round_variable = CSA_senators_support
+	clamp_variable = { var = CSA_senators_support max = CSA_senators_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+
+CSA_house_medium_opposition = {
+	custom_effect_tooltip = mtg_usa_house_medium_opposition_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = -20 }
+	clamp_temp_variable = { var = temp_factor max = -20 min = -40 }
+	add_to_variable = { CSA_representatives_support = temp_factor }
+	round_variable = CSA_representatives_support
+	clamp_variable = { var = CSA_representatives_support max = CSA_representatives_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+CSA_senate_medium_support = {
+	custom_effect_tooltip = mtg_usa_senate_medium_support_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = 4 }
+	clamp_temp_variable = { var = temp_factor max = 10 min = 5 }
+	add_to_variable = { CSA_senators_support = temp_factor }
+	round_variable = CSA_senators_support
+	clamp_variable = { var = CSA_senators_support max = CSA_senators_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+
+CSA_house_medium_support = {
+	custom_effect_tooltip = mtg_usa_house_medium_support_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = 20 }
+	clamp_temp_variable = { var = temp_factor max = 50 min = 20 }
+	add_to_variable = { CSA_representatives_support = temp_factor }
+	round_variable = CSA_representatives_support
+	clamp_variable = { var = CSA_representatives_support max = CSA_representatives_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+CSA_senate_large_opposition = {
+	custom_effect_tooltip = mtg_usa_senate_large_opposition_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = -8 }
+	clamp_temp_variable = { var = temp_factor max = 25 min = -10 }
+	add_to_variable = { CSA_senators_support = temp_factor }
+	round_variable = CSA_senators_support
+	clamp_variable = { var = CSA_senators_support max = CSA_senators_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+
+CSA_house_large_opposition = {
+	custom_effect_tooltip = mtg_usa_house_large_opposition_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = -50 }
+	clamp_temp_variable = { var = temp_factor max = -50 min = -100 }
+	add_to_variable = { CSA_representatives_support = temp_factor }
+	round_variable = CSA_representatives_support
+	clamp_variable = { var = CSA_representatives_support max = CSA_representatives_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+CSA_senate_large_support = {
+	custom_effect_tooltip = mtg_usa_senate_large_support_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = 8 }
+	clamp_temp_variable = { var = temp_factor max = 30 min = 15 }
+	add_to_variable = { CSA_senators_support = temp_factor }
+	round_variable = CSA_senators_support
+	clamp_variable = { var = CSA_senators_support max = CSA_senators_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+
+CSA_house_large_support = {
+	custom_effect_tooltip = mtg_usa_house_large_support_tt
+	set_temp_variable = { temp_factor = random }
+	multiply_temp_variable = { temp_factor = 30 }
+	clamp_temp_variable = { var = temp_factor max = 125 min = 80 }
+	add_to_variable = { CSA_representatives_support = temp_factor }
+	round_variable = CSA_representatives_support
+	clamp_variable = { var = CSA_representatives_support max = CSA_representatives_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+CSA_congress_medium_opposition = {
+	custom_effect_tooltip = mtg_usa_congress_medium_opposition_tt
+	hidden_effect = {
+		CSA_senate_medium_opposition = yes
+		CSA_house_medium_opposition = yes
+		
+	}
+}
+
+CSA_congress_large_opposition = {
+	custom_effect_tooltip = mtg_usa_congress_large_opposition_tt
+	hidden_effect = {
+		CSA_senate_large_opposition = yes
+		CSA_house_large_opposition = yes
+		
+	}
+}
+CSA_congress_small_support = {
+	custom_effect_tooltip = mtg_usa_congress_small_support_tt
+	hidden_effect = {
+		CSA_senate_small_support = yes
+		CSA_house_small_support = yes
+		
+	}
+}
+
+CSA_congress_medium_support = {
+	custom_effect_tooltip = mtg_usa_congress_medium_support_tt
+	hidden_effect = {
+		CSA_senate_medium_support = yes
+		CSA_house_medium_support = yes
+		
+	}
+}
+CSA_congress_large_support = {
+	custom_effect_tooltip = mtg_usa_congress_large_support_tt
+	hidden_effect = {
+		CSA_senate_large_support = yes
+		CSA_house_large_support = yes
+		
+	}
+}
+CSA_election_senate = {
+	set_variable = { var = senators_for_reelection value = CSA_senators_total } #not temp because needed for events
+	multiply_variable = { senators_for_reelection = 0.3 }
+	multiply_variable = { senators_for_reelection = election_factor }
+	add_to_variable = { CSA_senators_support = senators_for_reelection }
+	round_variable = CSA_senators_support
+	round_variable = senators_for_reelection
+	set_variable = { sen_loc = senators_for_reelection }
+	if = {
+		limit = {
+			check_variable = { sen_loc < 0 }
+		}
+		multiply_variable = { sen_loc = -1 }
+	}
+	clamp_variable = { var = CSA_senators_support max = CSA_senators_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+CSA_election_house = {
+	set_variable = { var = representatives_for_reelection value = CSA_representatives_total } #not temp because needed for events
+	multiply_variable = { representatives_for_reelection = 0.5 }
+	multiply_variable = { representatives_for_reelection = election_factor }
+	set_variable = { CSA_representatives_support = CSA_representatives_total }
+	multiply_variable = { CSA_representatives_support = 0.5 }
+	add_to_variable = { CSA_representatives_support = representatives_for_reelection }
+	round_variable = CSA_representatives_support
+	round_variable = representatives_for_reelection
+	set_variable = { ror_loc = representatives_for_reelection }
+	if = {
+		limit = {
+			check_variable = { ror_loc < 0 }
+		}
+		multiply_variable = { ror_loc = -1 }
+	}
+	clamp_variable = { var = CSA_senators_support max = CSA_representatives_total min = 0 }
+	CSA_recalc_congress_icon_frames = yes
+}
+CSA_return_majority = { #for communist/fascist
+	custom_effect_tooltip = CSA_return_majority_tt
+	set_variable = { var = CSA_goal_value_senators value = CSA_senators_total }
+	multiply_variable = { var = CSA_goal_value_senators value = 0.7 }
+	round_variable = CSA_goal_value_senators
+	if = {
+		limit = {
+			check_variable = { CSA_senators_support < CSA_goal_value_senators } #shouldn't punish player
+		}
+		set_variable = { var = CSA_senators_support value = CSA_goal_value_senators }
+	}
+	set_variable = { var = CSA_goal_value_representatives value = CSA_representatives_total }
+	multiply_variable = { var = CSA_goal_value_representatives value = 0.7 }
+	round_variable = CSA_goal_value_representatives
+	if = {
+		limit = {
+			check_variable = { CSA_representatives_support < CSA_goal_value_representatives } #shouldn't punish player
+		}
+		set_variable = { var = CSA_representatives_support value = CSA_goal_value_representatives }
+	}
+	CSA_recalc_congress_icon_frames = yes
+}
+CSA_flip_support = {
+	set_temp_variable = { CSA_senators_temp = CSA_senators_total }
+	subtract_from_temp_variable = { CSA_senators_temp = CSA_senators_support }
+	set_variable = { CSA_senators_support = CSA_senators_temp }
+	set_temp_variable = { representatives_temp = CSA_representatives_total }
+	subtract_from_temp_variable = { representatives_temp = CSA_representatives_support }
+	set_variable = { CSA_representatives_support = representatives_temp }
+	CSA_recalc_congress_icon_frames = yes
+}
+
+CSA_recalc_congress_icon_frames = {
+	
+	set_temp_variable = { CSA_senators_temp = CSA_senators_support }
+	divide_temp_variable = { CSA_senators_temp = CSA_senators_total }
+	multiply_temp_variable = { CSA_senators_temp = 21 }
+	if = {
+		limit = { check_variable = { CSA_senators_temp > 0 } }
+		clamp_temp_variable = {
+			var = CSA_senators_temp
+			min = 1
+			max = 21
+		}
+	}
+	else = {
+		set_temp_variable = { CSA_senators_temp = 1 }
+	}
+	set_variable = { CSA_current_senate_icon_frame = CSA_senators_temp }
+
+	set_temp_variable = { CSA_house_temp = CSA_representatives_support }
+	divide_temp_variable = { CSA_house_temp = CSA_representatives_total }
+	multiply_temp_variable = { CSA_house_temp = 21 }
+	if = {
+		limit = { check_variable = { CSA_house_temp > 0 } }
+		clamp_temp_variable = {
+			var = CSA_house_temp
+			min = 1
+			max = 21
+		}
+	}
+	else = {
+		set_temp_variable = { CSA_house_temp = 1 }		
+	}
+	set_variable = { CSA_current_house_icon_frame = CSA_house_temp }
+}

@@ -1,0 +1,222 @@
+division_template = {
+	name = "CSA Elite Infantry Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = {x=0 y=1}
+		artillery = {x=0 y=2}
+	}
+
+	priority = 1
+}
+division_template = {
+	name = "CSA Army Regular Regiment"
+	is_locked = yes
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = {x=0 y=1}
+		artillery = {x=0 y=2}
+	}
+
+	priority = 1
+}
+division_template = {
+	name = "CSA Army Artillery Regiment"
+	is_locked = yes
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		artillery_brigade = { x = 0 y = 3 }
+		artillery_brigade = { x = 0 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = { x = 0 y = 1}
+		artillery = {x=0 y=2}
+}
+	priority = 1
+}
+division_template = {
+	name = "CSA Army Cavalry Regiment"
+	is_locked = yes
+
+	regiments = {
+		Cavalry = { x = 0 y = 0 }
+		Cavalry = { x = 0 y = 1 }
+		Cavalry = { x = 0 y = 2 }
+		Cavalry = { x = 0 y = 3 }
+		Cavalry = { x = 0 y = 4 }
+	}
+	support ={
+		engineer ={ x = 0 y = 0}
+		recon = { x = 0 y = 1}
+		artillery = {x=0 y=2}
+}
+	priority = 1
+}
+division_template = {
+	name = "Confederate volunteers"
+	is_locked = yes
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
+	}
+	priority = 1
+}
+
+division_template = {
+	name = "Confederate Cavalry volunteers"
+	is_locked = yes
+
+	regiments = {
+		Cavalry = { x = 0 y = 0 }
+		Cavalry = { x = 0 y = 1 }
+		Cavalry = { x = 0 y = 2 }
+		Cavalry = { x = 0 y = 3 }
+	}
+	support = {
+	artillery = {x=0 y=0}
+	}
+	priority = 1
+}
+
+Units ={
+	division = {
+		name = "1st Infantry Regiment (Confederate)"
+		location = 346 ###2100
+		division_template = "CSA Army Regular Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "2nd Infantry Regiment (Confederate)"
+		location = 346 ###7299
+		division_template = "CSA Army Regular Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "3rd CSA Infantry Regiment (The Old Guard)"
+		location = 346 ###7924
+		division_template = "CSA Army Regular Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "4th CSA Infantry Regiment"
+		location = 346 ###3891
+		division_template = "CSA Army Regular Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "5th CSA Infantry Regiment"
+		location = 346 ###2349
+		division_template = "CSA Army Regular Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "6th CSA Infantry Regiment"
+		location = 346 ###7201
+		division_template = "CSA Army Regular Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "7th CSA Infantry Regiment"
+		location = 346 ###7270
+		division_template = "CSA Army Regular Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "8th CSA Infantry Regiment"
+		location = 346 ###2816
+		division_template = "CSA Army Regular Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "9th CSA Infantry Regiment"
+		location = 346 ###7649
+		division_template = "CSA Army Regular Regiment"
+		start_experience_factor = 1
+	}
+  division = {
+		name = "10th CSA Infantry Regiment"
+		location = 346 ###3442
+		division_template = "CSA Army Regular Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "1st Regiment of Artillery"
+		location = 346 ###7270
+		division_template = "CSA Army Artillery Regiment"
+		start_experience_factor = 1
+	}
+			division = {
+		name = "2nd Regiment of Artillery"
+		location = 346 ###7233
+		division_template = "CSA Army Artillery Regiment"
+		start_experience_factor = 1
+	}
+			division = {
+		name = "3rd Regiment of Artillery"
+		location = 346 ###7270
+		division_template = "CSA Army Artillery Regiment"
+		start_experience_factor = 1
+	}
+			division = {
+		name = "4th Regiment of Artillery"
+		location = 346 ###7270
+		division_template = "CSA Army Artillery Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "1st Cavalry Regiment (Confederate)"
+		location = 346 ###7943
+		division_template = "CSA Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "2nd Cavalry Regiment (Confederate)"
+		location = 346 ###3037
+		division_template = "CSA Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "3rd Cavalry Regiment (Confederate)"
+		location = 346 ###7870
+		division_template = "CSA Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+		division = {
+		name = "4th Cavalry Regiment (Confederate)"
+		location = 346 ###2580
+		division_template = "CSA Army Cavalry Regiment"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "5th Cavalry Regiment (Confederate)"
+		location = 346 ###8069
+		division_template = "CSA Army Cavalry Regiment"
+		start_experience_factor = 1
+	} }

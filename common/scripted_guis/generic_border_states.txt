@@ -1,0 +1,178 @@
+scripted_gui = {
+
+border_states_for_both_gui = {
+		context_type = player_context
+		window_name = "border_states_for_both_gui_window"
+		visible = {
+			has_country_flag = border_states_window_open
+			#triggered by any effect entries u prefer
+		}
+		effects = {
+			border_states_exit_btn_click = { 
+				clr_country_flag = border_states_window_open  
+				#clean up everything
+			}
+		}
+		triggers = {
+				CSA_Delaware_visible = {
+				 81 = {
+					is_fully_controlled_by = CSA
+				 }
+      		  }
+				USA_Delaware_visible = {
+					81 = {
+						is_owned_and_controlled_by = USA
+					 }
+				}
+				Delaware_divied_visible = {
+					81 = {
+						NOT = {
+							OR = {
+								is_fully_controlled_by = USA
+								is_fully_controlled_by = CSA
+								}
+							}
+						is_control_by = USA
+					 }
+         		}
+				 CSA_Maryland_visible = {
+					58 = {
+					   is_fully_controlled_by = CSA
+					}
+				   }
+				   USA_Maryland_visible = {
+					58 = {
+						   is_owned_and_controlled_by = USA
+						}
+				   }
+				   Maryland_divied_visible = {
+					58 = {
+						NOT = {
+							OR = {
+							is_fully_controlled_by = USA
+							is_fully_controlled_by = CSA
+							}
+							}
+							is_control_by = USA
+					 }
+					}
+					CSA_Missouri_visible = {
+						67 = {
+						   is_fully_controlled_by = CSA
+						}
+					   }
+					   USA_Missouri_visible = {
+						67 = {
+							   is_owned_and_controlled_by = USA
+							}
+					   }
+					   Missouri_divied_visible = {
+						67 = {
+							NOT = {
+							OR = {
+								is_fully_controlled_by = USA
+								is_fully_controlled_by = CSA
+								}
+							}
+								is_control_by = USA
+						 }
+						}
+						WVA_csa_visible = {
+							60 = {
+							   is_fully_controlled_by = CSA
+							}
+						   }
+						   WVA_usa_visible = {
+							60 = {
+								   is_fully_controlled_by = USA
+								}
+						   }
+						   WVA_divied_visible = {
+							60 = {
+								NOT = {
+								OR = {
+									is_fully_controlled_by = USA
+									is_fully_controlled_by = CSA
+									}
+								}
+								is_control_by = USA
+							 }
+							}
+							Kentucky_csa_visible = {
+								69 = {
+								   is_fully_controlled_by = CSA
+								}
+							   }
+							   Kentucky_usa_visible = {
+								69 = {
+									   is_owned_and_controlled_by = USA
+									}
+							   }
+							   Kentucky_divied_visible = {
+								69 = {
+									NOT = {
+										OR = {
+											is_fully_controlled_by = USA
+											is_fully_controlled_by = CSA
+											}
+									}
+									is_control_by = USA
+								 }
+								}
+				}
+		properties = {
+			CSA_Delaware = {
+				image = "GFX_Delaware_csa"
+			}
+			USA_Delaware = {
+				image = "GFX_Delaware_usa"
+			}
+			Delaware_divied = {
+				image = "GFX_Delaware_divied"
+			}
+			USA_Maryland = {
+				image = "GFX_Maryland_usa"
+			}
+			CSA_Maryland = {
+				image = "GFX_Maryland_csa"
+			}
+			Maryland_divied = {
+				image = "GFX_Maryland_divied"
+			}
+			CSA_Missouri = {
+				image = "GFX_Missouri_csa"
+			}
+			USA_Missouri = {
+				image = "GFX_Missouri_usa"
+			}
+			Missouri_divied = {
+				image = "GFX_Missouri_divied"
+			}
+			WVA_csa = {
+				image = "GFX_WVA_csa"
+			}
+			WVA_usa = {
+				image = "GFX_WVA_usa"
+			}
+			WVA_divied = {
+				image = "GFX_WVA_divied"
+			}
+			Kentucky_csa = {
+				image = "GFX_Kentucky_csa"
+			}
+			Kentucky_usa = {
+				image = "GFX_Kentucky_usa"
+			}
+			Kentucky_divied = {
+				image = "GFX_Kentucky_divied"
+			}
+		}
+		defined_text = {
+			name = BORDER_STATES
+			
+			text = {
+				localization_key = "BORDER_STATES_desc"
+			}
+		}
+	}
+}	

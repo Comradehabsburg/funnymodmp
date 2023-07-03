@@ -1,0 +1,148 @@
+﻿
+# MAIN THEME
+
+music = {
+	name = "maintheme"
+	file = "hoi4mainthemeallies.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Lincoln and Liberty"
+	file = "lincoln_and_liberty.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Virgina's Bloody Soil"
+	file = "VBS.ogg"
+	volume = 0.65
+}
+music = {
+	name = "We Are Coming Father Abraham"
+	file = "father_abraham.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Hail to the Chief"
+	file = "hail_to_the_chief.ogg"
+	volume = 0.65
+}
+music = {
+	name = "dakota"
+	file = "dakota.ogg"
+	volume = 0.65
+}
+music = {
+	name = "hanging"
+	file = "hanging.ogg"
+	volume = 0.55
+}
+music = {
+	name = "The Battle Cry of Freedom"
+	file = "battle_cry_of_freedom.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Battle Hymm of the Republic"
+	file = "battle_hymm_of_the_republic.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Union Dixie"
+	file = "union_dixie.ogg"
+	volume = 0.65
+}
+music = {
+	name = "We'll Fight for Uncle Sam"
+	file = "well_fight_for_uncle_sam.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Marching Through Georgia"
+	file = "Sherman_Will_March_to_the_Sea.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "ainthatso"
+	file = "1.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Abraham Our Abraham"
+	file = "2.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "DEUNION"
+	file = "3.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "DEATH_LINCOLN"
+	file = "4.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Little Mac"
+	file = "5.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "McClellan the Hope of the Nation!"
+	file = "6.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "McClellan's Name We Hail"
+	file = "7.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "rally_cause"
+	file = "8.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Republican Campaign Song"
+	file = "9.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Battle Cry McClellan"
+	file = "10.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Abes Four Years Are Over"
+	file = "11.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "White Boys for McClellan"
+	file = "12.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "Anchors Aweigh"
+	file = "anchors_aweigh.ogg"
+	volume = 0.65
+}
+
+music = {
+	name = "From the Halls of Montezuma"
+	file = "from_the_halls_of_montezuma.ogg"
+	volume = 0.65
+}

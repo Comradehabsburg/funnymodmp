@@ -1,0 +1,3521 @@
+USA_1864_campaign = {
+	f_p_blair_family = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_lincoln
+			NOT = {
+				has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_USA_1864_campaign_start
+			has_country_flag = support_lincoln
+			NOT = {
+				has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+				surrender_progress < 0.25
+				}
+				factor = 0
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}	
+				factor = 10
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 15
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = get_points
+			custom_effect_tooltip = end_war_before_1865
+			set_country_flag = end_war_1865
+			add_to_variable = { usa.supporters_numbers = 7 }
+			add_to_variable = { usa.sponsor_numbers = 3 }
+		}
+	}
+	
+	meet_radical_republican = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_lincoln
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_USA_1864_campaign_start
+			has_country_flag = support_lincoln
+			NOT = {
+			has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 0
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 10
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 15
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = get_points
+			custom_effect_tooltip = abolish_slavery_in_united_states
+			set_country_flag = abolish_slavery_1865
+			add_to_variable = { usa.supporters_numbers = 5 }
+			add_to_variable = { usa.sponsor_numbers = 1 }
+		}
+	}
+	smooth_the_fremont_democrat = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_lincoln
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_lincoln
+			NOT = {
+				has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 0
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 10
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 15
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = get_points
+			custom_effect_tooltip = remove_blair
+			set_country_flag = remove_blair
+			add_to_variable = { usa.supporters_numbers = 3 }
+			add_to_variable = { usa.sponsor_numbers = 2 }
+		}
+	}
+	exchange_michigan_support = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_lincoln
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_lincoln
+			NOT = {
+				has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+			check_variable = { var = usa.sponsor_numbers value =  2 compare = greater_than_or_equals }
+			check_variable = { var = usa.supporters_numbers value =  2 compare = greater_than_or_equals }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 0
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 10
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 30
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = lose_points
+			custom_effect_tooltip = get_support
+			add_to_variable = { 42.lincoln_support = 1 }
+			subtract_from_variable = { usa.supporters_numbers = 2 }
+			subtract_from_variable = { usa.sponsor_numbers = 2 }
+		}
+	}
+	
+	exchange_massechusetts_support = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_lincoln
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_lincoln
+			NOT = {
+				has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+			check_variable = { var = usa.sponsor_numbers value =  2 compare = greater_than_or_equals }
+			check_variable = { var = usa.supporters_numbers value =  2 compare = greater_than_or_equals }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 0
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 10
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 30
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = lose_points
+			custom_effect_tooltip = get_support
+			add_to_variable = { 43.lincoln_support = 1 }
+			subtract_from_variable = { usa.supporters_numbers = 2 }
+			subtract_from_variable = { usa.sponsor_numbers = 2 }
+		}
+	}
+	exchange_vermont_support = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_lincoln
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_lincoln
+			NOT = {
+				has_decision = count_on_pools
+			}	
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+			check_variable = { var = usa.sponsor_numbers value =  2 compare = greater_than_or_equals }
+			check_variable = { var = usa.supporters_numbers value =  2 compare = greater_than_or_equals }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 0
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 10
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 30
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = lose_points
+			custom_effect_tooltip = get_support
+			add_to_variable = { 35.lincoln_support = 1 }
+			subtract_from_variable = { usa.supporters_numbers = 2 }
+			subtract_from_variable = { usa.sponsor_numbers = 2 }
+		}
+	}
+	exchange_missouri_support = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_lincoln
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_lincoln
+			NOT = {
+				has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+			check_variable = { var = usa.sponsor_numbers value =  2 compare = greater_than_or_equals }
+			check_variable = { var = usa.supporters_numbers value =  2 compare = greater_than_or_equals }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 0
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+			factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 10
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 45
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = lose_points
+			custom_effect_tooltip = get_support
+			add_to_variable = { 67.lincoln_support = 1 }
+			subtract_from_variable = { usa.supporters_numbers = 2 }
+			subtract_from_variable = { usa.sponsor_numbers = 2 }
+		}
+	}
+	exchange_new_york_support = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_mcclellan
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_mcclellan
+			NOT = {
+				has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+			check_variable = { var = usa.sponsor_numbers value =  2 compare = greater_than_or_equals }
+			check_variable = { var = usa.supporters_numbers value =  2 compare = greater_than_or_equals }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 10
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 60
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = lose_points
+			custom_effect_tooltip = get_support
+			add_to_variable = { 37.lincoln_support = 1 }
+			subtract_from_variable = { usa.supporters_numbers = 2 }
+			subtract_from_variable = { usa.sponsor_numbers = 2 }
+		}
+	}
+	exchange_kentucky_support = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_mcclellan
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_mcclellan
+			NOT = {
+				has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+			check_variable = { var = usa.sponsor_numbers value =  2 compare = greater_than_or_equals }
+			check_variable = { var = usa.supporters_numbers value =  2 compare = greater_than_or_equals }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 10
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 45
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = lose_points
+			custom_effect_tooltip = get_support
+			add_to_variable = { 69.lincoln_support = 1 }
+			subtract_from_variable = { usa.supporters_numbers = 2 }
+			subtract_from_variable = { usa.sponsor_numbers = 2 }
+		}
+	}
+	exchange_conneticut_support = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_mcclellan
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_mcclellan
+			NOT = {
+			has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+			check_variable = { var = usa.sponsor_numbers value =  2 compare = greater_than_or_equals }
+			check_variable = { var = usa.supporters_numbers value =  2 compare = greater_than_or_equals }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 10
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 30
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = lose_points
+			custom_effect_tooltip = get_support
+			add_to_variable = { 45.lincoln_support = 1 }
+			subtract_from_variable = { usa.supporters_numbers = 2 }
+			subtract_from_variable = { usa.sponsor_numbers = 2 }
+		}
+	}
+	exchange_delaware_support = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_mcclellan
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_mcclellan
+			NOT = {
+				has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+			check_variable = { var = usa.sponsor_numbers value =  2 compare = greater_than_or_equals }
+			check_variable = { var = usa.supporters_numbers value =  2 compare = greater_than_or_equals }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 10
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 30
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = lose_points
+			custom_effect_tooltip = get_support
+			add_to_variable = { 81.lincoln_support = 1 }
+			subtract_from_variable = { usa.supporters_numbers = 2 }
+			subtract_from_variable = { usa.sponsor_numbers = 2 }
+		}
+	}
+	meet_sumner_and_stevens = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_lincoln
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_lincoln
+			NOT = {
+				has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 0
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 3
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 10
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 15
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = get_points
+			custom_effect_tooltip = abolish_slavery_in_united_states
+			custom_effect_tooltip = hard_reconstruction
+			set_country_flag = abolish_slavery_1865
+			add_to_variable = { usa.supporters_numbers = 2 }
+			add_to_variable = { usa.sponsor_numbers = 1 }
+			add_popularity = {
+				ideology = communism
+				popularity = 0.07
+			}
+		}
+	}
+	new_york_democrats = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_mcclellan
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+		has_country_flag = USA_1864_campaign_start
+		has_country_flag = support_mcclellan
+			NOT = {
+			has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 5
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 1
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 0
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 15
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = get_points
+			custom_effect_tooltip = end_war_before_1865_csa_alive
+			set_country_flag = end_war_1865_alive
+			add_to_variable = { usa.supporters_numbers = 5 }
+			add_to_variable = { usa.sponsor_numbers = 5 }
+		}
+	}
+	
+	copperhead_democrats = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_mcclellan
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_mcclellan
+			NOT = {
+				has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 5
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 1
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 0
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 15
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = get_points
+			custom_effect_tooltip = end_war_before_1865_csa_alive
+			set_country_flag = end_war_1865_alive
+			add_to_variable = { usa.supporters_numbers = 3 }
+			add_to_variable = { usa.sponsor_numbers = 5 }
+		}
+	}
+	tammany_hall = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_mcclellan
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_mcclellan
+			NOT = {
+				has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 5
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 1
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 0
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 15
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = get_points
+			custom_effect_tooltip = end_war_before_1865_csa_alive
+			add_timed_idea = { idea = pay_for_new_yorkers days = 280 }
+			set_country_flag = end_war_1865_alive
+			add_to_variable = { usa.supporters_numbers = 4 }
+			add_to_variable = { usa.sponsor_numbers = 9 }
+		}
+	}
+	mcclellan_war_need_go_on = {
+		
+		icon = GFX_decision_eng_puppet_usa
+		
+		allowed = {
+			original_tag = USA
+			has_country_flag = support_mcclellan
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			has_country_flag = support_mcclellan
+			NOT = {
+				has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				CSA = {
+					surrender_progress < 0.25
+				}
+				factor = 5
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.33
+				}
+				factor = 1
+			}
+			modifier = {
+				CSA = {
+					surrender_progress > 0.55
+				}
+				factor = 0
+			}
+		}
+		fixed_random_seed = no
+		days_remove = 15
+		cost = 0
+		fire_only_once = yes
+		remove_effect = {
+			custom_effect_tooltip = get_points
+			custom_effect_tooltip = end_war_before_1865
+			set_country_flag = end_war_1865_alive
+			add_to_variable = { usa.supporters_numbers = 3 }
+			add_to_variable = { usa.sponsor_numbers = 5 }
+		}
+	}
+	campaign_of_army = {
+		icon = generic_prepare_civil_war
+		
+		allowed = {
+			original_tag = USA
+			OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+			}
+			NOT = {
+			has_decision = count_on_pools
+			}
+		}
+	
+		visible = {
+			has_country_flag = USA_1864_campaign_start
+			OR ={
+				has_country_flag = support_lincoln
+				has_country_flag = support_mcclellan
+			}
+			NOT = {
+			has_decision = count_on_pools
+			}
+			date < 1864.11.1
+		}	
+		available = {
+			date < 1864.11.1
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		fixed_random_seed = no
+		custom_cost_trigger = {
+			has_army_experience > 50
+		}
+		custom_cost_text = army_xp_more_than_10 # localisation string
+		days_remove = 60
+		fire_only_once = yes
+		remove_effect = {
+			army_experience = -10 
+			add_political_power = 50
+			if = {
+				limit = {
+					CSA = {
+						surrender_progress > 0.55
+					}
+				}
+				add_political_power = 240
+			}
+			else_if = {
+				limit = {
+					CSA = {
+						surrender_progress > 0.35
+					}
+				}
+				add_political_power = 185
+			}
+			else_if = {
+				limit = {
+					CSA = {
+						surrender_progress > 0.15
+					}
+				}
+				add_political_power = 155
+			}
+		}
+	}
+
+campaign_of_enemy = {
+
+	icon = usa_1864_election
+		
+	allowed = {
+		original_tag = USA
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_decision = count_on_pools
+		}
+	}
+	
+	visible = {
+		has_country_flag = USA_1864_campaign_start
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_decision = count_on_pools
+		}
+		date > 1864.11.1
+	}	
+	available = {
+		date > 1864.11.1
+	}
+	
+	fixed_random_seed = no
+	
+	activation = { 
+		has_country_flag = USA_1864_campaign_start
+	} 
+	
+	days_mission_timeout = 40
+	days_re_enable = 3
+	
+	ai_will_do = {
+		factor = 200
+	}
+	
+	highlight_states = {
+		highlight_state_targets = {
+			state = 58
+		}			
+	}
+	timeout_effect = {
+		#Lincoln enemy campaign
+		if = {
+			limit = {
+				has_country_flag = support_lincoln
+			}
+			random_list = {
+				10 = {
+					custom_effect_tooltip = NEW_ENGLAND
+					add_to_variable = { 30.mcclellan_support = 1 }
+					add_to_variable = { 35.mcclellan_support = 1 }
+					add_to_variable = { 43.mcclellan_support = 1 }
+					add_to_variable = { 71.mcclellan_support = 1 }
+					add_to_variable = { 27.mcclellan_support = 1 }
+					add_to_variable = { 45.mcclellan_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				10 = {
+					custom_effect_tooltip = EAST_COAST
+					add_to_variable = { 37.mcclellan_support = 1 }
+					add_to_variable = { 48.mcclellan_support = 1 }
+					add_to_variable = { 50.mcclellan_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				15 = {
+					custom_effect_tooltip = MID_WEST
+					add_to_variable = { 53.mcclellan_support = 1 }
+					add_to_variable = { 55.mcclellan_support = 1 }
+					add_to_variable = { 51.mcclellan_support = 1 }
+					add_to_variable = { 40.mcclellan_support = 1 }
+					add_to_variable = { 42.mcclellan_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				15 = {
+					custom_effect_tooltip = BORDER_STATES
+				    add_to_variable = { 58.mcclellan_support = 1 }
+					add_to_variable = { 60.mcclellan_support = 1 }
+					add_to_variable = { 69.mcclellan_support = 1 }
+					add_to_variable = { 67.mcclellan_support = 1 }
+					add_to_variable = { 81.mcclellan_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				#far west and plains together
+				10 = {
+					custom_effect_tooltip = far_west_great_plains
+				    add_to_variable = { 54.mcclellan_support = 1 }
+					add_to_variable = { 70.mcclellan_support = 1 }
+					add_to_variable = { 32.mcclellan_support = 1 }
+					add_to_variable = { 52.mcclellan_support = 1 }
+					add_to_variable = { 41.mcclellan_support = 1 }
+					add_to_variable = { 59.mcclellan_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				5 = {
+					custom_effect_tooltip = bad_campaign
+					subtract_from_variable = { 54.mcclellan_support = 1 }
+					subtract_from_variable = { 70.mcclellan_support = 1 }
+					subtract_from_variable = { 32.mcclellan_support = 1 }
+					subtract_from_variable = { 52.mcclellan_support = 1 }
+					subtract_from_variable = { 41.mcclellan_support = 1 }
+					subtract_from_variable = { 59.mcclellan_support = 1 }
+					subtract_from_variable = { 58.mcclellan_support = 1 }
+					subtract_from_variable = { 60.mcclellan_support = 1 }
+					subtract_from_variable = { 69.mcclellan_support = 1 }
+					subtract_from_variable = { 67.mcclellan_support = 1 }
+					subtract_from_variable = { 81.mcclellan_support = 1 }
+					subtract_from_variable = { 53.mcclellan_support = 1 }
+					subtract_from_variable = { 55.mcclellan_support = 1 }
+					subtract_from_variable = { 51.mcclellan_support = 1 }
+					subtract_from_variable = { 40.mcclellan_support = 1 }
+					subtract_from_variable = { 42.mcclellan_support = 1 }
+					subtract_from_variable = { 37.mcclellan_support = 1 }
+					subtract_from_variable = { 48.mcclellan_support = 1 }
+					subtract_from_variable = { 50.mcclellan_support = 1 }
+					subtract_from_variable = { 30.mcclellan_support = 1 }
+					subtract_from_variable = { 35.mcclellan_support = 1 }
+					subtract_from_variable = { 43.mcclellan_support = 1 }
+					subtract_from_variable = { 71.mcclellan_support = 1 }
+					subtract_from_variable = { 27.mcclellan_support = 1 }
+					subtract_from_variable = { 45.mcclellan_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				5 = {
+					custom_effect_tooltip = great_campaign
+					add_to_variable = { 54.mcclellan_support = 1 }
+					add_to_variable = { 70.mcclellan_support = 1 }
+					add_to_variable = { 32.mcclellan_support = 1 }
+					add_to_variable = { 52.mcclellan_support = 1 }
+					add_to_variable = { 41.mcclellan_support = 1 }
+					add_to_variable = { 59.mcclellan_support = 1 }
+					add_to_variable = { 58.mcclellan_support = 1 }
+					add_to_variable = { 60.mcclellan_support = 1 }
+					add_to_variable = { 69.mcclellan_support = 1 }
+					add_to_variable = { 67.mcclellan_support = 1 }
+					add_to_variable = { 81.mcclellan_support = 1 }
+					add_to_variable = { 53.mcclellan_support = 1 }
+					add_to_variable = { 55.mcclellan_support = 1 }
+					add_to_variable = { 51.mcclellan_support = 1 }
+					add_to_variable = { 40.mcclellan_support = 1 }
+					add_to_variable = { 42.mcclellan_support = 1 }
+					add_to_variable = { 37.mcclellan_support = 1 }
+					add_to_variable = { 48.mcclellan_support = 1 }
+					add_to_variable = { 50.mcclellan_support = 1 }
+					add_to_variable = { 30.mcclellan_support = 1 }
+					add_to_variable = { 35.mcclellan_support = 1 }
+					add_to_variable = { 43.mcclellan_support = 1 }
+					add_to_variable = { 71.mcclellan_support = 1 }
+					add_to_variable = { 27.mcclellan_support = 1 }
+					add_to_variable = { 45.mcclellan_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				30 = {
+					custom_effect_tooltip = normal_campaign
+					add_to_variable = { 45.mcclellan_support = 1 }
+					add_to_variable = { 50.mcclellan_support = 1 }
+					add_to_variable = { 69.mcclellan_support = 1 }
+					add_to_variable = { 48.mcclellan_support = 1 }
+					add_to_variable = { 37.mcclellan_support = 1 }
+					add_to_variable = { 81.mcclellan_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+			}
+		}
+		#Mcclellan Campaign enemy
+		if = {
+			limit = {
+				has_country_flag = support_mcclellan
+			}
+			random_list = {
+				10 = {
+					custom_effect_tooltip = NEW_ENGLAND
+				    add_to_variable = { 30.lincoln_support = 1 }
+					add_to_variable = { 35.lincoln_support = 1 }
+					add_to_variable = { 43.lincoln_support = 1 }
+					add_to_variable = { 71.lincoln_support = 1 }
+					add_to_variable = { 27.lincoln_support = 1 }
+					add_to_variable = { 45.lincoln_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				10 = {
+					custom_effect_tooltip = EAST_COAST
+				    add_to_variable = { 37.lincoln_support = 1 }
+					add_to_variable = { 48.lincoln_support = 1 }
+					add_to_variable = { 50.lincoln_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				15 = {
+					custom_effect_tooltip = MID_WEST
+				    add_to_variable = { 53.lincoln_support = 1 }
+					add_to_variable = { 55.lincoln_support = 1 }
+					add_to_variable = { 51.lincoln_support = 1 }
+					add_to_variable = { 40.lincoln_support = 1 }
+					add_to_variable = { 42.lincoln_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				15 = {
+					custom_effect_tooltip = BORDER_STATES
+				    add_to_variable = { 58.lincoln_support = 1 }
+					add_to_variable = { 60.lincoln_support = 2 }
+					add_to_variable = { 69.lincoln_support = 1 }
+					add_to_variable = { 67.lincoln_support = 1 }
+					add_to_variable = { 81.lincoln_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				#far west and plains together
+				10 = {
+					custom_effect_tooltip = far_west_great_plains
+				    add_to_variable = { 54.lincoln_support = 1 }
+					add_to_variable = { 70.lincoln_support = 1 }
+					add_to_variable = { 32.lincoln_support = 1 }
+					add_to_variable = { 52.lincoln_support = 1 }
+					add_to_variable = { 41.lincoln_support = 1 }
+					add_to_variable = { 59.lincoln_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				5 = {
+					custom_effect_tooltip = bad_campaign
+					subtract_from_variable = { 54.lincoln_support = 1 }
+					subtract_from_variable = { 70.lincoln_support = 1 }
+					subtract_from_variable = { 32.lincoln_support = 1 }
+					subtract_from_variable = { 52.lincoln_support = 1 }
+					subtract_from_variable = { 41.lincoln_support = 1 }
+					subtract_from_variable = { 59.lincoln_support = 1 }
+					subtract_from_variable = { 58.lincoln_support = 1 }
+					subtract_from_variable = { 60.lincoln_support = 1 }
+					subtract_from_variable = { 69.lincoln_support = 1 }
+					subtract_from_variable = { 67.lincoln_support = 1 }
+					subtract_from_variable = { 81.lincoln_support = 1 }
+					subtract_from_variable = { 53.lincoln_support = 1 }
+					subtract_from_variable = { 55.lincoln_support = 1 }
+					subtract_from_variable = { 51.lincoln_support = 1 }
+					subtract_from_variable = { 40.lincoln_support = 1 }
+					subtract_from_variable = { 42.lincoln_support = 1 }
+					subtract_from_variable = { 37.lincoln_support = 1 }
+					subtract_from_variable = { 48.lincoln_support = 1 }
+					subtract_from_variable = { 50.lincoln_support = 1 }
+					subtract_from_variable = { 30.lincoln_support = 1 }
+					subtract_from_variable = { 35.lincoln_support = 1 }
+					subtract_from_variable = { 43.lincoln_support = 1 }
+					subtract_from_variable = { 71.lincoln_support = 1 }
+					subtract_from_variable = { 27.lincoln_support = 1 }
+					subtract_from_variable = { 45.lincoln_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				5 = {
+					custom_effect_tooltip = great_campaign
+					add_to_variable = { 54.lincoln_support = 1 }
+					add_to_variable = { 70.lincoln_support = 1 }
+					add_to_variable = { 32.lincoln_support = 1 }
+					add_to_variable = { 52.lincoln_support = 1 }
+					add_to_variable = { 41.lincoln_support = 1 }
+					add_to_variable = { 59.lincoln_support = 1 }
+					add_to_variable = { 58.lincoln_support = 1 }
+					add_to_variable = { 60.lincoln_support = 2 }
+					add_to_variable = { 69.lincoln_support = 1 }
+					add_to_variable = { 67.lincoln_support = 1 }
+					add_to_variable = { 81.lincoln_support = 1 }
+					add_to_variable = { 53.lincoln_support = 1 }
+					add_to_variable = { 55.lincoln_support = 1 }
+					add_to_variable = { 51.lincoln_support = 1 }
+					add_to_variable = { 40.lincoln_support = 1 }
+					add_to_variable = { 42.lincoln_support = 1 }
+					add_to_variable = { 37.lincoln_support = 1 }
+					add_to_variable = { 48.lincoln_support = 1 }
+					add_to_variable = { 50.lincoln_support = 1 }
+					add_to_variable = { 30.lincoln_support = 1 }
+					add_to_variable = { 35.lincoln_support = 1 }
+					add_to_variable = { 43.lincoln_support = 1 }
+					add_to_variable = { 71.lincoln_support = 1 }
+					add_to_variable = { 27.lincoln_support = 1 }
+					add_to_variable = { 45.lincoln_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+				30 = {
+					custom_effect_tooltip = normal_campaign
+					add_to_variable = { 70.lincoln_support = 2 }
+					add_to_variable = { 43.lincoln_support = 1 }
+					add_to_variable = { 35.lincoln_support = 1 }
+					add_to_variable = { 67.lincoln_support = 1 }
+					add_to_variable = { 60.lincoln_support = 2 }
+					add_to_variable = { 52.lincoln_support = 1 }
+					add_to_variable = { 71.lincoln_support = 1 }
+					add_to_variable = { 59.lincoln_support = 1 }
+					add_to_variable = { 53.lincoln_support = 1 }
+					activate_mission = campaign_of_enemy
+				}
+			}
+		}
+	}
+}
+
+campaign_on_new_england = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+			original_tag = USA
+		}
+	
+	visible = {
+		has_country_flag = USA_1864_campaign_start
+		OR = {
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_country_flag = new_england_count
+		}
+	}
+	available = {
+		has_country_flag = USA_1864_campaign_start
+		OR = {
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_country_flag = new_england_count
+		}
+	}
+	
+	fixed_random_seed = no
+	
+	cost = 50
+	days_re_enable = 10
+	days_remove = 15
+	
+	ai_will_do = {
+		factor = 200
+	}
+	
+	highlight_states = {
+		highlight_state_targets = {
+			state = 43
+		}			
+	}
+
+	available = {
+		controls_state = 27
+		controls_state = 45
+		controls_state = 71
+		controls_state = 35
+		controls_state = 43
+		controls_state = 30
+	}
+	remove_effect = {
+		#Lincoln
+		if = {
+			limit = {
+					has_country_flag = support_lincoln
+					NOT = {
+						has_country_flag = support_mcclellan
+					}
+				}
+				custom_effect_tooltip = lincoln_campaigning
+				random_list = { 
+					25 = {
+						country_event = {
+							id = usa.18643
+							days = 1
+							random = 12
+							random_days = 1
+						}
+						add_to_variable = { 27.lincoln_support = 1 }
+						add_to_variable = { 45.lincoln_support = 1 }
+						add_to_variable = { 71.lincoln_support = 1 }
+						add_to_variable = { 35.lincoln_support = 1 }
+						add_to_variable = { 43.lincoln_support = 1 }
+						add_to_variable = { 30.lincoln_support = 1 }
+					}
+					60 = {
+						country_event = {
+							id = usa.18644
+							days = 1
+							random = 12
+							random_days = 2
+						}
+						hidden_effect = {
+							random_list = { 
+								16 = {
+								 add_to_variable = { 27.lincoln_support = 1 }
+								}
+								14 = {
+								 add_to_variable = { 45.lincoln_support = 1 }
+								}
+								14 = {
+								 add_to_variable = { 71.lincoln_support = 1 }
+								}
+								20 = {
+								 add_to_variable = { 35.lincoln_support = 1 }
+								}
+								20 = {
+								 add_to_variable = { 43.lincoln_support = 1 }
+								}
+								16 = {
+								 add_to_variable = { 30.lincoln_support = 1 }
+								}
+							}
+						}
+					}
+					15 = {
+						country_event = {
+							id = usa.18647
+							days = 1
+							random = 12
+							random_days = 2
+						}
+						subtract_from_variable = { 27.lincoln_support = 1 }
+						subtract_from_variable = { 45.lincoln_support = 1 }
+						subtract_from_variable = { 71.lincoln_support = 1 }
+						subtract_from_variable = { 35.lincoln_support = 1 }
+						subtract_from_variable = { 43.lincoln_support = 1 }
+						subtract_from_variable = { 30.lincoln_support = 1 }
+					}
+				}
+		}
+			#Mcc
+		else_if = {
+			limit = {
+				has_country_flag = support_mcclellan
+				NOT = {
+					has_country_flag = support_lincoln
+				}
+			} 
+			custom_effect_tooltip = mcclellan_campaigning
+			random_list = { 
+				25 = {
+					country_event = {
+						id = usa.18645
+						days = 1
+						random = 12
+						random_days = 1
+					}
+					add_to_variable = { 27.mcclellan_support = 1 }
+					add_to_variable = { 45.mcclellan_support = 1 }
+					add_to_variable = { 71.mcclellan_support = 1 }
+					add_to_variable = { 35.mcclellan_support = 1 }
+					add_to_variable = { 43.mcclellan_support = 1 }
+					add_to_variable = { 30.mcclellan_support = 1 }
+				}
+				60 = {
+					country_event = {
+						id = usa.18646
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					hidden_effect = {
+						random_list = { 
+							16 = {
+							 add_to_variable = { 27.mcclellan_support = 1 }
+							}
+							20 = {
+							 add_to_variable = { 45.mcclellan_support = 1 }
+							}
+							16 = {
+							 add_to_variable = { 71.mcclellan_support = 1 }
+							}
+							16 = {
+							 add_to_variable = { 35.mcclellan_support = 1 }
+							}
+							16 = {
+							 add_to_variable = { 43.mcclellan_support = 1 }
+							}
+							16 = {
+							 add_to_variable = { 30.mcclellan_support = 1 }
+							}
+						}
+					}
+				}
+				15 = {
+					country_event = {
+						id = usa.18648
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					subtract_from_variable = { 27.mcclellan_support = 1 }
+					subtract_from_variable = { 45.mcclellan_support = 1 }
+					subtract_from_variable = { 71.mcclellan_support = 1 }
+					subtract_from_variable = { 35.mcclellan_support = 1 }
+					subtract_from_variable = { 43.mcclellan_support = 1 }
+					subtract_from_variable = { 30.mcclellan_support = 1 }
+				}
+			}
+		}
+	}
+}
+
+campaign_on_east_coast = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+		original_tag = USA
+	}
+	
+	visible = {
+		has_country_flag = USA_1864_campaign_start
+		OR = {
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_country_flag = east_coast_count
+		}
+	}
+	available = {
+		has_country_flag = USA_1864_campaign_start
+		OR = {
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_country_flag = east_coast_count
+		}
+	}
+	
+	fixed_random_seed = no
+	
+	cost = 75
+	days_re_enable = 10
+	days_remove = 15
+	
+	ai_will_do = {
+		factor = 200
+	}
+	
+	highlight_states = {
+		highlight_state_targets = {
+			state = 37
+		}			
+	}
+
+	available = {
+		controls_state = 37
+		controls_state = 50
+		controls_state = 48
+	}
+	remove_effect = {
+		#Lincoln
+		if = {
+			limit = {
+				has_country_flag = support_lincoln
+				NOT = {
+					has_country_flag = support_mcclellan
+				}
+			}
+			custom_effect_tooltip = lincoln_campaigning
+			random_list = { 
+				25 = {
+					country_event = {
+						id = usa.18643
+						days = 1
+						random = 12
+						random_days = 1
+					}
+					add_to_variable = { 37.lincoln_support = 1 }
+					add_to_variable = { 50.lincoln_support = 1 }
+					add_to_variable = { 48.lincoln_support = 1 }
+				}
+				60 = {
+					country_event = {
+						id = usa.18644
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					hidden_effect = {
+						random_list = { 
+							34 = {
+							 add_to_variable = { 37.lincoln_support = 1 }
+							}
+							33 = {
+							 add_to_variable = { 50.lincoln_support = 1 }
+							}
+							33 = {
+							 add_to_variable = { 48.lincoln_support = 1 }
+							}
+						}
+					}
+				}
+				15 = {
+					country_event = {
+						id = usa.18647
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					subtract_from_variable = { 37.lincoln_support = 1 }
+					subtract_from_variable = { 50.lincoln_support = 1 }
+					subtract_from_variable = { 48.lincoln_support = 1 }
+				}
+			}
+		}
+			#Mcc
+		else_if = {
+			limit = {
+				has_country_flag = support_mcclellan
+				NOT = {
+					has_country_flag = support_lincoln
+				}
+			} 
+			custom_effect_tooltip = mcclellan_campaigning
+			random_list = { 
+				25 = {
+					country_event = {
+						id = usa.18645
+						days = 1
+						random = 12
+						random_days = 1
+					}
+					add_to_variable = { 37.mcclellan_support = 1 }
+					add_to_variable = { 50.mcclellan_support = 1 }
+					add_to_variable = { 48.mcclellan_support = 1 }
+				}
+				60 = {
+					country_event = {
+						id = usa.18646
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					hidden_effect = {
+						random_list = { 
+							34 = {
+							 add_to_variable = { 37.mcclellan_support = 1 }
+							}
+							33 = {
+							 add_to_variable = { 50.mcclellan_support = 1 }
+							}
+							33 = {
+							 add_to_variable = { 48.mcclellan_support = 1 }
+							}
+						}
+					}
+				}
+				15 = {
+					country_event = {
+						id = usa.18648
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					subtract_from_variable = { 37.mcclellan_support = 1 }
+					subtract_from_variable = { 50.mcclellan_support = 1 }
+					subtract_from_variable = { 48.mcclellan_support = 1 }
+				}
+			}
+		}
+	}
+}
+campaign_on_far_west = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+		original_tag = USA
+	}
+	
+	visible = {
+		has_country_flag = USA_1864_campaign_start
+		OR = {
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_country_flag = far_west_count
+		}
+	}
+	available = {
+		has_country_flag = USA_1864_campaign_start
+		OR = {
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_country_flag = far_west_count
+		}
+	}
+	
+	fixed_random_seed = no
+	
+	cost = 25
+	days_re_enable = 25
+	days_remove = 15
+	
+	ai_will_do = {
+		factor = 200
+	}
+	
+	highlight_states = {
+		highlight_state_targets = {
+			state = 54
+		}			
+	}
+
+	available = {
+		controls_state = 54
+		controls_state = 41
+		controls_state = 59
+	}
+	remove_effect = {
+		#Lincoln
+		if = {
+			limit = {
+				has_country_flag = support_lincoln
+				NOT = {
+					has_country_flag = support_mcclellan
+				}
+			}
+			custom_effect_tooltip = lincoln_campaigning
+			random_list = { 
+				25 = {
+					country_event = {
+						id = usa.18643
+						days = 1
+						random = 12
+						random_days = 1
+					}
+					add_to_variable = { 54.lincoln_support = 1 }
+					add_to_variable = { 41.lincoln_support = 1 }
+					add_to_variable = { 59.lincoln_support = 1 }
+				}
+				60 = {
+					country_event = {
+						id = usa.18644
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					hidden_effect = {
+						random_list = { 
+							34 = {
+							 add_to_variable = { 54.lincoln_support = 1 }
+							}
+							33 = {
+							 add_to_variable = { 41.lincoln_support = 1 }
+							}
+							33 = {
+							 add_to_variable = { 59.lincoln_support = 1 }
+							}
+						}
+					}
+				}
+				15 = {
+					country_event = {
+						id = usa.18647
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					subtract_from_variable = { 54.lincoln_support = 1 }
+					subtract_from_variable = { 41.lincoln_support = 1 }
+					subtract_from_variable = { 59.lincoln_support = 1 }
+				}
+			}
+		}
+			#Mcc
+		else_if = {
+			limit = {
+				has_country_flag = support_mcclellan
+				NOT = {
+					has_country_flag = support_lincoln
+				}
+			} 
+			custom_effect_tooltip = mcclellan_campaigning
+			random_list = { 
+				25 = {
+					country_event = {
+						id = usa.18645
+						days = 1
+						random = 12
+						random_days = 1
+					}
+					add_to_variable = { 54.mcclellan_support = 1 }
+					add_to_variable = { 41.mcclellan_support = 1 }
+					add_to_variable = { 59.mcclellan_support = 1 }
+				}
+				60 = {
+					country_event = {
+						id = usa.18646
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					hidden_effect = {
+						random_list = { 
+							34 = {
+							 add_to_variable = { 54.mcclellan_support = 1 }
+							}
+							33 = {
+							 add_to_variable = { 41.mcclellan_support = 1 }
+							}
+							33 = {
+							 add_to_variable = { 59.mcclellan_support = 1 }
+							}
+						}
+					}
+				}
+				15 = {
+					country_event = {
+						id = usa.18648
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					subtract_from_variable = { 54.mcclellan_support = 1 }
+					subtract_from_variable = { 41.mcclellan_support = 1 }
+					subtract_from_variable = { 59.mcclellan_support = 1 }
+				}
+			}
+		}
+	}
+}
+campaign_on_great_plains = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+		original_tag = USA
+	}
+	
+	visible = {
+		has_country_flag = USA_1864_campaign_start
+		OR = {
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_country_flag = plains_count
+		}
+	}
+	available = {
+		has_country_flag = USA_1864_campaign_start
+		OR = {
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_country_flag = plains_count
+		}
+	}
+	
+	fixed_random_seed = no
+	
+	cost = 30
+	days_re_enable = 25
+	days_remove = 15
+	
+	ai_will_do = {
+		factor = 200
+	}
+	
+	highlight_states = {
+		highlight_state_targets = {
+			state = 52
+		}			
+	}
+
+	available = {
+		controls_state = 52
+		controls_state = 32
+		controls_state = 70
+	}
+	remove_effect = {
+		#Lincoln
+		if = {
+			limit = {
+				has_country_flag = support_lincoln
+				NOT = {
+					has_country_flag = support_mcclellan
+				}
+			}
+			custom_effect_tooltip = lincoln_campaigning
+			random_list = { 
+				25 = {
+					country_event = {
+						id = usa.18643
+						days = 1
+						random = 12
+						random_days = 1
+					}
+					add_to_variable = { 52.lincoln_support = 1 }
+					add_to_variable = { 32.lincoln_support = 1 }
+					add_to_variable = { 70.lincoln_support = 2 }
+				}
+				60 = {
+					country_event = {
+						id = usa.18644
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					hidden_effect = {
+						random_list = { 
+							34 = {
+							 add_to_variable = { 52.lincoln_support = 1 }
+							}
+							33 = {
+							 add_to_variable = { 32.lincoln_support = 1 }
+							}
+							33 = {
+							 add_to_variable = { 70.lincoln_support = 1 }
+							}
+						}
+					}
+				}
+				15 = {
+					country_event = {
+						id = usa.18647
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					subtract_from_variable = { 52.lincoln_support = 1 }
+					subtract_from_variable = { 32.lincoln_support = 1 }
+					subtract_from_variable = { 70.lincoln_support = 1 }
+				}
+			}
+		}
+			#Mcc
+		else_if = {
+			limit = {
+				has_country_flag = support_mcclellan
+				NOT = {
+					has_country_flag = support_lincoln
+				}
+			} 
+			custom_effect_tooltip = mcclellan_campaigning
+			random_list = { 
+				25 = {
+					country_event = {
+						id = usa.18645
+						days = 1
+						random = 12
+						random_days = 1
+					}
+					add_to_variable = { 52.mcclellan_support = 1 }
+					add_to_variable = { 32.mcclellan_support = 1 }
+					add_to_variable = { 70.mcclellan_support = 1 }
+				}
+				60 = {
+					country_event = {
+						id = usa.18646
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					hidden_effect = {
+						random_list = { 
+							34 = {
+							 add_to_variable = { 52.mcclellan_support = 1 }
+							}
+							33 = {
+							 add_to_variable = { 32.mcclellan_support = 1 }
+							}
+							33 = {
+							 add_to_variable = { 70.mcclellan_support = 1 }
+							}
+						}
+					}
+				}
+				15 = {
+					country_event = {
+						id = usa.18648
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					subtract_from_variable = { 52.mcclellan_support = 1 }
+					subtract_from_variable = { 32.mcclellan_support = 1 }
+					subtract_from_variable = { 70.mcclellan_support = 1 }
+				}
+			}
+		}
+	}
+}
+campaign_on_border_states = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+		original_tag = USA
+	}
+	
+	visible = {
+		has_country_flag = USA_1864_campaign_start
+		OR = {
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_country_flag = border_count
+		}
+	}
+	available = {
+		has_country_flag = USA_1864_campaign_start
+		OR = {
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_country_flag = border_count
+		}
+	}
+	
+	fixed_random_seed = no
+	
+	cost = 50
+	days_re_enable = 10
+	days_remove = 15
+	
+	ai_will_do = {
+		factor = 200
+	}
+	
+	highlight_states = {
+		highlight_state_targets = {
+			state = 69
+		}			
+	}
+
+	available = {
+		controls_state = 69
+		controls_state = 58
+		controls_state = 67
+		controls_state = 60
+		controls_state = 81
+	}
+	remove_effect = {
+		#Lincoln
+		if = {
+			limit = {
+				has_country_flag = support_lincoln
+				NOT = {
+					has_country_flag = support_mcclellan
+				}
+			}
+			custom_effect_tooltip = lincoln_campaigning
+			random_list = { 
+				25 = {
+					country_event = {
+						id = usa.18643
+						days = 1
+						random = 12
+						random_days = 1
+					}
+					add_to_variable = { 69.lincoln_support = 1 }
+					add_to_variable = { 58.lincoln_support = 1 }
+					add_to_variable = { 67.lincoln_support = 1 }
+					add_to_variable = { 60.lincoln_support = 2 }
+					add_to_variable = { 81.lincoln_support = 1 }
+				}
+				60 = {
+					country_event = {
+						id = usa.18644
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					hidden_effect = {
+						random_list = { 
+							20 = {
+							 add_to_variable = { 69.lincoln_support = 1 }
+							}
+							20 = {
+							 add_to_variable = { 58.lincoln_support = 1 }
+							}
+							20 = {
+							 add_to_variable = { 67.lincoln_support = 1 }
+							}
+							20 = {
+							 add_to_variable = { 60.lincoln_support = 2 }
+							}
+							20 = {
+							 add_to_variable = { 81.lincoln_support = 1 }
+							}
+						}
+					}
+				}
+				15 = {
+					country_event = {
+						id = usa.18647
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					subtract_from_variable = { 69.lincoln_support = 1 }
+					subtract_from_variable = { 58.lincoln_support = 1 }
+					subtract_from_variable = { 67.lincoln_support = 1 }
+					subtract_from_variable = { 60.lincoln_support = 1 }
+					subtract_from_variable = { 81.lincoln_support = 1 }
+				}
+			}
+		}
+			#Mcc
+		else_if = {
+			limit = {
+				has_country_flag = support_mcclellan
+				NOT = {
+					has_country_flag = support_lincoln
+				}
+			} 
+			custom_effect_tooltip = mcclellan_campaigning
+			random_list = { 
+				25 = {
+					country_event = {
+						id = usa.18645
+						days = 1
+						random = 12
+						random_days = 1
+					}
+					add_to_variable = { 69.mcclellan_support = 1 }
+					add_to_variable = { 58.mcclellan_support = 1 }
+					add_to_variable = { 67.mcclellan_support = 1 }
+					add_to_variable = { 60.mcclellan_support = 1 }
+					add_to_variable = { 81.mcclellan_support = 1 }
+				}
+				60 = {
+					country_event = {
+						id = usa.18646
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					hidden_effect = {
+						random_list = { 
+							20 = {
+							 add_to_variable = { 69.mcclellan_support = 1 }
+							}
+							20 = {
+							 add_to_variable = { 58.mcclellan_support = 1 }
+							}
+							20 = {
+							 add_to_variable = { 67.mcclellan_support = 1 }
+							}
+							20 = {
+							 add_to_variable = { 60.mcclellan_support = 1 }
+							}
+							20 = {
+							 add_to_variable = { 81.mcclellan_support = 1 }
+							}
+						}
+					}
+				}
+				15 = {
+					country_event = {
+						id = usa.18648
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					subtract_from_variable = { 69.mcclellan_support = 1 }
+					subtract_from_variable = { 58.mcclellan_support = 1 }
+					subtract_from_variable = { 67.mcclellan_support = 1 }
+					subtract_from_variable = { 60.mcclellan_support = 1 }
+					subtract_from_variable = { 81.mcclellan_support = 1 }
+				}
+			}
+		}
+	}
+}
+campaign_on_midwest = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+		original_tag = USA
+	}
+	
+	visible = {
+		has_country_flag = USA_1864_campaign_start
+		OR = {
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_country_flag = midwest_count
+		}
+	}
+	available = {
+		has_country_flag = USA_1864_campaign_start
+		OR = {
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+		NOT = {
+			has_country_flag = midwest_count
+		}
+	}
+	
+	fixed_random_seed = no
+	
+	cost = 75
+	days_re_enable = 10
+	days_remove = 15
+	
+	ai_will_do = {
+		factor = 200
+	}
+
+	highlight_states = {
+		highlight_state_targets = {
+			state = 53
+		}			
+	}
+
+	available = {
+		controls_state = 53
+		controls_state = 51
+		controls_state = 55
+		controls_state = 42
+		controls_state = 40
+	}
+	remove_effect = {
+		#Lincoln
+		if = {
+			limit = {
+				has_country_flag = support_lincoln
+				NOT = {
+					has_country_flag = support_mcclellan
+				}
+			}
+			custom_effect_tooltip = lincoln_campaigning
+			random_list = { 
+				25 = {
+					country_event = {
+						id = usa.18643
+						days = 1
+						random = 12
+						random_days = 1
+					}
+					add_to_variable = { 53.lincoln_support = 1 }
+					add_to_variable = { 51.lincoln_support = 1 }
+					add_to_variable = { 55.lincoln_support = 1 }
+					add_to_variable = { 42.lincoln_support = 1 }
+					add_to_variable = { 40.lincoln_support = 1 }
+				}
+				60 = {
+					country_event = {
+						id = usa.18644
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					hidden_effect = {
+						random_list = { 
+							20 = {
+							 add_to_variable = { 53.lincoln_support = 1 }
+							}
+							20 = {
+							 add_to_variable = { 51.lincoln_support = 1 }
+							}
+							20 = {
+							 add_to_variable = { 55.lincoln_support = 1 }
+							}
+							20 = {
+							 add_to_variable = { 42.lincoln_support = 1 }
+							}
+							20 = {
+							 add_to_variable = { 40.lincoln_support = 1 }
+							}
+						}
+					}
+				}
+				15 = {
+					country_event = {
+						id = usa.18647
+						days = 1
+						random = 12
+						random_days = 2
+					}
+					subtract_from_variable = { 53.lincoln_support = 1 }
+					subtract_from_variable = { 51.lincoln_support = 1 }
+					subtract_from_variable = { 55.lincoln_support = 1 }
+					subtract_from_variable = { 42.lincoln_support = 1 }
+					subtract_from_variable = { 40.lincoln_support = 1 }
+				}
+			}
+		}
+			#Mcc
+		else_if = {
+				limit = {
+					has_country_flag = support_mcclellan
+					NOT = {
+						has_country_flag = support_lincoln
+					}
+				} 
+				custom_effect_tooltip = mcclellan_campaigning
+				random_list = { 
+					25 = {
+						country_event = {
+							id = usa.18645
+							days = 1
+							random = 12
+							random_days = 1
+						}
+						add_to_variable = { 53.mcclellan_support = 1 }
+						add_to_variable = { 51.mcclellan_support = 1 }
+						add_to_variable = { 55.mcclellan_support = 1 }
+						add_to_variable = { 42.mcclellan_support = 1 }
+						add_to_variable = { 40.mcclellan_support = 1 }
+					}
+					60 = {
+						country_event = {
+							id = usa.18646
+							days = 1
+							random = 12
+							random_days = 2
+						}
+						hidden_effect = {
+							random_list = { 
+								20 = {
+								 add_to_variable = { 53.mcclellan_support = 1 }
+								}
+								20 = {
+								 add_to_variable = { 51.mcclellan_support = 1 }
+								}
+								20 = {
+								 add_to_variable = { 55.mcclellan_support = 1 }
+								}
+								20 = {
+								 add_to_variable = { 42.mcclellan_support = 1 }
+								}
+								20 = {
+								 add_to_variable = { 40.mcclellan_support = 1 }
+								}
+							}
+						}
+					}			
+					15 = {
+						country_event = {
+							id = usa.18648
+							days = 1
+							random = 12
+							random_days = 2
+						}
+						subtract_from_variable = { 53.mcclellan_support = 1 }
+						subtract_from_variable = { 51.mcclellan_support = 1 }
+						subtract_from_variable = { 55.mcclellan_support = 1 }
+						subtract_from_variable = { 42.mcclellan_support = 1 }
+						subtract_from_variable = { 40.mcclellan_support = 1 }
+					}
+				}
+			}
+		}
+	}
+}
+
+USA_1864_campaigning = {
+
+count_on_new_england_rep = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+		original_tag = USA
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}
+	
+	visible = {
+	has_country_flag = USA_1864_campaign_start
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}	
+	available = {
+		date > 1864.12.31
+	}
+	
+	fire_only_once = yes
+	is_good = yes
+	
+	activation = { 
+		has_country_flag = USA_1864_campaign_start
+		controls_state = 27
+		controls_state = 45
+		controls_state = 71
+		controls_state = 35
+		controls_state = 43
+		controls_state = 30
+	} 
+	
+	days_mission_timeout = 300
+	
+	ai_will_do = {
+		factor = 200
+	}
+	
+	highlight_states = {
+		highlight_state_targets = {
+			state = 43
+		}			
+	}
+	remove_effect  = {
+		if = {
+			limit = {
+				USA_compare_MA_support = yes
+			}
+			custom_effect_tooltip = MA_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_MA_support = yes
+				}
+			}
+			custom_effect_tooltip = MA_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_CT_support = yes
+			}
+			custom_effect_tooltip = CT_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_CT_support = yes
+				}
+			}
+			custom_effect_tooltip = CT_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_maine_support = yes
+			}
+			custom_effect_tooltip = maine_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_maine_support = yes
+				}
+			}
+			custom_effect_tooltip = maine_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_RI_support = yes
+			}
+			custom_effect_tooltip = RI_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_RI_support = yes
+				}
+			}
+			custom_effect_tooltip = RI_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_VT_support = yes
+			}
+			custom_effect_tooltip = VT_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_VT_support = yes
+				}
+			}
+			custom_effect_tooltip = VT_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_NH_support = yes
+			}
+			custom_effect_tooltip = NH_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_NH_support = yes
+				}
+			}
+			custom_effect_tooltip = NH_D_wined
+		}
+	}
+	timeout_effect = {
+		set_country_flag = new_england_count
+		if = {
+			limit = {
+				USA_compare_MA_support = yes
+			}
+			custom_effect_tooltip = MA_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.MA_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_MA_support = yes
+				}
+			}
+			custom_effect_tooltip = MA_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.MA_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_CT_support = yes
+			}
+			custom_effect_tooltip = CT_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.CT_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_CT_support = yes
+				}
+			}
+			custom_effect_tooltip = CT_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.CT_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_maine_support = yes
+			}
+			custom_effect_tooltip = maine_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.Maine_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_maine_support = yes
+				}
+			}
+			custom_effect_tooltip = maine_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.Maine_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_RI_support = yes
+			}
+			custom_effect_tooltip = RI_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.RI_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_RI_support = yes
+				}
+			}
+			custom_effect_tooltip = RI_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.RI_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_VT_support = yes
+			}
+			custom_effect_tooltip = VT_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.VT_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_VT_support = yes
+				}
+			}
+			custom_effect_tooltip = VT_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.VT_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_NH_support = yes
+			}
+			custom_effect_tooltip = NH_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.NH_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_NH_support = yes
+				}
+			}
+			custom_effect_tooltip = NH_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.NH_votes }
+		}
+		round_variable = usa.republican_votes_pool
+		round_variable = usa.democrats_votes_pool
+	}		
+}
+count_on_east_coast_rep = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+		original_tag = USA
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}
+	
+	visible = {
+		has_country_flag = USA_1864_campaign_start
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}	
+	available = {
+		date > 1864.12.31
+	}
+	
+	fire_only_once = yes
+	is_good = yes
+	
+	activation = { 
+		has_country_flag = USA_1864_campaign_start
+		controls_state = 37
+		controls_state = 48
+		controls_state = 50
+	} 
+	
+	days_mission_timeout = 304
+	
+	ai_will_do = {
+		factor = 200
+	}
+	
+	highlight_states = {
+		highlight_state_targets = {
+			state = 37
+		}			
+	}
+	remove_effect  = {
+		if = {
+			limit = {
+				USA_compare_NY_support = yes
+			}
+			custom_effect_tooltip = NY_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_NY_support = yes
+				}
+			}
+			custom_effect_tooltip = NY_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_PE_support = yes
+			}
+			custom_effect_tooltip = PE_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_PE_support = yes
+				}
+			}
+			custom_effect_tooltip = PE_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_NJ_support = yes
+			}
+			custom_effect_tooltip = NJ_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_NJ_support = yes
+				}
+			}
+			custom_effect_tooltip = NJ_D_wined
+		}
+	}
+	timeout_effect = {
+		set_country_flag = east_coast_count
+		if = {
+			limit = {
+				USA_compare_NY_support = yes
+			}
+			custom_effect_tooltip = NY_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.NY_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_NY_support = yes
+				}
+			}
+			custom_effect_tooltip = NY_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.NY_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_PE_support = yes
+			}
+			custom_effect_tooltip = PE_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.PE_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_PE_support = yes
+				}
+			}
+			custom_effect_tooltip = PE_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.PE_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_NJ_support = yes
+			}
+			custom_effect_tooltip = NJ_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.NJ_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_NJ_support = yes
+				}
+			}
+			custom_effect_tooltip = NJ_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.NJ_votes }
+		}
+		round_variable = usa.republican_votes_pool
+		round_variable = usa.democrats_votes_pool
+	}		
+}
+count_on_great_plains_rep = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+		original_tag = USA
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}
+	
+	visible = {
+		has_country_flag = USA_1864_campaign_start
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}	
+	available = {
+		date > 1864.12.31
+	}
+	
+	fire_only_once = yes
+	is_good = yes
+	
+	activation = { 
+		has_country_flag = USA_1864_campaign_start
+		controls_state = 37
+		controls_state = 48
+		controls_state = 50
+	} 
+	
+	days_mission_timeout = 306
+	
+	ai_will_do = {
+		factor = 200
+	}
+	
+	highlight_states = {
+		highlight_state_targets = {
+			state = 52
+		}			
+	}
+	remove_effect  = {
+		if = {
+			limit = {
+				USA_compare_MN_support = yes
+			}
+			custom_effect_tooltip = MN_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_MN_support = yes
+				}
+			}
+			custom_effect_tooltip = MN_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_KA_support = yes
+			}
+			custom_effect_tooltip = KA_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_KA_support = yes
+				}
+			}
+			custom_effect_tooltip = KA_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_IO_support = yes
+			}
+			custom_effect_tooltip = IO_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_IO_support = yes
+				}
+			}
+			custom_effect_tooltip = IO_D_wined
+		}
+	}
+	timeout_effect = {
+		set_country_flag = plains_count
+		if = {
+			limit = {
+				USA_compare_MN_support = yes
+			}
+			custom_effect_tooltip = MN_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.MN_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_MN_support = yes
+				}
+			}
+			custom_effect_tooltip = MN_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.MN_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_KA_support = yes
+			}
+			custom_effect_tooltip = KA_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.KA_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_KA_support = yes
+				}
+			}
+			custom_effect_tooltip = KA_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.KA_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_IO_support = yes
+			}
+			custom_effect_tooltip = IO_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.IO_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_IO_support = yes
+				}
+			}
+			custom_effect_tooltip = IO_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.IO_votes }
+		}
+		round_variable = usa.republican_votes_pool
+		round_variable = usa.democrats_votes_pool
+	}		
+}
+count_on_far_west_rep = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+		original_tag = USA
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}
+	
+	visible = {
+	has_country_flag = USA_1864_campaign_start
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}	
+	available = {
+		date > 1864.12.31
+	}
+	
+	fire_only_once = yes
+	is_good = yes
+	
+	activation = { 
+		has_country_flag = USA_1864_campaign_start
+		controls_state = 54
+		controls_state = 59
+		controls_state = 41
+	} 
+	
+	days_mission_timeout = 308
+	
+	ai_will_do = {
+		factor = 200
+	}
+	
+	highlight_states = {
+		highlight_state_targets = {
+			state = 54
+		}			
+	}
+	remove_effect  = {
+		if = {
+			limit = {
+				USA_compare_CA_support = yes
+			}
+			custom_effect_tooltip = CA_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_CA_support = yes
+				}
+			}
+			custom_effect_tooltip = CA_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_OR_support = yes
+			}
+			custom_effect_tooltip = OR_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_OR_support = yes
+				}
+			}
+			custom_effect_tooltip = OR_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_NE_support = yes
+				has_country_flag = neveda_in_union
+			}
+			custom_effect_tooltip = NE_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_NE_support = yes
+				}		
+				has_country_flag = neveda_in_union
+			}
+			custom_effect_tooltip = NE_D_wined
+		}
+	}
+	timeout_effect = {
+		set_country_flag = far_west_count
+		if = {
+			limit = {
+				USA_compare_CA_support = yes
+			}
+			custom_effect_tooltip = CA_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.CA_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_CA_support = yes
+				}
+			}
+			custom_effect_tooltip = CA_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.CA_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_OR_support = yes
+			}
+			custom_effect_tooltip = OR_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.OR_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_OR_support = yes
+				}
+			}
+			custom_effect_tooltip = OR_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.OR_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_NE_support = yes
+				has_country_flag = neveda_in_union
+			}
+			custom_effect_tooltip = NE_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.NE_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_NE_support = yes
+				}
+				has_country_flag = neveda_in_union
+			}
+			custom_effect_tooltip = NE_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.NE_votes }
+		}
+		round_variable = usa.republican_votes_pool
+		round_variable = usa.democrats_votes_pool
+	}		
+}
+count_on_border_state_rep = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+		original_tag = USA
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}
+	
+	visible = {
+	has_country_flag = USA_1864_campaign_start
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}	
+	available = {
+		date > 1864.12.31
+	}
+	
+	fire_only_once = yes
+	is_good = yes
+	
+	activation = { 
+		has_country_flag = USA_1864_campaign_start
+		controls_state = 58
+		controls_state = 69
+		controls_state = 67
+		controls_state = 60
+		controls_state = 81
+	} 
+	
+	days_mission_timeout = 310
+	
+	ai_will_do = {
+		factor = 200
+	}
+
+	highlight_states = {
+		highlight_state_targets = {
+			state = 69
+		}			
+	}
+	remove_effect  = {
+		if = {
+			limit = {
+				USA_compare_KY_support = yes
+			}
+			custom_effect_tooltip = KY_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_KY_support = yes
+				}
+			}
+			custom_effect_tooltip = KY_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_DE_support = yes
+			}
+			custom_effect_tooltip = DE_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_DE_support = yes
+				}
+			}
+			custom_effect_tooltip = DE_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_MO_support = yes
+			}
+			custom_effect_tooltip = MO_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_MO_support = yes
+				}
+			}
+			custom_effect_tooltip = MO_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_MD_support = yes
+			}
+			custom_effect_tooltip = MD_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_MD_support = yes
+				}
+			}
+			custom_effect_tooltip = MD_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_WVA_support = yes
+				has_country_flag = wva_in_union
+			}
+			custom_effect_tooltip = WVA_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_WVA_support = yes
+				}
+				has_country_flag = wva_in_union
+			}
+			custom_effect_tooltip = WVA_D_wined
+		}
+	}
+	timeout_effect = {
+		set_country_flag = border_count
+		if = {
+			limit = {
+				USA_compare_KY_support = yes
+			}
+			custom_effect_tooltip = KY_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.KY_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_KY_support = yes
+				}
+			}
+			custom_effect_tooltip = KY_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.KY_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_DE_support = yes
+			}
+			custom_effect_tooltip = DE_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.DE_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_DE_support = yes
+				}
+			}
+			custom_effect_tooltip = DE_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.DE_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_MO_support = yes
+			}
+			custom_effect_tooltip = MO_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.MO_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+				USA_compare_MO_support = yes
+				}
+			}
+			custom_effect_tooltip = MO_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.MO_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_MD_support = yes
+			}
+			custom_effect_tooltip = MD_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.MD_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_MD_support = yes
+				}
+			}
+			custom_effect_tooltip = MD_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.MD_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_WVA_support = yes
+				has_country_flag = wva_in_union
+			}
+			custom_effect_tooltip = WVA_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.WVA_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_WVA_support = yes
+				}
+				has_country_flag = wva_in_union
+			}
+			custom_effect_tooltip = WVA_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.WVA_votes }
+		}
+		round_variable = usa.republican_votes_pool
+		round_variable = usa.democrats_votes_pool
+	}		
+}
+count_on_midwest_state_rep = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+		original_tag = USA
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}
+	
+	visible = {
+		has_country_flag = USA_1864_campaign_start
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}	
+	available = {
+		date > 1864.12.31
+	}
+	
+	fire_only_once = yes
+	is_good = yes
+	
+	activation = { 
+		has_country_flag = USA_1864_campaign_start
+		controls_state = 55
+		controls_state = 51
+		controls_state = 53
+		controls_state = 40
+		controls_state = 42
+	} 
+	
+	days_mission_timeout = 312
+	
+	ai_will_do = {
+		factor = 200
+	}
+
+	highlight_states = {
+		highlight_state_targets = {
+			state = 53
+		}			
+	}
+	remove_effect  = {
+		if = {
+			limit = {
+				USA_compare_IL_support = yes
+			}
+			custom_effect_tooltip = IL_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_IL_support = yes
+				}
+			}
+			custom_effect_tooltip = IL_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_OH_support = yes
+			}
+			custom_effect_tooltip = OH_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_OH_support = yes
+				}
+			}
+			custom_effect_tooltip = OH_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_IN_support = yes
+			}
+			custom_effect_tooltip = IN_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_IN_support = yes
+				}
+			}
+			custom_effect_tooltip = IN_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_MI_support = yes
+			}
+			custom_effect_tooltip = MI_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_MI_support = yes
+				}
+			}
+			custom_effect_tooltip = MI_D_wined
+		}
+		if = {
+			limit = {
+				USA_compare_WS_support = yes
+			}
+			custom_effect_tooltip = WS_R_wined
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_WS_support = yes
+				}
+			}
+			custom_effect_tooltip = WS_D_wined
+		}
+	}
+	timeout_effect = {
+		set_country_flag = midwest_count
+		if = {
+			limit = {
+				USA_compare_IL_support = yes
+			}
+			custom_effect_tooltip = IL_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.IL_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_IL_support = yes
+				}
+			}
+			custom_effect_tooltip = IL_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.IL_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_OH_support = yes
+			}
+			custom_effect_tooltip = OH_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.OH_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_OH_support = yes
+				}
+			}
+			custom_effect_tooltip = OH_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.OH_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_IN_support = yes
+			}
+			custom_effect_tooltip = IN_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.IN_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_IN_support = yes
+				}
+			}
+			custom_effect_tooltip = IN_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.IN_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_MI_support = yes
+			}
+			custom_effect_tooltip = MI_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.MI_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_MI_support = yes
+				}
+			}
+			custom_effect_tooltip = MI_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.MI_votes }
+		}
+		if = {
+			limit = {
+				USA_compare_WS_support = yes
+			}
+			custom_effect_tooltip = WS_R_win
+			add_to_variable = { usa.republican_votes_pool = usa.WS_votes }
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					USA_compare_WS_support = yes
+				}
+			}
+			custom_effect_tooltip = WS_D_win
+			add_to_variable = { usa.democrats_votes_pool  = usa.WS_votes }
+		}
+		round_variable = usa.republican_votes_pool
+		round_variable = usa.democrats_votes_pool
+	}		
+}
+count_on_pools = {
+	
+	icon = usa_1864_election
+	
+	allowed = {
+		original_tag = USA
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}
+	
+	visible = {
+	has_country_flag = USA_1864_campaign_start
+		OR ={
+			has_country_flag = support_lincoln
+			has_country_flag = support_mcclellan
+		}
+	}	
+	available = {
+		date > 1864.12.31
+	}
+	
+	fire_only_once = yes
+	is_good = yes
+	
+	activation = { 
+		controls_state = 58
+		has_country_flag = USA_1864_campaign_start
+		has_country_flag = border_count
+		has_country_flag = east_coast_count
+		has_country_flag = new_england_count
+		has_country_flag = midwest_count
+		has_country_flag = plains_count
+		has_country_flag = far_west_count
+	} 
+	
+	days_mission_timeout = 7
+	
+	ai_will_do = {
+		factor = 200
+	}
+
+	highlight_states = {
+		highlight_state_targets = {
+			state = 58
+		}			
+	}
+	timeout_effect = {
+		round_variable = usa.republican_votes_pool
+		round_variable = usa.democrats_votes_pool
+		if = {
+			limit = {
+				USA_compare_R_votes = yes
+			}
+			custom_effect_tooltip = Republican_Wins_1864
+			country_event = {
+				id = usa.18640
+				days = 3
+				random = 12
+				random_days = 2
+			}
+		}
+		else_if = {
+			limit = {
+				USA_compare_D_votes = yes
+			}
+			custom_effect_tooltip = Democrat_Wins_1864
+			country_event = {
+				id = usa.18641
+				days = 3
+				random = 12
+				random_days = 2
+			}
+			country_event = {
+				id = usa.186412
+				days = 3
+				random = 12
+				random_days = 2
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					OR = {
+						USA_compare_D_votes = yes
+						USA_compare_R_votes = yes
+					}
+				}
+			}
+			custom_effect_tooltip = counting
+		}
+	}		
+}
+}

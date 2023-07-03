@@ -1,0 +1,23 @@
+﻿units = {
+#ONLY NORFOLK NAVAL BASE FLEETS
+fleet = {
+	name = "USS NORFOLK Fleet"			
+		naval_base = 4694 # NORFOLK
+		task_force = {		
+		name = "VIRGINIA FLEETS"	
+		location = 4694
+		ship = { name = "USS Pennsylvania" definition = battleship start_experience_factor = 0.0 equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "NO Class" } } }
+		ship = { name = "USS Delaware" definition = battleship start_experience_factor = 0.0 equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "NO Class" } } }
+		ship = { name = "USS New York" definition = battleship start_experience_factor = 0.0 equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "NO Class" } } }
+		ship = { name = "USS Columbus" definition = battleship start_experience_factor = 0.0 equipment = { ship_hull_heavy_1 = { amount = 1 owner = USA version_name = "NO Class" } } }
+		ship = { name = "USS United States" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "USS LIGHT Class" } } }
+		ship = { name = "USS Columbia" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "USS LIGHT Class" } } }
+		ship = { name = "USS Raritan" definition = light_cruiser start_experience_factor = 0.25 equipment = { ship_hull_cruiser_2 = { amount = 1 owner = USA version_name = "USS LIGHT Class" } } }
+		ship = { name = "USS Plymouth" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "USS Des" } } }
+		ship = { name = "USS Germantown" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "USS Des" } } }
+		ship = { name = "USS Dolphin" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "USS Des" } } }
+		ship = { name = "USS Merrimack" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "USS Des" } } }
+		ship = { name = "USS Pensacola" definition = destroyer start_experience_factor = 0.25 equipment = { ship_hull_light_1 = { amount = 1 owner = USA version_name = "USS Des" } } }
+		}
+}
+}

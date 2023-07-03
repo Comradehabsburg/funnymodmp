@@ -1,0 +1,31 @@
+state={
+	id=50
+	name="STATE_50"
+	history={
+		owner = USA
+		add_core_of = USA
+		victory_points = { 7057 20 }
+		victory_points = { 2148 10 }
+		victory_points = { 1341 10 }
+		buildings = {
+			infrastructure = 4
+			arms_factory = 0
+			industrial_complex = 3
+			dockyard = 1
+			7057 = {
+				naval_base = 5
+			}
+			2148 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		1164 1341 1405 2148 3784 5595 5681 5846 7023 7042 7057 7162 7194 
+	}
+	manpower=672035
+	state_category=metropolis
+	buildings_max_level_factor=1.000
+	local_supplies=35.0 
+}

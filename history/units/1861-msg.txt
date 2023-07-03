@@ -1,0 +1,170 @@
+division_template = {
+	name = "CS Militia"
+	is_locked = yes
+
+	regiments = {
+		Militia = { x = 0 y = 0 }
+		Militia = { x = 0 y = 1 }
+		Militia = { x = 0 y = 2 }
+		Militia = { x = 0 y = 3 }
+	}
+	priority = 1
+}
+Units ={
+	division = {
+		name = "North Carolina State Guards"
+		location = 1874
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "North Carolina State Guards"
+		location = 1874
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 2456
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 2456
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 2456
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 2456
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 2456
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 2456
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 2456
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 2456
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 2456
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 2456
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 2456
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 2456
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "Missouri State Guards"
+		location = 5278
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "Missouri State Guards"
+		location = 5278
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "Missouri State Guards"
+		location = 5278
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "Missouri State Guards"
+		location = 5278
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "Missouri State Guards"
+		location = 5278
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "Missouri State Guards"
+		location = 5278
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "Missouri State Guards"
+		location = 5278
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "Missouri State Guards"
+		location = 5278
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "Missouri State Guards"
+		location = 5278
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "Missouri State Guards"
+		location = 5278
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "Missouri State Guards"
+		location = 5278
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+		division = {
+		name = "Missouri State Guards"
+		location = 5278
+		division_template = "CS Militia"
+		start_experience_factor = 0.3
+	}
+}

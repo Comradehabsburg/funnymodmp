@@ -1,0 +1,32 @@
+Units ={
+	division = {
+		name = "3rd Minnesota Infantry Regiment"
+		location = 6968
+		division_template = "Union volunteers"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "7th Minnesota Infantry Regiment"
+		location = 6968
+		division_template = "Union volunteers"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "9th Minnesota Infantry Regiment"
+		location = 6968
+		division_template = "Union volunteers"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "10th Minnesota Infantry Regiment"
+		location = 6968
+		division_template = "Union volunteers"
+		start_experience_factor = 0.5
+	}
+	division = {
+		name = "6th Minnesota Infantry Regiment"
+		location = 6968
+		division_template = "Union volunteers"
+		start_experience_factor = 0.5
+	}
+}

@@ -1,0 +1,3373 @@
+###########################
+# 1860 - 1861 Events
+###########################
+
+add_namespace = usa
+#Price-Harney Truce
+country_event = {
+ id = usa.18604
+ title = usa.18604.t
+ desc = usa.18604.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	has_character = USA_abraham_lincoln
+	CSA = {
+	has_country_flag = CAMP_JACKSON
+	}
+	date > 1861.5.11
+	}
+	option = {
+	name = usa.18604.a
+	ai_chance = { factor = 100}
+	add_political_power = -25
+	custom_effect_tooltip = increase_usa
+	add_popularity = {
+	ideology = democratic 
+	popularity = 0.02
+	}
+	add_popularity = {
+	ideology = communism 
+	popularity = 0.02
+	}
+	every_unit_leader = {
+	limit = {
+	has_id = 502
+	}
+	add_unit_leader_trait = demoted
+	}
+	every_unit_leader = {
+	limit = {
+	has_id = 15000
+	}
+	add_timed_unit_leader_trait = {  
+	trait = recently_promoted 
+	days = 100 
+	}
+	add_unit_leader_trait = brilliant_strategist
+	}
+	add_to_variable = {
+	var = 67.usa_support
+	value = 5
+	}
+	subtract_from_variable = {
+	var = 67.csa_support
+	value = 5
+	}
+ }
+ 	option = {
+	name = usa.18604.b
+	add_political_power = 25
+	add_popularity = {
+	ideology = fascism 
+	popularity = 0.05
+	}
+	custom_effect_tooltip = increase_csa
+	add_to_variable = {
+	var = 67.csa_support
+	value = 5
+	}
+	subtract_from_variable = {
+	var = 67.usa_support
+	value = 5
+	}
+ }
+}
+#Floyd Resign
+country_event = {
+ id = usa.18601
+ title = usa.18601.t
+ desc = usa.18601.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	has_character = USA_james_buchanan
+	has_completed_focus = USA_cabinet_meeting
+	date > 1860.12.1
+	}
+	option = {
+	name = usa.18601.a
+	add_political_power = 10
+	custom_effect_tooltip = floyd_resign
+ }
+}
+#Wedding
+country_event = {
+ id = usa.18602
+ title = usa.18602.t
+ desc = usa.18602.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	has_character = USA_james_buchanan
+	date > 1860.12.13
+	has_completed_focus = USA_buchanan_administration
+	}
+	option = {
+	name = usa.18602.a
+	add_political_power = 25
+ }
+}
+#Anderson to sumter
+country_event = {
+ id = usa.18603
+ title = usa.18603.t
+ desc = usa.18603.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	has_character = USA_james_buchanan
+	date > 1860.11.20
+	has_completed_focus = USA_buchanan_administration
+	}
+	option = {
+	name = usa.18603.a
+	add_political_power = 15
+	custom_effect_tooltip = Anderson_move
+ }
+}
+
+#Indian territory CIVIL WAR
+country_event = {
+ id = usa.1492
+ title = usa.1492.t
+ desc = usa.1492.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.1492.a
+	ai_chance = { factor = 100 }
+
+	unlock_decision_category_tooltip = civil_war_in_indians_decisions
+	hidden_effect = {
+	CSA = {
+	release = OKL
+	}
+	INT = {
+	set_state_owner = 87
+	set_state_controller = 87
+	set_province_controller = 229
+	set_province_controller = 3809
+	set_province_controller = 91
+	set_province_controller = 7820
+	set_province_controller = 5759
+	set_province_controller = 2064
+	set_province_controller = 1401
+	set_province_controller = 7816
+	set_province_controller = 4295
+	set_province_controller = 4346
+	set_province_controller = 7811
+	set_province_controller = 4601
+	set_province_controller = 2826
+	set_province_controller = 7783 
+	set_province_controller = 1453
+	set_province_controller = 7826
+	set_province_controller = 7845
+	set_province_controller = 1917
+	set_province_controller = 3696
+	}
+	INT = {
+	declare_war_on = {
+    target = OKL
+    type = annex_everything
+		}
+	}	
+	INT = {
+	load_oob = indian_territory
+	add_ideas = indian_civil_war
+	}
+	OKL = {
+	load_oob = CSA_indian_territory
+	add_ideas = indian_civil_war
+	}
+		}
+	}
+}
+#Califronia Column
+country_event = {
+ id = usa.1493
+ title = usa.1493.t
+ desc = usa.1493.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 5 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1862.1.1
+	has_completed_focus = USA_caling_75000
+	controls_state = 54
+	}
+	option = {
+	name = usa.1493.a
+	ai_chance = { factor = 100 }
+		54 = {
+		create_unit = {
+			division = "name = \" 1st California Infantry\" division_template = \"Union volunteers\" start_experience_factor = 0.1 start_equipment_factor =1"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"1st Regiment California Volunteer Cavalry\" division_template = \"Union Cavalry volunteers\" start_experience_factor = 0.1 start_equipment_factor =1"
+			owner = USA
+			}
+			create_unit = {
+			division = "name = \"2nd Regiment California Volunteer Cavalry\" division_template = \"Union Cavalry volunteers\" start_experience_factor = 0.1 start_equipment_factor =1"
+			owner = USA
+			}
+		}
+ }
+}
+
+#REMOVE FORT SUMTER
+country_event = {
+ id = usa.999
+ title = usa.999.t
+ desc = usa.999.d
+ picture = GFX_report_event_remove_from_sumter
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+
+ trigger = {
+	date > 1860.11.10
+	tag = USA
+	has_character = USA_james_buchanan
+	controls_state = 82
+	has_country_flag = Lincoln_elect
+ }
+	#should not allow the surrender of fort sumter anymore
+	option = {
+		name = usa.999.b
+		ai_chance = { factor = 1000 }
+		custom_effect_tooltip = usa_fort_sumter_hold
+	}
+}
+
+#SC
+country_event = {
+ id = usa.1
+ title = usa.1.t
+ desc = usa.1.d
+ picture = GFX_report_event_picture_secession
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+	timeout_days = 7
+ trigger = {
+	date > 1860.12.20
+	tag = USA
+	has_character = USA_james_buchanan
+	controls_state = 62
+	has_country_flag = Lincoln_elect
+ }
+ 
+ 
+ option = {
+	name = usa.1.a
+	ai_chance = { factor = 100 }
+  release = SOC
+	every_country = {
+	set_global_flag = CM_SE_opened
+	clear_array = CM_SE_event_id_array
+	add_to_array = { CM_SE_event_id_array = 3 }	
+	play_song = "The Flag of Secession"
+	}
+	hidden_effect={
+	
+		add_state_claim = 62
+		add_state_core = 86
+		load_oob = fort_sumter_defense
+		USA_congress_remove_state = yes
+		23 = {
+	set_demilitarized_zone = yes
+	}
+	64 = {
+	set_demilitarized_zone = yes
+	}
+	38 = {
+	set_demilitarized_zone = yes
+	}
+	24 = {
+	set_demilitarized_zone = yes
+	}
+	34 = {
+	set_demilitarized_zone = yes
+	}
+	36 = {
+	set_demilitarized_zone = yes
+	}
+	38 = {
+	set_demilitarized_zone = yes
+	}
+	39 = {
+	set_demilitarized_zone = yes
+	}
+	66 = {
+	set_demilitarized_zone = yes
+	}
+	65 = {
+	set_demilitarized_zone = yes
+	}
+	56 = {
+	set_demilitarized_zone = yes
+	}
+	61 = {
+	set_demilitarized_zone = yes
+	}
+	}
+	add_threat = 1
+ }
+}
+country_event = {
+ id = usa.2
+ title = usa.2.t
+ desc = usa.2.d
+ picture = GFX_report_event_picture_secession
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+	timeout_days = 7
+ trigger = {
+	date > 1861.1.9
+	tag = USA
+	has_character = USA_james_buchanan
+	controls_state = 34
+	has_country_flag = Lincoln_elect
+ }
+ 
+ 
+ option = {
+	name = usa.2.a
+	ai_chance = { factor = 100 }
+  release = MIS
+	add_threat = 1
+	hidden_effect={
+		add_state_claim = 34
+		USA_congress_remove_state = yes
+	}
+ }
+}
+
+country_event = {
+ id = usa.3
+ title = usa.3.t
+ desc = usa.3.d
+ picture = GFX_report_event_picture_secession
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+	timeout_days = 7
+ trigger = {
+	date > 1861.1.10
+	tag = USA
+	has_character = USA_james_buchanan
+	controls_state = 23
+	has_country_flag = Lincoln_elect
+ }
+ 
+ 
+ option = {
+	name = usa.3.a
+	ai_chance = { factor = 100 }
+  release = FLO
+	add_threat = 1
+	hidden_effect={
+		add_state_claim = 23
+		USA_congress_remove_state = yes
+	}
+ }
+}
+
+country_event = {
+ id = usa.4
+ title = usa.4.t
+ desc = usa.4.d
+ picture = GFX_report_event_picture_secession
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+	timeout_days = 7
+ trigger = {
+	date > 1861.1.11
+	tag = USA
+	has_character = USA_james_buchanan
+	controls_state = 36
+	has_country_flag = Lincoln_elect
+ }
+ 
+ 
+ option = {
+	name = usa.4.a
+	ai_chance = { factor = 100 }
+  release = ALA
+	add_threat = 1
+	hidden_effect={
+		add_state_claim = 36
+		USA_congress_remove_state = yes
+	}
+ }
+}
+country_event = {
+ id = usa.5
+ title = usa.5.t
+ desc = usa.5.d
+ picture = GFX_report_event_picture_secession
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+	timeout_days = 7
+ trigger = {
+	date > 1861.1.19
+	tag = USA
+	has_character = USA_james_buchanan
+	controls_state = 39
+	has_country_flag = Lincoln_elect
+ }
+ 
+ 
+ option = {
+	name = usa.5.a
+	ai_chance = { factor = 100 }
+  release = GEA
+	add_threat = 1
+	hidden_effect={
+		add_state_claim = 39
+		USA_congress_remove_state = yes
+	}
+ }
+}
+country_event = {
+ id = usa.6
+ title = usa.6.t
+ desc = usa.6.d
+ picture = GFX_report_event_picture_secession
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+	timeout_days = 7
+ trigger = {
+	date > 1861.1.26
+	tag = USA
+	has_character = USA_james_buchanan
+	controls_state = 24
+	has_country_flag = Lincoln_elect
+ }
+ 
+ 
+ option = {
+	name = usa.6.a
+	ai_chance = { factor = 100 }
+  release = LOU
+	add_threat = 1
+	hidden_effect={
+		add_state_claim = 24
+		USA_congress_remove_state = yes
+	}
+ }
+}
+country_event = {
+ id = usa.7
+ title = usa.7.t
+ desc = usa.7.d
+ picture = GFX_report_event_picture_secession
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+	timeout_days = 7
+ trigger = {
+	date > 1861.2.15
+	tag = USA
+	has_character = USA_james_buchanan
+	controls_state = 38
+	has_country_flag = Lincoln_elect
+ }
+ 
+ 
+ option = {
+	name = usa.7.a
+	ai_chance = { factor = 100 }
+  release = TEX
+	add_threat = 1
+	hidden_effect={
+		add_state_claim = 38
+		USA_congress_remove_state = yes
+	}
+ }
+}
+
+country_event = {
+ id = usa.300
+ title = usa.300.t
+ desc = usa.300.d
+ picture = GFX_report_event_picture_secession
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+	timeout_days = 7
+ trigger = {
+	date > 1861.2.10
+	USA = {
+	controls_state = 58
+	}
+	has_country_flag = Lincoln_elect
+ }
+ 
+ 
+	option = {
+		name = usa.300.a
+		ai_chance = { factor = 100 }
+		create_intelligence_agency = yes
+		add_ideas = pinkerton
+	}
+}
+
+##attack on fort sumter
+country_event = {
+ id = usa.8
+ title = usa.8.t
+ desc = usa.8.d
+ picture = GFX_report_event_german_parade_paris
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+
+ trigger = {
+	date > 1861.4.1
+	tag = USA
+	has_character = USA_abraham_lincoln
+  controls_state = 82
+	has_country_flag = Lincoln_elect
+	}
+	
+ 
+ 
+ option = {
+	name = usa.8.a
+	ai_chance = { factor = 100 }
+	set_country_flag = sumter_attacked
+	custom_effect_tooltip = usa_fort_sumter
+	hidden_effect={
+	62 = {
+	set_demilitarized_zone = no
+	}
+	SOC = {
+	load_oob = fort_sumter_attack
+	}
+		start_border_war = {
+    change_state_after_war = YES
+    attacker = {
+        state = 62
+        num_provinces = 1
+        on_win = news.1
+        on_lose = usa.998
+        on_cancel = news.1
+    }
+				
+    defender = {
+        state = 82
+        num_provinces = 1
+        on_win = usa.997
+        on_lose = usa.998
+        on_cancel = usa.998
+    }
+	}
+	set_border_war_data = {
+    attacker = 62
+    defender = 82
+		attacker_modifier = 1.5
+		combat_width = 120
+		}
+		}
+		SOC = {
+		add_threat = 20
+		}
+		finalize_border_war = {
+    attacker_win = yes
+    attacker = 62
+    defender = 82
+	}
+ }
+}
+#Lincoln as P
+country_event = {
+ id = usa.9
+ title = usa.9.t
+ desc = usa.9.d
+ picture = GFX_report_event_german_parade_paris
+
+ fire_only_once = yes
+
+ trigger = {
+	date > 1861.2.23
+	tag = USA
+	has_character = USA_james_buchanan
+	has_country_flag = Lincoln_elect
+ }
+ 
+ 
+ option = {
+	name = usa.9.a
+	ai_chance = { factor = 100 }
+	add_threat = 5
+	USA_abraham_lincoln = {
+  promote_character = yes
+	}
+	retire_character = USA_james_buchanan
+	hidden_effect={
+	set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
+	set_country_flag = Lincoln_admin
+	}
+	}
+}
+
+#Lincoln Elect -1860
+country_event = {
+ id = usa.10
+ title = usa.10.t
+ desc = usa.10.d
+ picture = GFX_report_event_german_parade_paris
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+
+ trigger = {
+	date > 1860.10.20
+	tag = USA
+	has_character = USA_james_buchanan
+ }
+ 
+ 
+ option = {
+	name = usa.10.a
+	add_threat = 10
+	ai_chance = { factor = 100 }
+	set_variable = { var = usa.total_electoral_members value = 226 }
+	set_variable = { var = usa.won_electoral_members value = 111 }
+	every_country = {
+	set_global_flag = CM_SE_opened
+	clear_array = CM_SE_event_id_array
+	add_to_array = { CM_SE_event_id_array = 1 }	
+	play_song = "Lincoln and Liberty"
+	}
+	hidden_effect={
+	set_country_flag = Lincoln_elect
+			}
+		}
+ }
+ 
+#After Sumter has been taken
+country_event = {
+ id = usa.998
+ title = usa.998.t
+ desc = usa.998.d
+ picture = GFX_report_event_german_parade_paris
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+
+ trigger = {
+	date > 1861.4.20
+	tag = USA
+	has_character = USA_abraham_lincoln
+	OR = {
+	SOC = {
+	controls_state = 82
+	}
+	CSA = {
+	controls_state = 82
+	}
+	}
+	}
+ 
+ option = {
+	name = usa.998.a
+	custom_effect_tooltip = USA_STAY_2
+	CSA ={
+	add_threat = 10
+	}
+	ai_chance = { factor = 100 }
+	every_country = {
+	set_global_flag = CM_SE_opened
+	clear_array = CM_SE_event_id_array
+	add_to_array = { CM_SE_event_id_array = 2 }	
+	play_song = "Virgina's Bloody Soil"
+	}
+	set_country_flag = CIVIL_WAR
+		hidden_effect={
+		CSA = {
+		annex_country = {
+    target = SOC
+    transfer_troops = yes
+		}
+		add_state_core = 82
+		}
+		23 = {
+	set_demilitarized_zone = no
+	}
+	64 = {
+	set_demilitarized_zone = no
+	}
+	38 = {
+	set_demilitarized_zone = no
+	}
+	24 = {
+	set_demilitarized_zone = no
+	}
+	34 = {
+	set_demilitarized_zone = no
+	}
+	36 = {
+	set_demilitarized_zone = no
+	}
+	38 = {
+	set_demilitarized_zone = no
+	}
+	39 = {
+	set_demilitarized_zone = no
+	}
+	}
+	}
+}
+ 
+#Robert Anderson Defend
+country_event = {
+ id = usa.997
+ title = usa.997.t
+ desc = usa.997.d
+ picture = GFX_report_event_german_parade_paris
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+
+	is_triggered_only = yes
+ 
+	option = {
+	name = usa.997.a
+	CSA ={
+	add_threat = 10
+	}
+	ai_chance = { factor = 100 }
+	custom_effect_tooltip = ANDERSON_HOLD_1
+		hidden_effect={
+				23 = {
+	set_demilitarized_zone = no
+	}
+	64 = {
+	set_demilitarized_zone = no
+	}
+	38 = {
+	set_demilitarized_zone = no
+	}
+	24 = {
+	set_demilitarized_zone = no
+	}
+	34 = {
+	set_demilitarized_zone = no
+	}
+	36 = {
+	set_demilitarized_zone = no
+	}
+	38 = {
+	set_demilitarized_zone = no
+	}
+	39 = {
+	set_demilitarized_zone = no
+	}
+		set_country_flag = CIVIL_WAR
+		CSA = {
+		annex_country = {
+    target = SOC
+    transfer_troops = yes
+		}
+		add_state_core = 82
+		transfer_state = 82
+		}
+		}
+		USA = {
+		add_manpower = 129
+		add_state_core = 82
+		}
+	}
+ option = {
+	name = usa.997.b
+	ai_chance = { factor = 0 }
+	custom_effect_tooltip = ANDERSON_HOLD_2
+		CSA ={
+	add_threat = 10
+	}
+	 hidden_effect={
+	 		23 = {
+	set_demilitarized_zone = no
+	}
+	64 = {
+	set_demilitarized_zone = no
+	}
+	38 = {
+	set_demilitarized_zone = no
+	}
+	24 = {
+	set_demilitarized_zone = no
+	}
+	34 = {
+	set_demilitarized_zone = no
+	}
+	36 = {
+	set_demilitarized_zone = no
+	}
+	38 = {
+	set_demilitarized_zone = no
+	}
+	39 = {
+	set_demilitarized_zone = no
+	}
+	 	USA = {
+		add_manpower = 129
+		add_state_core = 82
+		}
+	 	CSA = {
+		annex_country = {
+    target = SOC
+    transfer_troops = yes
+		}
+		add_state_core = 82
+		transfer_state = 82
+		}
+		set_country_flag = CIVIL_WAR
+		}
+	}
+ }
+ 
+ #CSA:I AM HERE!
+ country_event = {
+ id = usa.10001
+ title = usa.10001.t
+ desc = usa.10001.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ is_triggered_only = yes
+ 
+ option = {
+	name = usa.10001.a
+	add_threat = 10
+	62 = {
+	set_demilitarized_zone = no
+	}
+ }
+}
+
+#Upper South Issue
+
+ country_event = {
+ id = usa.11
+ title = usa.11.t
+ desc = usa.11.d
+ picture = GFX_report_event_german_parade_paris
+ fire_only_once = yes
+ trigger = {
+		date > 1861.4.14
+		USA = {
+		has_character = USA_abraham_lincoln
+		 
+		}
+		controls_state = 64
+		controls_state = 60
+		has_country_flag = CIVIL_WAR
+	}
+
+ 
+ option = {
+	name = usa.11.a
+	add_threat = 1
+	release = VIR
+	VIR = {
+	load_oob = Virginia_citizen_army
+	}
+	60 = {
+	set_demilitarized_zone = yes
+	}
+	64 = {
+	set_demilitarized_zone = no
+	}
+	hidden_effect = {
+	USA_congress_remove_state = yes
+	USA = {
+	add_state_claim = 64
+	add_state_core = 60
+		country_event = {
+    id = usa.12
+    days = 5
+    random = 22
+    random_days = 5
+	}
+	country_event = {
+    id = usa.17
+    days = 5
+    random = 22
+    random_days = 5
+		}
+		}
+		CSA = {
+		add_state_core = 64
+		}
+		65 = {
+		set_demilitarized_zone = yes
+		}
+	}
+ }
+}
+#Lee
+ country_event = {
+ id = usa.12
+ title = usa.12.t
+ desc = usa.12.d
+ picture = GFX_report_event_german_parade_paris
+ fire_only_once = yes
+ is_triggered_only = yes
+ option = {
+	name = usa.12.a
+	custom_effect_tooltip = LEE_LEAVE_USA
+ }
+}
+#Thomas
+ country_event = {
+ id = usa.17
+ title = usa.17.t
+ desc = usa.17.d
+ picture = GFX_report_event_german_parade_paris
+ fire_only_once = yes
+ is_triggered_only = yes
+ option = {
+	name = usa.17.a
+	custom_effect_tooltip = THOMAS_STAY_USA
+ }
+}
+
+ country_event = {
+ id = usa.13
+ title = usa.13.t
+ desc = usa.13.d
+ picture = GFX_report_event_german_parade_paris
+ fire_only_once = yes
+ trigger = {
+		date > 1861.4.20
+		USA = {
+		has_character = USA_abraham_lincoln
+		 
+		}
+		controls_state = 56
+		has_country_flag = CIVIL_WAR
+	}
+	
+ 
+ option = {
+	name = usa.13.a
+	add_threat = 1
+	release = ARK
+	56 = {
+	set_demilitarized_zone = no
+	}
+	hidden_effect = {
+	USA_congress_remove_state = yes
+	USA = {
+	add_state_claim = 56
+	}
+	CSA = {
+	add_state_core = 56
+	}
+	}
+ }
+}
+
+ country_event = {
+ id = usa.14
+ title = usa.14.t
+ desc = usa.14.d
+ picture = GFX_report_event_german_parade_paris
+ fire_only_once = yes
+ trigger = {
+		date > 1861.6.10
+		USA = {
+		has_character = USA_abraham_lincoln
+		 
+		}
+		controls_state = 65
+		has_country_flag = CIVIL_WAR
+	}
+		
+ 
+ option = {
+	name = usa.14.a
+	add_threat = 1
+	release = TEN
+	65 = {
+	set_demilitarized_zone = no
+	}
+	69 = {
+		set_demilitarized_zone = yes
+		}
+	hidden_effect = {
+	USA_congress_remove_state = yes
+	USA = {
+	add_state_claim = 65
+	country_event = {
+    id = usa.15
+    days = 1
+    random = 12
+    random_days = 2
+		}
+	}
+	CSA = {
+	add_state_core = 65
+	}
+	}
+ }
+}
+#East TEN BONUS
+ country_event = {
+ id = usa.15
+ title = usa.15.t
+ desc = usa.15.d
+ picture = GFX_report_event_german_parade_paris
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+	name = usa.15.a
+	65 = {
+	set_demilitarized_zone = yes
+	}
+	add_victory_points = {
+	province = 7695
+	value = 1
+	}
+ }
+}
+
+ country_event = {
+ id = usa.16
+ title = usa.16.t
+ desc = usa.16.d
+ picture = GFX_report_event_german_parade_paris
+ fire_only_once = yes
+ trigger = {
+		date > 1861.5.1
+		USA = {
+		has_character = USA_abraham_lincoln
+		 
+		}
+		controls_state = 66
+		has_country_flag = CIVIL_WAR
+	}
+
+ 
+ option = {
+	name = usa.16.a
+	add_threat = 1
+	release = NOC
+	66 = {
+	set_demilitarized_zone  = no
+	}
+	hidden_effect = {
+	USA_congress_remove_state = yes
+	USA = {
+	add_state_claim = 66
+	add_state_core = 85
+	}
+	CSA = {
+	add_state_core = 66
+	}
+	}
+ }
+}
+#TEN 75000
+country_event = {
+ id = usa.75001
+ title =usa.75001.t
+ desc = usa.75001.d
+ picture = GFX_report_event_german_parade_paris
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+	name = usa.75001.a
+ }
+
+}
+#KFC 75000
+country_event = {
+ id = usa.75002
+ title =usa.75002.t
+ desc = usa.75002.d
+ picture = GFX_report_event_german_parade_paris
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+	name = usa.75002.a
+ }
+}
+#VIR 75000
+country_event = {
+ id = usa.75003
+ title =usa.75003.t
+ desc = usa.75003.d
+ picture = GFX_report_event_german_parade_paris
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+	name = usa.75003.a
+ }
+}
+#ARK 75000
+country_event = {
+ id = usa.75004
+ title =usa.75004.t
+ desc = usa.75004.d
+ picture = GFX_report_event_german_parade_paris
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+	name = usa.75004.a
+ }
+}
+#Border State-KFC,MIS
+
+country_event = {
+ id = usa.1400
+ title =usa.1400.t
+ desc = usa.1400.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ has_country_flag = KFC_NEU
+ KFC = {
+ controls_state = 69
+ }
+ date > 1861.6.20
+ }
+ 
+ option = {
+	name = usa.1400.a
+	ai_chance = { factor = 90 }
+	add_stability = 0.01
+	set_country_flag = KFC_STAY_IN
+	69 = {
+	set_demilitarized_zone = yes
+	}
+	custom_effect_tooltip = increase_usa
+	add_to_variable = {
+	var = 69.usa_support
+	value = 7
+	}
+	subtract_from_variable = {
+	var = 69.csa_support
+	value = 7
+	}
+ }
+ option = {
+	name = usa.1400.b
+	add_stability = -0.15
+	add_war_support = -0.20
+	custom_effect_tooltip = INVADE_USA_KFC
+		USA = {
+		declare_war_on = {
+    target = KFC
+    type = civil_war
+		}
+	}
+	custom_effect_tooltip = increase_csa
+	add_to_variable = {
+	var = 69.csa_support
+	value = 40
+	}
+	subtract_from_variable = {
+	var = 69.usa_support
+	value = 40
+	}
+	hidden_effect = {
+	CSA = {
+	add_manpower = 10000
+	add_war_support = 0.1
+	add_state_claim = 69
+	}
+	}
+ }
+}
+#CAMP JACKSON
+country_event = {
+ id = usa.1401
+ title =usa.1401.t
+ desc = usa.1401.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+		has_character = USA_abraham_lincoln
+		date > 1861.5.1
+		country_exists = CSA
+	}
+
+ option = {
+ #LYON'S GUARD AND MISSOURI TROOPS
+	name = usa.1401.a
+	load_oob = USA_MO_troops
+	ai_chance = { factor = 90 }
+	USA = {
+	add_stability = -0.03
+	add_war_support = -0.03
+	}
+	67 = {
+	set_demilitarized_zone = yes
+	add_manpower = -28
+	damage_building = {
+    type = infrastructure
+    damage = 1
+		}
+	}
+	69 = {
+	set_demilitarized_zone = yes
+	}
+	CSA = {
+	set_country_flag = CAMP_JACKSON
+	}
+	custom_effect_tooltip = increase_usa
+	add_to_variable = {
+	var = 67.usa_support
+	value = 10
+	}
+	subtract_from_variable = {
+	var = 67.csa_support
+	value = 10
+	}
+ }
+}
+
+#BALTIMORE RIOTS
+country_event = {
+ id = usa.1402
+ title =usa.1402.t
+ desc = usa.1402.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ 	has_character = USA_abraham_lincoln
+	 USA = {
+ controls_state = 58
+ }
+ country_exists = CSA
+ date > 1861.4.9
+ }
+
+ 
+ option = {
+	name = usa.1402.a
+	ai_chance = { factor = 90 }
+	USA = {
+	add_stability = -0.03
+	add_war_support = -0.03
+	set_country_flag = Riots_BAL
+	}
+	58 = {
+	add_manpower = -16
+	damage_building = {
+    type = infrastructure
+    damage = 1
+	}
+	}
+	custom_effect_tooltip  = increase_csa
+	add_to_variable = {
+	var = 58.csa_support
+	value = 10
+	}
+	subtract_from_variable = {
+	var = 58.usa_support
+	value = 10
+	}
+ }
+}
+#Bulter at baltimore
+country_event = {
+ id = usa.1403
+ title =usa.1403.t
+ desc = usa.1403.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ has_country_flag = Riots_BAL
+ USA = {
+ controls_state = 58
+ }
+ date > 1861.5.3
+ }
+ 
+ option = {
+	name = usa.1403.a
+	ai_chance = { factor = 90 }
+	58 = {
+	add_manpower = -100
+	}
+	custom_effect_tooltip = increase_csa
+	add_to_variable = {
+	var = 58.csa_support
+	value = 5
+	}
+	subtract_from_variable = {
+	var = 58.usa_support
+	value = 5
+	}
+ }
+}
+#Jeff DAVIS
+country_event = {
+ id = usa.202
+ title =usa.202.t
+ desc = usa.202.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+	trigger = {
+		date > 1861.1.10
+		country_exists = CSA
+		NOT = {
+			controls_state = 34
+		}
+		TAG = USA
+	}
+ 
+ option = {
+	name = usa.202.a
+	ai_chance = { factor = 100 }
+	custom_effect_tooltip = JEFF_LEAVE_USA
+ }
+}
+
+#Andrew Johnson
+country_event = {
+ id = usa.201
+ title =usa.201.t
+ desc = usa.201.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ date > 1861.6.10
+ has_country_flag = CIVIL_WAR
+ }
+ 
+ option = {
+	name = usa.201.a
+	ai_chance = { factor = 100 }
+	USA_congress_andrew_johnson = yes
+ }
+}
+#Restored Government of Virginia and Second Wheeling Convention
+country_event = {
+ id = usa.200
+ title =usa.200.t
+ desc = usa.200.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ date > 1861.6.19
+ has_country_flag = CIVIL_WAR
+ }
+ 
+ option = {
+	name = usa.200.a
+	ai_chance = { factor = 100 }
+	USA_congress_add_state = yes
+	add_victory_points = {
+	province = 3142
+	value = 5
+	}
+	set_variable = { var = representatives_total value = 185 }
+	add_to_variable = {
+	var = 60.usa_support
+	value = 3
+	}
+	subtract_from_variable = {
+	var = 60.csa_support
+	value = 3
+	}
+ }
+}
+#NEW YORK RIOTS-afterward
+country_event = {
+ id = usa.1404
+ title =usa.1404.t
+ desc = usa.1404.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ has_completed_focus = USA_enrollment_act
+ has_character = USA_abraham_lincoln
+	USA = {
+ controls_state = 37
+ }
+ date > 1863.7.3
+}
+
+ 
+ option = {
+	name = usa.1404.a
+	ai_chance = { factor = 90 }
+	USA ={
+	add_stability = -0.03
+	}
+	37 = {
+	add_manpower = -120
+	damage_building = {
+    type = infrastructure
+    damage = 1
+	}
+	}
+		country_event = {
+    id = usa.1406
+    days = 3
+    random = 3
+    random_days = 3
+		}	
+ }
+}
+#NYR 2
+country_event = {
+ id = usa.1406
+ title =usa.1406.t
+ desc = usa.1406.d
+ picture = GFX_report_event_german_parade_paris
+ fire_only_once = yes
+ is_triggered_only = yes
+ 
+ option = {
+	name = usa.1406.a
+ }
+}
+#VIRGINIA'S FLEET DEAD
+country_event = {
+ id = usa.1405
+ title =usa.1405.t
+ desc = usa.1405.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ has_character = USA_abraham_lincoln
+date > 1861.4.1
+ country_exists = CSA
+	}
+
+ 
+ option = {
+	name = usa.1405.a
+	ai_chance = { factor = 90 }
+	USA = {
+	destroy_ships = {
+    type = destroyer
+    count = all
+	}
+	destroy_ships = {
+    type = ship_hull_heavy
+    count = all
+	}
+	destroy_ships = {
+    type = light_cruiser
+    count = all
+	}
+	set_country_flag = Norfolk_Destroy
+	}
+ }
+}
+
+
+###########################
+# 1864 Election
+###########################
+#Lincoln Wins
+country_event = {
+ id = usa.18640
+ title = usa.18640.t
+ desc = usa.18640.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+
+ option = {
+	name = usa.18640.a
+	set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
+	add_political_power = 250
+	USA_abraham_lincoln = {
+	set_character_flag = second_presidency
+	}
+	add_country_leader_trait = second_term
+	set_country_flag = USA_1864_election_ends
+	clr_country_flag = USA_1864_campaign_start
+	set_country_flag = REP_Wins_1864
+	retire_character = USA_GEORGE_McClellan
+ }
+}
+#Mcclellan Wins
+country_event = {
+ id = usa.18641
+ title = usa.18641.t
+ desc = usa.18641.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+
+ option = {
+	name = usa.18641.a
+	set_party_name = { ideology = democratic long_name = USA_democratic_party name = USA_democratic_party }
+	add_political_power = 150
+	set_country_flag = USA_1864_election_ends
+	set_country_flag = Democrat_Wins_1864_2
+	clr_country_flag = USA_1864_campaign_start
+ }
+}
+country_event = {
+ id = usa.186412
+ title = usa.186412.t
+ desc = usa.186412.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ is_triggered_only = yes
+
+ option = {
+	name = usa.186412.a
+	add_ideas = lame_duck
+	add_political_power = -150
+	custom_effect_tooltip = Lame_duck
+	USA_congress_small_opposition = yes
+	USA_congress_medium_opposition = yes
+	USA_congress_large_opposition =  yes
+	clr_country_flag = USA_1864_campaign_start
+ }
+}
+country_event = {
+ id = usa.186534
+ title = usa.186534.t
+ desc = usa.186534.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ 
+ trigger = {
+ has_character = USA_GEORGE_McClellan
+ has_country_flag = Democrat_Wins_1864_2
+ date > 1865.2.23
+ }
+
+ option = {
+	name = usa.186534.a
+	complete_national_focus = USA_McClellan's_Campaign
+	add_political_power = 150
+	set_party_name = { ideology = democratic long_name = USA_democratic_party name = USA_democratic_party }
+	retire_character = USA_abraham_lincoln
+	USA_GEORGE_McClellan = {
+  promote_character = yes
+	set_character_flag = Mcclellan_Presidency
+	remove_unit_leader_role = yes
+	}
+	add_country_leader_trait = young_napoleon
+	load_focus_tree = usa_democrats_1864
+	remove_ideas = lincoln_administration
+ }
+}
+
+#set_variable of character
+country_event = {
+	id = usa.1864201
+	title = usa.18642.t
+	desc = usa.18642.d
+	picture = GFX_report_event_german_parade_paris
+	mean_time_to_happen = { days = 1 } 
+	
+	trigger = {
+		
+controls_state = 88
+NOT = { 
+
+	has_completed_focus = USA_McClellan's_Campaign
+}
+		OR = {
+controls_state = 64
+AND = {
+	controls_state = 24
+	controls_state = 34 
+}
+
+AND = {
+	controls_state = 65
+	controls_state = 56
+	controls_province = 1637
+}
+
+
+		}
+
+
+
+	   has_character = USA_abraham_lincoln
+	   has_character = USA_GEORGE_McClellan
+	   date > 1863.12.30
+	   country_exists = CSA
+
+	   }
+	   
+	   fire_only_once = yes
+	   
+	   option = {
+	   name = usa.1864201.a
+	   ai_chance = { 
+	   factor = 1 
+	   modifier = {
+			   factor = 2
+			   CSA = {
+			   surrender_progress > 0.33
+			   }
+		   }
+	   modifier = {
+			   factor = 5
+			   OR = {
+				   has_completed_focus = USA_emancipation_proclamation
+				   has_idea = reserved_emancipation_proclamation
+				   }
+		   }
+				   modifier = {
+		   factor = 5
+		   casualties_k > 100
+		   }
+		   modifier = {
+		   factor = 4
+		   casualties_k > 200
+		   }
+		   modifier = {
+		   factor = 3
+		   casualties_k > 300
+		   }
+		   modifier = {
+		   factor = 2
+		   casualties_k > 400
+		   }
+		   modifier = {
+		   factor = 1
+		   casualties_k > 500
+		   }
+	   }
+	   every_country = {
+	   set_global_flag = CM_SE_opened
+	   clear_array = CM_SE_event_id_array
+	   add_to_array = { CM_SE_event_id_array = 6 }	
+	   play_song = "Abraham Our Abraham"
+	   }
+	   custom_effect_tooltip = lincoln_1864_campaign
+	   add_political_power = 100
+	   complete_national_focus = USA_McClellan's_Campaign
+	   set_variable = { var = usa.sponsor_numbers value = 0 }
+	   set_variable = { var = usa.supporters_numbers value = 0 }
+	   set_country_flag = USA_support_mcclellan
+	   set_country_flag = USA_1864_campaign_start
+	   unlock_decision_category_tooltip = USA_1864_campaign
+		#TotalMembers of electoral college
+		set_variable = { var = usa.MA_votes value = 12 }
+		set_variable = { var = usa.CT_votes value = 6 }
+		set_variable = { var = usa.VT_votes value = 5 }
+		set_variable = { var = usa.NH_votes value = 5 }
+		set_variable = { var = usa.RI_votes value = 4 }
+		set_variable = { var = usa.Maine_votes value = 7 }
+		set_variable = { var = usa.NY_votes value = 33 }
+		set_variable = { var = usa.PE_votes value = 26 }
+		set_variable = { var = usa.NJ_votes value = 7 }
+		set_variable = { var = usa.DE_votes value = 3 }
+		set_variable = { var = usa.MD_votes value = 7 }
+		set_variable = { var = usa.OH_votes value = 21 }
+		set_variable = { var = usa.MI_votes value = 8 }
+		set_variable = { var = usa.IN_votes value = 13 }
+		set_variable = { var = usa.IL_votes value = 16 }
+		set_variable = { var = usa.WS_votes value = 8 }
+		set_variable = { var = usa.MN_votes value = 4 }
+		set_variable = { var = usa.IO_votes value = 8 }
+		set_variable = { var = usa.KA_votes value = 3 }
+		set_variable = { var = usa.CA_votes value = 5 }
+		set_variable = { var = usa.OR_votes value = 3 }
+		set_variable = { var = usa.MO_votes value = 11 }
+		set_variable = { var = usa.KY_votes value = 11 }
+		#Vote Pool
+		set_variable = { var = usa.republican_votes_pool value = 0 }
+		set_variable = { var = usa.democrats_votes_pool value = 0 }
+		#Lincoln
+		set_variable = { var = 27.lincoln_support value = 1 }
+		set_variable = { var = 45.lincoln_support value = 1 }
+		set_variable = { var = 71.lincoln_support value = 1 }
+		set_variable = { var = 35.lincoln_support value = 1 }
+		set_variable = { var = 43.lincoln_support value = 1 }
+		set_variable = { var = 30.lincoln_support value = 1 }
+		set_variable = { var = 37.lincoln_support value = 1 }
+		set_variable = { var = 48.lincoln_support value = 1 }
+		set_variable = { var = 50.lincoln_support value = 1 }
+		set_variable = { var = 69.lincoln_support value = 1 }
+		set_variable = { var = 58.lincoln_support value = 1 }
+		set_variable = { var = 67.lincoln_support value = 1 }
+		set_variable = { var = 60.lincoln_support value = 1 }
+		set_variable = { var = 81.lincoln_support value = 1 }
+		set_variable = { var = 53.lincoln_support value = 1 }
+		set_variable = { var = 55.lincoln_support value = 1 }
+		set_variable = { var = 51.lincoln_support value = 1 }
+		set_variable = { var = 40.lincoln_support value = 1 }
+		set_variable = { var = 42.lincoln_support value = 1 }
+		set_variable = { var = 32.lincoln_support value = 1 }
+		set_variable = { var = 52.lincoln_support value = 1 }
+		set_variable = { var = 70.lincoln_support value = 1 }
+		set_variable = { var = 54.lincoln_support value = 1 }
+		set_variable = { var = 41.lincoln_support value = 1 }
+		set_variable = { var = 59.lincoln_support value = 1 }
+		#MCC
+		set_variable = { var = 27.mcclellan_support value = 1 }
+		set_variable = { var = 45.mcclellan_support value = 1 }
+		set_variable = { var = 71.mcclellan_support value = 1 }
+		set_variable = { var = 35.mcclellan_support value = 1 }
+		set_variable = { var = 43.mcclellan_support value = 1 }
+		set_variable = { var = 30.mcclellan_support value = 1 }
+		set_variable = { var = 37.mcclellan_support value = 1 }
+		set_variable = { var = 48.mcclellan_support value = 1 }
+		set_variable = { var = 50.mcclellan_support value = 1 }
+		set_variable = { var = 69.mcclellan_support value = 1 }
+		set_variable = { var = 58.mcclellan_support value = 1 }
+		set_variable = { var = 67.mcclellan_support value = 1 }
+		set_variable = { var = 60.mcclellan_support value = 1 }
+		set_variable = { var = 81.mcclellan_support value = 1 }
+		set_variable = { var = 53.mcclellan_support value = 1 }
+		set_variable = { var = 55.mcclellan_support value = 1 }
+		set_variable = { var = 51.mcclellan_support value = 1 }
+		set_variable = { var = 40.mcclellan_support value = 1 }
+		set_variable = { var = 42.mcclellan_support value = 1 }
+		set_variable = { var = 32.mcclellan_support value = 1 }
+		set_variable = { var = 52.mcclellan_support value = 1 }
+		set_variable = { var = 70.mcclellan_support value = 1 }
+		set_variable = { var = 54.mcclellan_support value = 1 }
+		set_variable = { var = 41.mcclellan_support value = 1 }
+		set_variable = { var = 59.mcclellan_support value = 1 }
+	   } 
+	
+   }
+
+country_event = {
+ id = usa.1864202
+ title = usa.18642.t
+ desc = usa.18642.d
+ picture = GFX_report_event_german_parade_paris
+ mean_time_to_happen = { days = 1 } 
+ 
+ trigger = {
+	
+	has_character = USA_abraham_lincoln
+	has_character = USA_GEORGE_McClellan
+	date > 1863.12.30
+	country_exists = CSA
+	
+
+NOT = { has_completed_focus = USA_McClellan's_Campaign }
+
+	NOT = {
+		AND = { 
+			controls_state = 88
+			AND = {
+				controls_state = 64
+				OR = {
+					controls_state = 24
+					controls_state = 34 
+				}
+				
+				OR = {
+					controls_state = 65
+					controls_state = 56
+					controls_province = 1637
+}}}}}
+
+	fire_only_once = yes
+	
+	option = {
+		name = usa.1864202.a
+		ai_chance = { 
+		factor = 1 
+			modifier = {
+				factor = 2
+				CSA = {
+				surrender_progress < 0.33
+				}
+			}
+			modifier = {
+			factor = 5
+			NOT = {
+				OR = {
+					has_completed_focus = USA_emancipation_proclamation
+					has_idea = reserved_emancipation_proclamation
+					}
+				}
+			}
+			modifier = {
+			factor = 1
+			casualties_k > 100
+			}
+			modifier = {
+			factor = 2
+			casualties_k > 200
+			}
+			modifier = {
+			factor = 3
+			casualties_k > 300
+			}
+			modifier = {
+			factor = 4
+			casualties_k > 400
+			}
+			modifier = {
+			factor = 5
+			casualties_k > 500
+			}
+		}
+		custom_effect_tooltip = mcclellan_1864_campaign
+		add_political_power = 50
+		every_country = {
+		set_global_flag = CM_SE_opened
+		clear_array = CM_SE_event_id_array
+		add_to_array = { CM_SE_event_id_array = 5 }	
+		play_song = "McClellan the Hope of the Nation!"
+		}
+		set_country_flag = USA_support_mcclellan
+		set_country_flag = USA_1864_campaign_start
+		set_country_flag = USA_1864_campaign_start
+		complete_national_focus = USA_McClellan's_Campaign
+		set_variable = { var = usa.sponsor_numbers value = 0 }
+		set_variable = { var = usa.supporters_numbers value = 0 }
+		unlock_decision_category_tooltip = USA_1864_campaign
+		 #TotalMembers of electoral college
+		 set_variable = { var = usa.MA_votes value = 12 }
+		 set_variable = { var = usa.CT_votes value = 6 }
+		 set_variable = { var = usa.VT_votes value = 5 }
+		 set_variable = { var = usa.NH_votes value = 5 }
+		 set_variable = { var = usa.RI_votes value = 4 }
+		 set_variable = { var = usa.Maine_votes value = 7 }
+		 set_variable = { var = usa.NY_votes value = 33 }
+		 set_variable = { var = usa.PE_votes value = 26 }
+		 set_variable = { var = usa.NJ_votes value = 7 }
+		 set_variable = { var = usa.DE_votes value = 3 }
+		 set_variable = { var = usa.MD_votes value = 7 }
+		 set_variable = { var = usa.OH_votes value = 21 }
+		 set_variable = { var = usa.MI_votes value = 8 }
+		 set_variable = { var = usa.IN_votes value = 13 }
+		 set_variable = { var = usa.IL_votes value = 16 }
+		 set_variable = { var = usa.WS_votes value = 8 }
+		 set_variable = { var = usa.MN_votes value = 4 }
+		 set_variable = { var = usa.IO_votes value = 8 }
+		 set_variable = { var = usa.KA_votes value = 3 }
+		 set_variable = { var = usa.CA_votes value = 5 }
+		 set_variable = { var = usa.OR_votes value = 3 }
+		 set_variable = { var = usa.MO_votes value = 11 }
+		 set_variable = { var = usa.KY_votes value = 11 }
+		 #Vote Pool
+		 set_variable = { var = usa.republican_votes_pool value = 0 }
+		 set_variable = { var = usa.democrats_votes_pool value = 0 }
+		 #Lincoln
+		 set_variable = { var = 27.lincoln_support value = 1 }
+		 set_variable = { var = 45.lincoln_support value = 1 }
+		 set_variable = { var = 71.lincoln_support value = 1 }
+		 set_variable = { var = 35.lincoln_support value = 1 }
+		 set_variable = { var = 43.lincoln_support value = 1 }
+		 set_variable = { var = 30.lincoln_support value = 1 }
+		 set_variable = { var = 37.lincoln_support value = 1 }
+		 set_variable = { var = 48.lincoln_support value = 1 }
+		 set_variable = { var = 50.lincoln_support value = 1 }
+		 set_variable = { var = 69.lincoln_support value = 1 }
+		 set_variable = { var = 58.lincoln_support value = 1 }
+		 set_variable = { var = 67.lincoln_support value = 1 }
+		 set_variable = { var = 60.lincoln_support value = 1 }
+		 set_variable = { var = 81.lincoln_support value = 1 }
+		 set_variable = { var = 53.lincoln_support value = 1 }
+		 set_variable = { var = 55.lincoln_support value = 1 }
+		 set_variable = { var = 51.lincoln_support value = 1 }
+		 set_variable = { var = 40.lincoln_support value = 1 }
+		 set_variable = { var = 42.lincoln_support value = 1 }
+		 set_variable = { var = 32.lincoln_support value = 1 }
+		 set_variable = { var = 52.lincoln_support value = 1 }
+		 set_variable = { var = 70.lincoln_support value = 1 }
+		 set_variable = { var = 54.lincoln_support value = 1 }
+		 set_variable = { var = 41.lincoln_support value = 1 }
+		 set_variable = { var = 59.lincoln_support value = 1 }
+		 #MCC
+		 set_variable = { var = 27.mcclellan_support value = 1 }
+		 set_variable = { var = 45.mcclellan_support value = 1 }
+		 set_variable = { var = 71.mcclellan_support value = 1 }
+		 set_variable = { var = 35.mcclellan_support value = 1 }
+		 set_variable = { var = 43.mcclellan_support value = 1 }
+		 set_variable = { var = 30.mcclellan_support value = 1 }
+		 set_variable = { var = 37.mcclellan_support value = 1 }
+		 set_variable = { var = 48.mcclellan_support value = 1 }
+		 set_variable = { var = 50.mcclellan_support value = 1 }
+		 set_variable = { var = 69.mcclellan_support value = 1 }
+		 set_variable = { var = 58.mcclellan_support value = 1 }
+		 set_variable = { var = 67.mcclellan_support value = 1 }
+		 set_variable = { var = 60.mcclellan_support value = 1 }
+		 set_variable = { var = 81.mcclellan_support value = 1 }
+		 set_variable = { var = 53.mcclellan_support value = 1 }
+		 set_variable = { var = 55.mcclellan_support value = 1 }
+		 set_variable = { var = 51.mcclellan_support value = 1 }
+		 set_variable = { var = 40.mcclellan_support value = 1 }
+		 set_variable = { var = 42.mcclellan_support value = 1 }
+		 set_variable = { var = 32.mcclellan_support value = 1 }
+		 set_variable = { var = 52.mcclellan_support value = 1 }
+		 set_variable = { var = 70.mcclellan_support value = 1 }
+		 set_variable = { var = 54.mcclellan_support value = 1 }
+		 set_variable = { var = 41.mcclellan_support value = 1 }
+		 set_variable = { var = 59.mcclellan_support value = 1 }
+		} 
+
+}
+#great campaign-lincoln
+country_event = {
+ id = usa.18643
+ title = usa.18643.t
+ desc = usa.18643.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ is_triggered_only = yes
+	
+	option = {
+	name = usa.18643.a
+	} 
+}
+#normal campaign-lincoln
+country_event = {
+ id = usa.18644
+ title = usa.18644.t
+ desc = usa.18644.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ is_triggered_only = yes
+	
+	option = {
+	name = usa.18644.a
+	} 
+}
+#good campaign democrat
+country_event = {
+ id = usa.18645
+ title = usa.18645.t
+ desc = usa.18645.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ is_triggered_only = yes
+	
+	option = {
+	name = usa.18645.a
+	} 
+}
+#normal campaign democrat
+country_event = {
+ id = usa.18646
+ title = usa.18646.t
+ desc = usa.18646.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ is_triggered_only = yes
+	
+	option = {
+	name = usa.18646.a
+	} 
+}
+#bad campaign republican
+country_event = {
+ id = usa.18647
+ title = usa.18647.t
+ desc = usa.18647.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ is_triggered_only = yes
+	
+	option = {
+	name = usa.18647.a
+	} 
+}
+#bad campaign democrat
+country_event = {
+ id = usa.18648
+ title = usa.18648.t
+ desc = usa.18648.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ is_triggered_only = yes
+	
+	option = {
+	name = usa.18648.a
+	} 
+}
+#############################
+#1864 Election support events
+#############################
+#National Union Party
+country_event = {
+ id = usa.18650
+ title = usa.18650.t
+ desc = usa.18650.d
+ picture = GFX_report_event_german_parade_paris
+ mean_time_to_happen = { days = 1 } 
+ 
+	trigger = {
+	has_country_flag = USA_support_mcclellan
+	has_country_flag = USA_1864_campaign_start
+	has_character = USA_abraham_lincoln
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+	name = usa.18650.a
+	ai_chance = { factor = 100 }
+	set_party_name = { ideology = democratic long_name = USA_national_union_party name = USA_national_union_party }
+	custom_effect_tooltip = we_need_union
+	USA_congress_reduce = yes
+	add_political_power = -80
+	set_country_flag = VP_johnson
+	 add_to_variable = {  69.lincoln_support  = 1 }
+	 add_to_variable = {  58.lincoln_support  = 1 }
+	 add_to_variable = {  67.lincoln_support  = 1 }
+	 add_to_variable = {  60.lincoln_support  = 1 }
+	 add_to_variable = {  81.lincoln_support  = 1 }
+	add_popularity = {
+		ideology = communism
+    popularity = 0.08
+	}
+	} 
+	option = {
+	name = usa.18650.b
+	custom_effect_tooltip = no_war_democrats
+	add_political_power = 100
+	set_country_flag = VP_hamlin
+	add_popularity = {
+		ideology = democratic
+    popularity = 0.05
+	}
+	add_popularity = {
+		ideology = communism
+    popularity = 0.02
+	}
+	} 
+}
+#if border state safe,growing border support for lincoln
+country_event = {
+ id = usa.18651
+ title = usa.18651.t
+ desc = usa.18651.d
+ picture = GFX_report_event_german_parade_paris
+ 
+	trigger = {
+	USA = {
+	has_full_control_of_state = 81
+	has_full_control_of_state = 69
+	has_full_control_of_state = 67
+	has_full_control_of_state = 58
+	has_full_control_of_state = 60
+	}
+	OR = {
+	has_country_flag = USA_support_mcclellan
+	has_country_flag = USA_support_mcclellan
+	}
+	has_country_flag = USA_1864_campaign_start
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+	name = usa.18651.a
+	ai_chance = { factor = 100 }
+	 add_to_variable = {  69.lincoln_support  = 1 }
+	 add_to_variable = {  58.lincoln_support  = 1 }
+	 add_to_variable = {  67.lincoln_support  = 1 }
+	 add_to_variable = {  60.lincoln_support  = 1 }
+	 add_to_variable = {  81.lincoln_support  = 1 }
+	} 
+}
+#if border state in war,peace first!
+country_event = {
+ id = usa.18652
+ title = usa.18652.t
+ desc = usa.18652.d
+ picture = GFX_report_event_german_parade_paris
+ 
+	trigger = {
+	NOT = {
+	OR = {
+	81 = {
+	is_fully_controlled_by = USA
+	}
+	67 = {
+	is_fully_controlled_by = USA
+	}
+	69 = {
+	is_fully_controlled_by = USA
+	}
+	58 = {
+	is_fully_controlled_by = USA
+	}
+	60 = {
+	is_fully_controlled_by = USA
+	}
+	}
+	}
+	OR = {
+	has_country_flag = USA_support_mcclellan
+	has_country_flag = USA_support_mcclellan
+	}
+	has_country_flag = USA_1864_campaign_start
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+	name = usa.18652.a
+	ai_chance = { factor = 100 }
+	 add_to_variable = {  69.mcclellan_support  = 1 }
+	 add_to_variable = {  58.mcclellan_support  = 1 }
+	 add_to_variable = {  67.mcclellan_support  = 1 }
+	 add_to_variable = {  60.mcclellan_support  = 1 }
+	 add_to_variable = {   81.mcclellan_support  = 1 }
+	 subtract_from_variable = { 69.lincoln_support  = 1 }
+	 subtract_from_variable = {  58.lincoln_support  = 1 }
+	 subtract_from_variable = { 67.lincoln_support  = 1 }
+	 subtract_from_variable = {  60.lincoln_support  = 1 }
+	 subtract_from_variable = { 81.lincoln_support  = 1 }
+	} 
+}
+#emancipation proclamation is issued
+country_event = {
+ id = usa.18653
+ title = usa.18653.t
+ desc = usa.18653.d
+ picture = GFX_report_event_german_parade_paris
+ 
+	trigger = {
+	OR = {
+	has_completed_focus = USA_emancipation_proclamation
+	has_idea = reserved_emancipation_proclamation
+	}
+	OR = {
+	has_country_flag = USA_support_mcclellan
+	has_country_flag = USA_support_mcclellan
+	}
+	has_country_flag = USA_1864_campaign_start
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+	name = usa.18653.a
+	ai_chance = { factor = 100 }
+	 add_to_variable = {  27.lincoln_support  = 2 }
+	 add_to_variable = {  45.lincoln_support  = 2 }
+	 add_to_variable = {  71.lincoln_support  = 2 }
+	 add_to_variable = {  35.lincoln_support  = 2 }
+	 add_to_variable = {  43.lincoln_support  = 2 }
+	 add_to_variable = {  30.lincoln_support  = 2 }
+	 subtract_from_variable = {  69.lincoln_support  = 1 }
+	 subtract_from_variable = {  58.lincoln_support  = 1 }
+	 subtract_from_variable = {  67.lincoln_support  = 1 }
+	 subtract_from_variable = {  60.lincoln_support  = 1 }
+	 subtract_from_variable = {  81.lincoln_support  = 1 }
+	} 
+}
+#emancipation proclamation not issued
+country_event = {
+ id = usa.18654
+ title = usa.18654.t
+ desc = usa.18654.d
+ picture = GFX_report_event_german_parade_paris
+ 
+	trigger = {
+	NOT = {
+	OR = {
+	has_completed_focus = USA_emancipation_proclamation
+	has_idea = reserved_emancipation_proclamation
+	}
+	}
+	OR = {
+	has_country_flag = USA_support_mcclellan
+	has_country_flag = USA_support_mcclellan
+	}
+	has_country_flag = USA_1864_campaign_start
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+	name = usa.18654.a
+	ai_chance = { factor = 100 }
+	 subtract_from_variable = { 27.lincoln_support  = 1 }
+	 subtract_from_variable = { 45.lincoln_support  = 1 }
+	 subtract_from_variable = { 71.lincoln_support  = 1 }
+	 subtract_from_variable = { 35.lincoln_support  = 1 }
+	 subtract_from_variable = { 43.lincoln_support  = 1 }
+	 subtract_from_variable = { 30.lincoln_support  = 1 }
+	} 
+}
+#Home state advantage
+country_event = {
+ id = usa.18655
+ title = usa.18655.t
+ desc = usa.18655.d
+ picture = GFX_report_event_german_parade_paris
+ 
+	trigger = {
+	date > 1864.2.10
+	OR = {
+	has_country_flag = USA_support_mcclellan
+	has_country_flag = USA_support_mcclellan
+	}
+	has_country_flag = USA_1864_campaign_start
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+	name = usa.18655.a
+	ai_chance = { factor = 100 }
+	if = {
+	limit = {
+	has_country_flag = VP_johnson
+	}
+	add_to_variable = { 53.lincoln_support = 4 }
+	}
+	if = {
+	limit = {
+	has_country_flag = VP_hamlin
+	}
+	add_to_variable = { 53.lincoln_support = 3 }
+	add_to_variable = { 27.lincoln_support = 1 }
+	}
+	add_to_variable = { 50.mcclellan_support = 3 }
+	add_to_variable = { 51.mcclellan_support = 1 }
+	} 
+}
+#Win win win and win
+country_event = {
+ id = usa.18656
+ title = usa.18656.t
+ desc = usa.18656.d
+ picture = GFX_report_event_german_parade_paris
+ mean_time_to_happen = { days = 1 } 
+ 
+	trigger = {
+
+	NOT = { has_completed_focus = USA_McClellan's_Campaign1 }
+	date > 1864.11.1
+
+	OR = { 	NOT = { controls_state = 88 }
+NOT = { OR = {
+
+			
+	
+	
+	
+	
+	
+	
+	
+	
+	AND = {
+	controls_state = 64
+	AND = {
+		controls_state = 24
+		controls_state = 34 
+	} }
+
+				AND = {
+					controls_state = 24
+					controls_state = 34 
+				}
+				
+				AND = {
+					controls_state = 65
+					controls_state = 56
+					controls_province = 1637
+				}
+
+				AND = {
+					controls_state = 64
+					
+					AND = {
+						controls_state = 65
+						controls_state = 56
+						controls_province = 1637
+					}
+				}
+
+
+
+
+
+
+
+
+
+
+
+
+			AND = {
+				controls_state = 64
+				AND = {
+					controls_state = 24
+					controls_state = 34 
+				} 
+				
+				AND = {
+					controls_state = 65
+					controls_state = 56
+					controls_province = 1637
+				} 
+				
+				
+						} }
+
+
+
+} }
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+	name = usa.18656.a
+	ai_chance = { factor = 100 }
+	add_to_variable = { 54.mcclellan_support = 25 }
+	add_to_variable = { 70.mcclellan_support = 25 }
+	add_to_variable = { 32.mcclellan_support = 25 }
+	add_to_variable = { 52.mcclellan_support = 25 }
+	add_to_variable = { 41.mcclellan_support = 25 }
+	add_to_variable = { 59.mcclellan_support = 25 }
+	add_to_variable = { 58.mcclellan_support = 25 }
+	add_to_variable = { 60.mcclellan_support = 25 }
+	add_to_variable = { 69.mcclellan_support = 25 }
+	add_to_variable = { 67.mcclellan_support = 25 }
+	add_to_variable = { 81.mcclellan_support = 25 }
+	add_to_variable = { 53.mcclellan_support = 25 }
+	add_to_variable = { 55.mcclellan_support = 25 }
+	add_to_variable = { 51.mcclellan_support = 25 }
+	add_to_variable = { 40.mcclellan_support = 25 }
+	add_to_variable = { 42.mcclellan_support = 25 }
+	add_to_variable = { 37.mcclellan_support = 25 }
+	add_to_variable = { 48.mcclellan_support = 25 }
+	add_to_variable = { 50.mcclellan_support = 25 }
+	add_to_variable = { 30.mcclellan_support = 25 }
+	add_to_variable = { 35.mcclellan_support = 25 }
+	add_to_variable = { 43.mcclellan_support = 25 }
+	add_to_variable = { 71.mcclellan_support = 25 }
+	add_to_variable = { 27.mcclellan_support = 25 }
+	add_to_variable = { 45.mcclellan_support = 25 }
+	complete_national_focus = USA_McClellan's_Campaign1
+	} 
+}
+
+country_event = {
+	id = usa.18675
+	title = usa.18675.t
+	desc = usa.18675.d
+	picture = GFX_report_event_german_parade_paris
+	mean_time_to_happen = { days = 1 } 
+	
+	   trigger = {
+	NOT = { has_completed_focus = USA_McClellan's_Campaign1 }
+	   date > 1864.11.5
+	   has_country_flag = USA_support_mcclellan
+
+ }
+	   
+	   fire_only_once = yes
+	   
+	   option = {
+	   name = usa.18675.a
+	   ai_chance = { factor = 100 }
+	   add_to_variable = { 54.lincoln_support = 25 }
+	   add_to_variable = { 70.lincoln_support = 25 }
+	   add_to_variable = { 32.lincoln_support = 25 }
+	   add_to_variable = { 52.lincoln_support = 25 }
+	   add_to_variable = { 41.lincoln_support = 25 }
+	   add_to_variable = { 59.lincoln_support = 25 }
+	   add_to_variable = { 58.lincoln_support = 25 }
+	   add_to_variable = { 60.lincoln_support = 25 }
+	   add_to_variable = { 69.lincoln_support = 25 }
+	   add_to_variable = { 67.lincoln_support = 25 }
+	   add_to_variable = { 81.lincoln_support = 25 }
+	   add_to_variable = { 53.lincoln_support = 25 }
+	   add_to_variable = { 55.lincoln_support = 25 }
+	   add_to_variable = { 51.lincoln_support = 25 }
+	   add_to_variable = { 40.lincoln_support = 25 }
+	   add_to_variable = { 42.lincoln_support = 25 }
+	   add_to_variable = { 37.lincoln_support = 25 }
+	   add_to_variable = { 48.lincoln_support = 25 }
+	   add_to_variable = { 50.lincoln_support = 25 }
+	   add_to_variable = { 30.lincoln_support = 25 }
+	   add_to_variable = { 35.lincoln_support = 25 }
+	   add_to_variable = { 43.lincoln_support = 25 }
+	   add_to_variable = { 71.lincoln_support = 25 }
+	   add_to_variable = { 27.lincoln_support = 25 }
+	   add_to_variable = { 45.lincoln_support = 25 }
+	   complete_national_focus = USA_McClellan's_Campaign1
+	   } 
+   }
+
+#Atlanta Campaign
+country_event = {
+ id = usa.18657
+ title = usa.18657.t
+ desc = usa.18657.d
+ picture = GFX_report_event_german_parade_paris
+ 
+	trigger = {
+	date > 1864.3.1
+	has_country_flag = USA_support_mcclellan
+	has_country_flag = USA_1864_campaign_start
+	USA = {
+	controls_province = 346
+	}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+	name = usa.18657.a
+	ai_chance = { factor = 100 }
+				add_to_variable = { 54.lincoln_support = 1 }
+				add_to_variable = { 70.lincoln_support = 1 }
+				add_to_variable = { 32.lincoln_support = 1 }
+				add_to_variable = { 52.lincoln_support = 1 }
+				add_to_variable = { 41.lincoln_support = 1 }
+				add_to_variable = { 59.lincoln_support = 1 }
+				add_to_variable = { 58.lincoln_support = 1 }
+				add_to_variable = { 60.lincoln_support = 1 }
+				add_to_variable = { 69.lincoln_support = 1 }
+				add_to_variable = { 67.lincoln_support = 1 }
+				add_to_variable = { 81.lincoln_support = 1 }
+				add_to_variable = { 53.lincoln_support = 1 }
+				add_to_variable = { 55.lincoln_support = 1 }
+				add_to_variable = { 51.lincoln_support = 1 }
+				add_to_variable = { 40.lincoln_support = 1 }
+				add_to_variable = { 42.lincoln_support = 1 }
+				add_to_variable = { 37.lincoln_support = 1 }
+				add_to_variable = { 48.lincoln_support = 1 }
+				add_to_variable = { 50.lincoln_support = 1 }
+				add_to_variable = { 30.lincoln_support = 1 }
+				add_to_variable = { 35.lincoln_support = 1 }
+				add_to_variable = { 43.lincoln_support = 1 }
+				add_to_variable = { 71.lincoln_support = 1 }
+				add_to_variable = { 27.lincoln_support = 1 }
+				add_to_variable = { 45.lincoln_support = 1 }
+	} 
+}
+#low surrender progress
+country_event = {
+ id = usa.18658
+ title = usa.18658.t
+ desc = usa.18658.d
+ picture = GFX_report_event_german_parade_paris
+ 
+	trigger = {
+	date > 1864.2.20
+	or = {
+	has_country_flag = USA_support_mcclellan
+	has_country_flag = USA_support_mcclellan
+	}
+	has_country_flag = USA_1864_campaign_start
+	CSA = {
+			surrender_progress < 0.33
+		}
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+	name = usa.18658.a
+	ai_chance = { factor = 100 }
+				add_to_variable = { 54.mcclellan_support = 1 }
+				add_to_variable = { 70.mcclellan_support = 1 }
+				add_to_variable = { 32.mcclellan_support = 1 }
+				add_to_variable = { 52.mcclellan_support = 1 }
+				add_to_variable = { 41.mcclellan_support = 1 }
+				add_to_variable = { 59.mcclellan_support = 1 }
+				add_to_variable = { 58.mcclellan_support = 1 }
+				add_to_variable = { 60.mcclellan_support = 1 }
+				add_to_variable = { 69.mcclellan_support = 1 }
+				add_to_variable = { 67.mcclellan_support = 1 }
+				add_to_variable = { 81.mcclellan_support = 1 }
+				add_to_variable = { 53.mcclellan_support = 1 }
+				add_to_variable = { 55.mcclellan_support = 1 }
+				add_to_variable = { 51.mcclellan_support = 1 }
+				add_to_variable = { 40.mcclellan_support = 1 }
+				add_to_variable = { 42.mcclellan_support = 1 }
+				add_to_variable = { 37.mcclellan_support = 1 }
+				add_to_variable = { 48.mcclellan_support = 1 }
+				add_to_variable = { 50.mcclellan_support = 1 }
+				add_to_variable = { 30.mcclellan_support = 1 }
+				add_to_variable = { 35.mcclellan_support = 1 }
+				add_to_variable = { 43.mcclellan_support = 1 }
+				add_to_variable = { 71.mcclellan_support = 1 }
+				add_to_variable = { 27.mcclellan_support = 1 }
+				add_to_variable = { 45.mcclellan_support = 1 }
+	} 
+}
+#######################
+#Lincoln Assassination
+#######################
+#John Wilkes Booth 
+country_event = {
+ id = usa.01865414
+ title = usa.01865414.t
+ desc = usa.01865414.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	has_character = USA_abraham_lincoln
+	has_country_leader_with_trait = second_term
+	USA = {
+	controls_province = 7467
+	}
+	OR = {
+	CSA = {
+	surrender_progress > 0.85
+	}
+	NOT = {
+	country_exists = CSA
+	}
+	}
+	date > 1865.4.4
+	}
+	option = {
+	name = usa.01865414.a
+	ai_chance = { factor = 100}
+	custom_effect_tooltip = booth_and_groups
+ }
+}
+#Civil war near end
+country_event = {
+ id = usa.01865
+ title = usa.01865.t
+ desc = usa.01865.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	has_character = USA_abraham_lincoln
+	has_country_leader_with_trait = second_term
+	USA = {
+	controls_province = 7467
+	}
+	OR = {
+	CSA = {
+	surrender_progress > 0.85
+	}
+	NOT = {
+	country_exists = CSA
+	}
+	}
+	date > 1865.4.4
+	}
+	option = {
+	name = usa.01865.a
+	ai_chance = { factor = 100}
+	add_stability = 0.01
+	custom_effect_tooltip = lincoln_and_ford
+	hidden_effect = {
+		country_event = {
+    id = usa.01866
+    days = 0
+    random = 4
+    random_days = 0
+		}
+	}
+ }
+}
+#Lincoln's daily event
+country_event = {
+ id = usa.01866
+ title = usa.01866.t
+ desc = usa.01866.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = usa.01866.a
+	ai_chance = { factor = 100}
+		hidden_effect = {
+		country_event = {
+    id = usa.01867
+    days = 0
+    random = 5
+    random_days = 0
+		}
+	}
+ }
+}
+#to the Ford Theater
+country_event = {
+ id = usa.01867
+ title = usa.01867.t
+ desc = usa.01867.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = usa.01867.a
+	ai_chance = { factor = 100}
+			hidden_effect = {
+		country_event = {
+    id = usa.01868
+    days = 0
+    random = 2
+    random_days = 0
+		}
+	}
+ }
+}
+#BodyGuard who decide lincoln's life
+country_event = {
+ id = usa.01868
+ title = usa.01868.t
+ desc = usa.01868.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+ option = {
+	name = usa.01868.b
+	ai_chance = { factor = 10 }
+	set_country_flag = john_parker_bodyguard
+	custom_effect_tooltip = john_parker
+	hidden_effect = {
+		country_event = {
+    id = usa.01869
+    days = 0
+    random = 1
+    random_days = 0
+		}
+	}
+ }
+ option = {
+	name = usa.01868.c
+	ai_chance = { factor = 10 }
+	random_list = {
+	70 = {
+		custom_effect_tooltip = crook_go_home
+		set_country_flag = john_parker_bodyguard
+			country_event = {
+			id = usa.01869
+			days = 0
+      random = 1
+      random_days = 0
+			}
+	}
+	30 = {
+		custom_effect_tooltip = extra_bodyguard
+		set_country_flag = crook_bodyguard
+		country_event = {
+		id = usa.01869
+		days = 0
+    random = 1
+    random_days = 0
+		}
+	}
+	}
+ }
+}
+#Death.Or.Rebirth
+country_event = {
+ id = usa.01869
+ title = usa.01869.t
+ desc = usa.01869.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+	name = usa.01869.a
+	ai_chance = { factor = 100}
+	if = {
+	limit = {
+	has_country_flag = john_parker_bodyguard
+	NOT = {
+	has_country_flag = crook_bodyguard
+	}
+	}
+	random_list = {
+	95 = {
+	if = {
+	limit = {
+	has_country_flag = john_parker_bodyguard
+	NOT = {
+	has_country_flag = crook_bodyguard
+	}
+	}
+	custom_effect_tooltip = Lincoln_headshot
+	}
+	country_event = {
+			id = usa.01870
+			days = 0
+    random = 1
+    random_days = 0
+	}
+			country_event = {
+    id = usa.28651
+    days = 0
+    random = 1
+    random_days = 0
+		}
+	}
+	5 = {
+	if = {
+	limit = {
+	has_country_flag = john_parker_bodyguard
+	NOT = {
+	has_country_flag = crook_bodyguard
+	}
+	}
+	custom_effect_tooltip = Lincoln_survive
+	set_country_flag = booth_get_captured
+	country_event = {
+			id = usa.01871
+			days = 0
+    random = 1
+    random_days = 0
+		}
+	country_event = {
+    id = usa.28651
+    days = 0
+    random = 1
+    random_days = 0
+		}
+	}
+	}
+	}
+	}
+	else_if = {
+	limit = {
+	has_country_flag = crook_bodyguard
+	NOT = {
+	has_country_flag = john_parker_bodyguard
+	}
+	}
+	custom_effect_tooltip = booth_get_caught_by_crook
+		country_event = {
+			id = usa.01872
+			days = 0
+    random = 1
+    random_days = 0
+		}
+		country_event = {
+    id = usa.28651
+    days = 0
+    random = 1
+    random_days = 0
+		}
+	}
+	}
+}
+#Lincoln's Head...turn around!
+country_event = {
+ id = usa.01871
+ title = usa.01871.t
+ desc = usa.01871.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	immediate = {
+	USA = {
+	set_country_flag = lincoln_is_alive
+	}
+	}
+	option = {
+	name = usa.01871.a
+	ai_chance = { factor = 100}
+	custom_effect_tooltip = Lincoln_swift_from_bullets
+ 	every_country = {
+	set_global_flag = CM_SE_opened
+	clear_array = CM_SE_event_id_array
+	add_to_array = { CM_SE_event_id_array = 8 }
+	play_song = "Hail to the Chief"	
+	}
+ }
+}
+#Crook took the Booth
+country_event = {
+ id = usa.01872
+ title = usa.01872.t
+ desc = usa.01872.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	immediate = {
+	USA = {
+	set_country_flag = lincoln_is_alive
+	}
+	}
+	option = {
+	name = usa.01872.a
+	ai_chance = { factor = 100}
+	custom_effect_tooltip = crook_saved_lincoln
+	every_country = {
+	set_global_flag = CM_SE_opened
+	clear_array = CM_SE_event_id_array
+	add_to_array = { CM_SE_event_id_array = 8 }	
+	play_song = "Hail to the Chief"
+	}
+ }
+}
+#Lincoln has been shot!
+country_event = {
+ id = usa.01870
+ title = usa.01870.t
+ desc = usa.01870.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	immediate = {
+	USA = {
+	set_country_flag = assassination_of_lincoln
+	}
+	}
+	option = {
+	name = usa.01870.a
+	ai_chance = { factor = 100}
+	custom_effect_tooltip = no_no_no
+	custom_effect_tooltip = murder
+	custom_effect_tooltip = take_that_man
+	every_country = {
+	set_global_flag = CM_SE_opened
+	clear_array = CM_SE_event_id_array
+	add_to_array = { CM_SE_event_id_array = 7 }
+	}
+	country_event = {
+			id = usa.28653
+		days = 0
+    random = 1
+    random_days = 0
+	}
+ }
+}
+#Seward's family
+country_event = {
+ id = usa.28651
+ title = usa.28651.t
+ desc = usa.28651.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.28651.a
+	ai_chance = { factor = 100}
+	custom_effect_tooltip = seward_with_assassination
+ 		country_event = {
+			id = usa.28652
+		days = 0
+    random = 1
+    random_days = 0
+		}
+ }
+}
+#Andrew Johnson
+country_event = {
+ id = usa.28652
+ title = usa.28652.t
+ desc = usa.28652.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.28652.a
+	ai_chance = { factor = 100}
+ }
+}
+#Peterson House and aftermath
+country_event = {
+ id = usa.28653
+ title = usa.28653.t
+ desc = usa.28653.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.28653.a
+	ai_chance = { factor = 100}
+	custom_effect_tooltip = please_alive
+	country_event = {
+			id = usa.28654
+		days = 0
+    random = 1
+    random_days = 0
+		}
+ }
+}
+#Death of Lincoln 
+country_event = {
+ id = usa.28654
+ title = usa.28654.t
+ desc = usa.28654.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.28654.a
+	ai_chance = { factor = 100}
+	retire_character = USA_abraham_lincoln
+	custom_effect_tooltip = andrew_johnson_president
+	USA_andrew_johnson = {
+	promote_character = yes
+	}
+	every_country = {
+		set_global_flag = CM_SE_opened
+		clear_array = CM_SE_event_id_array
+		add_to_array = { CM_SE_event_id_array = 10 }	
+		play_song = "DEATH_LINCOLN"
+		}
+		country_event = {
+		id = usa.28667
+		days = 15
+    random = 12
+    random_days = 3
+		}
+	country_event = {
+		id = usa.2866
+		days = 7
+    random = 12
+    random_days = 3
+		}
+	hidden_effect = {
+		country_event = {
+		id = usa.28655
+		days = 15
+    random = 12
+    random_days = 3
+		}
+		country_event = {
+		id = usa.28656
+		days = 15
+    random = 12
+    random_days = 3
+		}
+		country_event = {
+		id = usa.28657
+		days = 15
+    random = 12
+    random_days = 3
+		}
+		country_event = {
+		id = usa.28658
+		days = 15
+    random = 12
+    random_days = 3
+		}
+		country_event = {
+		id = usa.28659
+		days = 15
+    random = 12
+    random_days = 3
+		}
+		country_event = {
+		id = usa.29660
+		days = 15
+    random = 12
+    random_days = 3
+		}
+	}
+ }
+}
+#China Reply
+country_event = {
+ id = usa.28655
+ title = usa.28655.t
+ desc = usa.28655.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = thanks
+	ai_chance = { factor = 100}
+	}
+ }
+#Ecuador
+ country_event = {
+ id = usa.28656
+ title = usa.28656.t
+ desc = usa.28656.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = thanks
+	ai_chance = { factor = 100}
+	}
+ }
+#Mexico
+ country_event = {
+ id = usa.28657
+ title = usa.28657.t
+ desc = usa.28657.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = thanks
+	ai_chance = { factor = 100}
+	}
+ }
+#Italy
+ country_event = {
+ id = usa.28658
+ title = usa.28658.t
+ desc = usa.28658.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = thanks
+	ai_chance = { factor = 100}
+	}
+ }
+#Canada
+ country_event = {
+ id = usa.28659
+ title = usa.28659.t
+ desc = usa.28659.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = thanks
+	ai_chance = { factor = 100}
+	}
+ }
+#UK
+ country_event = {
+ id = usa.29660
+ title = usa.29660.t
+ desc = usa.29660.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.29660.a
+	ai_chance = { factor = 100}
+	}
+ }
+#Capture of booth.after lincoln's death
+ country_event = {
+ id = usa.2866
+ title = usa.2866.t
+ desc = usa.2866.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.2866.a
+	ai_chance = { factor = 100}
+	custom_effect_tooltip = over_there
+		country_event = {
+		id = usa.28661
+		days = 0
+    random = 1
+    random_days = 0
+		}
+	}
+ }
+  country_event = {
+ id = usa.28661
+ title = usa.28661.t
+ desc = usa.28661.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.28661.a
+	ai_chance = { factor = 100}
+		country_event = {
+		id = usa.28662
+		days = 0
+    random = 1
+    random_days = 0
+		}
+	}
+ }
+ country_event = {
+ id = usa.28662
+ title = usa.28662.t
+ desc = usa.28662.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.28662.a
+	ai_chance = { factor = 100}
+		country_event = {
+		id = usa.28663
+		days = 0
+    random = 1
+    random_days = 0
+		}
+	}
+ }
+  country_event = {
+ id = usa.28663
+ title = usa.28663.t
+ desc = usa.28663.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.28663.a
+	ai_chance = { factor = 100}
+		country_event = {
+		id = usa.28664
+		days = 0
+    random = 1
+    random_days = 0
+		}
+	}
+ }
+ country_event = {
+ id = usa.28664
+ title = usa.28664.t
+ desc = usa.28664.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.28664.a
+	ai_chance = { factor = 100}
+	country_event = {
+		id = usa.28665
+		days = 0
+    random = 1
+    random_days = 0
+		}
+	}
+ }
+  country_event = {
+ id = usa.28665
+ title = usa.28665.t
+ desc = usa.28665.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.28665.a
+	ai_chance = { factor = 100}
+	custom_effect_tooltip = john_wilkes_booth_dead
+			country_event = {
+		id = usa.28666
+		days = 45
+    random = 5
+    random_days = 3
+		}
+	}
+ }
+ #hanged
+ country_event = {
+ id = usa.28666
+ title = usa.28666.t
+ desc = usa.28666.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.28666.a
+	ai_chance = { factor = 100}
+		every_country = {
+		set_global_flag = CM_SE_opened
+		clear_array = CM_SE_event_id_array
+		add_to_array = { CM_SE_event_id_array = 9 }	
+		play_song = hanging
+		}
+	}
+ }
+ #lincoln funeral
+  country_event = {
+ id = usa.28667
+ title = usa.28667.t
+ desc = usa.28667.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.28667.a
+	ai_chance = { factor = 100}
+		every_country = {
+		set_global_flag = CM_SE_opened
+		clear_array = CM_SE_event_id_array
+		add_to_array = { CM_SE_event_id_array = 11 }	
+		play_song = "DEATH_LINCOLN"
+		}
+	}
+ }
+###########################
+##STATE EVENTS
+###########################
+state_event = {
+    id = usa.1790
+		 title = usa.1790.t
+		desc = usa.1790.d
+    mean_time_to_happen = { days = 5 }
+   	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.1790.a
+	ai_chance = { factor = 100}
+	65 = {
+	add_province_modifier = { 
+	static_modifiers = { USA_Tennessee }
+	province = {
+		all_provinces = yes
+		limit_to_victory_point = yes 
+				}
+			}
+		}
+	}
+}
+###########################
+##1861 - 1862 events
+###########################
+ country_event = {
+ id = usa.2000
+ title = usa.2000.t
+ desc = usa.2000.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	date > 1861.7.21
+	has_character = USA_abraham_lincoln
+	has_country_flag = CIVIL_WAR
+	has_war_with = CSA
+	}
+	option = {
+	name = usa.2000.a
+	ai_chance = { factor = 100}
+	add_political_power = 80
+	}
+ }
+##Ex parte Merryman
+country_event = {
+ id = usa.2001
+ title = usa.2001.t
+ desc = usa.2001.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	option = {
+	name = usa.2001.a
+	ai_chance = { factor = 100}
+	add_political_power = 150
+	custom_effect_tooltip = increase_csa 
+	add_to_variable = {
+				var = 58.csa_support
+				value = 5
+				}
+				subtract_from_variable = {
+				var = 58.usa_support
+				value = 5
+			}
+	}
+ }

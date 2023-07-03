@@ -1,0 +1,177 @@
+
+music_station = "union_music"
+
+music = {
+	song = "dakota"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "hanging"
+	chance = {
+		modifier = {
+			factor = 0
+		}		
+	}
+}
+music = {
+	song = "The Battle Cry of Freedom"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}		
+	}
+}
+
+music = {
+	song = "Lincoln and Liberty"
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+
+music = {
+	song = "Virgina's Bloody Soil"
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "We Are Coming Father Abraham"
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "Hail to the Chief"
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "We'll Fight for Uncle Sam"
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "Union Dixie"
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "Marching Through Georgia"
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "The Battle Hymm of the Republic"
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "We'll Fight for Uncle Sam"
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "Anchors Aweigh"
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+music = {
+	song = "From the Halls of Montezuma"
+	chance = {
+		modifier = {
+			factor = 1
+		}		
+	}
+}
+
+music = {
+	song = "ainthatso"
+
+}
+
+music = {
+	song = "Abraham Our Abraham"
+
+}
+
+music = {
+	song = "DEUNION"
+
+}
+
+music = {
+	song = "DEATH_LINCOLN"
+
+}
+
+music = {
+	song = "Little_Mac"
+
+}
+
+music = {
+	song = "McClellan the Hope of the Nation!"
+
+}
+
+music = {
+	song = "McClellan's Name We Hail"
+
+}
+
+music = {
+	song = "rally_cause"
+
+}
+
+music = {
+	song = "Republican Campaign Song"
+
+}
+
+music = {
+	song = "Battle Cry McClellan"
+
+}
+
+music = {
+	song = "Abes Four Years Are Over"
+
+}
+
+music = {
+	song = "White Boys for McClellan"
+
+}

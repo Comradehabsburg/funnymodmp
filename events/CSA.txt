@@ -1,0 +1,578 @@
+###########################
+# 1860 - 1861 Events
+###########################
+
+add_namespace = csa
+
+#CSA IS BORN
+country_event = {
+ id = csa.1
+ title = csa.1.t
+ desc = csa.1.d
+ picture = GFX_report_event_german_parade_paris
+ mean_time_to_happen = { days = 1 } 
+ fire_only_once = yes
+ 
+	trigger = {
+		date > 1861.2.12
+		USA ={
+			has_character = USA_abraham_lincoln
+		}
+		OR={
+		date > 1861.2.12
+		ALA = {
+			controls_state = 36
+		}
+		CSA = {
+			controls_state = 36
+		}
+		MIS = {
+			controls_state = 34
+		}
+		CSA = {
+			controls_state = 34
+		}
+		FLO = {
+			controls_state = 23
+		}
+		CSA = {
+			controls_state = 23
+		}
+		GEA = {
+			controls_state = 39
+		}
+		CSA = {
+			controls_state = 39
+		}
+		LOU = {
+			controls_state = 24
+		}
+		CSA = {
+			controls_state = 24
+		}
+	}
+ }
+ option = {
+	name = csa.1.a
+	ai_chance = { factor = 100 }
+	#set_Support_for_border_states
+	CSA = {
+	set_research_slots = 3
+	remove_ideas = plotting
+	}
+	set_variable = {
+	var = 69.usa_support
+	value = 70
+	}
+	set_variable = {
+	var = 69.csa_support
+	value = 30
+	}
+	set_variable = {
+	var = 67.usa_support
+	value = 65
+	}
+	set_variable = {
+	var = 67.csa_support
+	value = 35
+	}
+	set_variable = {
+	var = 60.usa_support
+	value = 80
+	}
+	set_variable = {
+	var = 60.csa_support
+	value = 20
+	}
+	set_variable = {
+	var = 58.usa_support
+	value = 70
+	}
+	set_variable = {
+	var = 58.csa_support
+	value = 30
+	}
+	set_variable = {
+	var = 81.usa_support
+	value = 90
+	}
+	set_variable = {
+	var = 81.csa_support
+	value = 10
+	}
+	##
+	USA = {
+		country_event = {
+    id = usa.10001
+    days = 3
+    random = 22
+    random_days = 3
+			}
+		}
+		hidden_effect={
+				23 = {
+	set_demilitarized_zone = no
+	}
+	64 = {
+	set_demilitarized_zone = no
+	}
+	38 = {
+	set_demilitarized_zone = no
+	}
+	24 = {
+	set_demilitarized_zone = no
+	}
+	34 = {
+	set_demilitarized_zone = no
+	}
+	36 = {
+	set_demilitarized_zone = no
+	}
+	38 = {
+	set_demilitarized_zone = no
+	}
+	39 = {
+	set_demilitarized_zone = no
+	}
+		CSA = {
+		annex_country = {
+    target = TEX
+    transfer_troops = yes
+		}
+		annex_country = {
+    target = GEA
+    transfer_troops = yes
+		}
+		annex_country = {
+    target = ALA
+    transfer_troops = yes
+		}
+		annex_country = {
+    target = FLO
+    transfer_troops = yes
+		}
+		annex_country = {
+    target = MIS
+    transfer_troops = yes
+		}
+		annex_country = {
+    target = LOU
+    transfer_troops = yes
+		}
+		}
+		}
+	}
+}
+
+	#IF LOUISIANA EXIST
+	country_event = {
+	id = csa.lou
+	title = csa.lou.t
+	desc = csa.lou.d
+	picture = GFX_report_event_german_parade_paris
+	mean_time_to_happen = { days = 1 } 
+	fire_only_once = yes
+ 
+		trigger = {
+			date > 1861.2.12
+			LOU = {
+			controls_state = 24
+			}
+			country_exists = CSA
+		}
+		option = {
+			name = csa.lou.a
+			ai_chance = { factor = 100 }
+			CSA = {
+				annex_country = {
+				target = LOU
+				transfer_troops = yes
+				}
+			}
+		}
+	}
+
+#IF TEXAS IS EXIST,CSA EAT IT
+country_event = {
+ id = csa.2
+ title = csa.2.t
+ desc = csa.2.d
+ picture = GFX_report_event_german_parade_paris
+ mean_time_to_happen = { days = 1 } 
+ fire_only_once = yes
+ 
+ trigger = {
+	date > 1861.2.12
+	TEX = {
+	controls_state = 38
+	}
+	country_exists = CSA
+ }
+ option = {
+	name = csa.2.a
+	ai_chance = { factor = 100 }
+	CSA = {
+	annex_country = {
+    target = TEX
+    transfer_troops = yes
+		}
+	}
+	}
+}
+
+#IF SOC IS EXIST,CSA EAT IT
+country_event = {
+ id = csa.3
+ title = csa.3.t
+ desc = csa.3.d
+ picture = GFX_report_event_german_parade_paris
+ mean_time_to_happen = { days = 1 } 
+ fire_only_once = yes
+ 
+ trigger = {
+	date > 1861.4.10
+	OR = {
+		SOC = {
+			controls_state = 82
+		}
+		CSA = {
+			controls_state = 82
+		}
+	}
+	country_exists = CSA
+ }
+ option = {
+	name = csa.3.a
+	ai_chance = { factor = 100 }
+	CSA = {
+	annex_country = {
+    target = SOC
+    transfer_troops = yes
+		}
+	}
+	}
+}
+
+#no selected focus,war breakup 
+country_event = {
+ id = csa.4
+ title = csa.4.t
+ desc = csa.4.d
+ picture = GFX_report_event_german_parade_paris
+ mean_time_to_happen = { days = 1 } 
+ fire_only_once = yes
+ 
+ trigger = {
+	date > 1861.7.21
+	country_exists = CSA
+	has_country_flag = Missouri_state_guard
+	NOT = {
+	has_completed_focus = CSA_civil_war
+	}
+ }
+ option = {
+	name = csa.4.a
+	ai_chance = { factor = 100 }
+	
+
+	unlock_national_focus = CSA_civil_war
+	CSA = {
+		load_oob = 1861-7-21_CSA
+		set_capital = { state = 64 }
+		load_oob = 1861-msg
+		load_oob = war_breakout_csa_units
+		add_state_core = 61
+		transfer_state = 61
+		declare_war_on = {
+    target = USA
+    type = civil_war
+		}
+		}
+	USA = {
+	country_event = {
+    id = usa.1492
+    days = 1
+    random = 5
+    random_days = 1
+	}
+	load_oob = washington_garrison
+	load_oob = war_breakout_usa_units
+	set_province_controller = 14963
+	set_province_controller = 4272
+	set_province_controller = 7302
+	set_province_controller = 7353
+	set_province_controller = 7374
+	set_province_controller = 7425
+	set_province_controller = 2064
+	set_province_controller = 1401
+	set_province_controller = 7816
+	set_province_controller = 4295
+	set_province_controller = 4346
+	set_province_controller = 3142
+	set_province_controller = 2141
+	set_province_controller = 7300
+	set_province_controller = 7269
+	set_province_controller = 5920
+	set_province_controller = 7301
+	set_province_controller = 1631
+	set_province_controller = 7332
+	set_province_controller = 3108
+	set_province_controller = 7258
+	set_province_controller = 7348
+	set_province_controller = 7343
+	set_province_controller = 7340
+	set_province_controller = 2702
+	set_province_controller = 229
+	set_province_controller = 3809
+	set_province_controller = 91
+	set_province_controller = 7820
+	set_province_controller = 5759
+	set_province_controller = 4260
+	set_province_controller = 7390
+	release = KFC
+	add_state_core = 69
+	set_country_flag = KFC_NEU
+	}
+	set_country_flag = CSA_11_STATE
+	}
+}
+#Stupid Polk Invaded KFC!
+country_event = {
+ id = csa.5
+ title =csa.5.t
+ desc = csa.5.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ USA = {
+ has_country_flag = KFC_STAY_IN
+ }
+ KFC = {
+ controls_state = 69
+ }
+ date > 1861.8.24
+ }
+ 
+ option = {
+	name = csa.5.a
+	ai_chance = { factor = 100 }
+	add_to_variable = {
+	var = 69.usa_support
+	value = 20
+	}
+	subtract_from_variable = {
+	var = 69.csa_support
+	value = 20
+	}
+	CSA = {
+	load_oob = KFCSG
+	add_stability = -0.03
+	add_war_support = -0.03
+	set_country_flag = KFC_CSA_INVADE
+	}
+	hidden_effect = {
+	CSA = {
+		declare_war_on = {
+    target = KFC
+    type = annex_everything
+		}
+		set_province_controller = 7744
+		set_province_controller = 3655
+		set_province_controller = 5002
+		set_province_controller = 7666
+		set_province_controller = 4415
+		set_province_controller = 7629
+		set_province_controller = 5800
+		set_province_controller = 4824
+		set_province_controller = 7672
+	}
+	USA = {
+	annex_country = {
+    target = KFC
+    transfer_troops = yes
+	}	
+	69 = {
+	create_unit = {
+		   division = "name = \"1st Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"2nd Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"3rd Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"4th Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"5th Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"6th Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"7th Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"8th Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"9th Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+    owner = USA
+		}
+		create_unit = {
+		   division = "name = \"10th Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.2 start_equipment_factor = 1"
+    owner = USA
+		}
+	}
+	}
+	}
+ }
+}
+#MSG
+country_event = {
+ id = csa.6
+ title =csa.6.t
+ desc = csa.6.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ has_country_flag = CAMP_JACKSON
+ date > 1861.5.10
+ or = {
+ country_exists = ARK
+ controls_state = 56
+ }
+ }
+ 
+ option = {
+	name = csa.6.a
+	ai_chance = { factor = 100 }
+	set_country_flag = Missouri_state_guard
+	}
+ }
+#VA JOIN CSA
+country_event = {
+ id = csa.7
+ title = csa.7.t
+ desc = csa.7.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ date > 1861.4.27
+ tag = CSA
+ or = {
+ country_exists = VIR
+ controls_state = 64
+ }
+ }
+ 
+ option = {
+	name = csa.7.a
+	ai_chance = { factor = 100 }
+	CSA = {
+		annex_country = {
+    target = VIR
+    transfer_troops = yes
+		}
+	}
+ }
+ }
+#ARK Join CSA
+country_event = {
+ id = csa.8
+ title = csa.8.t
+ desc = csa.8.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ date > 1861.5.8
+ tag = CSA
+ or = {
+ country_exists = ARK
+ controls_state = 56
+ }
+ }
+ 
+ option = {
+	name = csa.8.a
+	ai_chance = { factor = 100 }
+	CSA = {
+		annex_country = {
+    target = ARK
+    transfer_troops = yes
+		}
+	}
+ }
+ }
+#NC join CSA
+ country_event = {
+ id = csa.9
+ title = csa.9.t
+ desc = csa.9.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ date > 1861.5.20
+ tag = CSA
+ or = {
+ country_exists = NOC
+ controls_state = 66
+ }
+ }
+ 
+ option = {
+	name = csa.9.a
+	ai_chance = { factor = 100 }
+	CSA = {
+		annex_country = {
+    target = NOC
+    transfer_troops = yes
+		}
+	}
+ }
+ }
+#TEN JOIN CSA
+  country_event = {
+ id = csa.10
+ title = csa.10.t
+ desc = csa.10.d
+ picture = GFX_report_event_german_parade_paris
+ 
+ fire_only_once = yes
+ trigger = {
+ date > 1861.7.1
+ tag = CSA
+ or = {
+ country_exists = TEN
+ controls_state = 65
+ }
+ }
+ 
+ option = {
+	name = csa.10.a
+	ai_chance = { factor = 100 }
+	CSA = {
+		annex_country = {
+    target = TEN
+    transfer_troops = yes
+		}
+	}
+	65 = {
+	set_demilitarized_zone = no
+	}
+ }
+ }

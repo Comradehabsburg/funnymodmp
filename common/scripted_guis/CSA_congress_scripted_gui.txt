@@ -1,0 +1,19 @@
+scripted_gui = {
+
+	csa_congress_decision_ui = {
+		context_type = decision_category
+		window_name = "csa_congress_decision_ui_window"
+
+		properties = {
+			CSA_senate_icon = {
+				frame = CSA_current_senate_icon_frame
+			}
+
+			CSA_house_icon = {
+				frame = CSA_current_house_icon_frame
+			}
+		}
+	}
+	
+}
+

@@ -1,0 +1,85 @@
+####################
+# US:Congress
+####################
+
+add_namespace = USC
+
+#38th
+country_event = {
+ id = USC.1
+ title = USC.1.t
+ desc = USC.1.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	has_completed_focus = USA_37th_congress
+	date > 1863.2.23
+	has_character = USA_abraham_lincoln
+	}
+	option = {
+	name = USC.1.a
+	ai_chance = { factor = 100}
+		custom_effect_tooltip = USA_reset_congress
+		add_stability = 0.05
+		set_variable = { var = senators_support value = 31 }
+		set_variable = { var = senators_total value = 48 }
+		set_variable = { var = representatives_support value = 85 }
+		set_variable = { var = representatives_total value = 180 }
+		USA_recalc_congress_icon_frames = yes
+ }
+}
+#39th
+country_event = {
+ id = USC.2
+ title = USC.2.t
+ desc = USC.2.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	has_completed_focus = USA_37th_congress
+	date > 1865.2.23
+	has_character = USA_abraham_lincoln
+	}
+	option = {
+	name = USC.2.a
+	ai_chance = { factor = 100}
+		custom_effect_tooltip = USA_reset_congress
+			add_stability = 0.05
+			set_variable = { var = senators_support value = 37 }
+			set_variable = { var = senators_total value = 48 }
+			set_variable = { var = representatives_support value = 132 }
+			set_variable = { var = representatives_total value = 183 }
+			USA_recalc_congress_icon_frames = yes
+ }
+}
+#13th amendment
+country_event = {
+ id = USC.3
+ title = USC.3.t
+ desc = USC.3.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	has_completed_focus = USA_end_of_us_slavery_senate_vote
+	has_completed_focus = USA_end_of_us_slavery_house_vote
+	date > 1865.1.1
+	has_character = USA_abraham_lincoln
+	has_country_flag = 13th_senate_voted
+	has_country_flag = 13th_house_voted
+	}
+	option = {
+	name = USC.3.a
+	ai_chance = { factor = 100}
+	complete_national_focus = USA_end_of_us_slavery_13th_amd
+	set_country_flag = events_trigger
+ }
+}

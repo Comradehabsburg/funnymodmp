@@ -1,0 +1,63 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_cold_harbor"
+		texturefile = "gfx/event_pictures/cold_harbor.dds"
+	}
+	spriteType = {
+		name = "GFX_richmond"
+		texturefile = "gfx/event_pictures/GFX_richmond.dds"
+	}
+	spriteType = {
+		name = "GFX_the_battle_of_sumter"
+		texturefile = "gfx/event_pictures/the_battle_of_sumter.dds"
+	}
+	spriteType = {
+		name = "GFX_Appomattox"
+		texturefile = "gfx/event_pictures/Appomattox.dds"
+	}
+	spriteType = {
+		name = "GFX_fredericksburg"
+		texturefile = "gfx/event_pictures/fredericksburg.dds"
+	}
+	spriteType = {
+		name = "GFX_Petersburg"
+		texturefile = "gfx/event_pictures/Petersburg.dds"
+	}
+	spriteType = {
+		name = "GFX_Philipi"
+		texturefile = "gfx/event_pictures/Philipi.dds"
+	}
+	spriteType = {
+		name = "GFX_harpers_Ferry"
+		texturefile = "gfx/event_pictures/harpers_Ferry.dds"
+	}
+	spriteType = {
+		name = "GFX_nashville"
+		texturefile = "gfx/event_pictures/nashville.dds"
+	}
+	spriteType = {
+		name = "GFX_vicksburg"
+		texturefile = "gfx/event_pictures/vicksburg.dds"
+	}
+	spriteType = {
+		name = "GFX_lincoln_inaugural"
+		texturefile = "gfx/event_pictures/lincoln_inaugural.dds"
+	}
+	spriteType = {
+		name = "GFX_Donelson"
+		texturefile = "gfx/event_pictures/Donelson.dds"
+	}
+	spriteType = {
+		name = "GFX_wilson_creek"
+		texturefile = "gfx/event_pictures/Wilsons_Creek.dds"
+	}
+	spriteType = {
+		name = "GFX_dixiedc"
+		texturefile = "gfx/event_pictures/GFX_dixiedc.dds"
+	}
+	spriteType = {
+		name = "GFX_pldixie"
+		texturefile = "gfx/event_pictures/GFX_pldixie.dds"
+	}
+}

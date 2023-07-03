@@ -1,0 +1,101 @@
+BAH = {
+	color = rgb { 60 52 203 }
+	color_ui = rgb { 60 52 203 }
+}
+CAN = {
+	color = rgb { 119 48 39 }
+	color_ui = rgb { 155 62 51 }
+}
+COL = {
+	color = rgb { 255 222 0 }
+	color_ui = rgb { 255 222 0 }
+}
+CUB = {
+	color = rgb { 140 65 166 }
+	color_ui = rgb { 140 65 166 }
+}
+ELS = {
+	color = rgb { 96 154 151 }
+	color_ui = rgb { 96 154 151 }
+}
+GRN = {
+	color = rgb { 239  237  238 }
+	color_ui = rgb { 239  237  238 }
+}
+MEX = {
+	color = rgb { 135 198 108 }
+	color_ui = rgb { 135 198 108 }
+}
+RUS = {
+	color = rgb { 0 127 14 }
+	color_ui = rgb { 0 127 14 }
+}
+USA = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+INT = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+VIR= {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+
+FLO= {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+MIS= {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+GEA= {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+NOC= {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+SOC= {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+TEX= {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+TEN= {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+OKL= {
+color = rgb { 190 186 202 }
+color_ui = rgb { 190 186 202 }
+}
+LOU= {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+ALA= {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+ARK= {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+KFC = {
+	color = rgb { 20 133 237 }
+	color_ui = rgb { 87 160 255 }
+}
+CSA= {
+color = rgb { 190 186 202 }
+color_ui = rgb { 190 186 202 }
+}
+SIO= {
+color = rgb { 165  0  33 }
+color_ui = rgb { 87 160 255 }
+}

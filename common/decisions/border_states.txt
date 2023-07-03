@@ -1,0 +1,1343 @@
+border_states_race = {
+
+	Border_States_condition = {
+		visible = {
+			OR = {
+				tag = CSA
+				tag = USA
+			}
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		fixed_random_seed = no
+		days_re_enable = 1
+		cost = 0
+		highlight_states = {
+			highlight_state_targets = {
+				state = 69
+			}			
+		}
+		complete_effect = {
+			set_country_flag = border_states_window_open
+		}
+	}
+	usa_growing_unionism_in_maryland = {
+		visible = {
+			tag = USA
+			date > 1861.4.12
+			controls_state = 58
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		available = {
+			date > 1861.4.12
+			controls_state = 58
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_political_power  < 200
+				factor = 0
+			}
+			modifier = {
+				has_political_power  > 250
+				factor = 3
+			}
+		}
+		fixed_random_seed = no
+		days_re_enable = 120
+		cost = 50
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 58
+			}			
+		}
+		complete_effect = {
+			custom_effect_tooltip = increase_usa
+			add_to_variable = {
+				var = 58.usa_support
+				value = 5
+			}
+			subtract_from_variable = {
+				var = 58.csa_support
+				value = 5
+			}
+		}
+	}
+	usa_growing_unionism_in_delaware = {
+		visible = {
+			tag = USA
+			date > 1861.4.12
+			controls_state = 81
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		available = {
+			date > 1861.4.12
+			controls_state = 81
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_political_power  < 200
+				factor = 0
+			}
+			modifier = {
+				has_political_power  > 250
+				factor = 3
+			}
+		}
+		fixed_random_seed = no
+		days_re_enable = 120
+		cost = 50
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 81
+			}			
+		}
+		complete_effect = {
+			custom_effect_tooltip = increase_usa
+			add_to_variable = {
+				var = 81.usa_support
+				value = 5
+			}
+			subtract_from_variable = {
+				var = 81.csa_support
+				value = 5
+			}
+		}
+	}
+	usa_growing_unionism_in_kentucky = {
+		visible = {
+			tag = USA
+			date > 1861.4.12
+			controls_state = 69
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		available = {
+			date > 1861.4.12
+			controls_state = 69
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_political_power  < 200
+				factor = 0
+			}
+			modifier = {
+				has_political_power  > 250
+				factor = 3
+			}
+		}
+		fixed_random_seed = no
+		days_re_enable = 120
+		cost = 50
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 69
+			}			
+		}
+		complete_effect = {
+			custom_effect_tooltip = increase_usa
+			add_to_variable = {
+				var = 69.usa_support
+				value = 5
+			}
+			subtract_from_variable = {
+				var = 69.csa_support
+				value = 5
+			}
+		}
+	}
+	usa_growing_unionism_in_wva = {
+		visible = {
+			tag = USA
+			date > 1861.4.12
+			controls_state = 60
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		available = {
+			date > 1861.4.12
+			controls_state = 60
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_political_power  < 200
+				factor = 0
+			}
+			modifier = {
+				has_political_power  > 250
+				factor = 3
+			}
+		}
+		fixed_random_seed = no
+		days_re_enable = 120
+		cost = 50
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 60
+			}			
+		}
+		complete_effect = {
+			custom_effect_tooltip = increase_usa
+			add_to_variable = {
+				var = 60.usa_support
+				value = 5
+			}
+			subtract_from_variable = {
+				var = 60.csa_support
+				value = 5
+			}
+		}
+	}
+	usa_growing_unionism_in_missouri = {
+		visible = {
+			tag = USA
+			date > 1861.4.12
+			controls_state = 67
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		available = {
+			date > 1861.4.12
+			controls_state = 67
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		ai_will_do = {
+			factor = 1
+				modifier = {
+				has_political_power  < 200
+				factor = 0
+			}
+				modifier = {
+				has_political_power  > 250
+				factor = 3
+			}
+		}
+		fixed_random_seed = no
+		days_re_enable = 120
+		cost = 50
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 67
+			}			
+		}
+		complete_effect = {
+			custom_effect_tooltip = increase_usa
+			add_to_variable = {
+				var = 67.usa_support
+				value = 5
+			}
+			subtract_from_variable = {
+				var = 67.csa_support
+				value = 5
+			}
+		}
+	}
+	
+	csa_growing_unionism_in_maryland = {
+		visible = {
+			tag = CSA
+			date > 1861.4.12
+			controls_state = 64
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		available = {
+			date > 1861.4.12
+			controls_state = 64
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_political_power  < 150
+				factor = 0
+			}
+			modifier = {
+				has_political_power  > 250
+				factor = 3
+			}
+		}
+		fixed_random_seed = no
+		days_re_enable = 120
+		cost = 50
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 58
+			}			
+		}
+		complete_effect = {
+			custom_effect_tooltip = increase_csa
+			add_to_variable = {
+				var = 58.csa_support
+				value = 5
+			}
+			subtract_from_variable = {
+				var = 58.usa_support
+				value = 5
+			}
+		}
+	}
+	csa_growing_unionism_in_delaware = {
+		visible = {
+			tag = CSA
+			date > 1861.4.12
+			controls_state = 64
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		available = {
+			date > 1861.4.12
+			controls_state = 64
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_political_power  < 150
+				factor = 0
+			}
+			modifier = {
+				has_political_power  > 250
+				factor = 3
+			}
+		}
+		fixed_random_seed = no
+		days_re_enable = 120
+		cost = 50
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 81
+			}			
+		}
+		complete_effect = {
+			custom_effect_tooltip = increase_csa
+			add_to_variable = {
+				var = 81.csa_support
+				value = 5
+			}
+			subtract_from_variable = {
+				var = 81.usa_support
+				value = 5
+			}
+		}
+	}
+	csa_growing_unionism_in_kentucky = {
+		visible = {
+			tag = CSA
+			date > 1861.4.12
+			controls_state = 64
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		available = {
+			date > 1861.4.12
+			controls_state = 64
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_political_power  < 150
+				factor = 0
+			}
+			modifier = {
+				has_political_power  > 250
+				factor = 3
+			}
+		}
+		fixed_random_seed = no
+		days_re_enable = 120
+		cost = 50
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 69
+			}			
+		}
+		complete_effect = {
+			custom_effect_tooltip = increase_csa
+			add_to_variable = {	
+				var = 69.csa_support
+				value = 5
+			}
+			subtract_from_variable = {
+					var = 69.usa_support
+					value = 5
+			}
+		}
+	}
+	csa_growing_unionism_in_wva = {
+		visible = {
+			tag = CSA
+			date > 1861.4.12
+			controls_state = 64
+				USA = {
+					has_country_flag = CIVIL_WAR
+					}
+				}
+		available = {
+			date > 1861.4.12
+			controls_state = 64
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		ai_will_do = {
+			factor = 1
+				modifier = {
+				has_political_power  < 150
+				factor = 0
+			}
+				modifier = {
+				has_political_power  > 250
+				factor = 3
+			}
+		}
+		fixed_random_seed = no
+		days_re_enable = 120
+		cost = 50
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 60
+			}			
+		}
+		complete_effect = {
+			custom_effect_tooltip = increase_csa
+				add_to_variable = {
+				var = 60.csa_support
+				value = 5
+				}
+				subtract_from_variable = {
+				var = 60.usa_support
+				value = 5
+			}
+		}
+	}
+	csa_growing_unionism_in_missouri = {
+		visible = {
+			tag = CSA
+			date > 1861.4.12
+			controls_state = 64
+				USA = {
+					has_country_flag = CIVIL_WAR
+					}
+				}
+		available = {
+			date > 1861.4.12
+			controls_state = 64
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+		}
+		ai_will_do = {
+			factor = 1
+				modifier = {
+				has_political_power  < 150
+				factor = 0
+			}
+				modifier = {
+				has_political_power  > 250
+				factor = 3
+			}
+		}
+		fixed_random_seed = no
+		days_re_enable = 120
+		cost = 50
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 67
+			}			
+		}
+		complete_effect = {
+		custom_effect_tooltip = increase_csa
+				add_to_variable = {
+				var = 67.csa_support
+				value = 5
+				}
+				subtract_from_variable = {
+				var = 67.usa_support
+				value = 5
+			}
+		}
+	}
+	##bonus for csa##
+	maryland_my_maryland = {
+		visible = {
+			tag = CSA
+			date > 1861.4.12
+			controls_state = 64
+				USA = {
+					has_country_flag = CIVIL_WAR
+					}
+					has_war = yes
+				}
+		available = {
+			date > 1861.4.12
+			controls_state = 64
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+			CSA_maryland_check_low = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fixed_random_seed = no
+		fire_only_once = yes
+		cost = 20
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 58
+			}			
+		}
+		complete_effect = {
+		custom_effect_tooltip = increase_csa
+				add_to_variable = {
+				var = 58.csa_support
+				value = 8
+				}
+				subtract_from_variable = {
+				var = 58.usa_support
+				value = 8
+			}
+		}
+	}
+	orphan_brigade = {
+		visible = {
+			tag = CSA
+			date > 1861.4.12
+				USA = {
+					has_country_flag = CIVIL_WAR
+					}
+					has_war = yes
+				}
+		available = {
+			date > 1861.4.12
+			USA = {
+				has_country_flag = CIVIL_WAR
+			}
+			CSA_kentucky_check_low = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fixed_random_seed = no
+		fire_only_once = yes
+		cost = 20
+		days_remove = 30
+		highlight_states = {
+			highlight_state_targets = {
+				state = 69
+			}			
+		}
+		remove_effect = {
+		random_owned_state = {
+		limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+					state_population > 50000
+					NOT = {
+					state = 82
+					state = 83
+					state = 84
+					state = 85
+					state = 86
+					}
+				}
+			create_unit = {
+			division = "name = \"2nd Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"3rd Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"4th Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"6th Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"9th Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"5th Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"5th Kentucky Infantry Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.3 start_equipment_factor = 1"
+			owner = CSA
+			}\
+			create_unit = {
+			division = "name = \"Cobb's Battery\" division_template = \"PACS Artillery\" start_experience_factor = 0.3 start_equipment_factor = 0.7"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Graves' Battery\" division_template = \"PACS Artillery\" start_experience_factor = 0.3 start_equipment_factor = 0.7"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Byrne's Artillery Battery\" division_template = \"PACS Artillery\" start_experience_factor = 0.3 start_equipment_factor = 0.4"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"1st Kentucky Cavalry\" division_template = \"PACS Cavalry\" start_experience_factor = 0.3 start_equipment_factor = 0.4"
+			owner = CSA
+			}
+		}
+		}
+	}
+		kentucky_csa_government = {
+		visible = {
+			tag = CSA
+			date > 1861.4.12
+				}
+		available = {
+			date > 1861.4.12
+			CSA_kentucky_check_medium = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fixed_random_seed = no
+		fire_only_once = yes
+		cost = 75
+		days_remove = 40
+		highlight_states = {
+			highlight_state_targets = {
+				state = 69
+			}			
+		}
+		remove_effect = {
+		add_state_claim = 69
+				add_to_variable = {
+				var = 69.csa_support
+				value = 2
+				}
+				subtract_from_variable = {
+				var = 69.usa_support
+				value = 2
+			}
+		}
+	}
+	missouri_csa_government = {
+		visible = {
+			tag = CSA
+			date > 1861.4.12
+				}
+		available = {
+			date > 1861.4.12
+			CSA_missouri_check_medium = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fixed_random_seed = no
+		fire_only_once = yes
+		cost = 75
+		days_remove = 40
+		highlight_states = {
+			highlight_state_targets = {
+				state = 67
+			}			
+		}
+		remove_effect = {
+		add_state_claim = 67
+				add_to_variable = {
+				var = 67.csa_support
+				value = 2
+				}
+				subtract_from_variable = {
+				var = 67.usa_support
+				value = 2
+			}
+		}
+	}
+	maryland_csa_government = {
+		visible = {
+			tag = CSA
+			date > 1861.4.12
+				}
+		available = {
+			date > 1861.4.12
+			CSA_maryland_check_medium = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fixed_random_seed = no
+		fire_only_once = yes
+		cost = 75
+		days_remove = 40
+		highlight_states = {
+			highlight_state_targets = {
+				state = 58
+			}			
+		}
+		remove_effect = {
+		add_state_claim = 58
+				add_to_variable = {
+				var = 58.csa_support
+				value = 2
+				}
+				subtract_from_variable = {
+				var = 58.usa_support
+				value = 2
+			}
+		}
+	}
+	delaware_csa_government = {
+		visible = {
+			tag = CSA
+			date > 1861.4.12
+					has_war = yes
+				}
+		available = {
+			date > 1861.4.12
+			CSA_delaware_check_medium = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		fixed_random_seed = no
+		fire_only_once = yes
+		cost = 75
+		days_remove = 40
+		highlight_states = {
+			highlight_state_targets = {
+				state = 81
+			}			
+		}
+		remove_effect = {
+		add_state_claim = 81
+				add_to_variable = {
+				var = 81.csa_support
+				value = 2
+				}
+				subtract_from_variable = {
+				var = 81.usa_support
+				value = 2
+			}
+		}
+	}
+	##bonus for usa##
+
+	##manpower to csa,like maryland line##
+	maryland_line = {
+	allowed = {
+		TAG = CSA
+		has_war = yes
+		date > 1861.4.12
+		CSA = {
+		NOT = {
+		controls_state = 58
+		}
+		}
+		NOT = {
+		has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+		}
+		}
+	
+	visible = {
+		TAG = CSA
+		has_war = yes
+		date > 1861.4.12
+		CSA = {
+		NOT = {
+		controls_state = 58
+		}
+		NOT = {
+		has_country_leader = {ruling_only = yes character = USA_abraham_lincoln }
+		}
+		}
+		CSA_maryland_check_low = yes
+		NOT = {
+		date > 1862.9.20
+		}
+	}	
+	available = {
+	date > 1862.9.17
+	CSA = {
+	NOT = {
+		controls_state = 58
+		}
+	}
+}
+	
+	fixed_random_seed = no
+	
+	 activation = {
+	 TAG = CSA
+	 ROOT = {
+		OR = {
+		CSA_maryland_check_low = yes
+		CSA_maryland_check_medium = yes
+		CSA_maryland_check_large = yes
+		}
+	}
+ } 
+	
+	days_mission_timeout = 35
+	days_re_enable = 1
+	
+	ai_will_do = {
+			factor = 200
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 58
+			}			
+		}
+		timeout_effect = {
+		if = {
+		limit = {
+		CSA_maryland_check_low = yes
+		NOT = {
+		date > 1862.9.17
+		}
+		}
+		activate_mission = maryland_line
+		add_manpower = 220
+		58 = {
+		add_manpower = -220
+		}
+		}
+		if = {
+		limit = {
+		CSA_maryland_check_medium = yes
+		NOT = {
+		date > 1862.9.17
+		}
+		}
+		activate_mission = maryland_line
+		add_manpower = 320
+		58 = {
+		add_manpower = -320
+		}
+		}
+		if = {
+		limit = {
+		CSA_maryland_check_large = yes
+		NOT = {
+		date > 1862.9.17
+		}
+		}
+		activate_mission = maryland_line
+		add_manpower = 420
+		58 = {
+		add_manpower = -420
+		}
+		}
+		if = {
+		limit = {
+		date > 1862.9.17
+		TAG = CSA
+		}
+		remove_decision = maryland_line
+		}
+		}
+	}
+}
+border_states_race_warning = {
+maryland_secession = {
+		allowed = {
+		TAG = USA
+		}
+	
+	visible = {
+		TAG = USA
+		date > 1861.6.1
+		CSA_maryland_check_low = yes
+	}	
+	available = {
+		date > 1861.6.1
+	NOT = {
+	OR = {
+		CSA_maryland_check_low = yes
+		CSA_maryland_check_medium = yes
+		CSA_maryland_check_large = yes
+		}
+	}
+}
+	
+ activation = {
+	 TAG = USA
+		date > 1861.6.1
+		CSA_maryland_check_low = yes
+ } 
+	
+	days_mission_timeout = 35
+	days_re_enable = 1
+	
+	ai_will_do = {
+			factor = 200
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 58
+			}			
+		}
+		timeout_effect = {
+		if = {
+		limit = {
+		CSA_maryland_check_medium = yes
+		}
+		add_stability = -0.01
+		add_war_support = -0.01
+		custom_effect_tooltip = increase_csa
+			add_to_variable = {
+				var = 58.csa_support
+				value = 1
+				}
+				subtract_from_variable = {
+				var = 58.usa_support
+				value = 1
+			}
+		}
+		if = {
+		limit = {
+		CSA_maryland_check_large = yes
+		}
+		add_stability = -0.03
+		add_war_support = -0.03
+		custom_effect_tooltip = increase_csa
+			add_to_variable = {
+				var = 58.csa_support
+				value = 3
+				}
+				subtract_from_variable = {
+				var = 58.usa_support
+				value = 3
+			}
+		}
+		}
+	}
+	delaware_secession = {
+		allowed = {
+		TAG = USA
+		}
+	
+	visible = {
+		TAG = USA
+		date > 1861.6.1
+		CSA_delaware_check_low = yes
+	}	
+	available = {
+	date > 1861.6.1
+	NOT = {
+	OR = {
+		CSA_delaware_check_low = yes
+		CSA_delaware_check_medium = YES
+		CSA_delaware_check_large = YES
+		}
+	}
+}
+	
+ activation = {
+	 TAG = USA
+	 date > 1861.6.1
+	 CSA_delaware_check_low = yes
+ } 
+	
+	days_mission_timeout = 35
+	days_re_enable = 1
+	
+	ai_will_do = {
+			factor = 200
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 81
+			}			
+		}
+		timeout_effect = {
+		if = {
+		limit = {
+		CSA_maryland_check_medium = yes
+		}
+		add_stability = -0.01
+		add_war_support = -0.01
+		custom_effect_tooltip = increase_csa
+			add_to_variable = {
+				var = 81.csa_support
+				value = 1
+				}
+				subtract_from_variable = {
+				var = 81.usa_support
+				value = 1
+			}
+		}
+		if = {
+		limit = {
+		CSA_maryland_check_large = yes
+		}
+		add_stability = -0.03
+		add_war_support = -0.03
+		custom_effect_tooltip = increase_csa
+			add_to_variable = {
+				var = 81.csa_support
+				value = 3
+				}
+				subtract_from_variable = {
+				var = 81.usa_support
+				value = 3
+			}
+		}
+		}
+	}
+	kentucky_secession = {
+		allowed = {
+		TAG = USA
+		}
+	
+	visible = {
+		TAG = USA
+		date > 1861.6.1
+		CSA_kentucky_check_low = yes
+	}	
+	available = {
+	date > 1861.6.1
+	NOT = {
+	OR = {
+		CSA_kentucky_check_low = yes
+		CSA_kentucky_check_medium = YES
+		CSA_kentucky_check_large = YES
+		}
+	}
+}
+	
+ activation = {
+	 TAG = USA
+	 date > 1861.6.1
+	 CSA_kentucky_check_low = yes
+ } 
+	
+	days_mission_timeout = 35
+	days_re_enable = 1
+	
+	ai_will_do = {
+			factor = 200
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 69
+			}			
+		}
+		timeout_effect = {
+		if = {
+		limit = {
+		CSA_kentucky_check_medium = yes
+		}
+		add_stability = -0.01
+		add_war_support = -0.01
+		custom_effect_tooltip = increase_csa
+			add_to_variable = {
+				var = 69.csa_support
+				value = 1
+				}
+				subtract_from_variable = {
+				var = 69.usa_support
+				value = 1
+			}
+		}
+		if = {
+		limit = {
+		CSA_kentucky_check_large = yes
+		}
+		add_stability = -0.03
+		add_war_support = -0.03
+		custom_effect_tooltip = increase_csa
+			add_to_variable = {
+				var = 69.csa_support
+				value = 3
+				}
+				subtract_from_variable = {
+				var = 69.usa_support
+				value = 3
+			}
+		}
+		}
+	}
+	missouri_secession = {
+		allowed = {
+		TAG = USA
+		}
+	
+	visible = {
+		TAG = USA
+		date > 1861.6.1
+		CSA_missouri_check_low = yes
+	}	
+	available = {
+	date > 1861.6.1
+	NOT = {
+	OR = {
+		CSA_missouri_check_low = yes
+		CSA_missouri_check_medium = YES
+		CSA_missouri_check_large = YES
+		}
+	}
+}
+	
+ activation = {
+	 TAG = USA
+	 date > 1861.6.1
+	 CSA_missouri_check_low = yes
+ } 
+	
+	days_mission_timeout = 35
+	days_re_enable = 1
+	
+	ai_will_do = {
+			factor = 200
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 67
+			}			
+		}
+		timeout_effect = {
+		if = {
+		limit = {
+		CSA_missouri_check_medium = yes
+		}
+		add_stability = -0.01
+		add_war_support = -0.01
+		custom_effect_tooltip = increase_csa
+			add_to_variable = {
+				var = 67.csa_support
+				value = 1
+				}
+				subtract_from_variable = {
+				var = 67.usa_support
+				value = 1
+			}
+		}
+		if = {
+		limit = {
+		CSA_missouri_check_large = yes
+		}
+		add_stability = -0.03
+		add_war_support = -0.03
+		custom_effect_tooltip = increase_csa
+			add_to_variable = {
+				var = 67.csa_support
+				value = 3
+				}
+				subtract_from_variable = {
+				var = 67.usa_support
+				value = 3
+			}
+		}
+		}
+	}
+	west_virginia_secession = {
+		allowed = {
+		TAG = USA
+		}
+	
+	visible = {
+		TAG = USA
+		date > 1861.6.1
+		CSA_wva_check_medium = yes
+	}	
+	available = {
+	date > 1861.6.1
+	NOT = {
+	OR = {
+		CSA_wva_check_low = yes
+		CSA_wva_check_medium = YES
+		CSA_wva_check_large = YES
+		}
+	}
+}
+	
+ activation = {
+	 TAG = USA
+	 date > 1861.6.1
+	 CSA_wva_check_low = yes
+ } 
+	
+	days_mission_timeout = 35
+	days_re_enable = 1
+	
+	ai_will_do = {
+			factor = 200
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 60
+			}			
+		}
+		timeout_effect = {
+		if = {
+		limit = {
+		CSA_wva_check_medium = yes
+		}
+		add_stability = -0.01
+		add_war_support = -0.01
+		custom_effect_tooltip = increase_csa
+			add_to_variable = {
+				var = 60.csa_support
+				value = 1
+				}
+				subtract_from_variable = {
+				var = 60.usa_support
+				value = 1
+			}
+		}
+		if = {
+		limit = {
+		CSA_wva_check_large = yes
+		}
+		add_stability = -0.03
+		add_war_support = -0.03
+		custom_effect_tooltip = increase_csa
+			add_to_variable = {
+				var = 60.csa_support
+				value = 3
+				}
+				subtract_from_variable = {
+				var = 60.usa_support
+				value = 3
+			}
+		}
+		}
+	}
+	###USA political power bonus due to border state unionism###
+	bonus_unionism = {
+		allowed = {
+		TAG = USA
+		}
+	is_good = yes
+	visible = {
+		TAG = USA
+		date > 1861.6.1
+		has_war_with = CSA
+		OR = {
+			USA_missouri_check_medium = yes
+			USA_maryland_check_medium = yes
+			USA_kentucky_check_medium = yes
+			USA_delaware_check_medium = yes
+			USA_wva_check_medium = yes
+		}
+	}	
+	available = {
+	date > 1861.8.15
+	NOT = {
+	has_war_with = CSA
+	}
+}
+	
+ activation = {
+	 TAG = USA
+	 date > 1861.6.1
+	 OR = { 
+			USA_missouri_check_medium = yes
+			USA_maryland_check_medium = yes
+			USA_kentucky_check_medium = yes
+			USA_delaware_check_medium = yes
+			USA_wva_check_medium = yes
+		}
+ } 
+	
+	days_mission_timeout = 60
+	days_re_enable = 1
+	
+	ai_will_do = {
+			factor = 200
+		}
+	
+		highlight_states = {
+			highlight_state_targets = {
+				state = 58
+			}			
+		}
+		timeout_effect = {
+		if = {
+		limit = {
+		USA_missouri_check_medium = yes
+		}
+		add_political_power = 25
+		}
+		if = {
+		limit = {
+		USA_maryland_check_medium = yes
+		}
+		add_political_power = 25
+		}
+		if = {
+		limit = {
+		USA_kentucky_check_medium = yes
+		}
+		add_political_power = 25
+		}
+		if = {
+		limit = {
+		USA_delaware_check_medium = yes
+		}
+		add_political_power = 25
+		}
+		if = {
+		limit = {
+		USA_wva_check_medium = yes
+		}
+		add_political_power = 25
+		}
+		}
+	}
+}

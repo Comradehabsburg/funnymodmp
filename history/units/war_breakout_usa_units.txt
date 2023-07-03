@@ -1,0 +1,129 @@
+division_template = {
+	name = "Local Militia"
+	is_locked = yes
+
+	regiments = {
+		militia = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+	}
+	priority = 1
+}
+Units ={
+
+division = {
+		name = "Union volunteers Regiment"
+		location = 3077
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "Union volunteers Regiment"
+		location = 3077
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "Union volunteers Regiment"
+		location = 7302
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+		division = {
+		name = "Union volunteers Regiment"
+		location = 7302
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "Union volunteers Regiment"
+		location = 7302
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+		division = {
+		name = "Union volunteers Regiment"
+		location = 7302
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "Union volunteers Regiment"
+		location = 7302
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+		division = {
+		name = "Union volunteers Regiment"
+		location = 7302
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "Union volunteers Regiment"
+		location = 4272
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "Union volunteers Regiment"
+		location = 4272
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "Union volunteers Regiment"
+		location = 4272
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "Union volunteers Regiment"
+		location = 4272
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "Union volunteers Regiment"
+		location = 4272
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "Union volunteers Regiment"
+		location = 4272
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "West Virginia Militia"
+		location = 7300
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "West Virginia Militia"
+		location = 5920
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "West Virginia Militia"
+		location = 3142
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "New Mexico Infantry Regiment"
+		location = 7924
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	division = {
+		name = "New Mexico Infantry Regiment"
+		location = 7924
+		division_template = "Local Militia"
+		start_experience_factor = 0.2 start_equipment_factor = 1
+	}
+	
+}

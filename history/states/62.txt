@@ -1,0 +1,38 @@
+
+state={
+	id=62
+	name="STATE_62"
+	history={
+	set_demilitarized_zone = yes
+		owner = USA
+		add_core_of = USA
+		add_core_of = SOC
+		add_core_of = CSA
+		victory_points = { 7952 20 }
+		victory_points = { 30 25 }
+		victory_points = { 2979 3}
+		victory_points = { 2705 1}
+		victory_points = { 7806 1}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 3
+			dockyard = 1
+			7952 = {
+				naval_base = 8
+				coastal_bunker = 3
+			}
+			2979 = {
+				naval_base = 3
+			}
+		}
+	}
+
+	provinces={
+		30 380 1000 1224 1303 1315 1379 1573 1967 2051 2118 2269 2370 2705 2771 2781 2926 2979 3133 3208 3664 3761 4534 4619 4898 4998 5163 5200 5272 5279 5497 5579 5622 5625 5647 5680 7775 7778 7796 7800 7803 7806 7809 7819 7822 7829 7832 7835 7837 7839 7843 7850 7861 7862 7872 7881 7889 7897 7947 7952 7961 7984
+	}
+	manpower=703708
+	state_category=large_town
+	buildings_max_level_factor=1.000
+	local_supplies=25.0 
+}

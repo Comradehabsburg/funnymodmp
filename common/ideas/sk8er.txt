@@ -1,0 +1,67 @@
+ideas = {
+	country = {
+		nobodys_home = {
+			picture = nobodys_home
+			
+			allowed = {
+				tag = GRN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -2.0
+				command_power_gain_mult = -2.0
+				conscription_factor = -2.0
+				consumer_goods_factor = 2.0
+				min_export = -2.0
+				research_speed_factor = -2.0
+				fuel_gain_factor = -2.0
+				civilian_intel_to_others = -200
+				army_intel_to_others = -200
+				navy_intel_to_others = -200
+				airforce_intel_to_others = -200
+			}
+		}
+		
+		girlfriend = {
+			picture = girlfriend
+			
+			allowed = {
+				tag = GRN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				operative_slot = 1
+			}
+		}
+		
+		bois_lie = {
+			picture = bois_lie
+			
+			allowed = {
+				tag = GRN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				improve_relations_maintain_cost_factor = 1.0
+			}
+		}
+	}
+}

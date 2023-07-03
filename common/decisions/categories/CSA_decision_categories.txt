@@ -1,0 +1,29 @@
+################
+##### CSA ######
+################
+CSA_congress = {
+	icon = usa_honor_the_confederacy
+	
+	picture = GFX_mtg_csa_congress
+	
+	
+	allowed = {
+		original_tag = CSA
+	}
+	visible = {
+	has_complete_focus = CSA_Provisional_Congress
+	}
+	scripted_gui = csa_congress_decision_ui	
+
+	priority = 1000
+}
+
+CSA_peace = {
+	icon = usa_honor_the_confederacy
+	
+	allowed = {
+		original_tag = CSA
+	}
+	
+	priority = 1250
+}

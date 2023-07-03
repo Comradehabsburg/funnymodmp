@@ -1,0 +1,6 @@
+﻿l_english:
+#ACW
+ oil_desc:0 "Coal"
+ rubber_desc:0 "Horses"
+ PRODUCTION_MATERIALS_OIL:0 "Coal"
+ PRODUCTION_MATERIALS_RUBBER:0 "Horses"

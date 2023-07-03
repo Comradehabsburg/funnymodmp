@@ -1,0 +1,68 @@
+Units = {
+division = {
+		name = "Union Army Cavalry volunteers Regiment"
+		location = 7556
+		division_template = "Union Cavalry volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army Cavalry volunteers Regiment"
+		location = 2122
+		division_template = "Union Cavalry volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army Cavalry volunteers Regiment"
+		location = 2122
+		division_template = "Union Cavalry volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army Cavalry volunteers Regiment"
+		location = 2122
+		division_template = "Union Cavalry volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army Cavalry volunteers Regiment"
+		location = 2122
+		division_template = "Union Cavalry volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army Cavalry volunteers Regiment"
+		location = 2122
+		division_template = "Union Cavalry volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army Cavalry volunteers Regiment"
+		location = 2122
+		division_template = "Union Cavalry volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army Cavalry volunteers Regiment"
+		location = 2122
+		division_template = "Union Cavalry volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army Cavalry volunteers Regiment"
+		location = 2122
+		division_template = "Union Cavalry volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army Cavalry volunteers Regiment"
+		location = 2122
+		division_template = "Union Cavalry volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army Cavalry volunteers Regiment"
+		location = 2122
+		division_template = "Union Cavalry volunteers"
+		start_experience_factor = 0
+	}
+}

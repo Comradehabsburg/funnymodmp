@@ -1,0 +1,127 @@
+scripted_gui = {
+
+	usa_election_gui = {
+		context_type = decision_category
+		window_name = "usa_election_gui_window"
+		  effects = {
+            USA_sponsor_exchange_click = {
+						 add_political_power = 25
+						 subtract_from_variable = { usa.sponsor_numbers = 1 } 
+						}
+						USA_support_exchange_click = {
+             subtract_from_variable = { usa.supporters_numbers = 1 }
+             add_political_power = 25
+						}
+        }
+				triggers = {
+				 USA_Republican_support_visible = {
+				 has_country_flag = support_lincoln
+        }
+					USA_Democrats_support_visible = {
+				 has_country_flag = support_mcclellan
+					}
+					USA_sponsor_exchange_click_enabled = {
+					check_variable = { var = usa.sponsor_numbers  value = 1 compare = greater_than_or_equals }
+         }
+				 	USA_support_exchange_click_enabled = {
+					check_variable = { var = usa.supporters_numbers  value = 1 compare = greater_than_or_equals }
+         }
+			}
+		properties = {
+			USA_Republican_support = {
+				image = "GFX_mtg_usa_republican"
+			}
+			USA_Democrats_support = {
+				image = "GFX_mtg_usa_democrats"
+			}
+			USA_sponsor_exchange = {
+				image = "GFX_mtg_usa_cash_picture"
+			}
+			USA_support_exchange = {
+				image = "GFX_mtg_usa_icon_stability"
+			}
+		}
+		defined_text = {
+    name = USA_sponsor_and_supporters
+    
+    text = {
+        localization_key = "USA_sponsor_and_supporters_desc"
+				}
+		}
+		defined_text = {
+    name = USA_sponsor_numbers
+    
+    text = {
+        localization_key = "USA_sponsor_numbers_desc"
+				}
+		}
+		defined_text = {
+    name = USA_supporters_numbers
+    
+    text = {
+        localization_key = "USA_supporters_numbers_desc"
+				}
+		}
+		ai_enabled = {
+    OR = {
+		has_country_flag = support_lincoln
+		has_country_flag = support_mcclellan
+		date > 1864.1.5
+		}
+		}
+		ai_test_interval = {
+		24
+		}
+		ai_check = {
+		always = yes
+		}
+		ai_check_scope = {
+    always = yes
+		}
+		ai_max_weight_taken_per_test = 2
+		ai_test_scopes = test_self_country
+		 ai_weights = {
+        USA_sponsor_exchange_click = {
+				ai_will_do = {
+				factor = 5
+				modifier = {
+				has_country_flag = support_lincoln
+				factor = 3
+				}
+				modifier = {
+				has_country_flag = support_mcclellan
+				factor = 5
+				}
+				modifier = {
+				OR = {
+				has_completed_focus = USA_emancipation_proclamation
+				has_idea = reserved_emancipation_proclamation
+				}
+				factor = 10
+				}
+				}
+      }
+			  USA_support_exchange_click = {
+				ai_will_do = {
+				factor = 5
+				modifier = {
+				has_country_flag = support_lincoln
+				factor = 3
+				}
+				modifier = {
+				has_country_flag = support_mcclellan
+				factor = 5
+				}
+				modifier = {
+				OR = {
+				has_completed_focus = USA_emancipation_proclamation
+				has_idea = reserved_emancipation_proclamation
+				}
+				factor = 10
+				}
+				}
+      }
+		}
+	}
+}
+

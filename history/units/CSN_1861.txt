@@ -1,0 +1,128 @@
+units ={
+fleet = {
+	name = "CS NAVY"			
+		naval_base = 7952 # should be Hampton Road
+		task_force = {		
+		name = "Atlantic CSS Squadron"	
+		location = 7952
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Alvarado" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Bayou City" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Beauregard" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CSA version_name = "CSS LIGHT Class" } } }
+		ship = { name = "CSS Calhoun" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Colonel Lovell" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CSA version_name = "CSS LIGHT Class" } } }
+		ship = { name = "CSS Darlington" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = CSA version_name = "HEAVY Class" } } }
+		ship = { name = "CSS De Soto" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Dick Keys" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = CSA version_name = "HEAVY Class" } } }
+		ship = { name = "CSS Ella and Annie" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CSA version_name = "CSS LIGHT Class" } } }
+		ship = { name = "CSS Enchantress" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Florida" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CSA version_name = "CSS LIGHT Class" } } }
+		ship = { name = "CSS General Lee" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Dick Keys" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = CSA version_name = "HEAVY Class" } } }
+		ship = { name = "CSS General Sterling Price" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS General Sumter" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS George Page" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Henry Patrick" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = CSA version_name = "HEAVY Class" } } }
+		ship = { name = "CSS Jamestown" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = CSA version_name = "HEAVY Class" } } }
+		ship = { name = "CSS Jefferson Davis " definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		}
+		task_force = {
+		name = "Nolfork CS Fleets"
+		location = 4694
+		ship = { name = "CSS Manassas" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = CSA version_name = "HEAVY Class" } } }
+		ship = { name = "CSS Lewis" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = CSA version_name = "HEAVY Class" } } }
+		ship = { name = "CSS McRae" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Virginia 'Merrimac'" definition = battleship start_experience_factor = 1 equipment = { ship_hull_heavy_1 = { amount = 1 owner = CSA version_name = "CSS WAR Class" } } }
+		ship = { name = "CSS Nashville" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_coastal_defense_ship = { amount = 1 owner = CSA version_name = "HEAVY Class" } } }
+		ship = { name = "CSS Prince" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Patrick Henry" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Prince" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Red Rover" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Selma" definition = light_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CSA version_name = "CSS LIGHT Class" } } }
+		ship = { name = "CSS Sumter" definition = heavy_cruiser start_experience_factor = 0.3 equipment = { ship_hull_cruiser_1 = { amount = 1 owner = CSA version_name = "HEAVY Class" } } }
+		ship = { name = "CSS Teaser" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS William G. Hewes" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		ship = { name = "CSS Yorktown" definition = destroyer start_experience_factor = 0.3 equipment = { ship_hull_light_1 = { amount = 1 owner = CSA version_name = "CSS Des" } } }
+		}
+		}
+}

@@ -1,0 +1,146 @@
+#by CMCMC
+#Localisations
+#CM_SE_title  scripted loc for bigevent title
+#CM_SE_desc  scripted loc for flavor text content
+#CM_SE_btn  scripted loc for button text
+#Texture
+#CM_SE_getpicture  scripted loc for picture entry,sprites(loc_keys) need to be defined in a .gfx file
+
+defined_text = { 
+	name = CM_SE_title
+		
+	text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 1
+			}
+		}
+		localization_key = CM_SE_title_1
+	}
+	text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 2
+			}
+		}
+		localization_key = CM_SE_title_2
+	}
+	text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 3
+			}
+		}
+		localization_key = CM_SE_title_3
+	}
+	text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 4
+			}
+		}
+		localization_key = CM_SE_title_4
+	}
+	text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 5
+			}
+		}
+		localization_key = CM_SE_title_5
+	}
+	text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 6
+			}
+		}
+		localization_key = CM_SE_title_6
+	}
+	text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 7
+			}
+		}
+		localization_key = CM_SE_title_7
+	}
+	text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 8
+			}
+		}
+		localization_key = CM_SE_title_8
+	}
+	text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 9
+			}
+		}
+		localization_key = CM_SE_title_9
+	}
+	text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 10
+			}
+		}
+		localization_key = CM_SE_title_10
+	}
+		text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 11
+			}
+		}
+		localization_key = CM_SE_title_11
+	}
+		text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 12
+			}
+		}
+		localization_key = CM_SE_title_12
+	}
+		text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 13
+			}
+		}
+		localization_key = CM_SE_title_13
+	}
+	text = {
+		trigger = {
+			is_in_array = {
+    			array = CM_SE_event_id_array
+   				value = 14
+			}
+		}
+		localization_key = CM_SE_title_14
+	}
+	text = {
+		trigger = { 
+		#generic
+		}
+		localization_key = CM_SE_title_missing
+	}	
+}
+
+

@@ -1,0 +1,78 @@
+#####################
+##### Tutorial ######
+#####################
+
+game_tutorial_and_question = {
+	
+	allowed = {
+	OR = {
+		tag = CSA
+		tag = USA
+		}
+		NOT = {
+		has_country_flag = tutorial_close
+		}
+		}
+
+	priority = 10000
+
+}
+border_states_race = {
+	
+	icon = GFX_decision_category_power_struggle
+
+	allowed = {
+	OR = {
+		tag = CSA
+		tag = USA
+		}
+	USA = {
+		has_country_flag = CIVIL_WAR
+		}
+	}
+	priority = 500
+}
+border_states_race_warning = {
+icon = GFX_decision_category_border_war
+
+	allowed = {
+	OR = {
+		tag = CSA
+		tag = USA
+		}
+	USA = {
+		has_country_flag = CIVIL_WAR
+		}
+	}
+	priority = 500
+}
+rename_decisions = {
+	
+	icon = GFX_decision_category_usa_intervention_mandate
+
+	allowed = {
+	OR = {
+		tag = CSA
+		tag = USA
+		}
+	USA = {
+		has_country_flag = CIVIL_WAR
+		}
+	}
+	priority = 20
+}
+civil_war_in_indians_decisions = {
+	
+	icon = GFX_decision_category_usa_intervention_mandate
+
+	allowed = {
+	OR = {
+		tag = CSA
+		tag = USA
+		}
+	USA = {
+		has_country_flag = CIVIL_WAR
+		}
+	}
+	priority = 20
+}

@@ -1,0 +1,170 @@
+Units = {
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+	division = {
+		name = "Union Army volunteers Regiment"
+		location = 7281
+		division_template = "Union volunteers"
+		start_experience_factor = 0
+	}
+}

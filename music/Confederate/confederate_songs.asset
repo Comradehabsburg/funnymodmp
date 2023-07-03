@@ -1,0 +1,62 @@
+
+# MAIN THEME
+music = {
+	name = "maintheme"
+	file = "hoi4mainthemeallies.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Flag of Secession"
+	file = "Secession.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Southron's Battle Cry of Freedom"
+	file = "southerons_battle_cry.ogg"
+	volume = 0.65
+}
+music = {
+	name = "To Arms in Dixie"
+	file = "to_arms_in_dixie.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Dixie's Land"
+	file = "dixie.ogg"
+	volume = 0.65
+}
+music = {
+	name = "God Save the South"
+	file = "god_save_the_south.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Bonnie Blue Flag"
+	file = "bonnie_blue_flag.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Old Zip Coon"
+	file = "zip_coon.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Southern Soldier"
+	file = "southern_soldier.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Irish Brigade"
+	file = "the_irish_brigade.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Yellow Rose Of Texas"
+	file = "the_yellow_rose_of_texas.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Jackson in the Valley"
+	file = "jackson_in_the_valley.ogg"
+	volume = 0.65
+}

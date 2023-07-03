@@ -1,0 +1,142 @@
+###########################
+# Peace Events
+###########################
+
+add_namespace = pc
+
+#DEMOCRATS offer peace truce
+country_event = {
+ id = pc.1
+ title = pc.1.t
+ desc = pc.1.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = pc.1.a
+	ai_chance = { 
+	factor = 2 
+	modifier = {
+			factor = 2
+			CSA = {
+			surrender_progress > 0.33
+			}
+		}
+	modifier = {
+			factor = 5
+			NOT = {
+			USA = {
+			OR = {
+				has_idea = reserved_emancipation_proclamation
+				has_idea = 13th_a
+				}
+			}
+		}
+	}
+		modifier = {
+		factor = 5
+		casualties_k > 100
+		}
+		modifier = {
+		factor = 4
+		casualties_k > 200
+		}
+		modifier = {
+		factor = 3
+		casualties_k > 300
+		}
+		modifier = {
+		factor = 2
+		casualties_k > 400
+		}
+		modifier = {
+		factor = 1
+		casualties_k > 500
+		}
+	}
+			set_truce = {
+			target = USA
+			days = 150
+		}
+ }
+ option = {
+	name = pc.1.b
+	ai_chance = { 
+	factor = 2 
+	modifier = {
+			factor = 5
+			CSA = {
+			surrender_progress < 0.33
+			}
+		}
+	modifier = {
+			factor = 5
+			USA = {
+			OR = {
+				has_idea = reserved_emancipation_proclamation
+				has_idea = 13th_a
+				}
+			}
+		}
+		modifier = {
+		factor = 5
+		casualties_k < 100
+		}
+		modifier = {
+		factor = 4
+		casualties_k < 200
+		}
+		modifier = {
+		factor = 3
+		casualties_k < 300
+		}
+		modifier = {
+		factor = 2
+		casualties_k < 400
+		}
+		modifier = {
+		factor = 1
+		casualties_k < 500
+		}
+	}
+ }
+}
+#You said war will over before 1865！but it is 1866 now！
+country_event = {
+ id = pc.2
+ title = pc.2.t
+ desc = pc.2.d
+ picture = GFX_report_event_remove_from_sumter
+ mean_time_to_happen = { days = 1 } 
+	
+	fire_only_once = yes
+	
+	trigger = {
+	TAG = USA
+	OR = {
+	has_character = USA_abraham_lincoln
+	has_character = USA_andrew_johnson
+	}
+	date > 1865.12.31
+	has_country_flag = end_war_1865
+	has_war_with = CSA
+	}
+
+	option = {
+	name = pc.2.a
+	add_war_support = -0.33
+	add_popularity = {
+		ideology = fascism
+    popularity = 0.25
+	}
+	add_political_power = -200
+	add_ideas = party_split
+	USA_congress_large_opposition =  yes
+	USA_congress_small_opposition = yes
+	USA_congress_medium_opposition = yes
+	}
+}

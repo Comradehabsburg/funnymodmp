@@ -1,0 +1,39 @@
+#	Example:
+# 
+#	example_trigger = {
+#		tag = GER
+#		is_ai = no
+#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+#		exampel_trigger = yes
+#	}
+#
+
+
+CSA_congress_low_support_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_congress_low_support_trigger_tt
+		check_variable = { var = CSA_senators_support value = CSA_quorum_low compare = greater_than_or_equals }
+		check_variable = { var = CSA_representatives_support value = 20 compare = greater_than_or_equals }
+	}
+}
+
+CSA_congress_medium_support_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_congress_medium_support_trigger_tt
+		check_variable = { var = CSA_senators_support value = CSA_quorum_medium compare = greater_than_or_equals }
+		check_variable = { var = CSA_representatives_support value = 40 compare = greater_than_or_equals }
+	}
+}
+
+CSA_congress_high_support_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = CSA_congress_high_support_trigger_tt
+		check_variable = { var = CSA_senators_support value = CSA_quorum_high compare = greater_than_or_equals }
+		check_variable = { var = CSA_representatives_support value = 60 compare = greater_than_or_equals }
+	}
+}

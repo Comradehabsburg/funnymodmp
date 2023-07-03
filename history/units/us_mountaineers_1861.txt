@@ -1,0 +1,20 @@
+Units ={
+	division = {
+		name = "West Virginia Mountaineers Regiment"
+		location = 3142
+		division_template = "West Virginia Mountaineers"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "West Virginia Mountaineers Regiment"
+		location = 3142
+		division_template = "West Virginia Mountaineers"
+		start_experience_factor = 1
+	}
+	division = {
+		name = "West Virginia Mountaineers Regiment"
+		location = 3142
+		division_template = "West Virginia Mountaineers"
+		start_experience_factor = 1
+	}
+}

@@ -1,0 +1,2488 @@
+focus_tree = {
+id = csa_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = CSA
+		}
+	}
+		focus = {
+		id = CSA_new_born
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 8
+		y = 0
+		cost = 3
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.2.22
+		}
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+	focus = {
+		id = CSA_southern_sprite
+		icon = GFX_focus_CSA_southern_sprite
+		x = 6
+		y = 1
+		cost = 4
+		prerequisite = {
+		focus = CSA_new_born
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			add_war_support = 0.05
+		}
+	}
+		focus = {
+		id = CSA_goverment_form
+		icon = GFX_focus_generic_treaty
+		x = 8
+		y = 1
+		cost = 4
+		prerequisite = {
+		focus = CSA_new_born
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+		}
+
+		completion_reward = {
+		add_political_power = 50
+		add_stability = 0.1
+		set_cosmetic_tag = CSA_9STAR
+		}
+	}
+	focus = {
+		id = CSA_yankee_guns
+		icon = GFX_focus_POL_belarus_army
+		x = 10
+		y = 1
+		cost = 4
+		prerequisite = {
+		focus = CSA_new_born
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+		}
+
+		completion_reward = {
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 5000
+    producer = USA
+		}
+		add_equipment_to_stockpile = {
+    type = artillery_equipment 
+    amount = 240
+    producer = USA
+			}
+		add_equipment_to_stockpile = {
+    type = support_equipment  
+    amount = 1000
+    producer = USA
+		}
+		}
+	}
+		focus = {
+		id = CSA_civil_war
+		icon = GFX_focus_attack_usa
+		x = 8
+		y = 2
+		cost = 6
+		will_lead_to_war_with = USA
+		prerequisite = {
+		focus = CSA_yankee_guns
+		}
+		prerequisite = {
+		focus = CSA_goverment_form
+		}
+		prerequisite = {
+		focus = CSA_southern_sprite
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.6.20
+		}
+
+		completion_reward = {
+		add_tech_bonus = {
+    bonus = 0.33
+    uses = 2
+    category = land_doctrine
+		}
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 1500
+    producer = USA
+		}
+		
+		
+	add_equipment_to_stockpile = {
+			type = train_equipment_1
+			amount = 200
+			producer = USA
+	}
+		add_equipment_to_stockpile = {
+    type = artillery_equipment 
+    amount = 48
+    producer = USA
+			}
+		add_equipment_to_stockpile = {
+    type = support_equipment  
+    amount = 300
+    producer = USA
+		}
+	
+		load_oob = 1861-7-21_CSA
+		set_capital = { state = 64 }
+		load_oob = 1861-msg
+		load_oob = CSA_garrison
+		load_oob = war_breakout_csa_units
+		add_state_core = 61
+		transfer_state = 61
+		declare_war_on = {
+    target = USA
+    type = civil_war
+		}
+	USA = {
+	country_event = {
+    id = usa.1492
+    days = 1
+    random = 5
+    random_days = 1
+	}
+	load_oob = washington_garrison
+	load_oob = war_breakout_usa_units
+	set_province_controller = 14963
+	set_province_controller = 4272
+	set_province_controller = 7302
+	set_province_controller = 7353
+	set_province_controller = 7374
+	set_province_controller = 7425
+	set_province_controller = 2064
+	set_province_controller = 1401
+	set_province_controller = 7816
+	set_province_controller = 4295
+	set_province_controller = 4346
+	set_province_controller = 3142
+	set_province_controller = 2141
+	set_province_controller = 7300
+	set_province_controller = 7269
+	set_province_controller = 5920
+	set_province_controller = 7301
+	set_province_controller = 1631
+	set_province_controller = 7332
+	set_province_controller = 3108
+	set_province_controller = 7258
+	set_province_controller = 7348
+	set_province_controller = 7343
+	set_province_controller = 7340
+	set_province_controller = 2702
+	set_province_controller = 229
+	set_province_controller = 3809
+	set_province_controller = 91
+	set_province_controller = 7820
+	set_province_controller = 5759
+	set_province_controller = 4260
+	set_province_controller = 7390
+	release = KFC
+	add_state_core = 69
+	set_country_flag = KFC_NEU
+	}
+	set_country_flag = CSA_11_STATE
+		}
+	}
+		focus = {
+		id = CSA_PACS
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 8
+		y = 3
+		cost = 4
+		prerequisite = {
+		focus = CSA_civil_war
+		}
+		mutually_exclusive = {
+		focus = CSA_regulars
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+		}
+
+		completion_reward = {
+		add_manpower = -30000
+		load_oob = CSA_PACS
+		}
+	}
+		focus = {
+		id = CSA_militia
+		icon = GFX_focus_generic_manpower
+		x = 6
+		y = 3
+		cost = 4
+		prerequisite = {
+		focus = CSA_civil_war
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+		controls_state = 65
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+		}
+
+		completion_reward = {
+		add_manpower = -50000
+		load_oob = CSA_MIL
+		}
+	}
+	focus = {
+		id = CSA_regulars
+		icon = GFX_focus_BUL_condemn_macedonian_organizations
+		x = 10
+		y = 3
+		cost = 4
+		prerequisite = {
+		focus = CSA_civil_war
+		}
+		mutually_exclusive = {
+		focus = CSA_PACS
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+		}
+
+		completion_reward = {
+		add_tech_bonus = {
+    bonus = 0.33
+    uses = 1
+    category = land_doctrine
+		}
+		add_manpower = -10000
+		load_oob = CSA_ACSA
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 2500
+    producer = USA
+		}
+		add_equipment_to_stockpile = {
+    type = artillery_equipment 
+    amount = 62
+    producer = USA
+			}
+		add_equipment_to_stockpile = {
+    type = support_equipment  
+    amount = 500
+    producer = USA
+		}	
+		}
+	}
+		focus = {
+		id = CSA_CSWD
+		icon = GFX_focus_csa_seal
+		x = 8
+		y = 4
+		cost = 4
+		prerequisite = {
+		focus = CSA_regulars
+		focus = CSA_militia
+		focus = CSA_PACS
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1861.7.1
+		}
+
+		completion_reward = {
+		add_ideas = war_department
+		}
+	}
+	focus = {
+		id = CSA_TREATY_WITH_CHICKASAW_AND_Choctaw
+		icon = GFX_focus_choctaw_and_chickasaws_shine
+		x = 6
+		y = 5
+		cost = 4
+		prerequisite = {
+		focus = CSA_CSWD
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+		controls_state = 61
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1861.7.12
+		}
+
+		completion_reward = {
+		add_stability = 0.1
+		61 = {
+		create_unit = {
+			division = "name = \"Chickasaw Tribal Infantry\" division_template = \"CS Militia\" start_experience_factor = 0.1 start_equipment_factor =1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Choctaw Tribal Infantry\" division_template = \"CS Militia\" start_experience_factor = 0.1 start_equipment_factor =1"
+			owner = CSA
+			}
+		}
+		}
+	}
+		focus = {
+		id = CSA_more_treaty_with_native
+		icon = GFX_goal_generic_military_deal
+		x = 6
+		y = 6
+		cost = 3
+		prerequisite = {
+		focus = CSA_TREATY_WITH_CHICKASAW_AND_Choctaw
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+		controls_state = 61
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1861.12.10
+		}
+
+		completion_reward = {
+		add_stability = 0.05
+		add_manpower = 4000
+		}
+	}
+		focus = {
+		id = CSA_import_Mexico_weapon
+		icon = GFX_focus_mexico
+		x = 6
+		y = 7
+		cost = 4
+		prerequisite = {
+		focus = CSA_more_treaty_with_native
+		}
+		available = {
+		NOT = {
+		has_idea = pay_for_guns
+		}
+		controls_state = 38
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1862.1.1
+		}
+
+		completion_reward = {
+		add_timed_idea = {
+		 idea = pay_for_guns
+		 days = 90
+		}
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 10000
+    producer = MEX
+		}
+		add_equipment_to_stockpile = {
+    type = artillery_equipment 
+    amount = 240
+    producer = MEX
+			}
+		add_equipment_to_stockpile = {
+    type = support_equipment  
+    amount = 1800
+    producer = MEX
+		}
+		add_equipment_to_stockpile = {
+    type = horse_mules  
+    amount = 6000
+    producer = MEX
+		}
+		}
+	}
+	focus = {
+		id = CSA_1862_Conscription_act
+		icon = GFX_focus_CSA_1862_Conscription_act
+		x = 4
+		y = 8
+		cost = 4
+		prerequisite = {
+		focus = CSA_import_Mexico_weapon
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1862.4.26
+		}
+
+		completion_reward = {
+		add_stability = -0.1
+		add_ideas = 1862_conscription
+		}
+	}
+	focus = {
+		id = CSA_1862_Conscription_act_9_27
+		icon = GFX_focus_CSA_1862_Conscription_act_9_27
+		x = 6
+		y = 8
+		cost = 4
+		prerequisite = {
+		focus = CSA_import_Mexico_weapon
+		}
+		available = {
+		has_idea = 1862_conscription
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1862.9.27
+		}
+
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = 1862_conscription
+		add_idea = 1862_conscription_927
+		}
+		}
+	}
+		focus = {
+		id = CSA_twenty_negro_law
+		icon = GFX_focus_twenty_negro_law
+		x = 5
+		y = 9
+		cost = 4
+		prerequisite = {
+		focus = CSA_1862_Conscription_act_9_27
+		}
+		prerequisite = {
+		focus = CSA_1862_Conscription_act
+		}
+		available = {
+		OR = {
+		has_idea = 1862_conscription
+		has_idea = 1862_conscription_927
+		}
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1862.10.11
+		}
+
+		completion_reward = {
+		add_ideas = twenty_negro_law
+		}
+	}
+	focus = {
+		id = CSA_Bureau_of_Engineers
+		icon = GFX_goal_generic_position_armies
+		x = 10
+		y = 5
+		cost = 4
+		prerequisite = {
+		focus = CSA_CSWD
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1861.2.26
+		}
+
+		completion_reward = {
+		add_ideas = CSA_Engineers
+		}
+	}
+		focus = {
+		id = CSA_CSLB
+		icon = GFX_goal_generic_oil_refinery
+		x = 10
+		y = 6
+		cost = 4
+		prerequisite = {
+		focus = CSA_Bureau_of_Engineers
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1861.3.6
+		}
+
+		completion_reward = {
+		add_ideas = CSA_CSLB
+		}
+	}
+	focus = {
+		id = CSA_CQGD
+		icon = GFX_goal_generic_production2
+		x = 8
+		y = 5
+		cost = 4
+		prerequisite = {
+		focus = CSA_CSWD
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1861.2.26
+		}
+
+		completion_reward = {
+		add_ideas = Confederate_Quartermaster_General_Department
+		}
+	}
+	focus = {
+		id = CSA_Confederate_Home_Guard
+		icon = GFX_focus_secret_rearmament
+		x = 8
+		y = 6
+		cost = 4
+		prerequisite = {
+		focus = CSA_CQGD
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+		controls_state = 62
+		controls_province = 7467
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1861.4.17
+		}
+
+		completion_reward = {
+		add_manpower = 35000
+		add_stability = -0.05
+		add_war_support = -0.03
+		add_ideas = CSA_home_guard
+		load_oob = CSA_HOMEGUARD
+		}
+	}
+	focus = {
+		id = CSA_import_england_weapon
+		icon = GFX_focus_eng_the_sun_never_sets
+		x = 8
+		y = 7
+		cost = 4
+		prerequisite = {
+		focus = CSA_Confederate_Home_Guard
+		}
+		available = {
+		NOT = {
+		has_idea = pay_for_guns
+		}
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1862.1.1
+		}
+
+		completion_reward = {
+		add_timed_idea = {
+		 idea = pay_for_guns
+		 days = 90
+		}
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 20000
+    producer = CAN
+		}
+		add_equipment_to_stockpile = {
+    type = artillery_equipment 
+    amount = 240
+    producer = CAN
+			}
+		add_equipment_to_stockpile = {
+    type = support_equipment  
+    amount = 1500
+    producer = CAN
+		}
+		add_equipment_to_stockpile = {
+    type = horse_mules  
+    amount = 4000
+    producer = CAN
+		}
+		}
+	}
+	focus = {
+		id = CSA_PACS_recruit
+		icon = GFX_focus_POL_beck_ribbentrop
+		x = 8
+		y = 8
+		cost = 4
+		prerequisite = {
+		focus = CSA_import_england_weapon
+		}
+		available = {
+		has_manpower > 50000
+		controls_province = 7892
+		controls_province = 1984
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1862.9.1
+		}
+
+		completion_reward = {
+		add_tech_bonus = {
+    bonus = 0.33
+    uses = 2
+    category = land_doctrine
+		}
+		add_manpower = -50000
+		load_oob = CSA_PACS_1862
+		}
+	}
+	focus = {
+		id = CSA_CSMC
+		icon = GFX_focus_CSMC
+		x = 8
+		y = 9
+		cost = 4
+		prerequisite = {
+		focus = CSA_PACS_recruit
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1861.3.16
+		}
+
+		completion_reward = {
+		load_oob = CSMC
+		}
+	}
+		focus = {
+		id = CSA_1864_conscription
+		icon = GFX_focus_CSA_1864_conscription
+		x = 8
+		y = 10
+		cost = 4
+		prerequisite = {
+		focus = CSA_CSMC
+		}
+		prerequisite = {
+		focus = CSA_twenty_negro_law
+		}
+		prerequisite = {
+		focus = CSA_BOFS
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1864.2.17
+		}
+
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = 1862_conscription_927
+		add_idea = 1864_conscription
+		}
+		}
+	}
+	focus = {
+		id = CSA_local_weapon_produce
+		icon = GFX_focus_local_weapon
+		x = 10
+		y = 7
+		cost = 4
+		prerequisite = {
+		focus = CSA_CSLB
+		}
+		available = {
+		NOT = {
+		has_idea = pay_for_guns
+		}
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1862.4.1
+		}
+
+		completion_reward = {
+		add_timed_idea = {
+		 idea = pay_for_guns
+		 days = 90
+		}
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 5000
+    producer = TEX
+		}
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 5000
+    producer = TEN
+		}
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 5000
+    producer = ARK
+		}
+		add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 2500
+    producer = KFC
+		}
+		add_equipment_to_stockpile = {
+    type = artillery_equipment 
+    amount = 240
+    producer = VIR
+			}
+		add_equipment_to_stockpile = {
+    type = support_equipment  
+    amount = 1000
+    producer = ALA
+		}
+		add_equipment_to_stockpile = {
+    type = horse_mules  
+    amount = 2000
+    producer = NOC
+		}
+	}
+}
+	focus = {
+		id = CSA_fort_at_virginia
+		icon = GFX_goal_generic_construct_military
+		x = 12
+		y = 8
+		cost = 4
+		prerequisite = {
+		focus = CSA_local_weapon_produce
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1862.4.1
+			controls_province = 3847
+			controls_province = 7461
+			controls_province = 2012
+			controls_province = 2587
+		}
+
+		completion_reward = {
+		add_ideas = CSA_fort_dig
+		64 = {
+		add_building_construction = {
+    type = bunker
+    level = 2
+    instant_build = yes
+    province = 7467
+		}
+		add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 7270
+		}
+		add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 3847
+		}
+		add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 7461
+		}
+		add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 2012
+		}
+		add_building_construction = {
+    type = bunker
+    level = 3
+    instant_build = yes
+    province = 2587
+		}
+		}
+	}
+}
+	focus = {
+		id = CSA_Nitre_and_Mining_Bureau
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 10
+		y = 8
+		cost = 4
+		prerequisite = {
+		focus = CSA_local_weapon_produce
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1862.4.11
+		}
+
+		completion_reward = {
+		add_ideas = CSA_NMB
+	}
+}
+	focus = {
+		id = CSA_BOFS
+		icon = GFX_focus_spr_class_war
+		x = 11
+		y = 9
+		cost = 4
+		prerequisite = {
+		focus = CSA_Nitre_and_Mining_Bureau
+		}
+		prerequisite = {
+		focus = CSA_fort_at_virginia
+		}
+		available = {
+		OR = {controls_state = 64 controls_state = 36}
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1864.5.17
+		}
+
+		completion_reward = {
+		add_ideas = CSA_BOFS
+	}
+}
+	#CSA FLAGS
+	focus = {
+		id = CSA_11_stars
+		icon = GFX_focus_csa_11_starsl
+		x = 3
+		y = 3
+		cost = 0
+		prerequisite = {
+		focus = CSA_civil_war
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1861.7.2
+		}
+
+		completion_reward = {
+		add_political_power = 150
+		set_cosmetic_tag = CSA_11STATE
+		}
+	}
+		focus = {
+		id = CSA_13_stars
+		icon = GFX_focus_csa_13_stars
+		x = 2
+		y = 4
+		cost = 0
+		prerequisite = {
+		focus = CSA_11_stars
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1861.11.28
+		}
+
+		completion_reward = {
+		add_political_power = 100
+		set_cosmetic_tag = CSA_13STATE
+		}
+	}
+	focus = {
+		id = CSA_white_flag
+		icon = GFX_focus_csa_white_flag
+		x = 4
+		y = 4
+		cost = 0
+		prerequisite = {
+		focus = CSA_11_stars
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1863.3.4
+		}
+
+		completion_reward = {
+		add_political_power = 100
+		set_cosmetic_tag = CSA_WHITE
+		}
+	}
+	focus = {
+		id = CSA_blood_flag
+		icon = GFX_focus_csa_blood
+		x = 3
+		y = 5
+		cost = 0
+		prerequisite = {
+		focus = CSA_13_stars
+		}
+		prerequisite = {
+		focus = CSA_white_flag
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			has_war_with = USA
+			date > 1865.1.1
+		}
+
+		completion_reward = {
+		add_political_power = 100
+		set_cosmetic_tag = CSA_BLOOD
+		}
+	}
+	#CSA Politics
+		focus = {
+		id = CSA_Jeff_davis
+		icon = GFX_focus_jeff
+		x = 15
+		y = 0
+		cost = 4
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.2.27
+		}
+
+		completion_reward = {
+		add_political_power = 200
+		}
+	}
+		focus = {
+		id = CSA_Dixie
+		icon = GFX_focus_dixie
+		x = 13
+		y = 1
+		cost = 1
+		mutually_exclusive = {
+		focus = CSA_god_save_the_south
+		}
+		mutually_exclusive = {
+		focus = CSA_bonnie_blue_flag
+		}
+		prerequisite = {
+		focus = CSA_Jeff_davis
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.2.17
+		}
+
+		completion_reward = {
+		add_political_power = 50
+		add_ideas = CSA_popular_anthem
+		CSA = {
+		play_song = "Dixie's Land"
+		}
+		}
+	}
+	focus = {
+		id = CSA_bonnie_blue_flag
+		icon = GFX_focus_bonnie_blue_flag
+		x = 15
+		y = 1
+		cost = 1
+		mutually_exclusive = {
+		focus = CSA_god_save_the_south
+		}
+		mutually_exclusive = {
+		focus = CSA_Dixie
+		}
+		prerequisite = {
+		focus = CSA_Jeff_davis
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.2.17
+		}
+
+		completion_reward = {
+		add_political_power = 50
+		add_ideas = CSA_popular_anthem
+		CSA = {
+		play_song = "The Bonnie Blue Flag"
+		}
+		}
+	}
+	focus = {
+		id = CSA_god_save_the_south
+		icon = GFX_focus_god_save_the_south
+		x = 17
+		y = 1
+		cost = 1
+		mutually_exclusive = {
+		focus = CSA_Dixie
+		}
+		mutually_exclusive = {
+		focus = CSA_bonnie_blue_flag
+		}
+		prerequisite = {
+		focus = CSA_Jeff_davis
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.2.17
+		}
+
+		completion_reward = {
+		add_political_power = 50
+		add_ideas = CSA_popular_anthem
+		CSA = {
+		play_song = "God Save the South"
+		}
+		}
+	}
+	#CSA Politics
+		focus = {
+		id = CSA_constitution
+		icon = GFX_goal_support_democracy
+		x = 14
+		y = 2
+		cost = 4
+		prerequisite = {
+		focus = CSA_Dixie
+		focus = CSA_bonnie_blue_flag
+		focus = CSA_god_save_the_south
+		}
+		available = {
+		has_completed_focus = CSA_civil_war
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.2.17
+		}
+
+		completion_reward = {
+		add_political_power = 50
+		add_ideas = CSA_national_constitution
+		}
+	}
+		focus = {
+		id = CSA_habeas_corpus
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 14
+		y = 3
+		cost = 4
+		prerequisite = {
+		focus = CSA_constitution
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.2.27
+		}
+
+		completion_reward = {
+		add_political_power = -150
+		add_ideas = CSA_stop_habeas_corpus
+		}
+	}
+		focus = {
+		id = CSA_crushing_unionist
+		icon = GFX_goal_generic_political_pressure
+		x = 12
+		y = 3
+		cost = 4
+		prerequisite = {
+		focus = CSA_constitution
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.1.1
+		}
+
+		completion_reward = {
+		add_political_power = -50
+		65 = {
+		add_manpower = -500
+		}
+		64 = {
+		add_manpower = -500
+		}
+		56 = {
+		add_manpower = -500
+		}
+		66 = {
+		add_manpower = -500
+		}
+		add_stability = 0.1
+		add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = CSA_searching_for_weapon
+		icon = GFX_focus_focus_fra_maquis
+		x = 13
+		y = 4
+		cost = 3
+		prerequisite = {
+		focus = CSA_crushing_unionist
+		}
+		prerequisite = {
+		focus = CSA_habeas_corpus
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.6.1
+			OR = {controls_state = 64 controls_state = 36}
+		}
+
+		completion_reward = {
+		add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 30000
+		producer = USA
+		}
+		add_equipment_to_stockpile = {
+		type = artillery_equipment
+		amount = 240
+		producer = USA
+		}
+		add_equipment_to_stockpile = {
+		type = support_equipment 
+		amount = 1400
+		producer = USA
+		}
+		add_equipment_to_stockpile = {
+		type = horse_mules 
+		amount = 3000
+		producer = USA
+		}
+		}
+	}
+	focus = {
+		id = CSA_offmap_company
+		icon = GFX_focus_spa_the_spanish_miracle
+		x = 13
+		y = 5
+		cost = 4
+		prerequisite = {
+		focus = CSA_searching_for_weapon
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.5.1
+			OR = {
+			controls_state = 64 
+			controls_state = 36
+			}
+		}
+
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+	}
+	focus = {
+		id = CSA_offmap_inplex
+		icon = GFX_goal_generic_consumer_goods
+		x = 13
+		y = 6
+		cost = 4
+		prerequisite = {
+		focus = CSA_offmap_company
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1863.1.1
+			OR = {
+			controls_state = 64 
+			controls_state = 36
+			}
+		}
+
+		completion_reward = {
+		add_offsite_building = {
+		type = industrial_complex level = 2
+		}
+		}
+	}
+	focus = {
+		id = CSA_Provisional_Congress
+		icon = GFX_focus_csa_congress
+		x = 16
+		y = 2
+		cost = 4
+		prerequisite = {
+		focus = CSA_Dixie
+		focus = CSA_bonnie_blue_flag
+		focus = CSA_god_save_the_south
+		}
+		available = {
+		has_completed_focus = CSA_civil_war
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.2.4
+		}
+
+		completion_reward = {
+		add_to_variable = { CSA_senators_support = 12 }
+		add_to_variable = { CSA_senators_total = 14 }
+		add_to_variable = { CSA_representatives_support = 34 }
+		add_to_variable = { CSA_representatives_total = 46 }
+		CSA_recalc_congress_icon_frames = yes
+		custom_effect_tooltip = CSA_Provisional_congress_founded
+		}
+	}
+	focus = {
+		id = CSA_first_congress
+		icon = GFX_focus_csa_congress
+		x = 16
+		y = 3
+		cost = 4
+		prerequisite = {
+		focus = CSA_Provisional_Congress
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.2.18
+		}
+
+		completion_reward = {
+		custom_effect_tooltip = CSA_1st_congress_change
+		add_to_variable = { CSA_senators_support = 13 }
+		add_to_variable = { CSA_senators_total = 26 }
+		add_to_variable = { CSA_representatives_support = 43 }
+		add_to_variable = { CSA_representatives_total = 87 }
+		}
+	}
+	focus = {
+		id = CSA_confederate_states_dollar
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 18
+		y = 3
+		cost = 4
+		prerequisite = {
+		focus = CSA_Provisional_Congress
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.2.18
+		}
+
+		completion_reward = {
+		add_ideas = CSA_dollar
+		}
+	}
+	focus = {
+		id = CSA_confederate_secret_service
+		icon = GFX_focus_generic_military_mission
+		x = 17
+		y = 4
+		cost = 3
+		prerequisite = {
+		focus = CSA_confederate_states_dollar
+		}
+		prerequisite = {
+		focus = CSA_first_congress
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.4.1
+		}
+
+		completion_reward = {
+		add_ideas = CSA_secret_agents
+		create_intelligence_agency = yes
+		}
+	}
+	focus = {
+		id = CSA_baynoets_and_guns
+		icon = GFX_goal_generic_military_sphere
+		x = 17
+		y = 5
+		cost = 4
+		prerequisite = {
+		focus = CSA_confederate_secret_service
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.6.1
+		}
+
+		completion_reward = {
+		add_ideas = CSA_infantry_focus
+		}
+	}
+	focus = {
+		id = CSA_Missouri_kentucky_rep
+		icon = GFX_focus_kentucky_and_missouri
+		x = 17
+		y = 6
+		cost = 3
+		prerequisite = {
+		focus = CSA_baynoets_and_guns
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.6.1
+			67 = {
+			is_claimed_by = CSA
+			}
+			69 = {
+			is_claimed_by = CSA
+			}
+		}
+
+		completion_reward = {
+		add_stability = 0.01
+		add_war_support = 0.01
+		hidden_effect = {
+		set_variable = { var = CSA_representatives_total value = 106 }
+		}
+		}
+	}
+	
+	focus = {
+		id = CSA_arizona_new_mexico_terro
+		icon = GFX_focus_arizonia_and_new_mexico
+		x = 17
+		y = 7
+		cost = 3
+		prerequisite = {
+		focus = CSA_Missouri_kentucky_rep
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.6.1
+		}
+
+		completion_reward = {
+		add_state_claim = 47
+		add_state_claim = 44
+		add_manpower = 4500
+		}
+	}
+	#CSA 2TH congress
+	focus = {
+		id = CSA_2th_Congress
+		icon = GFX_focus_csa_congress
+		x = 15
+		y = 7
+		cost = 4
+		prerequisite = {
+		focus = CSA_offmap_inplex
+		}
+		prerequisite = {
+		focus = CSA_Missouri_kentucky_rep
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1864.5.2
+		}
+
+		completion_reward = {
+		add_to_variable = { CSA_representatives_total = 106 }
+		custom_effect_tooltip = 2nd_congress
+		hidden_effect = {
+		}
+		}
+	}
+	focus = {
+		id = CSA_1864_Partisan_Ranger_Act
+		icon = GFX_focus_spr_no_pasaran
+		x = 15
+		y = 8
+		cost = 4
+		prerequisite = {
+		focus = CSA_2th_Congress
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1864.5.2
+			controls_province = 7467
+		}
+
+		completion_reward = {
+		remove_ideas = partisan_ranger_act
+		load_oob = CSA_rangers
+		}
+	}
+	focus = {
+		id = CSA_1864_keep_slavery
+		icon = GFX_focus_usa_voter_registration_act
+		x = 13
+		y = 9
+		cost = 4
+		prerequisite = {
+		focus = CSA_1864_Partisan_Ranger_Act
+		}
+		mutually_exclusive = {
+		focus = CSA_1864_consider_slavery
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1864.1.1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_stability = 0.05
+		add_war_support = 0.03
+		}
+	}
+	focus = {
+		id = CSA_1864_slaved_USCT
+		icon = GFX_goal_generic_CAS
+		x = 13
+		y = 10
+		cost = 4
+		prerequisite = {
+		focus = CSA_1864_keep_slavery
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1864.1.1
+			USA = {
+			has_completed_focus =  USA_emancipation_proclamation 
+			}
+		}
+		completion_reward = {
+		add_manpower = 10000
+		}
+	}
+		focus = {
+		id = CSA_1864_consider_slavery
+		icon = GFX_focus_generic_strike_at_democracy3
+		x = 15
+		y = 9
+		cost = 4
+		prerequisite = {
+		focus = CSA_1864_Partisan_Ranger_Act
+		}
+		mutually_exclusive = {
+		focus = CSA_1864_keep_slavery
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1864.1.1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		CSA_congress_medium_opposition = yes
+		add_war_support = -0.1
+		add_stability = -0.1
+		add_manpower = 15000
+		}
+	}
+	focus = {
+		id = CSA_1864_CSCT
+		icon = GFX_focus_csct
+		x = 15
+		y = 10
+		cost = 4
+		prerequisite = {
+		focus = CSA_1864_consider_slavery
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1864.6.1
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		CSA_congress_large_opposition = yes
+		add_stability = -0.2
+		add_war_support = -0.2
+		add_ideas = CSCT
+		random_owned_state = {
+		limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+					state_population > 50000
+				}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+			create_unit = {
+			division = "name = \"Confederate Colored Volunteers Regiment\" division_template = \"CS Militia\" start_experience_factor = 0.0 start_equipment_factor = 1"
+			owner = CSA
+			}
+		}
+		}
+	}
+	#Slavery Issues Final solution
+		focus = {
+		id = CSA_1865_slavery_keep_forever
+		icon = GFX_focus_slavery_forever
+		x = 13
+		y = 11
+		cost = 3
+		prerequisite = {
+		focus = CSA_1864_slaved_USCT
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1865.1.1
+		}
+		completion_reward = {
+		add_political_power = 300
+		add_stability = 0.1
+		}
+	}
+	focus = {
+		id = CSA_1865_slavery_reform
+		icon = GFX_focus_csa_slavery_reform
+		x = 15
+		y = 11
+		cost = 3
+		prerequisite = {
+		focus = CSA_1864_CSCT
+		}
+		mutually_exclusive = {
+		focus = CSA_1865_slavery_keep_forever
+		}
+		mutually_exclusive = {
+		focus = CSA_1865_slavery_abolish
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1865.1.1
+		}
+		completion_reward = {
+		swap_ideas = {
+		remove_idea = american_slavery
+		add_idea = american_slavery_reformed
+		}
+		add_stability = -0.2
+		add_political_power = -300
+		CSA_congress_large_opposition = yes
+		CSA_congress_medium_opposition = yes
+		}
+	}
+	focus = {
+		id = CSA_1865_slavery_abolish
+		icon = GFX_focus_slavery_abolished_shine
+		x = 17
+		y = 11
+		cost = 3
+		prerequisite = {
+		focus = CSA_1864_CSCT
+		}
+		mutually_exclusive = {
+		focus = CSA_1865_slavery_reform
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1865.1.1
+		}
+		completion_reward = {
+		remove_ideas = american_slavery
+		add_stability = -0.7
+		add_war_support = -0.7
+		add_political_power = -500
+		CSA_congress_large_opposition = yes
+		CSA_congress_medium_opposition = yes
+		CSA_congress_small_opposition = yes
+		}
+	}
+		#CSA industry
+		focus = {
+		id = CSA_industry_offshore_company
+		icon = GFX_focus_generic_africa_factory
+		x = 25
+		y = 0
+		cost = 4
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.7.10
+		}
+		completion_reward = {
+		add_offsite_building = {
+		type = industrial_complex level = 2
+		}
+		add_political_power = -50
+		}
+		add_tech_bonus = {
+		bonus = 0.25
+		uses = 1
+		category = industry
+		}
+	}
+	focus = {
+		id = CSA_southern_state_industry
+		icon = GFX_focus_POL_warsaw_main_station
+		x = 25
+		y = 1
+		cost = 4
+		prerequisite = {
+		focus = CSA_industry_offshore_company
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.10.1
+		}
+		completion_reward = {
+		random_owned_state = {
+		limit = {
+					is_fully_controlled_by = ROOT
+					is_core_of = ROOT
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CSA_industry_offshore_arms
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 23
+		y = 0
+		cost = 4
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.7.10
+			has_completed_focus = CSA_civil_war
+		}
+		completion_reward = {
+		add_offsite_building = {
+		type = arms_factory level = 1
+		}
+		add_political_power = -50
+		}
+	}
+	focus = {
+		id = CSA_alabama_arms_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 23
+		y = 1
+		cost = 4
+		prerequisite = {
+		focus = CSA_industry_offshore_arms
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.7.10
+			has_completed_focus = CSA_civil_war
+			controls_state = 36
+		}
+		completion_reward = {
+			36 ={
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = CSA_offshore_dockyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 27
+		y = 0
+		cost = 4
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.7.10
+			has_completed_focus = CSA_civil_war
+			controls_state = 64
+		}
+		completion_reward = {
+		add_offsite_building = {
+		type = dockyard level = 1
+		}
+		}
+	}
+	focus = {
+		id = CSA_virginia_dockyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 27
+		y = 1
+		cost = 4
+		prerequisite = {
+		focus = CSA_offshore_dockyard
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.7.10
+			has_completed_focus = CSA_civil_war
+			controls_state = 64
+		}
+		completion_reward = {
+		64 ={
+		add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+		}
+		}
+	}
+	#Industry_2
+		focus = {
+		id = CSA_1862_industry
+		icon = GFX_goal_generic_fortify_city
+		x = 25
+		y = 2
+		cost = 4
+		prerequisite = {
+		focus = CSA_virginia_dockyard
+		}
+		prerequisite = {
+		focus = CSA_southern_state_industry
+		}
+		prerequisite = {
+		focus = CSA_alabama_arms_factory
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.1.1
+		}
+		completion_reward = {
+		add_ideas = growing_industry
+		add_tech_bonus = {
+		bonus = 0.25
+		uses = 1
+		category = industry
+		}
+		}
+	}
+	focus = {
+		id = CSA_fortress_at_southern_states
+		icon = GFX_goal_generic_construct_military
+		x = 23
+		y = 3
+		cost = 3
+		prerequisite = {
+		focus = CSA_1862_industry
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.1.1
+		}
+		completion_reward = {
+		64 ={
+		add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4694
+		}
+		add_building_construction = {
+    type = coastal_bunker
+    level = 3
+    instant_build = yes
+    province = 4694
+		}
+		}
+			66 = {
+			add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 1874
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 1874
+				}
+			}
+			 62 = {
+			add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 7952
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 7952
+				}
+			}
+			39 = {
+			add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 2255
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 2255
+				}
+			add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 984
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 984
+				}
+			}
+			 36 = {
+			add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 8291
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 8291
+				}
+			}
+			34 = {
+			 add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 8108
+				}
+			}
+			38 = {
+			add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 4661
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = 4661
+				}
+			}
+		}
+	}
+	focus = {
+		id = CSA_richmond_arms
+		icon = GFX_goal_generic_military_deal
+		x = 23
+		y = 4
+		cost = 4
+		prerequisite = {
+		focus = CSA_fortress_at_southern_states
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.6.1
+			OR = {
+			controls_state = 36
+			controls_state = 64
+			}
+		}
+		completion_reward = {
+			64 = {
+			add_building_construction = {
+			type = arms_factory
+			level = 2
+				}	
+			}
+			add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 5000
+			producer = CSA
+			}
+		}
+	}
+	focus = {
+		id = CSA_fortress_at_tennessee
+		icon = GFX_goal_generic_small_arms
+		x = 25
+		y = 3
+		cost = 3
+		prerequisite = {
+		focus = CSA_1862_industry
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.1.1
+			OR = {
+			controls_province = 7774
+			controls_state = 64
+			}
+		}
+		completion_reward = {
+		 65 = {
+			add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 7774
+				}
+			}
+			34 = {
+			add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 1959
+				}
+			}
+			 39 = {
+			add_building_construction = {
+					type = bunker
+					level = 3
+					instant_build = yes
+					province = 346
+				}
+			}
+			56 = {
+			add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 7918
+				}
+			}
+			61 = {
+			add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 7869
+				}
+			}
+		}
+	}
+		focus = {
+		id = CSA_georgia_arms
+		icon = GFX_focus_generic_little_entente
+		x = 25
+		y = 4
+		cost = 4
+		prerequisite = {
+		focus = CSA_fortress_at_tennessee
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.6.1
+			OR = {
+			controls_state = 39
+			controls_state = 64
+			}
+		}
+		completion_reward = {
+		39 = {
+		add_building_construction = {
+		type = arms_factory
+		level = 2
+		}
+		}
+		}
+	}
+		focus = {
+		id = CSA_new_oreleans_port
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 27
+		y = 3
+		cost = 4
+		prerequisite = {
+		focus = CSA_1862_industry
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.1.1
+			OR = {
+			controls_state = 24
+			controls_state = 64
+			}
+			controls_province = 2132
+		}
+		completion_reward = {
+		add_offsite_building = {
+		type = industrial_complex level = 1
+		}
+		add_offsite_building = {
+		type = dockyard level = 1
+		}
+		}
+	}
+		focus = {
+		id = CSA_texas_arms
+		icon = GFX_goal_generic_build_tank
+		x = 27
+		y = 4
+		cost = 4
+		prerequisite = {
+		focus = CSA_new_oreleans_port
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.6.1
+			OR = {
+			controls_state = 38
+			controls_state = 64
+			}
+		}
+		completion_reward = {
+		38 = {
+		add_building_construction = {
+		type = arms_factory
+		level = 2
+		}
+		}
+		}
+	}
+	#final_line_of_csa_industry
+	focus = {
+		id = CSA_industry_completed
+		icon = GFX_focus_generic_industry_3
+		x = 25
+		y = 5
+		cost = 4
+		prerequisite = {
+		focus = CSA_georgia_arms
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1863.1.1
+			OR = {
+			controls_state = 36
+			controls_state = 39
+			controls_state = 64
+			}
+		}
+		completion_reward = {
+		add_research_slot = 1
+		add_tech_bonus = {
+		bonus = 0.25
+		uses = 2
+		category = industry
+		}
+		}
+	}
+	#CSS NAVY
+		focus = {
+		id = CSA_CSN
+		icon = GFX_goal_generic_navy_battleship
+		x = 22
+		y = 7
+		cost = 1
+		available = {
+		has_completed_focus = CSA_civil_war
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1861.4.17
+			OR = {
+			controls_state = 62
+			controls_state = 64
+			}
+		}
+		completion_reward = {
+		navy_experience = 50
+		load_oob = CSN_1861
+		remove_ideas = secession_in_the_dock_yards
+		add_tech_bonus = {
+		bonus = 0.5
+		uses = 2
+		category = naval_doctrine
+		}
+		}
+	}
+	focus = {
+		id = CSA_mines
+		icon = GFX_focus_generic_mine_warfare
+		x = 20
+		y = 8
+		cost = 4
+		prerequisite = {
+		focus = CSA_CSN
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.3.10
+			OR = {
+			controls_state = 62
+			controls_state = 64
+			}
+		}
+		completion_reward = {
+		navy_experience = 25
+		add_mines = { region = 10  amount = 50}
+		add_mines = { region = 11  amount = 50}
+		add_mines = { region = 12  amount = 50}
+		}
+	}
+	focus = {
+		id = CSA_mines_2
+		icon = GFX_focus_generic_mine_warfare
+		x = 20
+		y = 9
+		cost = 4
+		prerequisite = {
+		focus = CSA_mines
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.6.10
+			OR = {
+			controls_state = 62
+			controls_state = 64
+			}
+		}
+		completion_reward = {
+		navy_experience = 25
+		add_mines = { region = 10  amount = 150}
+		add_mines = { region = 11  amount = 150}
+		add_mines = { region = 12  amount = 150}
+		}
+	}
+	focus = {
+		id = CSA_raiders
+		icon = GFX_goal_generic_navy_cruiser
+		x = 24
+		y = 8
+		cost = 4
+		prerequisite = {
+		focus = CSA_CSN
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.3.10
+			OR = {
+			controls_state = 62
+			controls_state = 64
+			}
+		}
+		completion_reward = {
+		add_ideas = CSN_raiders
+		}
+	}
+		focus = {
+		id = CSA_raiders_2
+		icon = GFX_goal_generic_navy_cruiser
+		x = 24
+		y = 9
+		cost = 4
+		prerequisite = {
+		focus = CSA_raiders
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.3.1
+			OR = {
+			controls_state = 62
+			controls_state = 64
+			}
+		}
+		completion_reward = {
+		CSA = {
+    create_ship = {
+        type = ship_hull_cruiser_1
+        equipment_variant = "LIGHT Class"
+        creator = CSA
+        name = "CSS United States"
+			}
+			create_ship = {
+        type = destroyer
+        equipment_variant = "CSS Des"
+        creator = CSA
+        name = "CSS Admiral"
+			}
+			create_ship = {
+        type = ship_hull_cruiser_coastal_defense_ship
+        equipment_variant = "HEAVY Class"
+        creator = CSA
+        name = "CSS Alabama"
+			}
+			create_ship = {
+        type = ship_hull_cruiser_1
+        equipment_variant = "LIGHT Classs"
+        creator = CSA
+        name = "CSS Arkansas"
+			}
+			create_ship = {
+        type = ship_hull_cruiser_1
+        equipment_variant = "LIGHT Class"
+        creator = CSA
+        name = "CSS Atlanta"
+			}
+			create_ship = {
+        type = ship_hull_cruiser_1
+        equipment_variant = "LIGHT Class"
+        creator = CSA
+        name = "CSS United States"
+			}
+			create_ship = {
+        type = ship_hull_cruiser_1
+        equipment_variant = "LIGHT Class"
+        creator = CSA
+        name = "CSS Baltic"
+			}
+			create_ship = {
+        type = destroyer
+        equipment_variant = "CSS Des"
+        creator = CSA
+        name = "CSS Chicora"
+			}
+			create_ship = {
+        type = destroyer
+        equipment_variant = "CSS Des"
+        creator = CSA
+        name = "CSS Capitol"
+			}
+			create_ship = {
+        type = ship_hull_cruiser_1
+        equipment_variant = "CSS LIGHT Class"
+        creator = CSA
+        name = "CSS Florida"
+			}
+			create_ship = {
+        type = ship_hull_cruiser_1
+        equipment_variant = "CSS LIGHT Class"
+        creator = CSA
+        name = "CSS General Beauregard"
+			}
+			create_ship = {
+        type = ship_hull_cruiser_1
+        equipment_variant = "CSS LIGHT Class"
+        creator = CSA
+        name = "CSS City of Vicksburg"
+			}
+			create_ship = {
+        type = ship_hull_cruiser_1
+        equipment_variant = "CSS LIGHT Class"
+        creator = CSA
+        name = "CSS Gaines"
+			}
+			create_ship = {
+        type = ship_hull_cruiser_1
+        equipment_variant = "CSS LIGHT Class"
+        creator = CSA
+        name = "CSS General Bragg"
+			}
+			create_ship = {
+        type = destroyer
+        equipment_variant = "CSS Des"
+        creator = CSA
+        name = "CSS John Simonds"
+			}
+			create_ship = {
+        type = destroyer
+        equipment_variant = "CSS Des"
+        creator = CSA
+        name = "CSS Kanawha Valley"
+			}
+			create_ship = {
+        type = destroyer
+        equipment_variant = "CSS Des"
+        creator = CSA
+        name = "CSS Louisiana"
+			}
+			create_ship = {
+        type = destroyer
+        equipment_variant = "CSS Des"
+        creator = CSA
+        name = "CSS Little Rebel"
+			}
+			}
+		}
+	}
+		focus = {
+		id = CSA_submarines
+		icon = GFX_goal_generic_navy_submarine
+		x = 22
+		y = 8
+		cost = 4
+		prerequisite = {
+		focus = CSA_CSN
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.1.10
+			OR = {
+			controls_state = 62
+			controls_state = 64
+			}
+		}
+		completion_reward = {
+		set_technology = {
+    early_submarine = 1
+		}
+		set_technology = {
+    early_ship_hull_submarine = 1
+		}
+		navy_experience = -100
+		CSA = {
+    create_ship = {
+        type = ship_hull_submarine_1
+        equipment_variant = "CSS HUNLEY CLASS"
+        creator = CSA
+        name = "CSS Hunley"
+			}
+		}
+		}
+	}
+	focus = {
+		id = CSA_privateers
+		icon = GFX_goal_generic_navy_submarine
+		x = 22
+		y = 9
+		cost = 4
+		prerequisite = {
+		focus = CSA_submarines
+		}
+		available = {
+			has_country_leader = {ruling_only = yes character = CSA_jefferson_davis}
+			date > 1862.1.20
+			OR = {
+			controls_state = 62
+			controls_state = 64
+			}
+		}
+		completion_reward = {
+		add_ideas = CSN_privateers
+		}
+	}
+
+	focus = {
+		id = CSA_Robert_Lee_1
+		icon = GFX_goal_generic_fortify_city
+		x = 0
+		y = 0
+		cost = 0
+		continue_if_invalid = yes
+		mutually_exclusive = {
+			focus = CSA_Robert_Lee
+		}
+		prerequisite = {
+		}
+		available = {
+			date > 1863.1.1
+			surrender_progress > 0.05
+	}
+
+		completion_reward = {
+			add_timed_idea = { idea = CSA_Robert_Lee_defensive  days = 1000 }
+			USA = { add_timed_idea = {idea = USA_Robert_Lee_defensive  days = 1000 } }
+			custom_effect_tooltip = CSA_Lee_defensive
+		}
+	}
+
+	focus = {
+		id = CSA_Robert_Lee
+		icon = GFX_focus_slavery_forever
+		x = 2
+		y = 0
+		cost = 0
+		continue_if_invalid = yes
+		mutually_exclusive = {
+			focus = CSA_Robert_Lee_1
+		}
+		prerequisite = {
+		}
+		available = {
+			date > 1863.1.1
+			surrender_progress > 0.05
+	}
+
+		completion_reward = {
+			add_timed_idea = { idea = CSA_Robert_Lee_offensive  days = 45 }
+			add_timed_idea = { idea = CSA_Robert_Lee_offensive_1  days = 180 }
+			USA = { add_timed_idea = {idea = USA_Robert_Lee_offensive  days = 45 } }
+			custom_effect_tooltip = CSA_Lee_offensive
+		}
+	}
+
+}

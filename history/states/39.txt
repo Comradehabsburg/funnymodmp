@@ -1,0 +1,48 @@
+
+state={
+	id=39
+	name="STATE_39"
+	resources={
+		steel= 6
+		chromium= 0
+		aluminium= 0
+		tungsten = 0 
+		oil = 1
+		rubber = 5
+	}
+	history={
+		owner = USA
+		add_core_of = USA
+		add_core_of = GEA
+		add_core_of = CSA
+		victory_points = { 7875 3 }
+		victory_points = { 2285 3 }
+		victory_points = { 5468 5 }
+		victory_points = { 346 35 }
+		victory_points = { 2255 20 }
+		victory_points = { 4989 3 }
+		victory_points = { 5853 5 }
+		victory_points = { 7909 10 }
+		victory_points = { 4738 3 }
+		victory_points = { 8078 3 }
+		victory_points = { 4731 35 }
+		victory_points = { 1984 5 }
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 5
+			2255 = {
+				naval_base = 7
+			}
+		}
+	}
+	
+
+	provinces={
+		43 340 346 482 539 607 636 1042 1286 1537 1543 1713 1719 1845 1984 1995 2113 2147 2178 2213 2226 2255 2285 2311 2351 2541 2589 2661 2668 2815 2880 2980 3213 3235 3616 3690 3925 3947 4086 4127 4287 4326 4345 4563 4610 4731 4738 4822 4829 4922 4937 4940 4989 5000 5248 5297 5311 5331 5402 5468 5521 5633 5853 5877 5934 5944 7842 7860 7867 7875 7876 7880 7903 7909 7911 7921 7942 7946 7955 7957 7973 7981 8014 8019 8033 8034 8040 8045 8049 8053 8056 8058 8067 8072 8073 8078 8079 8081 8094 8110 8112 8115 8116 8122 8127 8129 8140 8141 8142 8152 8165 8166 8177 8182 8191 8216 
+	}
+	manpower=1057286
+	state_category=large_city
+	buildings_max_level_factor=1.000
+	local_supplies=25.0 
+}

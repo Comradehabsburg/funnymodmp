@@ -1,0 +1,82 @@
+ideas = {
+	country = {
+		pay_for_guns = {
+			picture = disarmed_nation
+			
+			allowed = {
+				tag = USA
+				tag = CSA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.08
+			}
+		}
+	}
+	country = {
+	USA_core_defense = {
+		picture = generic_usa_conflict
+		
+		allowed = {
+			always = no
+		}
+
+		allowed_civil_war = {
+			always = no
+		}
+
+		removal_cost = -1
+		
+		modifier = {
+army_core_defence_factor = 0.2
+army_core_attack_factor = 0.2
+		}
+	} }
+	country = {
+		mobilization_against_our_brothers = {
+			picture = mobilization
+			
+			allowed = {
+				tag = USA
+				tag = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_speed = 0.5
+			}
+		}
+	}
+	
+	country = {
+		secession_in_the_dock_yards = {
+			picture = secession_in_the_dock_yards
+			
+			allowed = {
+				tag = USA
+				tag = CSA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = -999
+			}
+		}
+	}
+}
