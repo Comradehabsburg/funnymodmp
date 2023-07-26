@@ -1,0 +1,136 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "border_states_for_both_gui_window"
+		orientation = center
+		size = { width = 1108 height = 720 }
+		show_position = { x=555 y=80 }
+		position = { x = -400   y= -300   }  
+		moveable = yes	
+		clipping = no
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 0
+#0  ## 300
+
+		background = {
+			name = "Background"	
+			quadTextureSprite = "GFX_browser_bg"
+		}	
+		instantTextboxType = {
+			name = "BORDER_STATES" 
+			position = { x = 52 y = 16 }
+			font = "hoi_36header"
+			text = "BORDER_STATES_desc"		
+			maxWidth = 440
+			maxHeight = 30
+			format = left 
+			alwaystransparent = yes
+		}
+		buttonType =
+		{
+			name = "border_states_exit_btn"
+			quadTextureSprite = "GFX_closebutton"
+			position = { x = -52 y = 16 }
+			Orientation = UPPER_RIGHT
+			clicksound = click_close
+			shortcut = "ESCAPE"
+		}	
+		#DE
+		buttonType = {
+			name ="CSA_Delaware"
+			spriteType = "GFX_Delaware_csa"
+			position = { x = 825	 y = 247 }
+			pdx_tooltip = "DL_support"
+		}
+		buttonType = {
+			name ="USA_Delaware"
+			spriteType = "GFX_Delaware_usa"
+			position = { x = 825	 y = 247 }
+			pdx_tooltip = "DL_support"
+		}
+		buttonType = {
+			name ="Delaware_divied"
+			spriteType = "GFX_Delaware_divied"
+			position = { x = 825	 y = 247 }
+			pdx_tooltip = "DL_support"
+		}
+		#ML
+		buttonType = {
+			name ="USA_Maryland"
+			spriteType = "GFX_Maryland_usa"
+			position = { x = 705	 y = 255 }
+			pdx_tooltip = "ML_support"
+		}
+		buttonType = {
+			name ="CSA_Maryland"
+			spriteType = "GFX_Maryland_csa"
+			position = { x = 705	 y = 255 }
+			pdx_tooltip = "ML_support"
+		}
+		buttonType = {
+			name ="Maryland_divied"
+			spriteType = "GFX_Maryland_divied"
+			position = { x = 705	 y = 255 }
+			pdx_tooltip = "ML_support"
+		}
+		#MO
+		buttonType = {
+			name ="CSA_Missouri"
+			spriteType = "GFX_Missouri_csa"
+			position = { x = 148	 y = 291  }
+			pdx_tooltip = "MO_support"
+		}
+		buttonType = {
+			name ="USA_Missouri"
+			spriteType = "GFX_Missouri_usa"
+			position = { x = 148	 y = 291  }
+			pdx_tooltip = "MO_support"
+		}
+		buttonType = {
+			name ="Missouri_divied"
+			spriteType = "GFX_Missouri_divied"
+			position = { x = 148	 y = 291 }
+			pdx_tooltip = "MO_support"
+		}
+		#WVA
+		buttonType = {
+			name ="WVA_csa"
+			spriteType = "GFX_WVA_csa"
+			position = { x = 610	 y = 247 }
+			pdx_tooltip = "WVA_support"
+		}
+		buttonType = {
+			name ="WVA_usa"
+			spriteType = "GFX_WVA_usa"
+			position = { x = 610	 y = 247 }
+			pdx_tooltip = "WVA_support"
+		}
+		buttonType = {
+			name ="WVA_divied"
+			spriteType = "GFX_WVA_divied"
+			position = { x = 610	 y = 247 }
+			pdx_tooltip = "WVA_support"
+		}
+		#KY
+		buttonType = {
+			name ="Kentucky_csa"
+			spriteType = "GFX_Kentucky_csa"
+			position = { x = 374	 y = 339 }
+			pdx_tooltip = "KY_support"
+		}
+		buttonType = {
+			name ="Kentucky_usa"
+			spriteType = "GFX_Kentucky_usa"
+			position = { x = 374	 y = 339 }
+			pdx_tooltip = "KY_support"
+		}
+		buttonType = {
+			name ="Kentucky_divied"
+			spriteType = "GFX_Kentucky_divied"
+			position = { x = 374	 y = 339 }
+			pdx_tooltip = "KY_support"
+		}
+		#TEST FLAG
+	}
+}
